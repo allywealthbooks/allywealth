@@ -701,8 +701,31 @@
         }
 
         .form-success.visible {
-            display: block;
-        }
+    display: block;
+}
+
+/* NEW — submission failure banner */
+.form-failure {
+    display: none;
+    background-color: #FDF3F2;
+    border-left: 3px solid #C0392B;
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 2rem;
+    font-size: 0.95rem;
+    color: #7B241C;
+    line-height: 1.7;
+}
+
+.form-failure.visible {
+    display: block;
+}
+
+/* NEW — button loading state */
+.btn-primary:disabled {
+    opacity: 0.65;
+    cursor: wait;
+    pointer-events: none;
+}
 
         /* =============================================================
            9. CONTACT INFO PANEL
@@ -1116,12 +1139,24 @@
                     <h2>Request a Proposal</h2>
                     <p>Fill in the form below. The more context you give us, the more specific our proposal will be.</p>
 
-                    <!-- Success message -->
-                    <div class="form-success" id="form-success">
-                        Thank you. Your enquiry has been received. We will review your details and respond within 24 to 48 business hours.
-                    </div>
+<!-- Success message -->
+<div class="form-success" id="form-success">
+    Thank you. Your enquiry has been received. We will review your details and respond within 24 to 48 business hours.
+</div>
 
-                    <form id="contact-form" novalidate>
+<!-- NEW: submission failure banner -->
+<div class="form-failure" id="form-failure">
+    Sorry, your enquiry could not be sent. Please try again, or email us directly at
+    <a href="mailto:info@allywealthvisibility.com" style="color:#7B241C;text-decoration:underline;">info@allywealthvisibility.com</a>.
+</div>
+
+<form id="contact-form" action="https://formspree.io/f/mzerzalz" method="POST" novalidate>
+
+    <!-- Formspree config: email subject line -->
+    <input type="hidden" name="_subject" value="New Proposal Request — Ally Wealth Website">
+
+    <!-- Formspree honeypot (spam protection) -->
+    <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
 
                         <div class="form-row">
                             <div class="form-group" id="group-name">
@@ -1552,35 +1587,86 @@
                     });
                 });
 
-                contactForm.addEventListener('submit', (e) => {
-                    e.preventDefault();
+const formFailure = document.getElementById('form-failure');
 
-                    let allValid = true;
-                    fields.forEach(field => {
-                        if (!validateField(field)) {
-                            allValid = false;
-                        }
-                    });
+contactForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
 
-                    if (!allValid) {
-                        const firstError = contactForm.querySelector('.has-error .form-control');
-                        if (firstError) firstError.focus();
-                        return;
-                    }
+    // Reset any previous banners
+    if (formSuccess) formSuccess.classList.remove('visible');
+    if (formFailure) formFailure.classList.remove('visible');
 
-                    contactForm.reset();
+    // Validate all fields
+    let allValid = true;
+    fields.forEach(field => {
+        if (!validateField(field)) {
+            allValid = false;
+        }
+    });
 
-                    if (formSuccess) {
-                        formSuccess.classList.add('visible');
-                        formSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                        setTimeout(() => {
-                            formSuccess.classList.remove('visible');
-                        }, 10000);
-                    }
-                });
-            }
+    if (!allValid) {
+        const firstError = contactForm.querySelector('.has-error .form-control');
+        if (firstError) firstError.focus();
+        return;
+    }
 
+    // Disable button to prevent double submits
+    const submitBtn = contactForm.querySelector('button[type="submit"]');
+    const originalBtnText = submitBtn.textContent;
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending...';
+
+    try {
+        const response = await fetch(contactForm.action, {
+            method: 'POST',
+            body: new FormData(contactForm),
+            headers: { 'Accept': 'application/json' }
         });
+
+        if (response.ok) {
+            // Success: clear form and show confirmation
+            contactForm.reset();
+            fields.forEach(field => {
+                const group = document.getElementById(field.group);
+                if (group) group.classList.remove('has-error');
+            });
+
+            if (formSuccess) {
+                formSuccess.classList.add('visible');
+                formSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                setTimeout(() => {
+                    formSuccess.classList.remove('visible');
+                }, 10000);
+            }
+        } else {
+            // Formspree returned an error
+            let msg = 'Submission failed. Please try again.';
+            try {
+                const data = await response.json();
+                if (data && data.errors && data.errors.length) {
+                    msg = data.errors.map(err => err.message).join(' ');
+                }
+            } catch (_) { /* ignore JSON parse errors */ }
+
+            if (formFailure) {
+                formFailure.innerHTML = 'Sorry, your enquiry could not be sent: ' + msg +
+                    ' Please try again, or email us directly at ' +
+                    '<a href="mailto:info@allywealthvisibility.com" style="color:#7B241C;text-decoration:underline;">info@allywealthvisibility.com</a>.';
+                formFailure.classList.add('visible');
+                formFailure.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+        }
+    } catch (err) {
+        // Network error
+        if (formFailure) {
+            formFailure.classList.add('visible');
+            formFailure.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+    } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalBtnText;
+    }
+});
     </script>
 </body>
 </html>
