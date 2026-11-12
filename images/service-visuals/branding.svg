@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" role="img" aria-label="Author Branding illustration">
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f8f3e9"/><stop offset="1" stop-color="#e9dfcc"/></linearGradient><radialGradient id="glow"><stop stop-color="#fff" stop-opacity=".8"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient></defs>
+<rect width="900" height="620" fill="url(#bg)"/><circle cx="760" cy="90" r="230" fill="url(#glow)"/><path d="M0 540Q250 470 480 560T900 520V620H0Z" fill="#0b1d35"/><path d="M0 540Q250 470 480 560T900 520" fill="none" stroke="#c99b46" stroke-width="5" opacity=".85"/>
+<circle cx="345" cy="250" r="105" fill="#e8d9bc"/><path d="M250 470c12-110 65-160 95-160s83 50 95 160" fill="#0b1d35"/><path d="M310 210c0-65 110-65 110 0v45c0 42-25 75-55 75s-55-33-55-75z" fill="#c99b46"/><rect x="500" y="140" width="180" height="250" rx="18" fill="#fff" stroke="#d8c49a" stroke-width="5"/><rect x="525" y="170" width="130" height="70" rx="10" fill="#0b1d35"/><path d="M545 205h90" stroke="#d9ad55" stroke-width="10"/><path d="M530 280h120M530 315h95M530 350h110" stroke="#d8c49a" stroke-width="10"/>
+<path d="M70 70h100M70 70v100M830 450v100M730 550h100" stroke="#c99b46" stroke-width="5" opacity=".55"/>
+</svg>

@@ -1,0 +1,1403 @@
+<!DOCTYPE html>
+<!-- =====================================================================
+     ALLY WEALTH - PREMIUM AUTHOR VISIBILITY CONSULTANT
+     MASTER SERVICES PAGE - ALL-IN-ONE FILE
+     =====================================================================
+     This file contains all HTML, CSS, and JavaScript required for the 
+     services page. No external CSS or JS files are needed for this page 
+     to render perfectly. 
+     
+     Author: Ally Wealth Development Team
+     Date: 2026
+     ===================================================================== -->
+
+<html lang="en">
+<head>
+    <!-- =================================================================
+         META TAGS AND SEO OPTIMIZATION
+         ================================================================= -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- Primary Meta Tags -->
+    <title>Our Services | Ally Wealth Book Marketing</title>
+    <meta name="title" content="Our Services | Ally Wealth Book Marketing">
+    <meta name="description" content="Explore Ally Wealth's complete range of book marketing services. From Amazon A+ content and keyword research to ARC outreach and book launch campaigns.">
+    <meta name="keywords" content="book marketing services, amazon marketing, A+ content, book launch, ARC outreach, goodreads marketing, author branding, Ally Wealth">
+    <meta name="author" content="Ally Wealth">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.allywealth.com/services.html">
+    <meta property="og:title" content="Our Services | Ally Wealth Book Marketing">
+    <meta property="og:description" content="Discover our comprehensive suite of book marketing solutions. We cover every angle of author visibility.">
+    <meta property="og:image" content="images/banner.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.allywealth.com/services.html">
+    <meta property="twitter:title" content="Our Services | Ally Wealth Book Marketing">
+    <meta property="twitter:description" content="Discover our comprehensive suite of book marketing solutions. We cover every angle of author visibility.">
+    <meta property="twitter:image" content="images/banner.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="apple-touch-icon" href="images/favicon.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+
+    <!-- =================================================================
+         EMBEDDED CSS STYLESHEET
+         ================================================================= -->
+    <style>
+        /* =============================================================
+           1. CSS VARIABLES AND ROOT DEFINITIONS
+           ============================================================= */
+        :root {
+            --navy: #0B132B; 
+            --gold: #C5A059; 
+            --ivory: #F4EFE7;
+            --charcoal: #28221D;
+            --white: #FFFFFF;
+            --light-gray: #E8DFD2;
+            --dark-gray: #1A1A1A;
+            --muted-text: #6B6B6B;
+            --border-color: rgba(0, 0, 0, 0.08);
+            --gold-transparent: rgba(197, 160, 89, 0.2);
+            --font-heading: 'Playfair Display', serif;
+            --font-body: 'Inter', sans-serif;
+            --transition-smooth: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            --transition-fast: all 0.2s ease-in-out;
+            --shadow-subtle: 0 10px 30px rgba(0, 0, 0, 0.05);
+            --shadow-hover: 0 20px 40px rgba(0, 0, 0, 0.1);
+            --container-width: 1280px;
+            --container-padding: 2rem;
+            --section-padding: 8rem 0;
+        }
+
+        /* =============================================================
+           2. GLOBAL RESET AND BASE STYLES
+           ============================================================= */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--ivory);
+            color: var(--charcoal);
+            line-height: 1.7;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-heading);
+            font-weight: 600;
+            color: var(--navy);
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        h1 { font-size: clamp(2.5rem, 5vw, 4.5rem); }
+        h2 { font-size: clamp(2rem, 4vw, 3rem); }
+        h3 { font-size: clamp(1.3rem, 2.5vw, 1.8rem); }
+        h4 { font-size: clamp(1.1rem, 2vw, 1.4rem); }
+
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+            color: var(--charcoal);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition-fast);
+        }
+
+        ul, ol {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+        }
+
+        button, input, select, textarea {
+            font-family: inherit;
+            font-size: inherit;
+            outline: none;
+            border: none;
+            background: none;
+        }
+
+        button { cursor: pointer; }
+
+        /* =============================================================
+           3. UTILITY AND LAYOUT CLASSES
+           ============================================================= */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--container-padding);
+            width: 100%;
+        }
+
+        .section {
+            padding: var(--section-padding);
+            position: relative;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 5rem;
+        }
+
+        .section-label {
+            color: var(--gold);
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+
+        .section-intro {
+            font-size: 1.15rem;
+            color: var(--muted-text);
+            line-height: 1.8;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .flex-between {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .flex-row {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 4rem;
+        }
+
+        .flex-row.reverse {
+            flex-direction: row-reverse;
+        }
+
+        .center-btn {
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        .mt-2 { margin-top: 2rem; }
+        .mt-3 { margin-top: 3rem; }
+
+        /* =============================================================
+           4. BUTTONS
+           ============================================================= */
+        .btn-primary,
+        .btn-secondary {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            border-radius: 2px;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+            text-align: center;
+            border: 1px solid transparent;
+        }
+
+        .btn-primary {
+            background-color: var(--gold);
+            color: var(--navy);
+            border-color: var(--gold);
+        }
+
+        .btn-primary:hover {
+            background-color: transparent;
+            color: var(--gold);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--navy);
+            border-color: var(--navy);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--navy);
+            color: var(--ivory);
+        }
+
+        .btn-large {
+            padding: 1.2rem 3rem;
+            font-size: 1rem;
+        }
+
+        .btn-small {
+            padding: 0.6rem 1.5rem;
+            font-size: 0.8rem;
+        }
+
+        /* =============================================================
+           5. PRELOADER
+           ============================================================= */
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: var(--navy);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.6s ease;
+        }
+
+        #preloader.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .loader-content { text-align: center; }
+
+        .loader-svg {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 1rem;
+        }
+
+        .circle-anim {
+            stroke-dasharray: 250;
+            stroke-dashoffset: 250;
+            animation: drawCircle 1.5s ease forwards infinite;
+            transform-origin: center;
+        }
+
+        @keyframes drawCircle {
+            0% { stroke-dashoffset: 250; transform: rotate(0deg); }
+            50% { stroke-dashoffset: 0; transform: rotate(180deg); }
+            100% { stroke-dashoffset: -250; transform: rotate(360deg); }
+        }
+
+        .loader-text {
+            color: var(--gold);
+            font-family: var(--font-heading);
+            letter-spacing: 4px;
+            font-size: 1.2rem;
+            animation: pulseText 1.5s ease infinite;
+        }
+
+        .loader-subtext {
+            color: var(--light-gray);
+            font-size: 0.8rem;
+            margin-top: 0.5rem;
+            letter-spacing: 1px;
+        }
+
+        @keyframes pulseText {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 1; }
+        }
+
+        /* =============================================================
+           6. NAVIGATION
+           ============================================================= */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 1.5rem 0;
+            background-color: transparent;
+            z-index: 1000;
+            transition: var(--transition-smooth);
+        }
+
+        .navbar.scrolled {
+            background-color: rgba(244, 239, 231, 0.95);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .nav-container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--container-padding);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-link {
+            display: flex;
+            align-items: center;
+            z-index: 1001;
+        }
+
+        .logo-img {
+            height: 65px;
+            width: auto;
+            transition: var(--transition-fast);
+        }
+
+        .navbar.scrolled .logo-img { height: 50px; }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 2.5rem;
+            margin-bottom: 0;
+        }
+
+        .nav-link {
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--ivory);
+            position: relative;
+            padding-bottom: 5px;
+            transition: var(--transition-fast);
+        }
+
+        .navbar.scrolled .nav-link { color: var(--navy); }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--gold);
+            transition: var(--transition-fast);
+        }
+
+        .nav-link:hover::after,
+        .nav-link.active::after { width: 100%; }
+
+        .nav-link:hover,
+        .nav-link.active { color: var(--gold) !important; }
+
+        .btn-primary.nav-btn {
+            background-color: var(--gold);
+            color: var(--navy);
+            padding: 0.8rem 1.5rem;
+            border: 1px solid var(--gold);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.85rem !important;
+            border-radius: 2px;
+        }
+
+        .btn-primary.nav-btn:hover {
+            background-color: transparent;
+            color: var(--gold);
+        }
+
+        .navbar:not(.scrolled) .btn-primary.nav-btn {
+            background-color: transparent;
+            color: var(--ivory);
+            border-color: var(--ivory);
+        }
+
+        .navbar:not(.scrolled) .btn-primary.nav-btn:hover {
+            background-color: var(--ivory);
+            color: var(--navy);
+        }
+
+        .dropdown { position: relative; }
+        .arrow { font-size: 0.7rem; margin-left: 3px; display: inline-block; transition: transform 0.3s ease; }
+        .dropdown:hover .arrow { transform: rotate(180deg); }
+
+        .mega-menu {
+            position: absolute;
+            top: 100%;
+            left: -150px;
+            background-color: var(--white);
+            width: 800px;
+            box-shadow: var(--shadow-hover);
+            border-top: 3px solid var(--gold);
+            padding: 2.5rem;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: var(--transition-smooth);
+            z-index: 100;
+        }
+
+        .dropdown:hover .mega-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .mega-menu-inner {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1.2fr;
+            gap: 2rem;
+        }
+
+        .mega-col h4 {
+            font-family: var(--font-body);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1.5rem;
+            color: var(--navy);
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.5rem;
+        }
+
+        .mega-col ul li { margin-bottom: 0.8rem; }
+        .mega-col ul li a {
+            font-size: 0.85rem;
+            color: var(--muted-text);
+            text-transform: none;
+            letter-spacing: 0;
+            display: block;
+            transition: var(--transition-fast);
+        }
+
+        .mega-col ul li a:hover {
+            color: var(--gold);
+            padding-left: 5px;
+        }
+
+        .highlight-col {
+            background-color: var(--ivory);
+            padding: 1.5rem;
+            border-radius: 4px;
+        }
+
+        .highlight-col p {
+            font-size: 0.9rem;
+            color: var(--muted-text);
+            margin-bottom: 1.5rem;
+            line-height: 1.5;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            cursor: pointer;
+            flex-direction: column;
+            gap: 6px;
+            z-index: 1001;
+            padding: 5px;
+        }
+
+        .bar {
+            width: 28px;
+            height: 2px;
+            background-color: var(--ivory);
+            transition: var(--transition-fast);
+            display: block;
+        }
+
+        .navbar.scrolled .bar { background-color: var(--navy); }
+
+        /* =============================================================
+           7. INNER PAGE HERO
+           ============================================================= */
+        .hero-inner {
+            position: relative;
+            height: 70vh;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background-color: var(--navy);
+            overflow: hidden;
+            padding-top: 80px;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(11,19,43,0.85) 0%, rgba(11,19,43,0.6) 50%, rgba(11,19,43,0.95) 100%);
+            z-index: 2;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 3;
+            max-width: 900px;
+        }
+
+        .hero-subtitle {
+            color: var(--gold);
+            font-size: 0.9rem;
+            font-weight: 700;
+            letter-spacing: 4px;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+        }
+
+        .hero-title {
+            color: var(--white);
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            line-height: 1.1;
+            margin-bottom: 2rem;
+            text-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        .hero-description {
+            color: var(--light-gray);
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 3rem;
+            line-height: 1.8;
+        }
+
+        /* =============================================================
+           8. SERVICES DEEP DIVE SECTION
+           ============================================================= */
+        .services-deep-dive {
+            background-color: var(--ivory);
+        }
+
+        .service-detail-row {
+            display: flex;
+            align-items: center;
+            gap: 5rem;
+            margin-bottom: 8rem;
+        }
+
+        .service-detail-row:last-child {
+            margin-bottom: 0;
+        }
+
+        .service-detail-row.reverse {
+            flex-direction: row-reverse;
+        }
+
+        .service-detail-content {
+            flex: 1;
+        }
+
+        .service-number {
+            display: block;
+            font-family: var(--font-heading);
+            font-size: 4rem;
+            color: rgba(197, 160, 89, 0.2);
+            line-height: 1;
+            margin-bottom: -1rem;
+        }
+
+        .service-detail-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--navy);
+        }
+
+        .service-problem, .service-approach {
+            font-size: 1rem;
+            color: var(--muted-text);
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .service-problem strong, .service-approach strong {
+            color: var(--navy);
+            display: block;
+            margin-bottom: 0.3rem;
+            font-family: var(--font-heading);
+            font-size: 1.1rem;
+        }
+
+        .service-inclusions {
+            margin: 2rem 0;
+            padding: 1.5rem;
+            background-color: var(--white);
+            border-left: 3px solid var(--gold);
+        }
+
+        .service-inclusions li {
+            font-size: 0.95rem;
+            color: var(--charcoal);
+            margin-bottom: 0.8rem;
+            line-height: 1.6;
+        }
+
+        .service-inclusions li strong {
+            color: var(--navy);
+        }
+
+        .service-detail-visual {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--white);
+            padding: 5rem;
+            border-radius: 4px;
+            box-shadow: var(--shadow-subtle);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-detail-visual::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(197,160,89,0.1) 0%, transparent 70%);
+        }
+
+        .service-detail-visual img {
+            display: block;
+            width: 100%;
+            height: auto;
+            min-height: 300px;
+            object-fit: cover;
+            border-radius: 8px;
+            position: relative;
+            z-index: 2;
+            transition: transform .55s ease, filter .55s ease;
+        }
+
+        .service-detail-row:hover .service-detail-visual img {
+            transform: scale(1.035);
+            filter: saturate(1.08);
+        }
+
+        /* =============================================================
+           9. CTA SECTION
+           ============================================================= */
+        .cta-section {
+            background-color: var(--navy);
+            color: var(--white);
+            padding: 8rem 0;
+        }
+
+        .cta-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .cta-text h2 {
+            color: var(--white);
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-text p {
+            color: var(--light-gray);
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+
+        /* =============================================================
+           10. FOOTER
+           ============================================================= */
+        .mega-footer {
+            background-color: #050A18;
+            color: var(--light-gray);
+            padding-top: 5rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
+            gap: 4rem;
+            padding-bottom: 4rem;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .footer-logo { height: 60px; width: auto; margin-bottom: 1.5rem; }
+        .footer-tagline { color: var(--gold); font-family: var(--font-heading); font-size: 1.1rem; margin-bottom: 1rem; line-height: 1.5; }
+        .footer-desc { font-size: 0.9rem; color: #999; line-height: 1.8; }
+
+        .footer-col h4 { color: var(--white); font-family: var(--font-body); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1.5rem; font-weight: 600; }
+        .footer-col ul { margin-bottom: 0; }
+        .footer-col ul li { margin-bottom: 0.8rem; }
+        .footer-col ul li a { font-size: 0.9rem; color: #999; }
+        .footer-col ul li a:hover { color: var(--gold); padding-left: 5px; }
+
+        .footer-email { display: inline-block; color: var(--gold); font-size: 1.1rem; font-weight: 500; margin-bottom: 1rem; }
+        .footer-email:hover { text-decoration: underline; }
+        .footer-response { font-size: 0.85rem; color: #888; margin-bottom: 2rem; }
+
+        .footer-bottom { padding: 2rem 0; display: flex; justify-content: space-between; align-items: center; font-size: 0.85rem; color: #888; }
+        .footer-bottom p { margin-bottom: 0; color: #888; font-size: 0.85rem; }
+
+        /* =============================================================
+           11. ANIMATIONS (SCROLL REVEAL)
+           ============================================================= */
+        .fade-in-up { opacity: 0; transform: translateY(40px); transition: opacity 0.8s ease, transform 0.8s ease; }
+        .fade-in-up.visible { opacity: 1; transform: translateY(0); }
+        .fade-in-left { opacity: 0; transform: translateX(-40px); transition: opacity 0.8s ease, transform 0.8s ease; }
+        .fade-in-left.visible { opacity: 1; transform: translateX(0); }
+        .fade-in-right { opacity: 0; transform: translateX(40px); transition: opacity 0.8s ease, transform 0.8s ease; }
+        .fade-in-right.visible { opacity: 1; transform: translateX(0); }
+        .delay-1 { transition-delay: 0.1s; }
+        .delay-2 { transition-delay: 0.2s; }
+        .delay-3 { transition-delay: 0.3s; }
+        .delay-4 { transition-delay: 0.4s; }
+
+        /* =============================================================
+           12. RESPONSIVE DESIGN
+           ============================================================= */
+        @media (max-width: 1200px) {
+            .container { padding: 0 1.5rem; }
+            .mega-menu { width: 600px; left: -100px; }
+            .mega-menu-inner { grid-template-columns: 1fr 1fr; }
+            .cta-container { gap: 3rem; }
+            .footer-grid { grid-template-columns: 1fr 1fr; gap: 3rem; }
+        }
+
+        @media (max-width: 1024px) {
+            .section { padding: 6rem 0; }
+            .flex-row { flex-direction: column; gap: 3rem; }
+            .cta-container { grid-template-columns: 1fr; }
+            .hero-title { font-size: 3.5rem; }
+            .service-detail-row, .service-detail-row.reverse {
+                flex-direction: column;
+                gap: 3rem;
+                margin-bottom: 6rem;
+            }
+            .service-detail-visual { width: 100%; padding: 4rem; }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-btn { display: flex; }
+            .nav-links {
+                position: fixed; top: 0; right: -100%; width: 85%; height: 100vh;
+                background-color: var(--navy); flex-direction: column;
+                justify-content: flex-start; padding: 8rem 2rem 2rem;
+                transition: var(--transition-smooth); box-shadow: -10px 0 30px rgba(0,0,0,0.5);
+                z-index: 999; overflow-y: auto; gap: 1.5rem;
+            }
+            .nav-links.active { right: 0; }
+            .nav-link { color: var(--white) !important; font-size: 1.1rem; margin: 0; display: block; width: 100%; }
+            .nav-link::after { display: none; }
+            .mega-menu { position: static; background-color: transparent; box-shadow: none; border-top: none; opacity: 1; visibility: visible; transform: none; width: 100%; padding: 0; display: none; }
+            .dropdown.active .mega-menu { display: block; }
+            .mega-menu-inner { grid-template-columns: 1fr; gap: 1.5rem; }
+            .mega-col h4 { color: var(--gold); border-bottom: 1px solid rgba(255,255,255,0.1); margin-bottom: 1rem; }
+            .mega-col ul li a { color: var(--light-gray); padding: 0.3rem 0; }
+            .highlight-col { display: none; }
+            .mobile-menu-btn.active .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); background-color: var(--white) !important; }
+            .mobile-menu-btn.active .bar:nth-child(2) { opacity: 0; }
+            .mobile-menu-btn.active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); background-color: var(--white) !important; }
+            .btn-primary.nav-btn { width: 100%; text-align: center; margin-top: 1rem; }
+            .hero-inner { min-height: 50vh; height: auto; }
+            .hero-title { font-size: 2.5rem; }
+            .hero-description { font-size: 1rem; }
+            .section-header h2 { font-size: 2rem; }
+            .section-intro { font-size: 1rem; }
+            .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+            .footer-bottom { flex-direction: column; text-align: center; gap: 1rem; }
+            .service-detail-content h2 { font-size: 2rem; }
+            .service-detail-visual { padding: 3rem; }
+            .service-detail-visual img { min-height: 240px; }
+        }
+
+        @media (max-width: 480px) {
+            .container { padding: 0 1rem; }
+            .section { padding: 4rem 0; }
+            .hero-title { font-size: 2rem; }
+            .btn-primary, .btn-secondary { padding: 0.8rem 1.5rem; font-size: 0.85rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- =================================================================
+         PRELOADER
+         ================================================================= -->
+    <div id="preloader">
+        <div class="loader-content">
+            <svg class="loader-svg" viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="40" stroke="#C5A059" stroke-width="2" fill="none" class="circle-anim"></circle>
+            </svg>
+            <h2 class="loader-text">ALLY WEALTH</h2>
+            <p class="loader-subtext">Loading services...</p>
+        </div>
+    </div>
+
+    <!-- =================================================================
+         GLOBAL NAVIGATION
+         ================================================================= -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            
+            <a href="index.html" class="logo-link" aria-label="Ally Wealth Home">
+                <img src="images/favicon.png" alt="Ally Wealth Logo" class="logo-img">
+            </a>
+            
+            <div class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle Menu" role="button" tabindex="0">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                
+                <li class="dropdown mega-dropdown">
+                    <a href="services.html" class="nav-link active">Services <span class="arrow">&#9662;</span></a>
+                    <div class="mega-menu">
+                        <div class="mega-menu-inner">
+                            <div class="mega-col">
+                                <h4>Amazon Optimization</h4>
+                                <ul>
+                                    <li><a href="#amazon">Amazon Book Marketing</a></li>
+                                    <li><a href="#aplus">Amazon A+ Content</a></li>
+                                    <li><a href="#listing">Book Listing Optimisation</a></li>
+                                    <li><a href="#keywords">Keywords and Categories</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-col">
+                                <h4>Reader Engagement</h4>
+                                <ul>
+                                    <li><a href="#goodreads">Goodreads Marketing</a></li>
+                                    <li><a href="#arc">ARC and Reader Outreach</a></li>
+                                    <li><a href="#social">Social Media Promotion</a></li>
+                                    <li><a href="#audiobook">Audiobook Marketing</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-col">
+                                <h4>Author and Launch</h4>
+                                <ul>
+                                    <li><a href="#branding">Author Branding</a></li>
+                                    <li><a href="#descriptions">Book Descriptions</a></li>
+                                    <li><a href="#launch">Book Launch Campaigns</a></li>
+                                    <li><a href="#custom">Custom Book Strategy</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-col highlight-col">
+                                <h4>Need Guidance?</h4>
+                                <p>Not sure which service fits your book? Let's discuss your goals.</p>
+                                <a href="contact.html" class="btn-primary btn-small">Get a Proposal</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                
+                <li><a href="work.html" class="nav-link">Our Work</a></li>
+                <li><a href="resources.html" class="nav-link">Resources</a></li>
+                <li><a href="contact.html" class="btn-primary nav-btn">Request a Proposal</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- =================================================================
+         INNER PAGE HERO
+         ================================================================= -->
+    <header class="hero-inner">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <p class="hero-subtitle fade-in-up">ALLY WEALTH SERVICES</p>
+            <h1 class="hero-title fade-in-up delay-1">
+                A complete range of<br>book marketing solutions.
+            </h1>
+            <p class="hero-description fade-in-up delay-2">
+                From backend Amazon strategies to front-facing promotional design, we cover every angle of author visibility. Explore our deep-dive service breakdowns below.
+            </p>
+        </div>
+    </header>
+
+    <!-- =================================================================
+         SERVICES DEEP DIVE SECTION
+         ================================================================= -->
+    <section class="section services-deep-dive">
+        <div class="container">
+
+            <!-- =============================================================
+                 SERVICE 1: AMAZON BOOK MARKETING
+                 ============================================================= -->
+            <div class="service-detail-row fade-in-up" id="amazon">
+                <div class="service-detail-content">
+                    <span class="service-number">01</span>
+                    <h2>Amazon Book Marketing</h2>
+                    <p class="service-problem"><strong>The Problem:</strong> You have published your book on Amazon, but it is lost in a sea of millions of titles. You are not getting the organic impressions or clicks you expected.</p>
+                    <p class="service-approach"><strong>Our Approach:</strong> We audit your entire listing, from backend metadata to front-facing copy, and analyze your top competitors. We build a comprehensive discoverability strategy to position your book in front of high-intent buyers.</p>
+                    <ul class="service-inclusions">
+                        <li><strong>Listing Audits:</strong> A deep review of your current title, subtitle, description, and categories.</li>
+                        <li><strong>Competitor Analysis:</strong> We study the books ranking in your target categories to identify keyword gaps and positioning opportunities.</li>
+                        <li><strong>Discoverability Strategy:</strong> A step-by-step plan to improve your ranking and visibility on the platform.</li>
+                    </ul>
+                    <a href="contact.html" class="btn-primary">Get an Amazon Audit</a>
+                </div>
+                <div class="service-detail-visual">
+                    <img src="images/service-visuals/amazon.svg" alt="Amazon Book Marketing — tailored service illustration" loading="lazy">
+                </div>
+            </div>
+
+            <!-- =============================================================
+                 SERVICE 2: AMAZON A+ CONTENT
+                 ============================================================= -->
+            <div class="service-detail-row reverse fade-in-up" id="aplus">
+                <div class="service-detail-content">
+                    <span class="service-number">02</span>
+                    <h2>Amazon A+ Content</h2>
+                    <p class="service-problem"><strong>The Problem:</strong> Your product page looks exactly like everyone else's. It is just a cover image, a blurb, and text. You are not leveraging the visual storytelling capabilities of Amazon.</p>
+                    <p class="service-approach"><strong>Our Approach:</strong> We transform your product page into a premium brand experience. We conceptualize, plan, and design A+ modules that answer reader questions, showcase your authority, and build desire.</p>
+                    <ul class="service-inclusions">
+                        <li><strong>Module Design Concepts:</strong> Custom graphic concepts that fit your book's genre and tone.</li>
+                        <li><strong>Visual Storyboarding:</strong> A layout plan that guides the reader through a logical narrative.</li>
+                        <li><strong>Product-Page Copy:</strong> Concise, persuasive copy that accompanies the visuals.</li>
+                    </ul>
+                    <a href="contact.html" class="btn-primary">Design My A+ Content</a>
+                </div>
+                <div class="service-detail-visual">
+                    <img src="images/service-visuals/aplus.svg" alt="Amazon A+ Content — tailored service illustration" loading="lazy">
+                </div>
+            </div>
+
+            <!-- =============================================================
+                 SERVICE 3: BOOK LISTING OPTIMISATION
+                 ============================================================= -->
+            <div class="service-detail-row fade-in-up" id="listing">
+                <div class="service-detail-content">
+                    <span class="service-number">03</span>
+                    <h2>Book Listing Optimisation</h2>
+                    <p class="service-problem"><strong>The Problem:</strong> People are visiting your book page, but they are not buying. Your listing is failing to convert browsers into readers.</p>
+                    <p class="service-approach"><strong>Our Approach:</strong> We assess your title, subtitle, and overall presentation. We rewrite your copy to clearly communicate the value of your book, making it irresistible to your target reader.</p>
+                    <ul class="service-inclusions">
+                        <li><strong>Title and Subtitle Review:</strong> We ensure your title is searchable and enticing.</li>
+                        <li><strong>Conversion Copywriting:</strong> Rewriting your book description for maximum impact.</li>
+                        <li><strong>Series Positioning:</strong> Ensuring your series data is accurate and cross-links properly.</li>
+                    </ul>
+                    <a href="contact.html" class="btn-primary">Optimise My Listing</a>
+                </div>
+                <div class="service-detail-visual">
+                    <img src="images/service-visuals/listing.svg" alt="Book Listing Optimisation — tailored service illustration" loading="lazy">
+                </div>
+            </div>
+
+            <!-- =============================================================
+                 SERVICE 4: KEYWORDS AND CATEGORIES
+                 ============================================================= -->
+            <div class="service-detail-row reverse fade-in-up" id="keywords">
+                <div class="service-detail-content">
+                    <span class="service-number">04</span>
+                    <h2>Keywords and Categories</h2>
+                    <p class="service-problem"><strong>The Problem:</strong> You are using broad keywords and overly competitive categories. Your book is invisible to the readers who are actively searching for exactly what you wrote.</p>
+                    <p class="service-approach"><strong>Our Approach:</strong> We conduct deep-dive keyword research and map out a category strategy that gives your book the best chance to rank. We find the hidden search terms your ideal readers are using.</p>
+                    <ul class="service-inclusions">
+                        <li><strong>Backend Keyword Research:</strong> A comprehensive list of high-value search terms.</li>
+                        <li><strong>Category Mapping:</strong> Identifying the most relevant and attainable categories for your book.</li>
+                        <li><strong>Competitive Positioning:</strong> Analyzing where you fit in the market landscape.</li>
+                    </ul>
+                    <a href="contact.html" class="btn-primary">Find My Keywords</a>
+                </div>
+                <div class="service-detail-visual">
+                    <img src="images/service-visuals/keywords.svg" alt="Keywords and Categories — tailored service illustration" loading="lazy">
+                </div>
+            </div>
+
+            <!-- =============================================================
+                 SERVICE 5: GOODREADS MARKETING
+                 ============================================================= -->
+            <div class="service-detail-row fade-in-up" id="goodreads">
+                <div class="service-detail-content">
+                    <span class="service-number">05</span>
+                    <h2>Goodreads Marketing</h2>
+                    <p class="service-problem"><strong>The Problem:</strong> You have a Goodreads profile, but you do not know how to engage with the community without feeling like you are spamming them. Your book data is also likely incomplete.</p>
+                    <p class="service-approach"><strong>Our Approach:</strong> We help you build a strong, authentic author profile, ensure your book data is accurate, and develop an engagement strategy that respects the reader-centric nature of the platform.</p>
+                    <ul class="service-inclusions">
+                        <li><strong>Author Profile Setup:</strong> Optimizing your bio, photo, and links.</li>
+                        <li><strong>Book Data Verification:</strong> Ensuring editions and series data are correct.</li>
+                        <li><strong>Community Engagement Strategy:</strong> A guide on how to participate meaningfully in groups.</li>
+                    </ul>
+                    <a href="contact.html" class="btn-primary">Build My Goodreads Presence</a>
+                </div>
+                <div class="service-detail-visual">
+                    <img src="images/service-visuals/goodreads.svg" alt="Goodreads Marketing — tailored service illustration" loading="lazy">
+                </div>
+            </div>
+
+            <!-- =============================================================
+                 SERVICE 6: AUTHOR BRANDING
+                 ============================================================= -->
+            <div class="service-detail-row reverse fade-in-up" id="branding">
+                <div class="service-detail-content">
+                    <span class="service-number">06</span>
+                    <h2>Author Branding</h2>
+                    <p class="service-problem"><strong>The Problem:</strong> You are treating your book as the only product. But readers buy from authors they trust. You lack a cohesive, professional author identity across platforms.</p>
+                    <p class="service-approach"><strong>Our Approach:</strong> We help you craft a professional identity that extends beyond a single book. We create a brand voice and visual presence that builds long-term trust with your audience.</p>
+                    <ul class="service-inclusions">
+                        <li><strong>Author Bio Development:</strong> Writing short and long bios for various uses.</li>
+                        <li><strong>Author Central Optimization:</strong> Ensuring your Amazon Author page is fully built out.</li>
+                        <li><strong>Brand Voice Strategy:</strong> Defining how you communicate online.</li>
+                    </ul>
+                    <a href="contact.html" class="btn-primary">Develop My Brand</a>
+                </div>
+                <div class="service-detail-visual">
+                    <img src="images/service-visuals/branding.svg" alt="Author Branding — tailored service illustration" loading="lazy">
+                </div>
+            </div>
+
+            <!-- =============================================================
+                 SERVICE 7: BOOK DESCRIPTION AND BLURB
+                 ============================================================= -->
+            <div class="service-detail-row fade-in-up" id="descriptions">
+                <div class="service-detail-content">
+                    <span class="service-number">07</span>
+                    <h2>Book Description and Blurb</h2>
+                    <p class="service-problem"><strong>The Problem:</strong> Your current description reads like a synopsis or a book report. It does not hook the reader or compel them to make a purchase.</p>
+                    <p class="service-approach"><strong>Our Approach:</strong> We write compelling, genre-appropriate descriptions that act as a sales pitch. We focus on the emotional or intellectual value of the book, not just the plot.</p>
+                    <ul class="service-inclusions">
+                        <li><strong>Sales Copywriting:</strong> Crafting the perfect hook and sales argument.</li>
+                        <li><strong>Genre Positioning:</strong> Using language that signals the genre to the reader.</li>
+                        <li><strong>Series Descriptions:</strong> Writing descriptions that link books together.</li>
+                    </ul>
+                    <a href="contact.html" class="btn-primary">Rewrite My Blurb</a>
+                </div>
+                <div class="service-detail-visual">
+                    <img src="images/service-visuals/descriptions.svg" alt="Book Description and Blurb — tailored service illustration" loading="lazy">
+                </div>
+            </div>
+
+            <!-- =============================================================
+                 SERVICE 8: ARC AND READER OUTREACH
+                 ============================================================= -->
+            <div class="service-detail-row reverse fade-in-up" id="arc">
+                <div class="service-detail-content">
+                    <span class="service-number">08</span>
+                    <h2>ARC and Reader Outreach</h2>
+                    <p class="service-problem"><strong>The Problem:</strong> You need early reviews to build momentum, but you do not want to violate Amazon's terms of service or spam readers.</p>
+                    <p class="service-approach"><strong>Our Approach:</strong> We coordinate ethical Advance Review Copy (ARC) campaigns. We identify relevant readers and manage the outreach process with integrity, ensuring all interactions are voluntary and compliant.</p>
+                    <ul class="service-inclusions">
+                        <li><strong>ARC Campaign Planning:</strong> Defining the timeline and goals.</li>
+                        <li><strong>Reader Identification:</strong> Finding readers who genuinely enjoy your genre.</li>
+                        <li><strong>Ethical Outreach Execution:</strong> Sending personalized, respectful invitations.</li>
+                    </ul>
+                    <a href="contact.html" class="btn-primary">Plan My ARC Campaign</a>
+                </div>
+                <div class="service-detail-visual">
+                    <img src="images/service-visuals/arc.svg" alt="ARC and Reader Outreach — tailored service illustration" loading="lazy">
+                </div>
+            </div>
+
+            <!-- =============================================================
+                 SERVICE 9: BOOK LAUNCH MARKETING
+                 ============================================================= -->
+            <div class="service-detail-row fade-in-up" id="launch">
+                <div class="service-detail-content">
+                    <span class="service-number">09</span>
+                    <h2>Book Launch Marketing</h2>
+                    <p class="service-problem"><strong>The Problem:</strong> You are treating launch day as a single event. You post on social media, and then the momentum dies within 48 hours.</p>
+                    <p class="service-approach"><strong>Our Approach:</strong> A launch is a campaign. We build a comprehensive pre-launch, launch-day, and post-launch strategy to maximize your book's visibility window and create lasting momentum.</p>
+                    <ul class="service-inclusions">
+                        <li><strong>Launch Timeline Creation:</strong> A step-by-step calendar of tasks.</li>
+                        <li><strong>Pre-Launch Hype Building:</strong> Strategies to generate early interest.</li>
+                        <li><strong>Post-Launch Visibility:</strong> Plans to keep the book visible after the initial buzz.</li>
+                    </ul>
+                    <a href="contact.html" class="btn-primary">Plan My Launch</a>
+                </div>
+                <div class="service-detail-visual">
+                    <img src="images/service-visuals/launch.svg" alt="Book Launch Marketing — tailored service illustration" loading="lazy">
+                </div>
+            </div>
+
+            <!-- =============================================================
+                 SERVICE 10: AUDIOBOOK MARKETING
+                 ============================================================= -->
+            <div class="service-detail-row reverse fade-in-up" id="audiobook">
+                <div class="service-detail-content">
+                    <span class="service-number">10</span>
+                    <h2>Audiobook Marketing</h2>
+                    <p class="service-problem"><strong>The Problem:</strong> You have an audiobook, but you are only marketing it as a print or ebook. You are missing out on the massive and growing audio-listening market.</p>
+                    <p class="service-approach"><strong>Our Approach:</strong> We help you position your audiobook as a standalone product. We coordinate multi-format campaigns and target listeners on platforms like Audible and Spotify.</p>
+                    <ul class="service-inclusions">
+                        <li><strong>Audio Release Promotion:</strong> Strategies specific to audio formats.</li>
+                        <li><strong>Listener Outreach:</strong> Finding podcasts and audio communities for promotion.</li>
+                        <li><strong>Multi-Format Campaigns:</strong> Ensuring your audio book links are prominent.</li>
+                    </ul>
+                    <a href="contact.html" class="btn-primary">Market My Audiobook</a>
+                </div>
+                <div class="service-detail-visual">
+                    <img src="images/service-visuals/audiobook.svg" alt="Audiobook Marketing — tailored service illustration" loading="lazy">
+                </div>
+            </div>
+
+            <!-- =============================================================
+                 SERVICE 11: SOCIAL MEDIA PROMOTION
+                 ============================================================= -->
+            <div class="service-detail-row fade-in-up" id="social">
+                <div class="service-detail-content">
+                    <span class="service-number">11</span>
+                    <h2>Social Media Promotion</h2>
+                    <p class="service-problem"><strong>The Problem:</strong> You are posting book links on your personal social media accounts, but no one is clicking. You do not know how to tap into BookTok or Bookstagram effectively.</p>
+                    <p class="service-approach"><strong>Our Approach:</strong> We create promotional concepts and visual assets designed specifically for social platforms. We help you stop the scroll and engage with reader communities.</p>
+                    <ul class="service-inclusions">
+                        <li><strong>BookTok Strategy:</strong> Ideas for short-form video content.</li>
+                        <li><strong>Campaign Visuals:</strong> Graphics and quote cards for sharing.</li>
+                        <li><strong>Reader Engagement Tactics:</strong> How to interact without being salesy.</li>
+                    </ul>
+                    <a href="contact.html" class="btn-primary">Boost My Social Presence</a>
+                </div>
+                <div class="service-detail-visual">
+                    <img src="images/service-visuals/social.svg" alt="Social Media Promotion — tailored service illustration" loading="lazy">
+                </div>
+            </div>
+
+            <!-- =============================================================
+                 SERVICE 12: BOOK PROMOTIONAL DESIGN
+                 ============================================================= -->
+            <div class="service-detail-row reverse fade-in-up" id="design">
+                <div class="service-detail-content">
+                    <span class="service-number">12</span>
+                    <h2>Book Promotional Design</h2>
+                    <p class="service-problem"><strong>The Problem:</strong> Your marketing materials look amateur. You are using basic screenshots of your cover instead of professional mockups and graphics.</p>
+                    <p class="service-approach"><strong>Our Approach:</strong> We design stunning, professional visuals that reflect the quality of your writing. From 3D mockups to ad creative, we ensure your book looks premium.</p>
+                    <ul class="service-inclusions">
+                        <li><strong>3D Book Mockups:</strong> High-resolution images of your book in various settings.</li>
+                        <li><strong>Social Media Graphics:</strong> Custom-designed posts and banners.</li>
+                        <li><strong>Ad Creative Design:</strong> Visuals designed for paid advertising campaigns.</li>
+                    </ul>
+                    <a href="contact.html" class="btn-primary">Get Professional Design</a>
+                </div>
+                <div class="service-detail-visual">
+                    <img src="images/service-visuals/design.svg" alt="Book Promotional Design — tailored service illustration" loading="lazy">
+                </div>
+            </div>
+
+            <!-- =============================================================
+                 SERVICE 13: READER DISCOVERY STRATEGY
+                 ============================================================= -->
+            <div class="service-detail-row fade-in-up" id="discovery">
+                <div class="service-detail-content">
+                    <span class="service-number">13</span>
+                    <h2>Reader Discovery Strategy</h2>
+                    <p class="service-problem"><strong>The Problem:</strong> You do not know where your readers are hanging out online. You are spending time on platforms that do not serve your genre.</p>
+                    <p class="service-approach"><strong>Our Approach:</strong> We map out exactly where your target readers are. From niche Facebook groups to specific subreddits and book blogs, we build a strategy to put your book in front of them.</p>
+                    <ul class="service-inclusions">
+                        <li><strong>Genre Community Mapping:</strong> Identifying the best online spaces for your genre.</li>
+                        <li><strong>Recommendation Positioning:</strong> Strategies to get your book mentioned.</li>
+                        <li><strong>Discovery Planning:</strong> A roadmap for long-term reader acquisition.</li>
+                    </ul>
+                    <a href="contact.html" class="btn-primary">Find My Readers</a>
+                </div>
+                <div class="service-detail-visual">
+                    <img src="images/service-visuals/discovery.svg" alt="Reader Discovery Strategy — tailored service illustration" loading="lazy">
+                </div>
+            </div>
+
+            <!-- =============================================================
+                 SERVICE 14: CUSTOM BOOK MARKETING STRATEGY
+                 ============================================================= -->
+            <div class="service-detail-row reverse fade-in-up" id="custom">
+                <div class="service-detail-content">
+                    <span class="service-number">14</span>
+                    <h2>Custom Book Marketing Strategy</h2>
+                    <p class="service-problem"><strong>The Problem:</strong> You have a unique book and unique goals, but you are trying to piece together generic marketing advice from the internet. Nothing fits your specific situation.</p>
+                    <p class="service-approach"><strong>Our Approach:</strong> We provide a comprehensive assessment of your book, audience, and goals. We then create a bespoke, multi-stage marketing plan designed exclusively for you.</p>
+                    <ul class="service-inclusions">
+                        <li><strong>Individual Book Assessment:</strong> A deep dive into your specific book.</li>
+                        <li><strong>Multi-Stage Marketing Plans:</strong> A phased approach to achieve your goals.</li>
+                        <li><strong>Ongoing Strategic Support:</strong> Continuous guidance as your campaign evolves.</li>
+                    </ul>
+                    <a href="contact.html" class="btn-primary">Request a Custom Strategy</a>
+                </div>
+                <div class="service-detail-visual">
+                    <img src="images/service-visuals/custom.svg" alt="Custom Book Marketing Strategy — tailored service illustration" loading="lazy">
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- =================================================================
+         CTA SECTION
+         ================================================================= -->
+    <section class="section cta-section">
+        <div class="container cta-container">
+            <div class="cta-text fade-in-left">
+                <p class="section-label">READY TO START?</p>
+                <h2>Let's give your book the visibility it deserves.</h2>
+                <p>Tell us about your book and the marketing support you're looking for. We will review your details and prepare a tailored proposal.</p>
+            </div>
+            <div class="fade-in-right" style="text-align: center;">
+                <a href="contact.html" class="btn-primary btn-large">Request a Proposal</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- =================================================================
+         MASSIVE FOOTER
+         ================================================================= -->
+    <footer class="mega-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col brand-col">
+                    <img src="images/favicon.png" alt="Ally Wealth Logo" class="footer-logo">
+                    <p class="footer-tagline">Get Seen. Grow Your Influence.<br>Build Your Legacy.</p>
+                    <p class="footer-desc">Premium author visibility and book marketing consulting for authors, publishers, and independent professionals.</p>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html#amazon">Amazon Book Marketing</a></li>
+                        <li><a href="services.html#aplus">Amazon A+ Content</a></li>
+                        <li><a href="services.html#listing">Book Listing Optimisation</a></li>
+                        <li><a href="services.html#keywords">Keywords and Categories</a></li>
+                        <li><a href="services.html#goodreads">Goodreads Marketing</a></li>
+                        <li><a href="services.html#branding">Author Branding</a></li>
+                        <li><a href="services.html#descriptions">Book Descriptions</a></li>
+                        <li><a href="services.html#arc">ARC and Reader Outreach</a></li>
+                        <li><a href="services.html#launch">Book Launch Campaigns</a></li>
+                        <li><a href="services.html#audiobook">Audiobook Marketing</a></li>
+                        <li><a href="services.html#social">Social Media Promotion</a></li>
+                        <li><a href="services.html#custom">Custom Strategy</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Knowledge Centre</h4>
+                    <ul>
+                        <li><a href="resources.html">Resources Home</a></li>
+                        <li><a href="resources.html#pdf-library">Free PDF Library</a></li>
+                        <li><a href="resources.html#articles">Marketing Articles</a></li>
+                        <li><a href="resources.html#articles">Step-by-Step Guides</a></li>
+                        <li><a href="work.html">Case Studies</a></li>
+                    </ul>
+                    
+                    <h4 class="mt-2">Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Ally Wealth</a></li>
+                        <li><a href="work.html">Our Work</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col contact-col">
+                    <h4>Get in Touch</h4>
+                    <p class="footer-contact-text">Ready to discuss your book marketing strategy? We'd love to hear from you.</p>
+                    <a href="mailto:info.allywealth@gmail.com" class="footer-email">info.allywealth@gmail.com</a>
+                    <p class="footer-response">We typically respond within 24-48 business hours.</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Ally Wealth. All rights reserved.</p>
+                <p>Author Visibility Consultant and Book Marketing Specialist.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- =================================================================
+         EMBEDDED JAVASCRIPT
+         ================================================================= -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            // 1. PRELOADER
+            const preloader = document.getElementById('preloader');
+            if (preloader) {
+                window.addEventListener('load', () => {
+                    setTimeout(() => {
+                        preloader.classList.add('hidden');
+                        setTimeout(() => { preloader.style.display = 'none'; }, 600);
+                    }, 800);
+                });
+            }
+
+            // 2. MOBILE NAVIGATION & DROPDOWNS
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const navLinks = document.getElementById('nav-links');
+            const dropdowns = document.querySelectorAll('.dropdown');
+
+            if (mobileMenuBtn && navLinks) {
+                mobileMenuBtn.addEventListener('click', () => {
+                    navLinks.classList.toggle('active');
+                    mobileMenuBtn.classList.toggle('active');
+                    document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
+                });
+
+                navLinks.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        if (window.innerWidth <= 768 && !link.parentElement.classList.contains('dropdown')) {
+                            navLinks.classList.remove('active');
+                            mobileMenuBtn.classList.remove('active');
+                            document.body.style.overflow = '';
+                        }
+                    });
+                });
+
+                dropdowns.forEach(dropdown => {
+                    const link = dropdown.querySelector('.nav-link');
+                    link.addEventListener('click', (e) => {
+                        if (window.innerWidth <= 768) {
+                            e.preventDefault();
+                            dropdown.classList.toggle('active');
+                        }
+                    });
+                });
+            }
+
+            // 3. STICKY NAVBAR
+            const navbar = document.getElementById('navbar');
+            if (navbar) {
+                const handleScroll = () => {
+                    if (window.scrollY > 50) { navbar.classList.add('scrolled'); } 
+                    else { navbar.classList.remove('scrolled'); }
+                };
+                window.addEventListener('scroll', handleScroll);
+                handleScroll();
+            }
+
+            // 4. SCROLL REVEAL ANIMATIONS
+            const observerOptions = { threshold: 0.1, rootMargin: "0px 0px -50px 0px" };
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target); 
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.fade-in-up, .fade-in-left, .fade-in-right').forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>

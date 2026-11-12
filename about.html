@@ -1,0 +1,1683 @@
+<!DOCTYPE html>
+<!-- =====================================================================
+     ALLY WEALTH - PREMIUM AUTHOR VISIBILITY CONSULTANT
+     MASTER ABOUT PAGE - ALL-IN-ONE FILE
+     =====================================================================
+     This file contains all HTML, CSS, and JavaScript required for the
+     about page. No external CSS or JS files are needed for this page
+     to render perfectly.
+
+     Contents:
+     1. About hero
+     2. Founder story and mission
+     3. Core values grid
+     4. Working process timeline
+     5. Statistics band
+     6. Who we work with section
+     7. Standard CTA and footer
+
+     Author: Ally Wealth Development Team
+     Date: 2026
+     ===================================================================== -->
+
+<html lang="en">
+<head>
+    <!-- =================================================================
+         META TAGS AND SEO OPTIMIZATION
+         ================================================================= -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Primary Meta Tags -->
+    <title>About | Ally Wealth Book Marketing</title>
+    <meta name="title" content="About | Ally Wealth Book Marketing">
+    <meta name="description" content="Learn about Ally Wealth, a premium author visibility consultant and book marketing specialist. Our story, our values, and the process we use to help authors get seen.">
+    <meta name="keywords" content="about Ally Wealth, author visibility consultant, book marketing specialist, book marketing agency, author marketing team">
+    <meta name="author" content="Ally Wealth">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.allywealth.com/about.html">
+    <meta property="og:title" content="About | Ally Wealth Book Marketing">
+    <meta property="og:description" content="Our story, our values, and the process we use to help authors get seen.">
+    <meta property="og:image" content="images/banner.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.allywealth.com/about.html">
+    <meta property="twitter:title" content="About | Ally Wealth Book Marketing">
+    <meta property="twitter:description" content="Our story, our values, and the process we use to help authors get seen.">
+    <meta property="twitter:image" content="images/banner.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="apple-touch-icon" href="images/favicon.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+
+    <!-- =================================================================
+         EMBEDDED CSS STYLESHEET
+         ================================================================= -->
+    <style>
+        /* =============================================================
+           1. CSS VARIABLES AND ROOT DEFINITIONS
+           ============================================================= */
+        :root {
+            --navy: #0B132B;
+            --gold: #C5A059;
+            --ivory: #F4EFE7;
+            --charcoal: #28221D;
+            --white: #FFFFFF;
+            --light-gray: #E8DFD2;
+            --dark-gray: #1A1A1A;
+            --muted-text: #6B6B6B;
+            --border-color: rgba(0, 0, 0, 0.08);
+            --gold-transparent: rgba(197, 160, 89, 0.2);
+            --font-heading: 'Playfair Display', serif;
+            --font-body: 'Inter', sans-serif;
+            --transition-smooth: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            --transition-fast: all 0.2s ease-in-out;
+            --shadow-subtle: 0 10px 30px rgba(0, 0, 0, 0.05);
+            --shadow-hover: 0 20px 40px rgba(0, 0, 0, 0.1);
+            --container-width: 1280px;
+            --container-padding: 2rem;
+            --section-padding: 8rem 0;
+        }
+
+        /* =============================================================
+           2. GLOBAL RESET AND BASE STYLES
+           ============================================================= */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--ivory);
+            color: var(--charcoal);
+            line-height: 1.7;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-heading);
+            font-weight: 600;
+            color: var(--navy);
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        h1 { font-size: clamp(2.5rem, 5vw, 4.5rem); }
+        h2 { font-size: clamp(2rem, 4vw, 3rem); }
+        h3 { font-size: clamp(1.3rem, 2.5vw, 1.8rem); }
+        h4 { font-size: clamp(1.1rem, 2vw, 1.4rem); }
+
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+            color: var(--charcoal);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition-fast);
+        }
+
+        ul, ol {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+        }
+
+        button, input, select, textarea {
+            font-family: inherit;
+            font-size: inherit;
+            outline: none;
+            border: none;
+            background: none;
+        }
+
+        button { cursor: pointer; }
+
+        /* =============================================================
+           3. UTILITY AND LAYOUT CLASSES
+           ============================================================= */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--container-padding);
+            width: 100%;
+        }
+
+        .section {
+            padding: var(--section-padding);
+            position: relative;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 5rem;
+        }
+
+        .section-label {
+            color: var(--gold);
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+
+        .section-intro {
+            font-size: 1.15rem;
+            color: var(--muted-text);
+            line-height: 1.8;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .flex-between {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .flex-row {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 5rem;
+        }
+
+        .flex-row.reverse {
+            flex-direction: row-reverse;
+        }
+
+        .mt-2 { margin-top: 2rem; }
+        .mt-3 { margin-top: 3rem; }
+
+        .bg-white { background-color: var(--white); }
+        .bg-ivory { background-color: var(--ivory); }
+        .bg-navy { background-color: var(--navy); }
+
+        .is-hidden { display: none !important; }
+
+        /* =============================================================
+           4. BUTTONS
+           ============================================================= */
+        .btn-primary,
+        .btn-secondary {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            border-radius: 2px;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+            text-align: center;
+            border: 1px solid transparent;
+        }
+
+        .btn-primary {
+            background-color: var(--gold);
+            color: var(--navy);
+            border-color: var(--gold);
+        }
+
+        .btn-primary:hover {
+            background-color: transparent;
+            color: var(--gold);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--navy);
+            border-color: var(--navy);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--navy);
+            color: var(--ivory);
+        }
+
+        .btn-light {
+            background-color: transparent;
+            color: var(--ivory);
+            border-color: rgba(244, 239, 231, 0.5);
+        }
+
+        .btn-light:hover {
+            background-color: var(--ivory);
+            color: var(--navy);
+            border-color: var(--ivory);
+        }
+
+        .btn-large {
+            padding: 1.2rem 3rem;
+            font-size: 1rem;
+        }
+
+        .btn-small {
+            padding: 0.6rem 1.5rem;
+            font-size: 0.8rem;
+        }
+
+        /* =============================================================
+           5. PRELOADER
+           ============================================================= */
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: var(--navy);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.6s ease;
+        }
+
+        #preloader.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .loader-content { text-align: center; }
+
+        .loader-svg {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 1rem;
+        }
+
+        .circle-anim {
+            stroke-dasharray: 250;
+            stroke-dashoffset: 250;
+            animation: drawCircle 1.5s ease forwards infinite;
+            transform-origin: center;
+        }
+
+        @keyframes drawCircle {
+            0% { stroke-dashoffset: 250; transform: rotate(0deg); }
+            50% { stroke-dashoffset: 0; transform: rotate(180deg); }
+            100% { stroke-dashoffset: -250; transform: rotate(360deg); }
+        }
+
+        .loader-text {
+            color: var(--gold);
+            font-family: var(--font-heading);
+            letter-spacing: 4px;
+            font-size: 1.2rem;
+            animation: pulseText 1.5s ease infinite;
+        }
+
+        .loader-subtext {
+            color: var(--light-gray);
+            font-size: 0.8rem;
+            margin-top: 0.5rem;
+            letter-spacing: 1px;
+        }
+
+        @keyframes pulseText {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 1; }
+        }
+
+        /* =============================================================
+           6. NAVIGATION
+           ============================================================= */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 1.5rem 0;
+            background-color: transparent;
+            z-index: 1000;
+            transition: var(--transition-smooth);
+        }
+
+        .navbar.scrolled {
+            background-color: rgba(244, 239, 231, 0.95);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .nav-container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--container-padding);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-link {
+            display: flex;
+            align-items: center;
+            z-index: 1001;
+        }
+
+        .logo-img {
+            height: 65px;
+            width: auto;
+            transition: var(--transition-fast);
+        }
+
+        .navbar.scrolled .logo-img { height: 50px; }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 2.5rem;
+            margin-bottom: 0;
+        }
+
+        .nav-link {
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--ivory);
+            position: relative;
+            padding-bottom: 5px;
+            transition: var(--transition-fast);
+        }
+
+        .navbar.scrolled .nav-link { color: var(--navy); }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--gold);
+            transition: var(--transition-fast);
+        }
+
+        .nav-link:hover::after,
+        .nav-link.active::after { width: 100%; }
+
+        .nav-link:hover,
+        .nav-link.active { color: var(--gold) !important; }
+
+        .btn-primary.nav-btn {
+            background-color: var(--gold);
+            color: var(--navy);
+            padding: 0.8rem 1.5rem;
+            border: 1px solid var(--gold);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.85rem !important;
+            border-radius: 2px;
+        }
+
+        .btn-primary.nav-btn:hover {
+            background-color: transparent;
+            color: var(--gold);
+        }
+
+        .navbar:not(.scrolled) .btn-primary.nav-btn {
+            background-color: transparent;
+            color: var(--ivory);
+            border-color: var(--ivory);
+        }
+
+        .navbar:not(.scrolled) .btn-primary.nav-btn:hover {
+            background-color: var(--ivory);
+            color: var(--navy);
+        }
+
+        .dropdown { position: relative; }
+        .arrow { font-size: 0.7rem; margin-left: 3px; display: inline-block; transition: transform 0.3s ease; }
+        .dropdown:hover .arrow { transform: rotate(180deg); }
+
+        .mega-menu {
+            position: absolute;
+            top: 100%;
+            left: -150px;
+            background-color: var(--white);
+            width: 800px;
+            box-shadow: var(--shadow-hover);
+            border-top: 3px solid var(--gold);
+            padding: 2.5rem;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: var(--transition-smooth);
+            z-index: 100;
+        }
+
+        .dropdown:hover .mega-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .mega-menu-inner {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1.2fr;
+            gap: 2rem;
+        }
+
+        .mega-col h4 {
+            font-family: var(--font-body);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1.5rem;
+            color: var(--navy);
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.5rem;
+        }
+
+        .mega-col ul li { margin-bottom: 0.8rem; }
+        .mega-col ul li a {
+            font-size: 0.85rem;
+            color: var(--muted-text);
+            text-transform: none;
+            letter-spacing: 0;
+            display: block;
+            transition: var(--transition-fast);
+        }
+
+        .mega-col ul li a:hover {
+            color: var(--gold);
+            padding-left: 5px;
+        }
+
+        .highlight-col {
+            background-color: var(--ivory);
+            padding: 1.5rem;
+            border-radius: 4px;
+        }
+
+        .highlight-col p {
+            font-size: 0.9rem;
+            color: var(--muted-text);
+            margin-bottom: 1.5rem;
+            line-height: 1.5;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            cursor: pointer;
+            flex-direction: column;
+            gap: 6px;
+            z-index: 1001;
+            padding: 5px;
+        }
+
+        .bar {
+            width: 28px;
+            height: 2px;
+            background-color: var(--ivory);
+            transition: var(--transition-fast);
+            display: block;
+        }
+
+        .navbar.scrolled .bar { background-color: var(--navy); }
+
+        /* =============================================================
+           7. INNER PAGE HERO
+           ============================================================= */
+        .hero-inner {
+            position: relative;
+            height: 70vh;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background-color: var(--navy);
+            overflow: hidden;
+            padding-top: 80px;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(11,19,43,0.85) 0%, rgba(11,19,43,0.6) 50%, rgba(11,19,43,0.95) 100%);
+            z-index: 2;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 3;
+            max-width: 900px;
+        }
+
+        .hero-subtitle {
+            color: var(--gold);
+            font-size: 0.9rem;
+            font-weight: 700;
+            letter-spacing: 4px;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+        }
+
+        .hero-title {
+            color: var(--white);
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            line-height: 1.1;
+            margin-bottom: 2rem;
+            text-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        .hero-description {
+            color: var(--light-gray);
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 3rem;
+            line-height: 1.8;
+        }
+
+        /* =============================================================
+           8. STORY SECTION
+           ============================================================= */
+        .story-visual {
+            flex: 1;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--navy);
+            padding: 4rem;
+            border-radius: 4px;
+            min-height: 420px;
+            overflow: hidden;
+        }
+
+        .story-visual::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 30% 30%, rgba(197,160,89,0.35) 0%, transparent 65%);
+        }
+
+        .story-visual-inner {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+
+        .story-mark {
+            font-family: var(--font-heading);
+            font-size: 5rem;
+            color: var(--gold);
+            line-height: 1;
+            margin-bottom: 1rem;
+            opacity: 0.9;
+        }
+
+        .story-caption {
+            color: var(--ivory);
+            font-family: var(--font-heading);
+            font-size: 1.1rem;
+            font-style: italic;
+            line-height: 1.6;
+            max-width: 340px;
+            margin: 0 auto;
+        }
+
+        .story-caption-rule {
+            width: 50px;
+            height: 2px;
+            background-color: var(--gold);
+            margin: 1.5rem auto 0;
+        }
+
+        .story-content {
+            flex: 1.1;
+        }
+
+        .story-content h2 {
+            font-size: 2.6rem;
+            margin-bottom: 1.75rem;
+        }
+
+        .story-content p {
+            font-size: 1.02rem;
+            color: var(--muted-text);
+            line-height: 1.85;
+            margin-bottom: 1.5rem;
+        }
+
+        .story-content p strong {
+            color: var(--navy);
+            font-weight: 600;
+        }
+
+        .story-signature {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            gap: 1.25rem;
+        }
+
+        .signature-avatar {
+            width: 54px;
+            height: 54px;
+            border-radius: 50%;
+            background-color: var(--navy);
+            color: var(--gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-heading);
+            font-size: 1.4rem;
+            flex-shrink: 0;
+        }
+
+        .signature-name {
+            font-family: var(--font-heading);
+            font-size: 1.05rem;
+            color: var(--navy);
+            margin-bottom: 0.1rem;
+            line-height: 1.3;
+        }
+
+        .signature-role {
+            font-size: 0.78rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--gold);
+            font-weight: 600;
+        }
+
+        /* =============================================================
+           9. MISSION BAND
+           ============================================================= */
+        .mission-band {
+            background-color: var(--navy);
+            padding: 6rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .mission-band::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 600px;
+            height: 600px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(197,160,89,0.12) 0%, transparent 70%);
+        }
+
+        .mission-inner {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .mission-inner .section-label {
+            color: var(--gold);
+        }
+
+        .mission-statement {
+            font-family: var(--font-heading);
+            font-size: clamp(1.6rem, 3vw, 2.4rem);
+            color: var(--white);
+            line-height: 1.5;
+            font-weight: 400;
+            margin-bottom: 0;
+        }
+
+        .mission-statement em {
+            color: var(--gold);
+            font-style: italic;
+        }
+
+        /* =============================================================
+           10. VALUES GRID
+           ============================================================= */
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .value-card {
+            background-color: var(--white);
+            padding: 2.75rem 2.25rem;
+            border-radius: 4px;
+            border-top: 3px solid transparent;
+            box-shadow: var(--shadow-subtle);
+            transition: var(--transition-smooth);
+            position: relative;
+        }
+
+        .value-card:hover {
+            border-top-color: var(--gold);
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .value-icon {
+            width: 44px;
+            height: 44px;
+            margin-bottom: 1.5rem;
+            color: var(--gold);
+        }
+
+        .value-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.85rem;
+            color: var(--navy);
+        }
+
+        .value-card p {
+            font-size: 0.95rem;
+            color: var(--muted-text);
+            line-height: 1.75;
+            margin-bottom: 0;
+        }
+
+        /* =============================================================
+           11. PROCESS TIMELINE
+           ============================================================= */
+        .process-list {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .process-list::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 35px;
+            width: 2px;
+            height: calc(100% - 60px);
+            background: linear-gradient(to bottom, var(--gold) 0%, rgba(197,160,89,0.15) 100%);
+        }
+
+        .process-item {
+            position: relative;
+            padding-left: 100px;
+            padding-bottom: 3.5rem;
+        }
+
+        .process-item:last-child {
+            padding-bottom: 0;
+        }
+
+        .process-number {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 72px;
+            height: 72px;
+            border-radius: 50%;
+            background-color: var(--white);
+            border: 2px solid var(--gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            color: var(--navy);
+            z-index: 2;
+            transition: var(--transition-smooth);
+        }
+
+        .process-item:hover .process-number {
+            background-color: var(--gold);
+            color: var(--navy);
+            transform: scale(1.05);
+        }
+
+        .process-content {
+            padding-top: 0.5rem;
+        }
+
+        .process-content h3 {
+            font-size: 1.35rem;
+            margin-bottom: 0.75rem;
+            color: var(--navy);
+        }
+
+        .process-content p {
+            font-size: 0.98rem;
+            color: var(--muted-text);
+            line-height: 1.8;
+            margin-bottom: 0;
+        }
+
+        /* =============================================================
+           12. STATS BAND
+           ============================================================= */
+        .stats-band {
+            background-color: var(--white);
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+            padding: 4.5rem 0;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .stat-item {
+            position: relative;
+        }
+
+        .stat-item:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            top: 15%;
+            right: 0;
+            width: 1px;
+            height: 70%;
+            background-color: var(--border-color);
+        }
+
+        .stat-number {
+            display: block;
+            font-family: var(--font-heading);
+            font-size: clamp(2.2rem, 4vw, 3rem);
+            color: var(--navy);
+            line-height: 1;
+            margin-bottom: 0.75rem;
+        }
+
+        .stat-number span {
+            color: var(--gold);
+        }
+
+        .stat-label {
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--muted-text);
+            line-height: 1.5;
+        }
+
+        /* =============================================================
+           13. WHO WE WORK WITH
+           ============================================================= */
+        .audience-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+
+        .audience-card {
+            background-color: var(--white);
+            padding: 2.5rem;
+            border-radius: 4px;
+            border-left: 3px solid var(--gold);
+            box-shadow: var(--shadow-subtle);
+            transition: var(--transition-smooth);
+        }
+
+        .audience-card:hover {
+            box-shadow: var(--shadow-hover);
+        }
+
+        .audience-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+            color: var(--navy);
+        }
+
+        .audience-card p {
+            font-size: 0.95rem;
+            color: var(--muted-text);
+            line-height: 1.8;
+            margin-bottom: 0;
+        }
+
+        .audience-note {
+            margin-top: 3rem;
+            padding: 2rem 2.5rem;
+            background-color: var(--ivory);
+            border-radius: 4px;
+            text-align: center;
+        }
+
+        .audience-note p {
+            font-size: 1rem;
+            color: var(--charcoal);
+            margin-bottom: 0;
+            line-height: 1.8;
+        }
+
+        .audience-note p strong {
+            color: var(--navy);
+        }
+
+        /* =============================================================
+           14. CTA SECTION
+           ============================================================= */
+        .cta-section {
+            background-color: var(--ivory);
+            padding: 8rem 0;
+        }
+
+        .cta-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .cta-text h2 {
+            color: var(--navy);
+            font-size: 2.9rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-text p {
+            color: var(--muted-text);
+            font-size: 1.08rem;
+            margin-bottom: 0;
+        }
+
+        /* =============================================================
+           15. FOOTER
+           ============================================================= */
+        .mega-footer {
+            background-color: #050A18;
+            color: var(--light-gray);
+            padding-top: 5rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
+            gap: 4rem;
+            padding-bottom: 4rem;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .footer-logo { height: 60px; width: auto; margin-bottom: 1.5rem; }
+        .footer-tagline { color: var(--gold); font-family: var(--font-heading); font-size: 1.1rem; margin-bottom: 1rem; line-height: 1.5; }
+        .footer-desc { font-size: 0.9rem; color: #999; line-height: 1.8; }
+
+        .footer-col h4 { color: var(--white); font-family: var(--font-body); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1.5rem; font-weight: 600; }
+        .footer-col ul { margin-bottom: 0; }
+        .footer-col ul li { margin-bottom: 0.8rem; }
+        .footer-col ul li a { font-size: 0.9rem; color: #999; }
+        .footer-col ul li a:hover { color: var(--gold); padding-left: 5px; }
+
+        .footer-email { display: inline-block; color: var(--gold); font-size: 1.1rem; font-weight: 500; margin-bottom: 1rem; }
+        .footer-email:hover { text-decoration: underline; }
+        .footer-response { font-size: 0.85rem; color: #888; margin-bottom: 2rem; }
+        .footer-contact-text { font-size: 0.9rem; color: #999; line-height: 1.8; margin-bottom: 1.25rem; }
+
+        .footer-bottom { padding: 2rem 0; display: flex; justify-content: space-between; align-items: center; font-size: 0.85rem; color: #888; }
+        .footer-bottom p { margin-bottom: 0; color: #888; font-size: 0.85rem; }
+
+        /* =============================================================
+           16. ANIMATIONS (SCROLL REVEAL)
+           ============================================================= */
+        .fade-in-up { opacity: 0; transform: translateY(40px); transition: opacity 0.8s ease, transform 0.8s ease; }
+        .fade-in-up.visible { opacity: 1; transform: translateY(0); }
+        .fade-in-left { opacity: 0; transform: translateX(-40px); transition: opacity 0.8s ease, transform 0.8s ease; }
+        .fade-in-left.visible { opacity: 1; transform: translateX(0); }
+        .fade-in-right { opacity: 0; transform: translateX(40px); transition: opacity 0.8s ease, transform 0.8s ease; }
+        .fade-in-right.visible { opacity: 1; transform: translateX(0); }
+        .delay-1 { transition-delay: 0.1s; }
+        .delay-2 { transition-delay: 0.2s; }
+        .delay-3 { transition-delay: 0.3s; }
+        .delay-4 { transition-delay: 0.4s; }
+
+        /* =============================================================
+           17. RESPONSIVE DESIGN
+           ============================================================= */
+        @media (max-width: 1200px) {
+            .container { padding: 0 1.5rem; }
+            .mega-menu { width: 600px; left: -100px; }
+            .mega-menu-inner { grid-template-columns: 1fr 1fr; }
+            .cta-container { gap: 3rem; }
+            .footer-grid { grid-template-columns: 1fr 1fr; gap: 3rem; }
+            .values-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 1024px) {
+            .section { padding: 6rem 0; }
+            .flex-row { flex-direction: column; gap: 3rem; }
+            .flex-row.reverse { flex-direction: column; }
+            .cta-container { grid-template-columns: 1fr; }
+            .hero-title { font-size: 3.5rem; }
+            .story-visual { width: 100%; min-height: 340px; }
+            .story-content h2 { font-size: 2.2rem; }
+            .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 3rem 2rem; }
+            .stat-item:nth-child(2)::after { display: none; }
+            .audience-grid { grid-template-columns: 1fr; }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-btn { display: flex; }
+            .nav-links {
+                position: fixed; top: 0; right: -100%; width: 85%; height: 100vh;
+                background-color: var(--navy); flex-direction: column;
+                justify-content: flex-start; padding: 8rem 2rem 2rem;
+                transition: var(--transition-smooth); box-shadow: -10px 0 30px rgba(0,0,0,0.5);
+                z-index: 999; overflow-y: auto; gap: 1.5rem;
+            }
+            .nav-links.active { right: 0; }
+            .nav-link { color: var(--white) !important; font-size: 1.1rem; margin: 0; display: block; width: 100%; }
+            .nav-link::after { display: none; }
+            .mega-menu { position: static; background-color: transparent; box-shadow: none; border-top: none; opacity: 1; visibility: visible; transform: none; width: 100%; padding: 0; display: none; }
+            .dropdown.active .mega-menu { display: block; }
+            .mega-menu-inner { grid-template-columns: 1fr; gap: 1.5rem; }
+            .mega-col h4 { color: var(--gold); border-bottom: 1px solid rgba(255,255,255,0.1); margin-bottom: 1rem; }
+            .mega-col ul li a { color: var(--light-gray); padding: 0.3rem 0; }
+            .highlight-col { display: none; }
+            .mobile-menu-btn.active .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); background-color: var(--white) !important; }
+            .mobile-menu-btn.active .bar:nth-child(2) { opacity: 0; }
+            .mobile-menu-btn.active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); background-color: var(--white) !important; }
+            .btn-primary.nav-btn { width: 100%; text-align: center; margin-top: 1rem; }
+            .hero-inner { min-height: 50vh; height: auto; }
+            .hero-title { font-size: 2.5rem; }
+            .hero-description { font-size: 1rem; }
+            .section-header h2 { font-size: 2rem; }
+            .section-intro { font-size: 1rem; }
+            .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+            .footer-bottom { flex-direction: column; text-align: center; gap: 1rem; }
+            .values-grid { grid-template-columns: 1fr; }
+            .process-list::before { left: 26px; }
+            .process-item { padding-left: 72px; padding-bottom: 2.5rem; }
+            .process-number { width: 54px; height: 54px; font-size: 1.2rem; }
+            .stats-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+            .stat-item:not(:last-child)::after { display: none; }
+            .cta-text h2 { font-size: 2.2rem; }
+            .mission-band { padding: 4.5rem 0; }
+            .audience-card { padding: 2rem; }
+        }
+
+        @media (max-width: 480px) {
+            .container { padding: 0 1rem; }
+            .section { padding: 4rem 0; }
+            .hero-title { font-size: 2rem; }
+            .btn-primary, .btn-secondary, .btn-light { padding: 0.8rem 1.5rem; font-size: 0.85rem; }
+            .story-visual { padding: 2.5rem; }
+            .story-mark { font-size: 3.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- =================================================================
+         PRELOADER
+         ================================================================= -->
+    <div id="preloader">
+        <div class="loader-content">
+            <svg class="loader-svg" viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="40" stroke="#C5A059" stroke-width="2" fill="none" class="circle-anim"></circle>
+            </svg>
+            <h2 class="loader-text">ALLY WEALTH</h2>
+            <p class="loader-subtext">Loading about...</p>
+        </div>
+    </div>
+
+    <!-- =================================================================
+         GLOBAL NAVIGATION
+         ================================================================= -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+
+            <a href="index.html" class="logo-link" aria-label="Ally Wealth Home">
+                <img src="images/favicon.png" alt="Ally Wealth Logo" class="logo-img">
+            </a>
+
+            <div class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle Menu" role="button" tabindex="0">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link active">About</a></li>
+
+                <li class="dropdown mega-dropdown">
+                    <a href="services.html" class="nav-link">Services <span class="arrow">&#9662;</span></a>
+                    <div class="mega-menu">
+                        <div class="mega-menu-inner">
+                            <div class="mega-col">
+                                <h4>Amazon Optimization</h4>
+                                <ul>
+                                    <li><a href="services.html#amazon">Amazon Book Marketing</a></li>
+                                    <li><a href="services.html#aplus">Amazon A+ Content</a></li>
+                                    <li><a href="services.html#listing">Book Listing Optimisation</a></li>
+                                    <li><a href="services.html#keywords">Keywords and Categories</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-col">
+                                <h4>Reader Engagement</h4>
+                                <ul>
+                                    <li><a href="services.html#goodreads">Goodreads Marketing</a></li>
+                                    <li><a href="services.html#arc">ARC and Reader Outreach</a></li>
+                                    <li><a href="services.html#social">Social Media Promotion</a></li>
+                                    <li><a href="services.html#audiobook">Audiobook Marketing</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-col">
+                                <h4>Author and Launch</h4>
+                                <ul>
+                                    <li><a href="services.html#branding">Author Branding</a></li>
+                                    <li><a href="services.html#descriptions">Book Descriptions</a></li>
+                                    <li><a href="services.html#launch">Book Launch Campaigns</a></li>
+                                    <li><a href="services.html#custom">Custom Book Strategy</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-col highlight-col">
+                                <h4>Need Guidance?</h4>
+                                <p>Not sure which service fits your book? Let's discuss your goals.</p>
+                                <a href="contact.html" class="btn-primary btn-small">Get a Proposal</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li><a href="work.html" class="nav-link">Our Work</a></li>
+                <li><a href="resources.html" class="nav-link">Resources</a></li>
+                <li><a href="contact.html" class="btn-primary nav-btn">Request a Proposal</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- =================================================================
+         INNER PAGE HERO
+         ================================================================= -->
+    <header class="hero-inner">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <p class="hero-subtitle fade-in-up">ABOUT ALLY WEALTH</p>
+            <h1 class="hero-title fade-in-up delay-1">
+                We help good books<br>find the readers they deserve.
+            </h1>
+            <p class="hero-description fade-in-up delay-2">
+                Ally Wealth is a premium author visibility consultancy built on a single belief: that most books do not fail because they are bad. They fail because nobody sees them.
+            </p>
+        </div>
+    </header>
+
+    <!-- =================================================================
+         STORY SECTION
+         ================================================================= -->
+    <section class="section bg-ivory">
+        <div class="container">
+            <div class="flex-row">
+
+                <div class="story-visual fade-in-left">
+                    <div class="story-visual-inner">
+                        <p class="story-mark">AW</p>
+                        <p class="story-caption">Visibility is not luck. It is a system, and it can be learned.</p>
+                        <div class="story-caption-rule"></div>
+                    </div>
+                </div>
+
+                <div class="story-content fade-in-right">
+                    <span class="section-label">OUR STORY</span>
+                    <h2>Built for the authors the industry overlooks.</h2>
+                    <p>
+                        Ally Wealth began with a simple observation. The publishing world is full of talented authors who have done everything right. They finished the manuscript. They commissioned a cover. They published on Amazon. And then they waited, because nobody told them what comes next.
+                    </p>
+                    <p>
+                        <strong>Marketing advice for authors is plentiful, but most of it is either too generic to apply or too expensive to access.</strong> The big agencies focus on authors with existing audiences. The free advice focuses on tactics without context. Somewhere in the middle, a huge number of serious authors are left to piece together a strategy from blog posts and conflicting opinions.
+                    </p>
+                    <p>
+                        We built Ally Wealth to sit in that middle. Premium thinking, delivered with the clarity and directness of a specialist rather than the bureaucracy of an agency. We work with a limited number of authors at a time, because visibility work requires attention, and attention does not scale.
+                    </p>
+                    <p>
+                        Our approach is deliberately unglamorous. We audit what exists. We fix the foundations. We measure what changes. We keep what works. There are no secret formulas and no promises of overnight success, because the authors who sell well over time are the ones who built a system and stuck with it.
+                    </p>
+
+                    <div class="story-signature">
+                        <div class="signature-avatar" aria-hidden="true">A</div>
+                        <div>
+                            <p class="signature-name">The Ally Wealth Team</p>
+                            <p class="signature-role">Author Visibility Consultants</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- =================================================================
+         MISSION BAND
+         ================================================================= -->
+    <section class="mission-band">
+        <div class="container">
+            <div class="mission-inner fade-in-up">
+                <span class="section-label">OUR MISSION</span>
+                <p class="mission-statement">
+                    To give every serious author access to the same strategic thinking that is normally reserved for the few. <em>No gatekeeping. No inflated promises. Just clear, honest work that makes good books visible.</em>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- =================================================================
+         VALUES SECTION
+         ================================================================= -->
+    <section class="section bg-ivory">
+        <div class="container">
+
+            <div class="section-header fade-in-up">
+                <span class="section-label">WHAT WE BELIEVE</span>
+                <h2>The principles behind our work.</h2>
+                <p class="section-intro">
+                    These are not slogans. They are the standards we hold ourselves to on every project, and the reasons our clients trust us with their books.
+                </p>
+            </div>
+
+            <div class="values-grid">
+
+                <article class="value-card fade-in-up">
+                    <svg class="value-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                    <h3>Honesty over hype</h3>
+                    <p>We will never promise a bestseller ranking. We will tell you what is realistic for your book, your genre, and your stage. If a service will not help you, we will say so, even if it costs us the project.</p>
+                </article>
+
+                <article class="value-card fade-in-up delay-1">
+                    <svg class="value-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                    </svg>
+                    <h3>Ethics before shortcuts</h3>
+                    <p>Every ARC campaign, every outreach message, and every review strategy follows the rules of the platforms we work with. We would rather grow slowly and safely than risk your account on a shortcut.</p>
+                </article>
+
+                <article class="value-card fade-in-up delay-2">
+                    <svg class="value-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                        <polyline points="14 2 14 8 20 8"></polyline>
+                    </svg>
+                    <h3>Clarity in everything</h3>
+                    <p>You will always know what we are doing, why we are doing it, and what it costs. No hidden line items, no jargon designed to confuse, and no reports that look impressive but say nothing.</p>
+                </article>
+
+                <article class="value-card fade-in-up">
+                    <svg class="value-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                    <h3>A limited client list</h3>
+                    <p>We only take on a small number of authors at a time. This is deliberate. Visibility work is detail work, and detail does not survive a workload that is too large. When you work with us, you have our attention.</p>
+                </article>
+
+                <article class="value-card fade-in-up delay-1">
+                    <svg class="value-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M3 3v18h18"></path>
+                        <path d="M7 14l4-4 4 4 5-6"></path>
+                    </svg>
+                    <h3>Measured, not guessed</h3>
+                    <p>Every campaign has numbers attached to it. We track what matters, we report on it plainly, and we change course when the data tells us to. Marketing is a series of decisions, not a leap of faith.</p>
+                </article>
+
+                <article class="value-card fade-in-up delay-2">
+                    <svg class="value-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                        <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                    </svg>
+                    <h3>Built for the long term</h3>
+                    <p>A launch is a moment. A career is a decade. We build strategies that keep working after the launch window closes, because the goal is not one good week. It is a body of work that readers keep finding.</p>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- =================================================================
+         PROCESS SECTION
+         ================================================================= -->
+    <section class="section bg-white">
+        <div class="container">
+
+            <div class="section-header fade-in-up">
+                <span class="section-label">HOW WE WORK</span>
+                <h2>A process built on evidence.</h2>
+                <p class="section-intro">
+                    Every engagement follows the same four stages. The scale changes depending on the service, but the logic does not. Find the truth, fix the foundation, build the campaign, then measure what happened.
+                </p>
+            </div>
+
+            <div class="process-list">
+
+                <div class="process-item fade-in-up">
+                    <div class="process-number">01</div>
+                    <div class="process-content">
+                        <h3>Audit</h3>
+                        <p>We start by looking at what already exists. Your listing, your categories, your description, your author profile, and the competitive landscape around your book. Most marketing problems are visible at this stage, and most are fixable before money is spent on promotion.</p>
+                    </div>
+                </div>
+
+                <div class="process-item fade-in-up delay-1">
+                    <div class="process-number">02</div>
+                    <div class="process-content">
+                        <h3>Foundation</h3>
+                        <p>Before we try to bring anyone to your book, the book page has to convert the people who arrive. We rewrite, restructure, and reposition the fundamentals so that traffic, when it comes, actually turns into sales rather than a quick bounce.</p>
+                    </div>
+                </div>
+
+                <div class="process-item fade-in-up delay-2">
+                    <div class="process-number">03</div>
+                    <div class="process-content">
+                        <h3>Campaign</h3>
+                        <p>With the foundation in place, we build the campaign. That might be a launch timeline, an ARC programme, an audiobook push, a social strategy, or a combination. Each element is chosen because it fits your book, not because it is fashionable.</p>
+                    </div>
+                </div>
+
+                <div class="process-item fade-in-up delay-3">
+                    <div class="process-number">04</div>
+                    <div class="process-content">
+                        <h3>Measure</h3>
+                        <p>We track the numbers that matter, report on them in plain language, and adjust. The strongest strategies are not the ones that predicted everything correctly. They are the ones that responded quickly when the data disagreed with the plan.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- =================================================================
+         STATS BAND
+         ================================================================= -->
+    <section class="stats-band">
+        <div class="container">
+            <div class="stats-grid">
+
+                <div class="stat-item fade-in-up">
+                    <span class="stat-number">14<span>+</span></span>
+                    <span class="stat-label">Marketing Services</span>
+                </div>
+
+                <div class="stat-item fade-in-up delay-1">
+                    <span class="stat-number">100<span>%</span></span>
+                    <span class="stat-label">Ethical Outreach</span>
+                </div>
+
+                <div class="stat-item fade-in-up delay-2">
+                    <span class="stat-number">24<span>h</span></span>
+                    <span class="stat-label">Average Response Time</span>
+                </div>
+
+                <div class="stat-item fade-in-up delay-3">
+                    <span class="stat-number">1<span>:1</span></span>
+                    <span class="stat-label">Author Attention Model</span>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- =================================================================
+         WHO WE WORK WITH
+         ================================================================= -->
+    <section class="section bg-ivory">
+        <div class="container">
+
+            <div class="section-header fade-in-up">
+                <span class="section-label">WHO WE WORK WITH</span>
+                <h2>The right fit matters.</h2>
+                <p class="section-intro">
+                    We are not the right consultancy for every author. These are the people we do our best work with, and the reasons why.
+                </p>
+            </div>
+
+            <div class="audience-grid">
+
+                <article class="audience-card fade-in-up">
+                    <h3>Debut and early career authors</h3>
+                    <p>You have finished or nearly finished your first book and want to start with a foundation that will not need rebuilding later. We will be honest about what is realistic at your stage and help you avoid the common first-launch mistakes.</p>
+                </article>
+
+                <article class="audience-card fade-in-up delay-1">
+                    <h3>Established authors with a backlist</h3>
+                    <p>Your earlier books are still selling but have plateaued. A backlist can be revived with the right positioning, and often the work is smaller than authors expect. We focus on the highest impact changes first.</p>
+                </article>
+
+                <article class="audience-card fade-in-up delay-2">
+                    <h3>Non-fiction authors and experts</h3>
+                    <p>You have a message, a method, or a body of expertise, and the book is one part of a wider professional identity. We build visibility that supports your broader work, not just a single title.</p>
+                </article>
+
+                <article class="audience-card fade-in-up delay-3">
+                    <h3>Independent and hybrid publishers</h3>
+                    <p>You are publishing under your own imprint or through a hybrid model and need marketing strategy that fits the independence you fought for. We work with the constraints of independent publishing, not against them.</p>
+                </article>
+
+            </div>
+
+            <div class="audience-note fade-in-up">
+                <p>
+                    <strong>What we are not:</strong> a guarantee factory, a click farm, or a service that buys reviews. If you are looking for a fast route to a bestseller badge, we are not the right partner. If you are looking to build something that lasts, we probably are.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- =================================================================
+         CTA SECTION
+         ================================================================= -->
+    <section class="section cta-section">
+        <div class="container cta-container">
+            <div class="cta-text fade-in-left">
+                <p class="section-label">WORK WITH US</p>
+                <h2>Let us look at your book.</h2>
+                <p>Tell us where your book is now and what you would like it to achieve. We will review your details personally and come back with an honest assessment and a proposal if we think we can help.</p>
+            </div>
+            <div class="fade-in-right" style="text-align: center;">
+                <a href="contact.html" class="btn-primary btn-large">Request a Proposal</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- =================================================================
+         MASSIVE FOOTER
+         ================================================================= -->
+    <footer class="mega-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col brand-col">
+                    <img src="images/favicon.png" alt="Ally Wealth Logo" class="footer-logo">
+                    <p class="footer-tagline">Get Seen. Grow Your Influence.<br>Build Your Legacy.</p>
+                    <p class="footer-desc">Premium author visibility and book marketing consulting for authors, publishers, and independent professionals.</p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html#amazon">Amazon Book Marketing</a></li>
+                        <li><a href="services.html#aplus">Amazon A+ Content</a></li>
+                        <li><a href="services.html#listing">Book Listing Optimisation</a></li>
+                        <li><a href="services.html#keywords">Keywords and Categories</a></li>
+                        <li><a href="services.html#goodreads">Goodreads Marketing</a></li>
+                        <li><a href="services.html#branding">Author Branding</a></li>
+                        <li><a href="services.html#descriptions">Book Descriptions</a></li>
+                        <li><a href="services.html#arc">ARC and Reader Outreach</a></li>
+                        <li><a href="services.html#launch">Book Launch Campaigns</a></li>
+                        <li><a href="services.html#audiobook">Audiobook Marketing</a></li>
+                        <li><a href="services.html#social">Social Media Promotion</a></li>
+                        <li><a href="services.html#custom">Custom Strategy</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Knowledge Centre</h4>
+                    <ul>
+                        <li><a href="resources.html">Resources Home</a></li>
+                        <li><a href="resources.html#pdf-library">Free PDF Library</a></li>
+                        <li><a href="resources.html#articles">Marketing Articles</a></li>
+                        <li><a href="resources.html#guides">Step-by-Step Guides</a></li>
+                        <li><a href="work.html">Case Studies</a></li>
+                    </ul>
+
+                    <h4 class="mt-2">Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Ally Wealth</a></li>
+                        <li><a href="work.html">Our Work</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col contact-col">
+                    <h4>Get in Touch</h4>
+                    <p class="footer-contact-text">Ready to discuss your book marketing strategy? We would love to hear from you.</p>
+                    <a href="mailto:info.allywealth@gmail.com" class="footer-email">info.allywealth@gmail.com</a>
+                    <p class="footer-response">We typically respond within 24-48 business hours.</p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Ally Wealth. All rights reserved.</p>
+                <p>Author Visibility Consultant and Book Marketing Specialist.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- =================================================================
+         EMBEDDED JAVASCRIPT
+         ================================================================= -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            /* =========================================================
+               1. PRELOADER
+               ========================================================= */
+            const preloader = document.getElementById('preloader');
+            if (preloader) {
+                window.addEventListener('load', () => {
+                    setTimeout(() => {
+                        preloader.classList.add('hidden');
+                        setTimeout(() => { preloader.style.display = 'none'; }, 600);
+                    }, 800);
+                });
+            }
+
+            /* =========================================================
+               2. MOBILE NAVIGATION AND DROPDOWNS
+               ========================================================= */
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const navLinks = document.getElementById('nav-links');
+            const dropdowns = document.querySelectorAll('.dropdown');
+
+            if (mobileMenuBtn && navLinks) {
+                mobileMenuBtn.addEventListener('click', () => {
+                    navLinks.classList.toggle('active');
+                    mobileMenuBtn.classList.toggle('active');
+                    document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
+                });
+
+                navLinks.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        if (window.innerWidth <= 768 && !link.parentElement.classList.contains('dropdown')) {
+                            navLinks.classList.remove('active');
+                            mobileMenuBtn.classList.remove('active');
+                            document.body.style.overflow = '';
+                        }
+                    });
+                });
+
+                dropdowns.forEach(dropdown => {
+                    const link = dropdown.querySelector('.nav-link');
+                    if (!link) return;
+                    link.addEventListener('click', (e) => {
+                        if (window.innerWidth <= 768) {
+                            e.preventDefault();
+                            dropdown.classList.toggle('active');
+                        }
+                    });
+                });
+            }
+
+            /* =========================================================
+               3. STICKY NAVBAR
+               ========================================================= */
+            const navbar = document.getElementById('navbar');
+            if (navbar) {
+                const handleScroll = () => {
+                    if (window.scrollY > 50) {
+                        navbar.classList.add('scrolled');
+                    } else {
+                        navbar.classList.remove('scrolled');
+                    }
+                };
+                window.addEventListener('scroll', handleScroll);
+                handleScroll();
+            }
+
+            /* =========================================================
+               4. SCROLL REVEAL ANIMATIONS
+               ========================================================= */
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.fade-in-up, .fade-in-left, .fade-in-right').forEach(el => observer.observe(el));
+
+        });
+    </script>
+</body>
+</html>

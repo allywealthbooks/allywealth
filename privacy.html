@@ -1,0 +1,1783 @@
+<!DOCTYPE html>
+<!-- =====================================================================
+     ALLY WEALTH - PREMIUM AUTHOR VISIBILITY CONSULTANT
+     MASTER PRIVACY POLICY PAGE - ALL-IN-ONE FILE
+     =====================================================================
+     This file contains all HTML, CSS, and JavaScript required for the
+     privacy policy page. No external CSS or JS files are needed for this
+     page to render perfectly.
+
+     Contents:
+     1. Privacy hero with last updated badge
+     2. Sticky table of contents with scroll spy
+     3. Fourteen policy sections (anchored)
+     4. Contact block and back to top
+     5. Standard CTA and footer
+
+     Author: Ally Wealth Development Team
+     Date: 2026
+     ===================================================================== -->
+
+<html lang="en">
+<head>
+    <!-- =================================================================
+         META TAGS AND SEO OPTIMIZATION
+         ================================================================= -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Primary Meta Tags -->
+    <title>Privacy Policy | Ally Wealth Book Marketing</title>
+    <meta name="title" content="Privacy Policy | Ally Wealth Book Marketing">
+    <meta name="description" content="Read the Ally Wealth privacy policy. How we collect, use, and protect your personal information when you use our website and book marketing services.">
+    <meta name="keywords" content="Ally Wealth privacy policy, data protection, author privacy, book marketing privacy, GDPR, CCPA">
+    <meta name="author" content="Ally Wealth">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.allywealth.com/privacy.html">
+    <meta property="og:title" content="Privacy Policy | Ally Wealth Book Marketing">
+    <meta property="og:description" content="How we collect, use, and protect your personal information.">
+    <meta property="og:image" content="images/banner.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.allywealth.com/privacy.html">
+    <meta property="twitter:title" content="Privacy Policy | Ally Wealth Book Marketing">
+    <meta property="twitter:description" content="How we collect, use, and protect your personal information.">
+    <meta property="twitter:image" content="images/banner.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="apple-touch-icon" href="images/favicon.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+
+    <!-- =================================================================
+         EMBEDDED CSS STYLESHEET
+         ================================================================= -->
+    <style>
+        /* =============================================================
+           1. CSS VARIABLES AND ROOT DEFINITIONS
+           ============================================================= */
+        :root {
+            --navy: #0B132B;
+            --gold: #C5A059;
+            --ivory: #F4EFE7;
+            --charcoal: #28221D;
+            --white: #FFFFFF;
+            --light-gray: #E8DFD2;
+            --dark-gray: #1A1A1A;
+            --muted-text: #6B6B6B;
+            --border-color: rgba(0, 0, 0, 0.08);
+            --gold-transparent: rgba(197, 160, 89, 0.2);
+            --font-heading: 'Playfair Display', serif;
+            --font-body: 'Inter', sans-serif;
+            --transition-smooth: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            --transition-fast: all 0.2s ease-in-out;
+            --shadow-subtle: 0 10px 30px rgba(0, 0, 0, 0.05);
+            --shadow-hover: 0 20px 40px rgba(0, 0, 0, 0.1);
+            --container-width: 1280px;
+            --container-padding: 2rem;
+            --section-padding: 8rem 0;
+        }
+
+        /* =============================================================
+           2. GLOBAL RESET AND BASE STYLES
+           ============================================================= */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--ivory);
+            color: var(--charcoal);
+            line-height: 1.7;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-heading);
+            font-weight: 600;
+            color: var(--navy);
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        h1 { font-size: clamp(2.5rem, 5vw, 4.5rem); }
+        h2 { font-size: clamp(2rem, 4vw, 3rem); }
+        h3 { font-size: clamp(1.3rem, 2.5vw, 1.8rem); }
+        h4 { font-size: clamp(1.1rem, 2vw, 1.4rem); }
+
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+            color: var(--charcoal);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition-fast);
+        }
+
+        ul, ol {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+        }
+
+        button, input, select, textarea {
+            font-family: inherit;
+            font-size: inherit;
+            outline: none;
+            border: none;
+            background: none;
+        }
+
+        button { cursor: pointer; }
+
+        /* =============================================================
+           3. UTILITY AND LAYOUT CLASSES
+           ============================================================= */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--container-padding);
+            width: 100%;
+        }
+
+        .section {
+            padding: var(--section-padding);
+            position: relative;
+        }
+
+        .section-label {
+            color: var(--gold);
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+
+        .mt-2 { margin-top: 2rem; }
+        .mt-3 { margin-top: 3rem; }
+
+        .bg-white { background-color: var(--white); }
+        .bg-ivory { background-color: var(--ivory); }
+
+        /* =============================================================
+           4. BUTTONS
+           ============================================================= */
+        .btn-primary,
+        .btn-secondary {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            border-radius: 2px;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+            text-align: center;
+            border: 1px solid transparent;
+        }
+
+        .btn-primary {
+            background-color: var(--gold);
+            color: var(--navy);
+            border-color: var(--gold);
+        }
+
+        .btn-primary:hover {
+            background-color: transparent;
+            color: var(--gold);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--navy);
+            border-color: var(--navy);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--navy);
+            color: var(--ivory);
+        }
+
+        .btn-large {
+            padding: 1.2rem 3rem;
+            font-size: 1rem;
+        }
+
+        .btn-small {
+            padding: 0.6rem 1.5rem;
+            font-size: 0.8rem;
+        }
+
+        /* =============================================================
+           5. PRELOADER
+           ============================================================= */
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: var(--navy);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.6s ease;
+        }
+
+        #preloader.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .loader-content { text-align: center; }
+
+        .loader-svg {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 1rem;
+        }
+
+        .circle-anim {
+            stroke-dasharray: 250;
+            stroke-dashoffset: 250;
+            animation: drawCircle 1.5s ease forwards infinite;
+            transform-origin: center;
+        }
+
+        @keyframes drawCircle {
+            0% { stroke-dashoffset: 250; transform: rotate(0deg); }
+            50% { stroke-dashoffset: 0; transform: rotate(180deg); }
+            100% { stroke-dashoffset: -250; transform: rotate(360deg); }
+        }
+
+        .loader-text {
+            color: var(--gold);
+            font-family: var(--font-heading);
+            letter-spacing: 4px;
+            font-size: 1.2rem;
+            animation: pulseText 1.5s ease infinite;
+        }
+
+        .loader-subtext {
+            color: var(--light-gray);
+            font-size: 0.8rem;
+            margin-top: 0.5rem;
+            letter-spacing: 1px;
+        }
+
+        @keyframes pulseText {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 1; }
+        }
+
+        /* =============================================================
+           6. NAVIGATION
+           ============================================================= */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 1.5rem 0;
+            background-color: transparent;
+            z-index: 1000;
+            transition: var(--transition-smooth);
+        }
+
+        .navbar.scrolled {
+            background-color: rgba(244, 239, 231, 0.95);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .nav-container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--container-padding);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-link {
+            display: flex;
+            align-items: center;
+            z-index: 1001;
+        }
+
+        .logo-img {
+            height: 65px;
+            width: auto;
+            transition: var(--transition-fast);
+        }
+
+        .navbar.scrolled .logo-img { height: 50px; }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 2.5rem;
+            margin-bottom: 0;
+        }
+
+        .nav-link {
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--ivory);
+            position: relative;
+            padding-bottom: 5px;
+            transition: var(--transition-fast);
+        }
+
+        .navbar.scrolled .nav-link { color: var(--navy); }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--gold);
+            transition: var(--transition-fast);
+        }
+
+        .nav-link:hover::after,
+        .nav-link.active::after { width: 100%; }
+
+        .nav-link:hover,
+        .nav-link.active { color: var(--gold) !important; }
+
+        .btn-primary.nav-btn {
+            background-color: var(--gold);
+            color: var(--navy);
+            padding: 0.8rem 1.5rem;
+            border: 1px solid var(--gold);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.85rem !important;
+            border-radius: 2px;
+        }
+
+        .btn-primary.nav-btn:hover {
+            background-color: transparent;
+            color: var(--gold);
+        }
+
+        .navbar:not(.scrolled) .btn-primary.nav-btn {
+            background-color: transparent;
+            color: var(--ivory);
+            border-color: var(--ivory);
+        }
+
+        .navbar:not(.scrolled) .btn-primary.nav-btn:hover {
+            background-color: var(--ivory);
+            color: var(--navy);
+        }
+
+        .dropdown { position: relative; }
+        .arrow { font-size: 0.7rem; margin-left: 3px; display: inline-block; transition: transform 0.3s ease; }
+        .dropdown:hover .arrow { transform: rotate(180deg); }
+
+        .mega-menu {
+            position: absolute;
+            top: 100%;
+            left: -150px;
+            background-color: var(--white);
+            width: 800px;
+            box-shadow: var(--shadow-hover);
+            border-top: 3px solid var(--gold);
+            padding: 2.5rem;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: var(--transition-smooth);
+            z-index: 100;
+        }
+
+        .dropdown:hover .mega-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .mega-menu-inner {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1.2fr;
+            gap: 2rem;
+        }
+
+        .mega-col h4 {
+            font-family: var(--font-body);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1.5rem;
+            color: var(--navy);
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.5rem;
+        }
+
+        .mega-col ul li { margin-bottom: 0.8rem; }
+        .mega-col ul li a {
+            font-size: 0.85rem;
+            color: var(--muted-text);
+            text-transform: none;
+            letter-spacing: 0;
+            display: block;
+            transition: var(--transition-fast);
+        }
+
+        .mega-col ul li a:hover {
+            color: var(--gold);
+            padding-left: 5px;
+        }
+
+        .highlight-col {
+            background-color: var(--ivory);
+            padding: 1.5rem;
+            border-radius: 4px;
+        }
+
+        .highlight-col p {
+            font-size: 0.9rem;
+            color: var(--muted-text);
+            margin-bottom: 1.5rem;
+            line-height: 1.5;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            cursor: pointer;
+            flex-direction: column;
+            gap: 6px;
+            z-index: 1001;
+            padding: 5px;
+        }
+
+        .bar {
+            width: 28px;
+            height: 2px;
+            background-color: var(--ivory);
+            transition: var(--transition-fast);
+            display: block;
+        }
+
+        .navbar.scrolled .bar { background-color: var(--navy); }
+
+        /* =============================================================
+           7. INNER PAGE HERO
+           ============================================================= */
+        .hero-inner {
+            position: relative;
+            height: 55vh;
+            min-height: 480px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background-color: var(--navy);
+            overflow: hidden;
+            padding-top: 80px;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(11,19,43,0.85) 0%, rgba(11,19,43,0.6) 50%, rgba(11,19,43,0.95) 100%);
+            z-index: 2;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 3;
+            max-width: 900px;
+        }
+
+        .hero-subtitle {
+            color: var(--gold);
+            font-size: 0.9rem;
+            font-weight: 700;
+            letter-spacing: 4px;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+        }
+
+        .hero-title {
+            color: var(--white);
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            line-height: 1.1;
+            margin-bottom: 1.75rem;
+            text-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        .hero-description {
+            color: var(--light-gray);
+            font-size: 1.15rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            line-height: 1.8;
+        }
+
+        .last-updated {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            font-size: 0.78rem;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--gold);
+            border: 1px solid rgba(197, 160, 89, 0.5);
+            padding: 0.5rem 1.1rem;
+            border-radius: 2px;
+        }
+
+        .last-updated-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background-color: var(--gold);
+            display: inline-block;
+        }
+
+        /* =============================================================
+           8. POLICY LAYOUT WITH STICKY SIDEBAR
+           ============================================================= */
+        .policy-layout {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .policy-sidebar {
+            position: sticky;
+            top: 120px;
+        }
+
+        .policy-toc {
+            background-color: var(--white);
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
+            padding: 1.75rem;
+            box-shadow: var(--shadow-subtle);
+        }
+
+        .policy-toc-title {
+            font-family: var(--font-body);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 1.25rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .policy-toc ol {
+            counter-reset: toc-counter;
+            margin-bottom: 0;
+        }
+
+        .policy-toc ol li {
+            counter-increment: toc-counter;
+            margin-bottom: 0.25rem;
+        }
+
+        .policy-toc ol li a {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            padding: 0.5rem 0.6rem;
+            border-radius: 2px;
+            font-size: 0.85rem;
+            color: var(--muted-text);
+            line-height: 1.4;
+            transition: var(--transition-fast);
+            position: relative;
+        }
+
+        .policy-toc ol li a::before {
+            content: counter(toc-counter, decimal-leading-zero);
+            font-family: var(--font-heading);
+            font-size: 0.75rem;
+            color: var(--gold);
+            min-width: 22px;
+            padding-top: 1px;
+            flex-shrink: 0;
+        }
+
+        .policy-toc ol li a:hover {
+            background-color: var(--ivory);
+            color: var(--navy);
+        }
+
+        .policy-toc ol li a.active {
+            background-color: var(--ivory);
+            color: var(--navy);
+            font-weight: 600;
+        }
+
+        .policy-toc ol li a.active::before {
+            color: var(--navy);
+            font-weight: 700;
+        }
+
+        .policy-sidebar-note {
+            margin-top: 1.5rem;
+            padding: 1.25rem;
+            background-color: var(--navy);
+            border-radius: 4px;
+            color: var(--light-gray);
+        }
+
+        .policy-sidebar-note p {
+            font-size: 0.8rem;
+            line-height: 1.7;
+            color: var(--light-gray);
+            margin-bottom: 0.75rem;
+        }
+
+        .policy-sidebar-note a {
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            color: var(--gold);
+            border-bottom: 1px solid var(--gold);
+            padding-bottom: 2px;
+        }
+
+        .policy-sidebar-note a:hover {
+            color: var(--ivory);
+            border-bottom-color: var(--ivory);
+        }
+
+        /* =============================================================
+           9. POLICY CONTENT
+           ============================================================= */
+        .policy-content {
+            min-width: 0;
+        }
+
+        .policy-intro {
+            background-color: var(--white);
+            border-left: 3px solid var(--gold);
+            padding: 1.75rem 2rem;
+            border-radius: 2px;
+            margin-bottom: 3rem;
+            box-shadow: var(--shadow-subtle);
+        }
+
+        .policy-intro p {
+            font-size: 1rem;
+            color: var(--muted-text);
+            line-height: 1.85;
+            margin-bottom: 0;
+        }
+
+        .policy-intro p strong {
+            color: var(--navy);
+        }
+
+        .policy-section {
+            padding-bottom: 3rem;
+            margin-bottom: 3rem;
+            border-bottom: 1px solid var(--border-color);
+            scroll-margin-top: 120px;
+        }
+
+        .policy-section:last-of-type {
+            border-bottom: none;
+            margin-bottom: 2rem;
+        }
+
+        .policy-section-header {
+            display: flex;
+            align-items: baseline;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .policy-number {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            color: var(--gold);
+            line-height: 1;
+            flex-shrink: 0;
+        }
+
+        .policy-section h2 {
+            font-size: clamp(1.4rem, 2.5vw, 1.9rem);
+            margin-bottom: 0;
+            color: var(--navy);
+            line-height: 1.3;
+        }
+
+        .policy-section h3 {
+            font-size: 1.1rem;
+            margin-top: 2rem;
+            margin-bottom: 0.75rem;
+            color: var(--navy);
+        }
+
+        .policy-section p {
+            font-size: 0.98rem;
+            color: var(--charcoal);
+            line-height: 1.85;
+            margin-bottom: 1.25rem;
+        }
+
+        .policy-section p strong {
+            color: var(--navy);
+            font-weight: 600;
+        }
+
+        .policy-section ul {
+            margin: 1rem 0 1.5rem;
+            padding-left: 0;
+        }
+
+        .policy-section ul li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.75rem;
+            font-size: 0.98rem;
+            color: var(--charcoal);
+            line-height: 1.8;
+        }
+
+        .policy-section ul li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.7rem;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background-color: var(--gold);
+        }
+
+        .policy-section ul li strong {
+            color: var(--navy);
+            font-weight: 600;
+        }
+
+        .policy-callout {
+            background-color: var(--ivory);
+            border-left: 3px solid var(--gold);
+            padding: 1.25rem 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 2px;
+        }
+
+        .policy-callout p {
+            font-size: 0.92rem;
+            color: var(--muted-text);
+            line-height: 1.8;
+            margin-bottom: 0;
+        }
+
+        .policy-callout p strong {
+            color: var(--navy);
+        }
+
+        .policy-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0 2rem;
+            font-size: 0.9rem;
+            background-color: var(--white);
+            border: 1px solid var(--border-color);
+            border-radius: 2px;
+            overflow: hidden;
+        }
+
+        .policy-table thead {
+            background-color: var(--navy);
+        }
+
+        .policy-table thead th {
+            text-align: left;
+            padding: 0.85rem 1.1rem;
+            color: var(--white);
+            font-weight: 600;
+            font-size: 0.78rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .policy-table tbody td {
+            padding: 0.9rem 1.1rem;
+            border-bottom: 1px solid var(--border-color);
+            color: var(--charcoal);
+            line-height: 1.6;
+            vertical-align: top;
+        }
+
+        .policy-table tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        .policy-table tbody td strong {
+            color: var(--navy);
+            font-weight: 600;
+        }
+
+        .policy-contact-block {
+            background-color: var(--navy);
+            border-radius: 4px;
+            padding: 2.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .policy-contact-block p {
+            color: var(--light-gray);
+            font-size: 0.95rem;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .policy-contact-block p:last-child {
+            margin-bottom: 0;
+        }
+
+        .policy-contact-block a {
+            color: var(--gold);
+            border-bottom: 1px solid rgba(197, 160, 89, 0.4);
+            padding-bottom: 1px;
+        }
+
+        .policy-contact-block a:hover {
+            border-bottom-color: var(--gold);
+        }
+
+        .policy-contact-block strong {
+            color: var(--white);
+            display: block;
+            font-size: 0.75rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 0.4rem;
+        }
+
+        .back-to-top-wrap {
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .back-to-top {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--navy);
+            border-bottom: 1px solid var(--gold);
+            padding-bottom: 4px;
+            transition: var(--transition-fast);
+        }
+
+        .back-to-top:hover {
+            color: var(--gold);
+        }
+
+        /* =============================================================
+           10. CTA SECTION
+           ============================================================= */
+        .cta-section {
+            background-color: var(--ivory);
+            padding: 7rem 0;
+        }
+
+        .cta-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .cta-text h2 {
+            color: var(--navy);
+            font-size: 2.6rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-text p {
+            color: var(--muted-text);
+            font-size: 1.05rem;
+            margin-bottom: 0;
+        }
+
+        /* =============================================================
+           11. FOOTER
+           ============================================================= */
+        .mega-footer {
+            background-color: #050A18;
+            color: var(--light-gray);
+            padding-top: 5rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
+            gap: 4rem;
+            padding-bottom: 4rem;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .footer-logo { height: 60px; width: auto; margin-bottom: 1.5rem; }
+        .footer-tagline { color: var(--gold); font-family: var(--font-heading); font-size: 1.1rem; margin-bottom: 1rem; line-height: 1.5; }
+        .footer-desc { font-size: 0.9rem; color: #999; line-height: 1.8; }
+
+        .footer-col h4 { color: var(--white); font-family: var(--font-body); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1.5rem; font-weight: 600; }
+        .footer-col ul { margin-bottom: 0; }
+        .footer-col ul li { margin-bottom: 0.8rem; }
+        .footer-col ul li a { font-size: 0.9rem; color: #999; }
+        .footer-col ul li a:hover { color: var(--gold); padding-left: 5px; }
+
+        .footer-email { display: inline-block; color: var(--gold); font-size: 1.1rem; font-weight: 500; margin-bottom: 1rem; }
+        .footer-email:hover { text-decoration: underline; }
+        .footer-response { font-size: 0.85rem; color: #888; margin-bottom: 2rem; }
+        .footer-contact-text { font-size: 0.9rem; color: #999; line-height: 1.8; margin-bottom: 1.25rem; }
+
+        .footer-bottom { padding: 2rem 0; display: flex; justify-content: space-between; align-items: center; font-size: 0.85rem; color: #888; }
+        .footer-bottom p { margin-bottom: 0; color: #888; font-size: 0.85rem; }
+
+        /* =============================================================
+           12. ANIMATIONS (SCROLL REVEAL)
+           ============================================================= */
+        .fade-in-up { opacity: 0; transform: translateY(40px); transition: opacity 0.8s ease, transform 0.8s ease; }
+        .fade-in-up.visible { opacity: 1; transform: translateY(0); }
+        .fade-in-left { opacity: 0; transform: translateX(-40px); transition: opacity 0.8s ease, transform 0.8s ease; }
+        .fade-in-left.visible { opacity: 1; transform: translateX(0); }
+        .fade-in-right { opacity: 0; transform: translateX(40px); transition: opacity 0.8s ease, transform 0.8s ease; }
+        .fade-in-right.visible { opacity: 1; transform: translateX(0); }
+        .delay-1 { transition-delay: 0.1s; }
+        .delay-2 { transition-delay: 0.2s; }
+        .delay-3 { transition-delay: 0.3s; }
+
+        /* =============================================================
+           13. RESPONSIVE DESIGN
+           ============================================================= */
+        @media (max-width: 1200px) {
+            .container { padding: 0 1.5rem; }
+            .mega-menu { width: 600px; left: -100px; }
+            .mega-menu-inner { grid-template-columns: 1fr 1fr; }
+            .cta-container { gap: 3rem; }
+            .footer-grid { grid-template-columns: 1fr 1fr; gap: 3rem; }
+            .policy-layout { grid-template-columns: 260px 1fr; gap: 3rem; }
+        }
+
+        @media (max-width: 1024px) {
+            .section { padding: 6rem 0; }
+            .cta-container { grid-template-columns: 1fr; }
+            .hero-title { font-size: 3rem; }
+            .policy-layout { grid-template-columns: 1fr; gap: 2.5rem; }
+            .policy-sidebar { position: static; }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-btn { display: flex; }
+            .nav-links {
+                position: fixed; top: 0; right: -100%; width: 85%; height: 100vh;
+                background-color: var(--navy); flex-direction: column;
+                justify-content: flex-start; padding: 8rem 2rem 2rem;
+                transition: var(--transition-smooth); box-shadow: -10px 0 30px rgba(0,0,0,0.5);
+                z-index: 999; overflow-y: auto; gap: 1.5rem;
+            }
+            .nav-links.active { right: 0; }
+            .nav-link { color: var(--white) !important; font-size: 1.1rem; margin: 0; display: block; width: 100%; }
+            .nav-link::after { display: none; }
+            .mega-menu { position: static; background-color: transparent; box-shadow: none; border-top: none; opacity: 1; visibility: visible; transform: none; width: 100%; padding: 0; display: none; }
+            .dropdown.active .mega-menu { display: block; }
+            .mega-menu-inner { grid-template-columns: 1fr; gap: 1.5rem; }
+            .mega-col h4 { color: var(--gold); border-bottom: 1px solid rgba(255,255,255,0.1); margin-bottom: 1rem; }
+            .mega-col ul li a { color: var(--light-gray); padding: 0.3rem 0; }
+            .highlight-col { display: none; }
+            .mobile-menu-btn.active .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); background-color: var(--white) !important; }
+            .mobile-menu-btn.active .bar:nth-child(2) { opacity: 0; }
+            .mobile-menu-btn.active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); background-color: var(--white) !important; }
+            .btn-primary.nav-btn { width: 100%; text-align: center; margin-top: 1rem; }
+            .hero-inner { min-height: 46vh; height: auto; }
+            .hero-title { font-size: 2.4rem; }
+            .hero-description { font-size: 1rem; }
+            .section-header h2 { font-size: 2rem; }
+            .section-intro { font-size: 1rem; }
+            .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+            .footer-bottom { flex-direction: column; text-align: center; gap: 1rem; }
+            .policy-toc { padding: 1.5rem; }
+            .policy-intro { padding: 1.5rem; }
+            .policy-contact-block { padding: 2rem; }
+            .policy-table thead th,
+            .policy-table tbody td { padding: 0.75rem 0.85rem; font-size: 0.85rem; }
+            .cta-text h2 { font-size: 2.1rem; }
+        }
+
+        @media (max-width: 480px) {
+            .container { padding: 0 1rem; }
+            .section { padding: 4rem 0; }
+            .hero-title { font-size: 1.95rem; }
+            .btn-primary, .btn-secondary { padding: 0.8rem 1.5rem; font-size: 0.85rem; }
+            .policy-section-header { gap: 0.75rem; }
+            .policy-number { font-size: 1.2rem; }
+            .policy-section h2 { font-size: 1.3rem; }
+            .policy-table { font-size: 0.82rem; }
+            .policy-table thead th,
+            .policy-table tbody td { padding: 0.65rem 0.7rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- =================================================================
+         PRELOADER
+         ================================================================= -->
+    <div id="preloader">
+        <div class="loader-content">
+            <svg class="loader-svg" viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="40" stroke="#C5A059" stroke-width="2" fill="none" class="circle-anim"></circle>
+            </svg>
+            <h2 class="loader-text">ALLY WEALTH</h2>
+            <p class="loader-subtext">Loading privacy policy...</p>
+        </div>
+    </div>
+
+    <!-- =================================================================
+         GLOBAL NAVIGATION
+         ================================================================= -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+
+            <a href="index.html" class="logo-link" aria-label="Ally Wealth Home">
+                <img src="images/favicon.png" alt="Ally Wealth Logo" class="logo-img">
+            </a>
+
+            <div class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle Menu" role="button" tabindex="0">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+
+                <li class="dropdown mega-dropdown">
+                    <a href="services.html" class="nav-link">Services <span class="arrow">&#9662;</span></a>
+                    <div class="mega-menu">
+                        <div class="mega-menu-inner">
+                            <div class="mega-col">
+                                <h4>Amazon Optimization</h4>
+                                <ul>
+                                    <li><a href="services.html#amazon">Amazon Book Marketing</a></li>
+                                    <li><a href="services.html#aplus">Amazon A+ Content</a></li>
+                                    <li><a href="services.html#listing">Book Listing Optimisation</a></li>
+                                    <li><a href="services.html#keywords">Keywords and Categories</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-col">
+                                <h4>Reader Engagement</h4>
+                                <ul>
+                                    <li><a href="services.html#goodreads">Goodreads Marketing</a></li>
+                                    <li><a href="services.html#arc">ARC and Reader Outreach</a></li>
+                                    <li><a href="services.html#social">Social Media Promotion</a></li>
+                                    <li><a href="services.html#audiobook">Audiobook Marketing</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-col">
+                                <h4>Author and Launch</h4>
+                                <ul>
+                                    <li><a href="services.html#branding">Author Branding</a></li>
+                                    <li><a href="services.html#descriptions">Book Descriptions</a></li>
+                                    <li><a href="services.html#launch">Book Launch Campaigns</a></li>
+                                    <li><a href="services.html#custom">Custom Book Strategy</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-col highlight-col">
+                                <h4>Need Guidance?</h4>
+                                <p>Not sure which service fits your book? Let's discuss your goals.</p>
+                                <a href="contact.html" class="btn-primary btn-small">Get a Proposal</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li><a href="work.html" class="nav-link">Our Work</a></li>
+                <li><a href="resources.html" class="nav-link">Resources</a></li>
+                <li><a href="contact.html" class="btn-primary nav-btn">Request a Proposal</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- =================================================================
+         INNER PAGE HERO
+         ================================================================= -->
+    <header class="hero-inner">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <p class="hero-subtitle fade-in-up">LEGAL</p>
+            <h1 class="hero-title fade-in-up delay-1">
+                Privacy Policy
+            </h1>
+            <p class="hero-description fade-in-up delay-2">
+                This policy explains what personal information we collect, why we collect it, how we use it, and the choices you have. It is written in plain language on purpose.
+            </p>
+            <span class="last-updated fade-in-up delay-3">
+                <span class="last-updated-dot"></span>
+                Last updated 10 November 2026
+            </span>
+        </div>
+    </header>
+
+    <!-- =================================================================
+         POLICY SECTION
+         ================================================================= -->
+    <section class="section bg-ivory" id="policy">
+        <div class="container">
+
+            <div class="policy-layout">
+
+                <!-- =====================================================
+                     STICKY TABLE OF CONTENTS
+                     ===================================================== -->
+                <aside class="policy-sidebar">
+                    <nav class="policy-toc" aria-label="Privacy policy contents">
+                        <p class="policy-toc-title">Contents</p>
+                        <ol>
+                            <li><a href="#introduction">Introduction</a></li>
+                            <li><a href="#information-we-collect">Information We Collect</a></li>
+                            <li><a href="#how-we-use">How We Use Your Information</a></li>
+                            <li><a href="#legal-basis">Legal Basis for Processing</a></li>
+                            <li><a href="#cookies">Cookies and Tracking</a></li>
+                            <li><a href="#sharing">How We Share Information</a></li>
+                            <li><a href="#retention">Data Retention</a></li>
+                            <li><a href="#security">Data Security</a></li>
+                            <li><a href="#your-rights">Your Rights</a></li>
+                            <li><a href="#transfers">International Transfers</a></li>
+                            <li><a href="#children">Children's Privacy</a></li>
+                            <li><a href="#third-party">Third-Party Links</a></li>
+                            <li><a href="#changes">Changes to This Policy</a></li>
+                            <li><a href="#contact">How to Contact Us</a></li>
+                        </ol>
+                    </nav>
+
+                    <div class="policy-sidebar-note">
+                        <p>Have a question about your data? Email us directly and we will answer it personally.</p>
+                        <a href="mailto:info.allywealth@gmail.com">Get in Touch</a>
+                    </div>
+                </aside>
+
+                <!-- =====================================================
+                     POLICY CONTENT
+                     ===================================================== -->
+                <div class="policy-content">
+
+                    <div class="policy-intro fade-in-up">
+                        <p>
+                            <strong>In short:</strong> we collect the minimum amount of information needed to reply to your enquiries and run our business. We do not sell your data, we do not share it for advertising, and we will always tell you clearly what we hold and why. The full details are set out below.
+                        </p>
+                    </div>
+
+                    <!-- ===============================================
+                         01. INTRODUCTION
+                         =============================================== -->
+                    <article class="policy-section fade-in-up" id="introduction">
+                        <div class="policy-section-header">
+                            <span class="policy-number">01</span>
+                            <h2>Introduction</h2>
+                        </div>
+                        <p>
+                            Ally Wealth ("we", "our", "us") is an author visibility consultancy and book marketing specialist. This privacy policy explains how we collect, use, store, and protect personal information when you visit our website, contact us, or work with us.
+                        </p>
+                        <p>
+                            It applies to every page on this website, including the contact form, the resources library, and the newsletter signup, and to any personal information you share with us by email or during a consultancy engagement.
+                        </p>
+                        <p>
+                            By using this website, you agree to the practices described in this policy. If you do not agree with any part of it, please do not use the website or submit information through it.
+                        </p>
+                    </article>
+
+                    <!-- ===============================================
+                         02. INFORMATION WE COLLECT
+                         =============================================== -->
+                    <article class="policy-section fade-in-up" id="information-we-collect">
+                        <div class="policy-section-header">
+                            <span class="policy-number">02</span>
+                            <h2>Information We Collect</h2>
+                        </div>
+                        <p>
+                            We collect two broad categories of information: information you give us directly, and information that is collected automatically when you use the website.
+                        </p>
+
+                        <h3>Information you provide directly</h3>
+                        <ul>
+                            <li><strong>Contact details:</strong> your name, email address, and any other contact details you choose to include when you submit the contact form or email us.</li>
+                            <li><strong>Book details:</strong> the title, genre, publication stage, and any other information about your book that you choose to share in an enquiry.</li>
+                            <li><strong>Project information:</strong> details about your goals, marketing activity to date, budget, and timeline, when you share them during the proposal or engagement stage.</li>
+                            <li><strong>Correspondence:</strong> the content of emails, messages, and any documents you send us during an engagement.</li>
+                            <li><strong>Newsletter signup:</strong> your email address if you choose to join the resources mailing list.</li>
+                        </ul>
+
+                        <h3>Information collected automatically</h3>
+                        <p>
+                            When you use the website, certain technical information is generated automatically by your browser and by the hosting environment. This typically includes your IP address, browser type and version, the pages you visit, and the time of your visit. We use this information only in aggregate to understand how the website is used and to keep it secure.
+                        </p>
+
+                        <div class="policy-callout">
+                            <p>
+                                <strong>What we do not collect:</strong> we do not collect payment card details on this website. Any payment processing during an engagement is handled separately and directly between the relevant parties.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- ===============================================
+                         03. HOW WE USE YOUR INFORMATION
+                         =============================================== -->
+                    <article class="policy-section fade-in-up" id="how-we-use">
+                        <div class="policy-section-header">
+                            <span class="policy-number">03</span>
+                            <h2>How We Use Your Information</h2>
+                        </div>
+                        <p>
+                            We use the information we collect only for the purposes listed below. We do not use it for any other reason without your consent.
+                        </p>
+                        <ul>
+                            <li><strong>To respond to your enquiry:</strong> so that we can read your message, understand what you are looking for, and reply with an appropriate answer or proposal.</li>
+                            <li><strong>To prepare a proposal:</strong> so that we can tailor our services to your book, genre, and goals.</li>
+                            <li><strong>To deliver services:</strong> so that we can carry out the work agreed between us, including audits, campaigns, and strategy.</li>
+                            <li><strong>To send resources:</strong> if you opt in to the mailing list, so that we can send you new PDFs, articles, and guides as they are published.</li>
+                            <li><strong>To maintain records:</strong> so that we have a clear record of our correspondence and of any engagement, for accounting and legal purposes.</li>
+                            <li><strong>To improve the website:</strong> so that we can understand which pages are useful and which are not, in aggregate and without identifying individuals.</li>
+                        </ul>
+                        <p>
+                            We will never use your information to send you unrelated marketing, and we will never add you to a mailing list without your explicit consent.
+                        </p>
+                    </article>
+
+                    <!-- ===============================================
+                         04. LEGAL BASIS FOR PROCESSING
+                         =============================================== -->
+                    <article class="policy-section fade-in-up" id="legal-basis">
+                        <div class="policy-section-header">
+                            <span class="policy-number">04</span>
+                            <h2>Legal Basis for Processing</h2>
+                        </div>
+                        <p>
+                            If you are located in the European Economic Area, the United Kingdom, or a jurisdiction with similar data protection laws, we rely on the following legal bases to process your information.
+                        </p>
+                        <ul>
+                            <li><strong>Consent:</strong> when you submit the contact form or join the mailing list, you are giving us consent to use your information for the purposes described at that point.</li>
+                            <li><strong>Contract:</strong> when you engage us to provide services, we process your information because it is necessary to deliver the work agreed.</li>
+                            <li><strong>Legitimate interests:</strong> we have a legitimate interest in running and improving our business, responding to enquiries, and keeping accurate records, provided those interests do not override your rights.</li>
+                            <li><strong>Legal obligation:</strong> we may process your information where we are required to do so by law, for example to keep financial records.</li>
+                        </ul>
+                        <p>
+                            Where we rely on consent, you can withdraw it at any time by contacting us. Withdrawing consent does not affect the lawfulness of any processing carried out before the withdrawal.
+                        </p>
+                    </article>
+
+                    <!-- ===============================================
+                         05. COOKIES AND TRACKING
+                         =============================================== -->
+                    <article class="policy-section fade-in-up" id="cookies">
+                        <div class="policy-section-header">
+                            <span class="policy-number">05</span>
+                            <h2>Cookies and Tracking</h2>
+                        </div>
+                        <p>
+                            This website uses a minimal number of cookies and similar technologies. We do not use advertising cookies, cross-site tracking cookies, or third-party profiling tools.
+                        </p>
+
+                        <h3>What cookies we use</h3>
+                        <table class="policy-table">
+                            <thead>
+                                <tr>
+                                    <th>Category</th>
+                                    <th>Purpose</th>
+                                    <th>Retention</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Strictly necessary</strong></td>
+                                    <td>Required for the website to function, such as remembering a form submission state or basic security protections.</td>
+                                    <td>Session</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Analytics</strong></td>
+                                    <td>Aggregate, anonymous information about how the website is used. No individual profiling.</td>
+                                    <td>Up to 12 months</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Preferences</strong></td>
+                                    <td>Remembering your choices, such as whether you have dismissed a notice.</td>
+                                    <td>Up to 6 months</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <p>
+                            You can control or delete cookies through your browser settings. Blocking strictly necessary cookies may affect the functionality of the website.
+                        </p>
+                    </article>
+
+                    <!-- ===============================================
+                         06. HOW WE SHARE INFORMATION
+                         =============================================== -->
+                    <article class="policy-section fade-in-up" id="sharing">
+                        <div class="policy-section-header">
+                            <span class="policy-number">06</span>
+                            <h2>How We Share Information</h2>
+                        </div>
+                        <p>
+                            We do not sell your personal information, and we do not share it for advertising purposes. We share it only in the limited circumstances described below.
+                        </p>
+                        <ul>
+                            <li><strong>Service providers:</strong> we use a small number of trusted providers, such as email hosting and website hosting, to run our business. These providers process information on our behalf and are bound by confidentiality and data protection obligations.</li>
+                            <li><strong>Professional advisers:</strong> where necessary, we may share information with accountants or legal advisers, subject to professional confidentiality.</li>
+                            <li><strong>Legal requirements:</strong> we may disclose information if required to do so by law, by a court order, or by a regulatory authority.</li>
+                            <li><strong>Business transfers:</strong> if our business is ever transferred or merged, your information may be transferred as part of that process, subject to the same protections described in this policy.</li>
+                        </ul>
+                        <p>
+                            We will never share your book details, manuscript material, or unpublished content with third parties without your explicit written permission.
+                        </p>
+                    </article>
+
+                    <!-- ===============================================
+                         07. DATA RETENTION
+                         =============================================== -->
+                    <article class="policy-section fade-in-up" id="retention">
+                        <div class="policy-section-header">
+                            <span class="policy-number">07</span>
+                            <h2>Data Retention</h2>
+                        </div>
+                        <p>
+                            We keep personal information only for as long as we need it for the purpose for which it was collected, or as long as the law requires us to keep it.
+                        </p>
+                        <ul>
+                            <li><strong>Enquiries that do not proceed:</strong> usually deleted within 12 months of the last contact.</li>
+                            <li><strong>Engagements:</strong> retained for up to 6 years after the end of the engagement, to comply with accounting and legal record-keeping obligations.</li>
+                            <li><strong>Mailing list subscribers:</strong> retained until you unsubscribe, after which your address is removed from the active list.</li>
+                            <li><strong>Website analytics:</strong> retained in aggregate for up to 12 months.</li>
+                        </ul>
+                        <p>
+                            When information is no longer needed, we delete it securely or anonymise it so that it can no longer be linked to you.
+                        </p>
+                    </article>
+
+                    <!-- ===============================================
+                         08. DATA SECURITY
+                         =============================================== -->
+                    <article class="policy-section fade-in-up" id="security">
+                        <div class="policy-section-header">
+                            <span class="policy-number">08</span>
+                            <h2>Data Security</h2>
+                        </div>
+                        <p>
+                            We take the security of your information seriously and use reasonable technical and organisational measures to protect it against unauthorised access, loss, or misuse.
+                        </p>
+                        <ul>
+                            <li><strong>Access control:</strong> only the people who need access to your information to do their work have it.</li>
+                            <li><strong>Encryption in transit:</strong> the website uses HTTPS to protect information in transit between your browser and our servers.</li>
+                            <li><strong>Secure providers:</strong> we use reputable email and hosting providers that maintain industry-standard security practices.</li>
+                            <li><strong>Review:</strong> we review our practices periodically and update them when necessary.</li>
+                        </ul>
+                        <div class="policy-callout">
+                            <p>
+                                <strong>A note on email:</strong> no system is completely secure. If you are sending information that you consider highly sensitive, please contact us first so that we can arrange a more secure way to receive it.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- ===============================================
+                         09. YOUR RIGHTS
+                         =============================================== -->
+                    <article class="policy-section fade-in-up" id="your-rights">
+                        <div class="policy-section-header">
+                            <span class="policy-number">09</span>
+                            <h2>Your Rights</h2>
+                        </div>
+                        <p>
+                            Depending on where you live, you may have some or all of the following rights in relation to your personal information.
+                        </p>
+                        <ul>
+                            <li><strong>Right of access:</strong> you can ask us for a copy of the personal information we hold about you.</li>
+                            <li><strong>Right to correction:</strong> you can ask us to correct information that is inaccurate or incomplete.</li>
+                            <li><strong>Right to deletion:</strong> you can ask us to delete your information, subject to any legal obligations that require us to keep it.</li>
+                            <li><strong>Right to restrict processing:</strong> you can ask us to limit how we use your information in certain circumstances.</li>
+                            <li><strong>Right to data portability:</strong> you can ask us to provide your information in a structured, machine-readable format.</li>
+                            <li><strong>Right to object:</strong> you can object to processing based on legitimate interests or to direct marketing at any time.</li>
+                            <li><strong>Right to withdraw consent:</strong> where we rely on consent, you can withdraw it at any time.</li>
+                            <li><strong>Right to complain:</strong> you can lodge a complaint with your local data protection authority.</li>
+                        </ul>
+                        <p>
+                            To exercise any of these rights, email us at the address in section 14. We will respond within the timeframe required by the applicable law, usually within 30 days. We may need to verify your identity before acting on a request.
+                        </p>
+                    </article>
+
+                    <!-- ===============================================
+                         10. INTERNATIONAL TRANSFERS
+                         =============================================== -->
+                    <article class="policy-section fade-in-up" id="transfers">
+                        <div class="policy-section-header">
+                            <span class="policy-number">10</span>
+                            <h2>International Transfers</h2>
+                        </div>
+                        <p>
+                            Our service providers may be located in countries other than your own. Where personal information is transferred outside the European Economic Area or the United Kingdom, we ensure that appropriate safeguards are in place, such as standard contractual clauses or an equivalent mechanism recognised under the relevant law.
+                        </p>
+                        <p>
+                            We keep these arrangements under review and will update them as the legal framework changes.
+                        </p>
+                    </article>
+
+                    <!-- ===============================================
+                         11. CHILDREN'S PRIVACY
+                         =============================================== -->
+                    <article class="policy-section fade-in-up" id="children">
+                        <div class="policy-section-header">
+                            <span class="policy-number">11</span>
+                            <h2>Children's Privacy</h2>
+                        </div>
+                        <p>
+                            This website and our services are intended for adults. We do not knowingly collect personal information from anyone under the age of 16. If you believe that we have collected information from a child under 16, please contact us and we will delete it promptly.
+                        </p>
+                        <p>
+                            If you are the parent or guardian of a child who has provided us with personal information, please contact us using the details in section 14 so that we can take appropriate action.
+                        </p>
+                    </article>
+
+                    <!-- ===============================================
+                         12. THIRD-PARTY LINKS
+                         =============================================== -->
+                    <article class="policy-section fade-in-up" id="third-party">
+                        <div class="policy-section-header">
+                            <span class="policy-number">12</span>
+                            <h2>Third-Party Links</h2>
+                        </div>
+                        <p>
+                            This website may contain links to third-party websites, such as Amazon, Goodreads, or publishing platforms. We are not responsible for the privacy practices of those websites.
+                        </p>
+                        <p>
+                            We encourage you to read the privacy policy of any third-party website you visit. This policy applies only to information collected by us through this website and our direct engagement with you.
+                        </p>
+                    </article>
+
+                    <!-- ===============================================
+                         13. CHANGES TO THIS POLICY
+                         =============================================== -->
+                    <article class="policy-section fade-in-up" id="changes">
+                        <div class="policy-section-header">
+                            <span class="policy-number">13</span>
+                            <h2>Changes to This Policy</h2>
+                        </div>
+                        <p>
+                            We may update this policy from time to time to reflect changes in our practices, our services, or the law. When we do, we will update the "last updated" date at the top of this page.
+                        </p>
+                        <p>
+                            If the changes are significant, we will make that clear on the website and, where appropriate, notify subscribers by email. Continuing to use the website after a change takes effect means you accept the revised policy.
+                        </p>
+                        <p>
+                            We recommend that you check this page occasionally so that you are aware of the current version.
+                        </p>
+                    </article>
+
+                    <!-- ===============================================
+                         14. HOW TO CONTACT US
+                         =============================================== -->
+                    <article class="policy-section fade-in-up" id="contact">
+                        <div class="policy-section-header">
+                            <span class="policy-number">14</span>
+                            <h2>How to Contact Us</h2>
+                        </div>
+                        <p>
+                            If you have a question about this policy, want to exercise any of your rights, or want to make a complaint about how we have handled your information, please get in touch.
+                        </p>
+
+                        <div class="policy-contact-block">
+                            <p>
+                                <strong>Email</strong>
+                                <a href="mailto:info.allywealth@gmail.com">info.allywealth@gmail.com</a>
+                            </p>
+                            <p>
+                                <strong>Response time</strong>
+                                We aim to respond to privacy enquiries within 30 days, and usually much sooner.
+                            </p>
+                            <p>
+                                <strong>What to include</strong>
+                                Tell us what your question or request is and, if you are exercising a right, the email address you used with us so that we can locate your records.
+                            </p>
+                        </div>
+                    </article>
+
+                    <div class="back-to-top-wrap">
+                        <a href="#policy" class="back-to-top">Back to top &uarr;</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =================================================================
+         CTA SECTION
+         ================================================================= -->
+    <section class="section cta-section">
+        <div class="container cta-container">
+            <div class="cta-text fade-in-left">
+                <p class="section-label">QUESTIONS?</p>
+                <h2>We are happy to talk.</h2>
+                <p>If anything in this policy is unclear, or if you want to know how we would handle a specific situation, just ask. We answer every message personally.</p>
+            </div>
+            <div class="fade-in-right" style="text-align: center;">
+                <a href="contact.html" class="btn-primary btn-large">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- =================================================================
+         MASSIVE FOOTER
+         ================================================================= -->
+    <footer class="mega-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col brand-col">
+                    <img src="images/favicon.png" alt="Ally Wealth Logo" class="footer-logo">
+                    <p class="footer-tagline">Get Seen. Grow Your Influence.<br>Build Your Legacy.</p>
+                    <p class="footer-desc">Premium author visibility and book marketing consulting for authors, publishers, and independent professionals.</p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html#amazon">Amazon Book Marketing</a></li>
+                        <li><a href="services.html#aplus">Amazon A+ Content</a></li>
+                        <li><a href="services.html#listing">Book Listing Optimisation</a></li>
+                        <li><a href="services.html#keywords">Keywords and Categories</a></li>
+                        <li><a href="services.html#goodreads">Goodreads Marketing</a></li>
+                        <li><a href="services.html#branding">Author Branding</a></li>
+                        <li><a href="services.html#descriptions">Book Descriptions</a></li>
+                        <li><a href="services.html#arc">ARC and Reader Outreach</a></li>
+                        <li><a href="services.html#launch">Book Launch Campaigns</a></li>
+                        <li><a href="services.html#audiobook">Audiobook Marketing</a></li>
+                        <li><a href="services.html#social">Social Media Promotion</a></li>
+                        <li><a href="services.html#custom">Custom Strategy</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Knowledge Centre</h4>
+                    <ul>
+                        <li><a href="resources.html">Resources Home</a></li>
+                        <li><a href="resources.html#pdf-library">Free PDF Library</a></li>
+                        <li><a href="resources.html#articles">Marketing Articles</a></li>
+                        <li><a href="resources.html#guides">Step-by-Step Guides</a></li>
+                        <li><a href="work.html">Case Studies</a></li>
+                    </ul>
+
+                    <h4 class="mt-2">Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Ally Wealth</a></li>
+                        <li><a href="work.html">Our Work</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col contact-col">
+                    <h4>Get in Touch</h4>
+                    <p class="footer-contact-text">Ready to discuss your book marketing strategy? We would love to hear from you.</p>
+                    <a href="mailto:info.allywealth@gmail.com" class="footer-email">info.allywealth@gmail.com</a>
+                    <p class="footer-response">We typically respond within 24-48 business hours.</p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Ally Wealth. All rights reserved.</p>
+                <p>Author Visibility Consultant and Book Marketing Specialist.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- =================================================================
+         EMBEDDED JAVASCRIPT
+         ================================================================= -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            /* =========================================================
+               1. PRELOADER
+               ========================================================= */
+            const preloader = document.getElementById('preloader');
+            if (preloader) {
+                window.addEventListener('load', () => {
+                    setTimeout(() => {
+                        preloader.classList.add('hidden');
+                        setTimeout(() => { preloader.style.display = 'none'; }, 600);
+                    }, 800);
+                });
+            }
+
+            /* =========================================================
+               2. MOBILE NAVIGATION AND DROPDOWNS
+               ========================================================= */
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const navLinks = document.getElementById('nav-links');
+            const dropdowns = document.querySelectorAll('.dropdown');
+
+            if (mobileMenuBtn && navLinks) {
+                mobileMenuBtn.addEventListener('click', () => {
+                    navLinks.classList.toggle('active');
+                    mobileMenuBtn.classList.toggle('active');
+                    document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
+                });
+
+                navLinks.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        if (window.innerWidth <= 768 && !link.parentElement.classList.contains('dropdown')) {
+                            navLinks.classList.remove('active');
+                            mobileMenuBtn.classList.remove('active');
+                            document.body.style.overflow = '';
+                        }
+                    });
+                });
+
+                dropdowns.forEach(dropdown => {
+                    const link = dropdown.querySelector('.nav-link');
+                    if (!link) return;
+                    link.addEventListener('click', (e) => {
+                        if (window.innerWidth <= 768) {
+                            e.preventDefault();
+                            dropdown.classList.toggle('active');
+                        }
+                    });
+                });
+            }
+
+            /* =========================================================
+               3. STICKY NAVBAR
+               ========================================================= */
+            const navbar = document.getElementById('navbar');
+            if (navbar) {
+                const handleScroll = () => {
+                    if (window.scrollY > 50) {
+                        navbar.classList.add('scrolled');
+                    } else {
+                        navbar.classList.remove('scrolled');
+                    }
+                };
+                window.addEventListener('scroll', handleScroll);
+                handleScroll();
+            }
+
+            /* =========================================================
+               4. SCROLL REVEAL ANIMATIONS
+               ========================================================= */
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const revealObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        revealObserver.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.fade-in-up, .fade-in-left, .fade-in-right').forEach(el => revealObserver.observe(el));
+
+            /* =========================================================
+               5. SCROLL SPY FOR THE TABLE OF CONTENTS
+               ========================================================= */
+            const tocLinks = document.querySelectorAll('.policy-toc ol li a');
+            const sections = document.querySelectorAll('.policy-section');
+
+            if (tocLinks.length && sections.length) {
+                const linkMap = {};
+                tocLinks.forEach(link => {
+                    const href = link.getAttribute('href');
+                    if (href && href.startsWith('#')) {
+                        linkMap[href.slice(1)] = link;
+                    }
+                });
+
+                const setActive = (id) => {
+                    tocLinks.forEach(link => link.classList.remove('active'));
+                    if (linkMap[id]) {
+                        linkMap[id].classList.add('active');
+                    }
+                };
+
+                const spyOptions = {
+                    rootMargin: '-110px 0px -65% 0px',
+                    threshold: 0
+                };
+
+                const spyObserver = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            setActive(entry.target.id);
+                        }
+                    });
+                }, spyOptions);
+
+                sections.forEach(section => spyObserver.observe(section));
+
+                /* Fallback: mark the first link active on load */
+                setActive('introduction');
+            }
+
+        });
+    </script>
+</body>
+</html>

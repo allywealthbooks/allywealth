@@ -1,0 +1,1503 @@
+<!DOCTYPE html>
+<!-- =====================================================================
+     ALLY WEALTH - PREMIUM AUTHOR VISIBILITY CONSULTANT
+     MASTER 404 ERROR PAGE - ALL-IN-ONE FILE
+     =====================================================================
+     This file contains all HTML, CSS, and JavaScript required for the
+     404 error page. No external CSS or JS files are needed for this
+     page to render perfectly.
+
+     Contents:
+     1. Oversized 404 hero with recovery message
+     2. Quick links grid to all main pages
+     3. Popular resource shortcuts
+     4. "Try these instead" guidance panel
+     5. Standard CTA and footer
+
+     Author: Ally Wealth Development Team
+     Date: 2026
+     ===================================================================== -->
+
+<html lang="en">
+<head>
+    <!-- =================================================================
+         META TAGS AND SEO OPTIMIZATION
+         ================================================================= -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Primary Meta Tags -->
+    <title>Page Not Found | Ally Wealth Book Marketing</title>
+    <meta name="title" content="Page Not Found | Ally Wealth Book Marketing">
+    <meta name="description" content="The page you were looking for could not be found. Use the quick links below to get back to the main Ally Wealth pages, or contact us directly.">
+    <meta name="author" content="Ally Wealth">
+    <meta name="robots" content="noindex, follow">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="apple-touch-icon" href="images/favicon.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+
+    <!-- =================================================================
+         EMBEDDED CSS STYLESHEET
+         ================================================================= -->
+    <style>
+        /* =============================================================
+           1. CSS VARIABLES AND ROOT DEFINITIONS
+           ============================================================= */
+        :root {
+            --navy: #0B132B;
+            --gold: #C5A059;
+            --ivory: #F4EFE7;
+            --charcoal: #28221D;
+            --white: #FFFFFF;
+            --light-gray: #E8DFD2;
+            --dark-gray: #1A1A1A;
+            --muted-text: #6B6B6B;
+            --border-color: rgba(0, 0, 0, 0.08);
+            --gold-transparent: rgba(197, 160, 89, 0.2);
+            --font-heading: 'Playfair Display', serif;
+            --font-body: 'Inter', sans-serif;
+            --transition-smooth: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            --transition-fast: all 0.2s ease-in-out;
+            --shadow-subtle: 0 10px 30px rgba(0, 0, 0, 0.05);
+            --shadow-hover: 0 20px 40px rgba(0, 0, 0, 0.1);
+            --container-width: 1280px;
+            --container-padding: 2rem;
+            --section-padding: 8rem 0;
+        }
+
+        /* =============================================================
+           2. GLOBAL RESET AND BASE STYLES
+           ============================================================= */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--ivory);
+            color: var(--charcoal);
+            line-height: 1.7;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-heading);
+            font-weight: 600;
+            color: var(--navy);
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        h1 { font-size: clamp(2.5rem, 5vw, 4.5rem); }
+        h2 { font-size: clamp(2rem, 4vw, 3rem); }
+        h3 { font-size: clamp(1.3rem, 2.5vw, 1.8rem); }
+        h4 { font-size: clamp(1.1rem, 2vw, 1.4rem); }
+
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+            color: var(--charcoal);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition-fast);
+        }
+
+        ul, ol {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+        }
+
+        button, input, select, textarea {
+            font-family: inherit;
+            font-size: inherit;
+            outline: none;
+            border: none;
+            background: none;
+        }
+
+        button { cursor: pointer; }
+
+        /* =============================================================
+           3. UTILITY AND LAYOUT CLASSES
+           ============================================================= */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--container-padding);
+            width: 100%;
+        }
+
+        .section {
+            padding: var(--section-padding);
+            position: relative;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 4rem;
+        }
+
+        .section-label {
+            color: var(--gold);
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+
+        .section-intro {
+            font-size: 1.15rem;
+            color: var(--muted-text);
+            line-height: 1.8;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .flex-between {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .mt-2 { margin-top: 2rem; }
+        .mt-3 { margin-top: 3rem; }
+
+        .bg-white { background-color: var(--white); }
+        .bg-ivory { background-color: var(--ivory); }
+        .bg-navy { background-color: var(--navy); }
+
+        .text-center { text-align: center; }
+
+        /* =============================================================
+           4. BUTTONS
+           ============================================================= */
+        .btn-primary,
+        .btn-secondary {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            border-radius: 2px;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+            text-align: center;
+            border: 1px solid transparent;
+        }
+
+        .btn-primary {
+            background-color: var(--gold);
+            color: var(--navy);
+            border-color: var(--gold);
+        }
+
+        .btn-primary:hover {
+            background-color: transparent;
+            color: var(--gold);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--navy);
+            border-color: var(--navy);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--navy);
+            color: var(--ivory);
+        }
+
+        .btn-light {
+            background-color: transparent;
+            color: var(--ivory);
+            border-color: rgba(244, 239, 231, 0.5);
+        }
+
+        .btn-light:hover {
+            background-color: var(--ivory);
+            color: var(--navy);
+            border-color: var(--ivory);
+        }
+
+        .btn-large {
+            padding: 1.2rem 3rem;
+            font-size: 1rem;
+        }
+
+        .btn-small {
+            padding: 0.6rem 1.5rem;
+            font-size: 0.8rem;
+        }
+
+        .btn-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        /* =============================================================
+           5. PRELOADER
+           ============================================================= */
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: var(--navy);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.6s ease;
+        }
+
+        #preloader.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .loader-content { text-align: center; }
+
+        .loader-svg {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 1rem;
+        }
+
+        .circle-anim {
+            stroke-dasharray: 250;
+            stroke-dashoffset: 250;
+            animation: drawCircle 1.5s ease forwards infinite;
+            transform-origin: center;
+        }
+
+        @keyframes drawCircle {
+            0% { stroke-dashoffset: 250; transform: rotate(0deg); }
+            50% { stroke-dashoffset: 0; transform: rotate(180deg); }
+            100% { stroke-dashoffset: -250; transform: rotate(360deg); }
+        }
+
+        .loader-text {
+            color: var(--gold);
+            font-family: var(--font-heading);
+            letter-spacing: 4px;
+            font-size: 1.2rem;
+            animation: pulseText 1.5s ease infinite;
+        }
+
+        .loader-subtext {
+            color: var(--light-gray);
+            font-size: 0.8rem;
+            margin-top: 0.5rem;
+            letter-spacing: 1px;
+        }
+
+        @keyframes pulseText {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 1; }
+        }
+
+        /* =============================================================
+           6. NAVIGATION
+           ============================================================= */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 1.5rem 0;
+            background-color: transparent;
+            z-index: 1000;
+            transition: var(--transition-smooth);
+        }
+
+        .navbar.scrolled {
+            background-color: rgba(244, 239, 231, 0.95);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .nav-container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--container-padding);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-link {
+            display: flex;
+            align-items: center;
+            z-index: 1001;
+        }
+
+        .logo-img {
+            height: 65px;
+            width: auto;
+            transition: var(--transition-fast);
+        }
+
+        .navbar.scrolled .logo-img { height: 50px; }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 2.5rem;
+            margin-bottom: 0;
+        }
+
+        .nav-link {
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--ivory);
+            position: relative;
+            padding-bottom: 5px;
+            transition: var(--transition-fast);
+        }
+
+        .navbar.scrolled .nav-link { color: var(--navy); }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--gold);
+            transition: var(--transition-fast);
+        }
+
+        .nav-link:hover::after,
+        .nav-link.active::after { width: 100%; }
+
+        .nav-link:hover,
+        .nav-link.active { color: var(--gold) !important; }
+
+        .btn-primary.nav-btn {
+            background-color: var(--gold);
+            color: var(--navy);
+            padding: 0.8rem 1.5rem;
+            border: 1px solid var(--gold);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.85rem !important;
+            border-radius: 2px;
+        }
+
+        .btn-primary.nav-btn:hover {
+            background-color: transparent;
+            color: var(--gold);
+        }
+
+        .navbar:not(.scrolled) .btn-primary.nav-btn {
+            background-color: transparent;
+            color: var(--ivory);
+            border-color: var(--ivory);
+        }
+
+        .navbar:not(.scrolled) .btn-primary.nav-btn:hover {
+            background-color: var(--ivory);
+            color: var(--navy);
+        }
+
+        .dropdown { position: relative; }
+        .arrow { font-size: 0.7rem; margin-left: 3px; display: inline-block; transition: transform 0.3s ease; }
+        .dropdown:hover .arrow { transform: rotate(180deg); }
+
+        .mega-menu {
+            position: absolute;
+            top: 100%;
+            left: -150px;
+            background-color: var(--white);
+            width: 800px;
+            box-shadow: var(--shadow-hover);
+            border-top: 3px solid var(--gold);
+            padding: 2.5rem;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: var(--transition-smooth);
+            z-index: 100;
+        }
+
+        .dropdown:hover .mega-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .mega-menu-inner {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1.2fr;
+            gap: 2rem;
+        }
+
+        .mega-col h4 {
+            font-family: var(--font-body);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1.5rem;
+            color: var(--navy);
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.5rem;
+        }
+
+        .mega-col ul li { margin-bottom: 0.8rem; }
+        .mega-col ul li a {
+            font-size: 0.85rem;
+            color: var(--muted-text);
+            text-transform: none;
+            letter-spacing: 0;
+            display: block;
+            transition: var(--transition-fast);
+        }
+
+        .mega-col ul li a:hover {
+            color: var(--gold);
+            padding-left: 5px;
+        }
+
+        .highlight-col {
+            background-color: var(--ivory);
+            padding: 1.5rem;
+            border-radius: 4px;
+        }
+
+        .highlight-col p {
+            font-size: 0.9rem;
+            color: var(--muted-text);
+            margin-bottom: 1.5rem;
+            line-height: 1.5;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            cursor: pointer;
+            flex-direction: column;
+            gap: 6px;
+            z-index: 1001;
+            padding: 5px;
+        }
+
+        .bar {
+            width: 28px;
+            height: 2px;
+            background-color: var(--ivory);
+            transition: var(--transition-fast);
+            display: block;
+        }
+
+        .navbar.scrolled .bar { background-color: var(--navy); }
+
+        /* =============================================================
+           7. 404 HERO
+           ============================================================= */
+        .hero-404 {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background-color: var(--navy);
+            overflow: hidden;
+            padding: 10rem 0 6rem;
+        }
+
+        .hero-404::before {
+            content: '';
+            position: absolute;
+            top: -20%;
+            right: -15%;
+            width: 700px;
+            height: 700px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(197,160,89,0.14) 0%, transparent 65%);
+            pointer-events: none;
+        }
+
+        .hero-404::after {
+            content: '';
+            position: absolute;
+            bottom: -25%;
+            left: -15%;
+            width: 600px;
+            height: 600px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(197,160,89,0.08) 0%, transparent 65%);
+            pointer-events: none;
+        }
+
+        .hero-404-content {
+            position: relative;
+            z-index: 2;
+            max-width: 880px;
+            padding: 0 var(--container-padding);
+        }
+
+        .hero-404-subtitle {
+            color: var(--gold);
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 4px;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+        }
+
+        .error-code {
+            font-family: var(--font-heading);
+            font-size: clamp(8rem, 22vw, 18rem);
+            font-weight: 700;
+            color: transparent;
+            -webkit-text-stroke: 2px var(--gold);
+            text-stroke: 2px var(--gold);
+            line-height: 0.9;
+            letter-spacing: -0.02em;
+            margin-bottom: 1.5rem;
+            display: block;
+            position: relative;
+        }
+
+        .error-code::after {
+            content: '404';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            color: var(--gold);
+            opacity: 0.08;
+            z-index: -1;
+            transform: translate(8px, 8px);
+        }
+
+        .hero-404-title {
+            color: var(--white);
+            font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            text-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        .hero-404-description {
+            color: var(--light-gray);
+            font-size: 1.1rem;
+            max-width: 640px;
+            margin: 0 auto 3rem;
+            line-height: 1.8;
+        }
+
+        /* =============================================================
+           8. QUICK LINKS GRID
+           ============================================================= */
+        .quick-links-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            max-width: 1040px;
+            margin: 0 auto;
+        }
+
+        .quick-link-card {
+            background-color: var(--white);
+            border-radius: 4px;
+            padding: 2rem 1.75rem;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            border: 1px solid var(--border-color);
+            transition: var(--transition-smooth);
+            position: relative;
+            overflow: hidden;
+            text-align: left;
+        }
+
+        .quick-link-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background-color: var(--gold);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: var(--transition-smooth);
+        }
+
+        .quick-link-card:hover {
+            box-shadow: var(--shadow-hover);
+            transform: translateY(-4px);
+            border-color: rgba(197, 160, 89, 0.3);
+        }
+
+        .quick-link-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .quick-link-icon {
+            width: 36px;
+            height: 36px;
+            color: var(--gold);
+            margin-bottom: 1.25rem;
+        }
+
+        .quick-link-card h3 {
+            font-size: 1.15rem;
+            color: var(--navy);
+            margin-bottom: 0.5rem;
+            line-height: 1.3;
+        }
+
+        .quick-link-card p {
+            font-size: 0.88rem;
+            color: var(--muted-text);
+            line-height: 1.65;
+            margin-bottom: 1.25rem;
+            flex-grow: 1;
+        }
+
+        .quick-link-arrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--navy);
+            transition: var(--transition-fast);
+        }
+
+        .quick-link-arrow svg {
+            width: 12px;
+            height: 12px;
+            transition: var(--transition-fast);
+        }
+
+        .quick-link-card:hover .quick-link-arrow {
+            color: var(--gold);
+        }
+
+        .quick-link-card:hover .quick-link-arrow svg {
+            transform: translateX(4px);
+        }
+
+        /* =============================================================
+           9. SHORTCUTS PANEL
+           ============================================================= */
+        .shortcuts-panel {
+            background-color: var(--white);
+            border-radius: 4px;
+            padding: 3.5rem 3rem;
+            box-shadow: var(--shadow-subtle);
+            border-left: 3px solid var(--gold);
+            max-width: 1040px;
+            margin: 0 auto;
+        }
+
+        .shortcuts-panel h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: var(--navy);
+        }
+
+        .shortcuts-panel > p {
+            font-size: 1rem;
+            color: var(--muted-text);
+            line-height: 1.8;
+            margin-bottom: 2.5rem;
+            max-width: 700px;
+        }
+
+        .shortcuts-columns {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2.5rem;
+        }
+
+        .shortcut-column h4 {
+            font-family: var(--font-body);
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: 700;
+            color: var(--gold);
+            margin-bottom: 1.25rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .shortcut-column ul {
+            margin-bottom: 0;
+        }
+
+        .shortcut-column ul li {
+            margin-bottom: 0.75rem;
+        }
+
+        .shortcut-column ul li a {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            font-size: 0.92rem;
+            color: var(--muted-text);
+            line-height: 1.5;
+            transition: var(--transition-fast);
+        }
+
+        .shortcut-column ul li a::before {
+            content: '';
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background-color: var(--gold);
+            flex-shrink: 0;
+            transition: var(--transition-fast);
+        }
+
+        .shortcut-column ul li a:hover {
+            color: var(--navy);
+            padding-left: 4px;
+        }
+
+        .shortcut-column ul li a:hover::before {
+            background-color: var(--navy);
+        }
+
+        /* =============================================================
+           10. HELP PANEL
+           ============================================================= */
+        .help-panel {
+            background-color: var(--navy);
+            border-radius: 4px;
+            padding: 3.5rem 3rem;
+            max-width: 1040px;
+            margin: 2.5rem auto 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .help-panel::before {
+            content: '';
+            position: absolute;
+            top: -30%;
+            right: -20%;
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(197,160,89,0.15) 0%, transparent 65%);
+            pointer-events: none;
+        }
+
+        .help-panel-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .help-panel h3 {
+            color: var(--white);
+            font-size: 1.7rem;
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+
+        .help-panel p {
+            color: var(--light-gray);
+            font-size: 0.98rem;
+            line-height: 1.8;
+            margin-bottom: 0;
+        }
+
+        .help-panel-actions {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .help-panel-actions a {
+            width: 100%;
+            text-align: center;
+        }
+
+        .help-email {
+            display: block;
+            font-size: 0.85rem;
+            color: var(--light-gray);
+            text-align: center;
+            margin-top: 0.5rem;
+        }
+
+        .help-email strong {
+            color: var(--gold);
+            font-weight: 500;
+        }
+
+        /* =============================================================
+           11. CTA SECTION
+           ============================================================= */
+        .cta-section {
+            background-color: var(--ivory);
+            padding: 7rem 0;
+        }
+
+        .cta-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .cta-text h2 {
+            color: var(--navy);
+            font-size: 2.6rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-text p {
+            color: var(--muted-text);
+            font-size: 1.05rem;
+            margin-bottom: 0;
+        }
+
+        /* =============================================================
+           12. FOOTER
+           ============================================================= */
+        .mega-footer {
+            background-color: #050A18;
+            color: var(--light-gray);
+            padding-top: 5rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
+            gap: 4rem;
+            padding-bottom: 4rem;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .footer-logo { height: 60px; width: auto; margin-bottom: 1.5rem; }
+        .footer-tagline { color: var(--gold); font-family: var(--font-heading); font-size: 1.1rem; margin-bottom: 1rem; line-height: 1.5; }
+        .footer-desc { font-size: 0.9rem; color: #999; line-height: 1.8; }
+
+        .footer-col h4 { color: var(--white); font-family: var(--font-body); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1.5rem; font-weight: 600; }
+        .footer-col ul { margin-bottom: 0; }
+        .footer-col ul li { margin-bottom: 0.8rem; }
+        .footer-col ul li a { font-size: 0.9rem; color: #999; }
+        .footer-col ul li a:hover { color: var(--gold); padding-left: 5px; }
+
+        .footer-email { display: inline-block; color: var(--gold); font-size: 1.1rem; font-weight: 500; margin-bottom: 1rem; }
+        .footer-email:hover { text-decoration: underline; }
+        .footer-response { font-size: 0.85rem; color: #888; margin-bottom: 2rem; }
+        .footer-contact-text { font-size: 0.9rem; color: #999; line-height: 1.8; margin-bottom: 1.25rem; }
+
+        .footer-bottom { padding: 2rem 0; display: flex; justify-content: space-between; align-items: center; font-size: 0.85rem; color: #888; }
+        .footer-bottom p { margin-bottom: 0; color: #888; font-size: 0.85rem; }
+
+        /* =============================================================
+           13. ANIMATIONS (SCROLL REVEAL)
+           ============================================================= */
+        .fade-in-up { opacity: 0; transform: translateY(40px); transition: opacity 0.8s ease, transform 0.8s ease; }
+        .fade-in-up.visible { opacity: 1; transform: translateY(0); }
+        .fade-in-left { opacity: 0; transform: translateX(-40px); transition: opacity 0.8s ease, transform 0.8s ease; }
+        .fade-in-left.visible { opacity: 1; transform: translateX(0); }
+        .fade-in-right { opacity: 0; transform: translateX(40px); transition: opacity 0.8s ease, transform 0.8s ease; }
+        .fade-in-right.visible { opacity: 1; transform: translateX(0); }
+        .delay-1 { transition-delay: 0.1s; }
+        .delay-2 { transition-delay: 0.2s; }
+        .delay-3 { transition-delay: 0.3s; }
+        .delay-4 { transition-delay: 0.4s; }
+
+        /* =============================================================
+           14. RESPONSIVE DESIGN
+           ============================================================= */
+        @media (max-width: 1200px) {
+            .container { padding: 0 1.5rem; }
+            .mega-menu { width: 600px; left: -100px; }
+            .mega-menu-inner { grid-template-columns: 1fr 1fr; }
+            .cta-container { gap: 3rem; }
+            .footer-grid { grid-template-columns: 1fr 1fr; gap: 3rem; }
+            .quick-links-grid { grid-template-columns: repeat(2, 1fr); }
+            .shortcuts-columns { grid-template-columns: 1fr 1fr; gap: 2rem; }
+        }
+
+        @media (max-width: 1024px) {
+            .section { padding: 6rem 0; }
+            .cta-container { grid-template-columns: 1fr; }
+            .hero-404 { min-height: auto; padding: 8rem 0 5rem; }
+            .help-panel { grid-template-columns: 1fr; gap: 2rem; }
+            .help-panel-actions { flex-direction: row; flex-wrap: wrap; }
+            .help-panel-actions a { flex: 1 1 auto; min-width: 200px; }
+            .help-email { flex-basis: 100%; text-align: left; margin-top: 0.5rem; }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-btn { display: flex; }
+            .nav-links {
+                position: fixed; top: 0; right: -100%; width: 85%; height: 100vh;
+                background-color: var(--navy); flex-direction: column;
+                justify-content: flex-start; padding: 8rem 2rem 2rem;
+                transition: var(--transition-smooth); box-shadow: -10px 0 30px rgba(0,0,0,0.5);
+                z-index: 999; overflow-y: auto; gap: 1.5rem;
+            }
+            .nav-links.active { right: 0; }
+            .nav-link { color: var(--white) !important; font-size: 1.1rem; margin: 0; display: block; width: 100%; }
+            .nav-link::after { display: none; }
+            .mega-menu { position: static; background-color: transparent; box-shadow: none; border-top: none; opacity: 1; visibility: visible; transform: none; width: 100%; padding: 0; display: none; }
+            .dropdown.active .mega-menu { display: block; }
+            .mega-menu-inner { grid-template-columns: 1fr; gap: 1.5rem; }
+            .mega-col h4 { color: var(--gold); border-bottom: 1px solid rgba(255,255,255,0.1); margin-bottom: 1rem; }
+            .mega-col ul li a { color: var(--light-gray); padding: 0.3rem 0; }
+            .highlight-col { display: none; }
+            .mobile-menu-btn.active .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); background-color: var(--white) !important; }
+            .mobile-menu-btn.active .bar:nth-child(2) { opacity: 0; }
+            .mobile-menu-btn.active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); background-color: var(--white) !important; }
+            .btn-primary.nav-btn { width: 100%; text-align: center; margin-top: 1rem; }
+            .hero-404-title { font-size: 1.9rem; }
+            .hero-404-description { font-size: 1rem; }
+            .error-code { -webkit-text-stroke-width: 1.5px; }
+            .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+            .footer-bottom { flex-direction: column; text-align: center; gap: 1rem; }
+            .quick-links-grid { grid-template-columns: 1fr; }
+            .shortcuts-columns { grid-template-columns: 1fr; gap: 1.5rem; }
+            .shortcuts-panel { padding: 2.5rem 1.75rem; }
+            .help-panel { padding: 2.5rem 1.75rem; }
+            .help-panel-actions { flex-direction: column; }
+            .help-panel-actions a { width: 100%; }
+            .help-email { text-align: center; margin-top: 0.75rem; }
+            .section-header h2 { font-size: 2rem; }
+            .section-intro { font-size: 1rem; }
+            .cta-text h2 { font-size: 2.1rem; }
+        }
+
+        @media (max-width: 480px) {
+            .container { padding: 0 1rem; }
+            .section { padding: 4rem 0; }
+            .hero-404 { padding: 7rem 0 4rem; }
+            .error-code { font-size: 7rem; -webkit-text-stroke-width: 1.5px; }
+            .hero-404-title { font-size: 1.65rem; }
+            .btn-primary, .btn-secondary, .btn-light { padding: 0.8rem 1.5rem; font-size: 0.85rem; }
+            .btn-group { flex-direction: column; }
+            .btn-group a { width: 100%; }
+            .quick-link-card { padding: 1.75rem 1.5rem; }
+            .shortcuts-panel,
+            .help-panel { padding: 2rem 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- =================================================================
+         PRELOADER
+         ================================================================= -->
+    <div id="preloader">
+        <div class="loader-content">
+            <svg class="loader-svg" viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="40" stroke="#C5A059" stroke-width="2" fill="none" class="circle-anim"></circle>
+            </svg>
+            <h2 class="loader-text">ALLY WEALTH</h2>
+            <p class="loader-subtext">Loading page...</p>
+        </div>
+    </div>
+
+    <!-- =================================================================
+         GLOBAL NAVIGATION
+         ================================================================= -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+
+            <a href="index.html" class="logo-link" aria-label="Ally Wealth Home">
+                <img src="images/favicon.png" alt="Ally Wealth Logo" class="logo-img">
+            </a>
+
+            <div class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle Menu" role="button" tabindex="0">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+
+                <li class="dropdown mega-dropdown">
+                    <a href="services.html" class="nav-link">Services <span class="arrow">&#9662;</span></a>
+                    <div class="mega-menu">
+                        <div class="mega-menu-inner">
+                            <div class="mega-col">
+                                <h4>Amazon Optimization</h4>
+                                <ul>
+                                    <li><a href="services.html#amazon">Amazon Book Marketing</a></li>
+                                    <li><a href="services.html#aplus">Amazon A+ Content</a></li>
+                                    <li><a href="services.html#listing">Book Listing Optimisation</a></li>
+                                    <li><a href="services.html#keywords">Keywords and Categories</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-col">
+                                <h4>Reader Engagement</h4>
+                                <ul>
+                                    <li><a href="services.html#goodreads">Goodreads Marketing</a></li>
+                                    <li><a href="services.html#arc">ARC and Reader Outreach</a></li>
+                                    <li><a href="services.html#social">Social Media Promotion</a></li>
+                                    <li><a href="services.html#audiobook">Audiobook Marketing</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-col">
+                                <h4>Author and Launch</h4>
+                                <ul>
+                                    <li><a href="services.html#branding">Author Branding</a></li>
+                                    <li><a href="services.html#descriptions">Book Descriptions</a></li>
+                                    <li><a href="services.html#launch">Book Launch Campaigns</a></li>
+                                    <li><a href="services.html#custom">Custom Book Strategy</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-col highlight-col">
+                                <h4>Need Guidance?</h4>
+                                <p>Not sure which service fits your book? Let's discuss your goals.</p>
+                                <a href="contact.html" class="btn-primary btn-small">Get a Proposal</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li><a href="work.html" class="nav-link">Our Work</a></li>
+                <li><a href="resources.html" class="nav-link">Resources</a></li>
+                <li><a href="contact.html" class="btn-primary nav-btn">Request a Proposal</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- =================================================================
+         404 HERO
+         ================================================================= -->
+    <header class="hero-404">
+        <div class="hero-404-content">
+            <p class="hero-404-subtitle fade-in-up">ERROR 404</p>
+            <span class="error-code fade-in-up delay-1">404</span>
+            <h1 class="hero-404-title fade-in-up delay-2">
+                This page has wandered off.
+            </h1>
+            <p class="hero-404-description fade-in-up delay-3">
+                The page you were looking for does not exist, has been moved, or was never here to begin with. That happens sometimes. The best pages are still one click away.
+            </p>
+            <div class="btn-group fade-in-up delay-4">
+                <a href="index.html" class="btn-primary btn-large">Back to Home</a>
+                <a href="contact.html" class="btn-light btn-large">Contact Us</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- =================================================================
+         QUICK LINKS SECTION
+         ================================================================= -->
+    <section class="section bg-ivory" id="quick-links">
+        <div class="container">
+
+            <div class="section-header fade-in-up">
+                <span class="section-label">WHERE WOULD YOU LIKE TO GO?</span>
+                <h2>The most visited pages.</h2>
+                <p class="section-intro">
+                    These are the pages our readers and clients tend to be looking for. Pick the one that matches what you had in mind.
+                </p>
+            </div>
+
+            <div class="quick-links-grid">
+
+                <!-- Home -->
+                <a href="index.html" class="quick-link-card fade-in-up">
+                    <svg class="quick-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                        <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                    </svg>
+                    <h3>Home</h3>
+                    <p>An overview of Ally Wealth and how we help authors get seen.</p>
+                    <span class="quick-link-arrow">
+                        Visit page
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </span>
+                </a>
+
+                <!-- About -->
+                <a href="about.html" class="quick-link-card fade-in-up delay-1">
+                    <svg class="quick-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                    <h3>About</h3>
+                    <p>Our story, our values, and the process we use on every engagement.</p>
+                    <span class="quick-link-arrow">
+                        Visit page
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </span>
+                </a>
+
+                <!-- Services -->
+                <a href="services.html" class="quick-link-card fade-in-up delay-2">
+                    <svg class="quick-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                    </svg>
+                    <h3>Services</h3>
+                    <p>All fourteen book marketing services, explained in detail.</p>
+                    <span class="quick-link-arrow">
+                        Visit page
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </span>
+                </a>
+
+                <!-- Our Work -->
+                <a href="work.html" class="quick-link-card fade-in-up">
+                    <svg class="quick-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M3 3v18h18"></path>
+                        <path d="M7 14l4-4 4 4 5-6"></path>
+                    </svg>
+                    <h3>Our Work</h3>
+                    <p>Case studies, measured results, and what it is like to work with us.</p>
+                    <span class="quick-link-arrow">
+                        Visit page
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </span>
+                </a>
+
+                <!-- Resources -->
+                <a href="resources.html" class="quick-link-card fade-in-up delay-1">
+                    <svg class="quick-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                        <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                    </svg>
+                    <h3>Resources</h3>
+                    <p>Free PDFs, marketing articles, and step-by-step guides for authors.</p>
+                    <span class="quick-link-arrow">
+                        Visit page
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </span>
+                </a>
+
+                <!-- Contact -->
+                <a href="contact.html" class="quick-link-card fade-in-up delay-2">
+                    <svg class="quick-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                    <h3>Contact</h3>
+                    <p>Request a proposal or ask us anything about your book.</p>
+                    <span class="quick-link-arrow">
+                        Visit page
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </span>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- =================================================================
+         SHORTCUTS PANEL
+         ================================================================= -->
+    <section class="section bg-white">
+        <div class="container">
+
+            <div class="shortcuts-panel fade-in-up">
+
+                <h2>Or jump straight to a specific topic.</h2>
+                <p>
+                    If you were looking for a particular service or resource, one of the shortcuts below is likely to take you there.
+                </p>
+
+                <div class="shortcuts-columns">
+
+                    <div class="shortcut-column">
+                        <h4>Amazon Optimisation</h4>
+                        <ul>
+                            <li><a href="services.html#amazon">Amazon Book Marketing</a></li>
+                            <li><a href="services.html#aplus">Amazon A+ Content</a></li>
+                            <li><a href="services.html#listing">Book Listing Optimisation</a></li>
+                            <li><a href="services.html#keywords">Keywords and Categories</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="shortcut-column">
+                        <h4>Reader Engagement</h4>
+                        <ul>
+                            <li><a href="services.html#goodreads">Goodreads Marketing</a></li>
+                            <li><a href="services.html#arc">ARC and Reader Outreach</a></li>
+                            <li><a href="services.html#social">Social Media Promotion</a></li>
+                            <li><a href="services.html#audiobook">Audiobook Marketing</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="shortcut-column">
+                        <h4>Author and Launch</h4>
+                        <ul>
+                            <li><a href="services.html#branding">Author Branding</a></li>
+                            <li><a href="services.html#descriptions">Book Descriptions</a></li>
+                            <li><a href="services.html#launch">Book Launch Campaigns</a></li>
+                            <li><a href="services.html#custom">Custom Book Strategy</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Help panel -->
+            <div class="help-panel fade-in-up">
+
+                <div class="help-panel-content">
+                    <h3>Still not sure where to go?</h3>
+                    <p>
+                        Send us a message and tell us what you were looking for. We will point you to the right page or answer your question directly. Either way, you will hear from a person, not an automated reply.
+                    </p>
+                </div>
+
+                <div class="help-panel-actions">
+                    <a href="contact.html" class="btn-primary btn-large">Send Us a Message</a>
+                    <span class="help-email">
+                        Or email us at <strong>info.allywealth@gmail.com</strong>
+                    </span>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- =================================================================
+         CTA SECTION
+         ================================================================= -->
+    <section class="section cta-section">
+        <div class="container cta-container">
+            <div class="cta-text fade-in-left">
+                <p class="section-label">START FROM THE BEGINNING</p>
+                <h2>Not sure what you were looking for?</h2>
+                <p>The home page is a good place to begin. It will give you an overview of everything we do and help you decide what to look at next.</p>
+            </div>
+            <div class="fade-in-right" style="text-align: center;">
+                <a href="index.html" class="btn-primary btn-large">Go to Home</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- =================================================================
+         MASSIVE FOOTER
+         ================================================================= -->
+    <footer class="mega-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col brand-col">
+                    <img src="images/favicon.png" alt="Ally Wealth Logo" class="footer-logo">
+                    <p class="footer-tagline">Get Seen. Grow Your Influence.<br>Build Your Legacy.</p>
+                    <p class="footer-desc">Premium author visibility and book marketing consulting for authors, publishers, and independent professionals.</p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html#amazon">Amazon Book Marketing</a></li>
+                        <li><a href="services.html#aplus">Amazon A+ Content</a></li>
+                        <li><a href="services.html#listing">Book Listing Optimisation</a></li>
+                        <li><a href="services.html#keywords">Keywords and Categories</a></li>
+                        <li><a href="services.html#goodreads">Goodreads Marketing</a></li>
+                        <li><a href="services.html#branding">Author Branding</a></li>
+                        <li><a href="services.html#descriptions">Book Descriptions</a></li>
+                        <li><a href="services.html#arc">ARC and Reader Outreach</a></li>
+                        <li><a href="services.html#launch">Book Launch Campaigns</a></li>
+                        <li><a href="services.html#audiobook">Audiobook Marketing</a></li>
+                        <li><a href="services.html#social">Social Media Promotion</a></li>
+                        <li><a href="services.html#custom">Custom Strategy</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Knowledge Centre</h4>
+                    <ul>
+                        <li><a href="resources.html">Resources Home</a></li>
+                        <li><a href="resources.html#pdf-library">Free PDF Library</a></li>
+                        <li><a href="resources.html#articles">Marketing Articles</a></li>
+                        <li><a href="resources.html#guides">Step-by-Step Guides</a></li>
+                        <li><a href="work.html">Case Studies</a></li>
+                    </ul>
+
+                    <h4 class="mt-2">Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Ally Wealth</a></li>
+                        <li><a href="work.html">Our Work</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col contact-col">
+                    <h4>Get in Touch</h4>
+                    <p class="footer-contact-text">Ready to discuss your book marketing strategy? We would love to hear from you.</p>
+                    <a href="mailto:info.allywealth@gmail.com" class="footer-email">info.allywealth@gmail.com</a>
+                    <p class="footer-response">We typically respond within 24-48 business hours.</p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Ally Wealth. All rights reserved.</p>
+                <p>Author Visibility Consultant and Book Marketing Specialist.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- =================================================================
+         EMBEDDED JAVASCRIPT
+         ================================================================= -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            /* =========================================================
+               1. PRELOADER
+               ========================================================= */
+            const preloader = document.getElementById('preloader');
+            if (preloader) {
+                window.addEventListener('load', () => {
+                    setTimeout(() => {
+                        preloader.classList.add('hidden');
+                        setTimeout(() => { preloader.style.display = 'none'; }, 600);
+                    }, 800);
+                });
+            }
+
+            /* =========================================================
+               2. MOBILE NAVIGATION AND DROPDOWNS
+               ========================================================= */
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const navLinks = document.getElementById('nav-links');
+            const dropdowns = document.querySelectorAll('.dropdown');
+
+            if (mobileMenuBtn && navLinks) {
+                mobileMenuBtn.addEventListener('click', () => {
+                    navLinks.classList.toggle('active');
+                    mobileMenuBtn.classList.toggle('active');
+                    document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
+                });
+
+                navLinks.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        if (window.innerWidth <= 768 && !link.parentElement.classList.contains('dropdown')) {
+                            navLinks.classList.remove('active');
+                            mobileMenuBtn.classList.remove('active');
+                            document.body.style.overflow = '';
+                        }
+                    });
+                });
+
+                dropdowns.forEach(dropdown => {
+                    const link = dropdown.querySelector('.nav-link');
+                    if (!link) return;
+                    link.addEventListener('click', (e) => {
+                        if (window.innerWidth <= 768) {
+                            e.preventDefault();
+                            dropdown.classList.toggle('active');
+                        }
+                    });
+                });
+            }
+
+            /* =========================================================
+               3. STICKY NAVBAR
+               ========================================================= */
+            const navbar = document.getElementById('navbar');
+            if (navbar) {
+                const handleScroll = () => {
+                    if (window.scrollY > 50) {
+                        navbar.classList.add('scrolled');
+                    } else {
+                        navbar.classList.remove('scrolled');
+                    }
+                };
+                window.addEventListener('scroll', handleScroll);
+                handleScroll();
+            }
+
+            /* =========================================================
+               4. SCROLL REVEAL ANIMATIONS
+               ========================================================= */
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const revealObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        revealObserver.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.fade-in-up, .fade-in-left, .fade-in-right').forEach(el => revealObserver.observe(el));
+
+        });
+    </script>
+</body>
+</html>

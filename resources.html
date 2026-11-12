@@ -1,0 +1,2433 @@
+<!DOCTYPE html>
+<!-- =====================================================================
+     ALLY WEALTH - PREMIUM AUTHOR VISIBILITY CONSULTANT
+     MASTER RESOURCES PAGE - ALL-IN-ONE FILE
+     =====================================================================
+     Working version: PDFs generate and download in the browser.
+     Articles open in an on-page modal with full content.
+
+     Author: Ally Wealth Development Team
+     Date: 2026
+     ===================================================================== -->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Resources | Ally Wealth Book Marketing</title>
+    <meta name="title" content="Resources | Ally Wealth Book Marketing">
+    <meta name="description" content="Free PDF library, marketing articles, and step-by-step guides for authors. Learn Amazon optimisation, launch strategy, author branding, and reader discovery from Ally Wealth.">
+    <meta name="keywords" content="book marketing resources, free author PDFs, book marketing articles, author guides, Amazon optimisation, book launch checklist, Ally Wealth">
+    <meta name="author" content="Ally Wealth">
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.allywealth.com/resources.html">
+    <meta property="og:title" content="Resources | Ally Wealth Book Marketing">
+    <meta property="og:description" content="Free PDF library, marketing articles, and step-by-step guides for authors who want to be seen.">
+    <meta property="og:image" content="images/banner.jpg">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.allywealth.com/resources.html">
+    <meta property="twitter:title" content="Resources | Ally Wealth Book Marketing">
+    <meta property="twitter:description" content="Free PDF library, marketing articles, and step-by-step guides for authors who want to be seen.">
+    <meta property="twitter:image" content="images/banner.jpg">
+
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="apple-touch-icon" href="images/favicon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+
+    <style>
+        /* =============================================================
+           1. CSS VARIABLES AND ROOT DEFINITIONS
+           ============================================================= */
+        :root {
+            --navy: #0B132B;
+            --gold: #C5A059;
+            --ivory: #F4EFE7;
+            --charcoal: #28221D;
+            --white: #FFFFFF;
+            --light-gray: #E8DFD2;
+            --muted-text: #6B6B6B;
+            --border-color: rgba(0, 0, 0, 0.08);
+            --gold-transparent: rgba(197, 160, 89, 0.2);
+            --font-heading: 'Playfair Display', serif;
+            --font-body: 'Inter', sans-serif;
+            --transition-smooth: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            --transition-fast: all 0.2s ease-in-out;
+            --shadow-subtle: 0 10px 30px rgba(0, 0, 0, 0.05);
+            --shadow-hover: 0 20px 40px rgba(0, 0, 0, 0.1);
+            --container-width: 1280px;
+            --container-padding: 2rem;
+            --section-padding: 8rem 0;
+        }
+
+        /* =============================================================
+           2. GLOBAL RESET
+           ============================================================= */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html { scroll-behavior: smooth; font-size: 16px; -webkit-text-size-adjust: 100%; }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--ivory);
+            color: var(--charcoal);
+            line-height: 1.7;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-heading);
+            font-weight: 600;
+            color: var(--navy);
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        h1 { font-size: clamp(2.5rem, 5vw, 4.5rem); }
+        h2 { font-size: clamp(2rem, 4vw, 3rem); }
+        h3 { font-size: clamp(1.3rem, 2.5vw, 1.8rem); }
+
+        p { margin-bottom: 1.5rem; font-size: 1.05rem; color: var(--charcoal); }
+        a { text-decoration: none; color: inherit; transition: var(--transition-fast); }
+        ul, ol { list-style: none; margin-bottom: 1.5rem; }
+        img { max-width: 100%; height: auto; display: block; object-fit: cover; }
+
+        button, input, select, textarea {
+            font-family: inherit;
+            font-size: inherit;
+            outline: none;
+            border: none;
+            background: none;
+        }
+
+        button { cursor: pointer; }
+
+        /* =============================================================
+           3. UTILITIES
+           ============================================================= */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--container-padding);
+            width: 100%;
+        }
+
+        .section { padding: var(--section-padding); position: relative; }
+
+        .section-header {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 4rem;
+        }
+
+        .section-label {
+            color: var(--gold);
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+
+        .section-intro {
+            font-size: 1.15rem;
+            color: var(--muted-text);
+            line-height: 1.8;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .bg-white { background-color: var(--white); }
+        .bg-ivory { background-color: var(--ivory); }
+        .is-hidden { display: none !important; }
+
+        /* =============================================================
+           4. BUTTONS
+           ============================================================= */
+        .btn-primary, .btn-secondary {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            border-radius: 2px;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+            text-align: center;
+            border: 1px solid transparent;
+        }
+
+        .btn-primary { background-color: var(--gold); color: var(--navy); border-color: var(--gold); }
+        .btn-primary:hover { background-color: transparent; color: var(--gold); }
+
+        .btn-secondary { background-color: transparent; color: var(--navy); border-color: var(--navy); }
+        .btn-secondary:hover { background-color: var(--navy); color: var(--ivory); }
+
+        .btn-large { padding: 1.2rem 3rem; font-size: 1rem; }
+        .btn-small { padding: 0.6rem 1.5rem; font-size: 0.8rem; }
+
+        /* =============================================================
+           5. PRELOADER
+           ============================================================= */
+        #preloader {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background-color: var(--navy);
+            display: flex; justify-content: center; align-items: center;
+            z-index: 9999; transition: opacity 0.6s ease;
+        }
+        #preloader.hidden { opacity: 0; pointer-events: none; }
+        .loader-content { text-align: center; }
+        .loader-svg { width: 80px; height: 80px; margin-bottom: 1rem; }
+        .circle-anim {
+            stroke-dasharray: 250; stroke-dashoffset: 250;
+            animation: drawCircle 1.5s ease forwards infinite;
+            transform-origin: center;
+        }
+        @keyframes drawCircle {
+            0% { stroke-dashoffset: 250; transform: rotate(0deg); }
+            50% { stroke-dashoffset: 0; transform: rotate(180deg); }
+            100% { stroke-dashoffset: -250; transform: rotate(360deg); }
+        }
+        .loader-text {
+            color: var(--gold); font-family: var(--font-heading);
+            letter-spacing: 4px; font-size: 1.2rem;
+            animation: pulseText 1.5s ease infinite;
+        }
+        .loader-subtext { color: var(--light-gray); font-size: 0.8rem; margin-top: 0.5rem; letter-spacing: 1px; }
+        @keyframes pulseText { 0%, 100% { opacity: 0.5; } 50% { opacity: 1; } }
+
+        /* =============================================================
+           6. NAVIGATION
+           ============================================================= */
+        .navbar {
+            position: fixed; top: 0; left: 0; width: 100%;
+            padding: 1.5rem 0; background-color: transparent;
+            z-index: 1000; transition: var(--transition-smooth);
+        }
+
+        .navbar.scrolled {
+            background-color: rgba(244, 239, 231, 0.95);
+            backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+            padding: 1rem 0; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .nav-container {
+            max-width: var(--container-width); margin: 0 auto;
+            padding: 0 var(--container-padding);
+            display: flex; justify-content: space-between; align-items: center;
+        }
+
+        .logo-link { display: flex; align-items: center; z-index: 1001; }
+        .logo-img { height: 65px; width: auto; transition: var(--transition-fast); }
+        .navbar.scrolled .logo-img { height: 50px; }
+
+        .nav-links { display: flex; align-items: center; gap: 2.5rem; margin-bottom: 0; }
+
+        .nav-link {
+            font-size: 0.85rem; font-weight: 600; text-transform: uppercase;
+            letter-spacing: 1.5px; color: var(--ivory);
+            position: relative; padding-bottom: 5px; transition: var(--transition-fast);
+        }
+
+        .navbar.scrolled .nav-link { color: var(--navy); }
+
+        .nav-link::after {
+            content: ''; position: absolute; bottom: 0; left: 0;
+            width: 0; height: 2px; background-color: var(--gold);
+            transition: var(--transition-fast);
+        }
+
+        .nav-link:hover::after, .nav-link.active::after { width: 100%; }
+        .nav-link:hover, .nav-link.active { color: var(--gold) !important; }
+
+        .btn-primary.nav-btn {
+            background-color: var(--gold); color: var(--navy);
+            padding: 0.8rem 1.5rem; border: 1px solid var(--gold);
+            font-weight: 600; text-transform: uppercase;
+            letter-spacing: 1px; font-size: 0.85rem !important; border-radius: 2px;
+        }
+        .btn-primary.nav-btn:hover { background-color: transparent; color: var(--gold); }
+
+        .navbar:not(.scrolled) .btn-primary.nav-btn {
+            background-color: transparent; color: var(--ivory); border-color: var(--ivory);
+        }
+        .navbar:not(.scrolled) .btn-primary.nav-btn:hover {
+            background-color: var(--ivory); color: var(--navy);
+        }
+
+        .dropdown { position: relative; }
+        .arrow { font-size: 0.7rem; margin-left: 3px; display: inline-block; transition: transform 0.3s ease; }
+        .dropdown:hover .arrow { transform: rotate(180deg); }
+
+        .mega-menu {
+            position: absolute; top: 100%; left: -150px;
+            background-color: var(--white); width: 800px;
+            box-shadow: var(--shadow-hover); border-top: 3px solid var(--gold);
+            padding: 2.5rem; opacity: 0; visibility: hidden;
+            transform: translateY(10px); transition: var(--transition-smooth); z-index: 100;
+        }
+        .dropdown:hover .mega-menu { opacity: 1; visibility: visible; transform: translateY(0); }
+
+        .mega-menu-inner {
+            display: grid; grid-template-columns: 1fr 1fr 1fr 1.2fr; gap: 2rem;
+        }
+
+        .mega-col h4 {
+            font-family: var(--font-body); font-size: 0.9rem; text-transform: uppercase;
+            letter-spacing: 1px; margin-bottom: 1.5rem; color: var(--navy);
+            border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem;
+        }
+        .mega-col ul li { margin-bottom: 0.8rem; }
+        .mega-col ul li a {
+            font-size: 0.85rem; color: var(--muted-text);
+            text-transform: none; letter-spacing: 0;
+            display: block; transition: var(--transition-fast);
+        }
+        .mega-col ul li a:hover { color: var(--gold); padding-left: 5px; }
+
+        .highlight-col { background-color: var(--ivory); padding: 1.5rem; border-radius: 4px; }
+        .highlight-col p { font-size: 0.9rem; color: var(--muted-text); margin-bottom: 1.5rem; line-height: 1.5; }
+
+        .mobile-menu-btn {
+            display: none; cursor: pointer; flex-direction: column;
+            gap: 6px; z-index: 1001; padding: 5px;
+        }
+        .bar { width: 28px; height: 2px; background-color: var(--ivory); transition: var(--transition-fast); display: block; }
+        .navbar.scrolled .bar { background-color: var(--navy); }
+
+        /* =============================================================
+           7. INNER PAGE HERO
+           ============================================================= */
+        .hero-inner {
+            position: relative; height: 70vh; min-height: 600px;
+            display: flex; align-items: center; justify-content: center;
+            text-align: center; background-color: var(--navy);
+            overflow: hidden; padding-top: 80px;
+        }
+
+        .hero-overlay {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(to bottom, rgba(11,19,43,0.85) 0%, rgba(11,19,43,0.6) 50%, rgba(11,19,43,0.95) 100%);
+            z-index: 2;
+        }
+
+        .hero-content { position: relative; z-index: 3; max-width: 900px; }
+
+        .hero-subtitle {
+            color: var(--gold); font-size: 0.9rem; font-weight: 700;
+            letter-spacing: 4px; margin-bottom: 1.5rem; text-transform: uppercase;
+        }
+
+        .hero-title {
+            color: var(--white); font-size: clamp(2.5rem, 5vw, 4rem);
+            line-height: 1.1; margin-bottom: 2rem;
+            text-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        .hero-description {
+            color: var(--light-gray); font-size: 1.2rem;
+            max-width: 700px; margin: 0 auto 3rem; line-height: 1.8;
+        }
+
+        /* =============================================================
+           8. FILTER BAR
+           ============================================================= */
+        .filter-bar {
+            display: flex; flex-wrap: wrap; justify-content: center;
+            gap: 0.75rem; margin-bottom: 3.5rem;
+        }
+
+        .filter-btn {
+            padding: 0.65rem 1.4rem; font-size: 0.8rem; font-weight: 600;
+            letter-spacing: 1px; text-transform: uppercase; color: var(--navy);
+            background-color: transparent; border: 1px solid var(--border-color);
+            border-radius: 2px; transition: var(--transition-fast);
+        }
+        .filter-btn:hover { border-color: var(--gold); color: var(--gold); }
+        .filter-btn.active { background-color: var(--navy); color: var(--ivory); border-color: var(--navy); }
+
+        /* =============================================================
+           9. PDF LIBRARY
+           ============================================================= */
+        .pdf-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+
+        .pdf-card {
+            background-color: var(--white); border: 1px solid var(--border-color);
+            border-radius: 4px; padding: 2.25rem 2rem;
+            display: flex; flex-direction: column;
+            transition: var(--transition-smooth); position: relative; overflow: hidden;
+        }
+
+        .pdf-card::before {
+            content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 3px;
+            background-color: var(--gold); transform: scaleX(0);
+            transform-origin: left; transition: var(--transition-smooth);
+        }
+
+        .pdf-card:hover { box-shadow: var(--shadow-hover); transform: translateY(-4px); }
+        .pdf-card:hover::before { transform: scaleX(1); }
+
+        .pdf-icon { width: 44px; height: 44px; margin-bottom: 1.5rem; color: var(--gold); }
+
+        .pdf-tag {
+            display: inline-block; font-size: 0.7rem; font-weight: 700;
+            letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold);
+            background-color: var(--gold-transparent); padding: 0.3rem 0.7rem;
+            border-radius: 2px; margin-bottom: 1rem; align-self: flex-start;
+        }
+
+        .pdf-card h3 { font-size: 1.25rem; margin-bottom: 0.75rem; color: var(--navy); }
+
+        .pdf-card p {
+            font-size: 0.92rem; color: var(--muted-text); line-height: 1.7;
+            margin-bottom: 1.75rem; flex-grow: 1;
+        }
+
+        .pdf-download {
+            display: inline-flex; align-items: center; gap: 0.5rem;
+            font-size: 0.8rem; font-weight: 700; letter-spacing: 1.5px;
+            text-transform: uppercase; color: var(--navy);
+            border-bottom: 1px solid var(--gold); padding-bottom: 4px;
+            align-self: flex-start; transition: var(--transition-fast);
+            text-align: left;
+        }
+        .pdf-download:hover { color: var(--gold); }
+        .pdf-download svg { width: 14px; height: 14px; }
+
+        /* =============================================================
+           10. ARTICLES
+           ============================================================= */
+        .article-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.5rem; }
+
+        .article-card {
+            background-color: var(--white); border-radius: 4px; overflow: hidden;
+            display: flex; flex-direction: column; box-shadow: var(--shadow-subtle);
+            transition: var(--transition-smooth);
+        }
+        .article-card:hover { box-shadow: var(--shadow-hover); transform: translateY(-6px); }
+
+        .article-thumb {
+            height: 200px; background-color: var(--navy);
+            background-image: radial-gradient(circle at 30% 30%, rgba(197,160,89,0.35) 0%, transparent 60%),
+                              linear-gradient(135deg, var(--navy) 0%, #16224A 100%);
+            position: relative; display: flex; align-items: flex-end; padding: 1.25rem;
+        }
+
+        .article-thumb::after {
+            content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 60%;
+            background: linear-gradient(to top, rgba(11,19,43,0.8), transparent);
+        }
+
+        .article-cat {
+            position: relative; z-index: 2; font-size: 0.7rem; font-weight: 700;
+            letter-spacing: 1.5px; text-transform: uppercase; color: var(--navy);
+            background-color: var(--gold); padding: 0.35rem 0.8rem; border-radius: 2px;
+        }
+
+        .article-body { padding: 2rem; display: flex; flex-direction: column; flex-grow: 1; }
+
+        .article-meta {
+            font-size: 0.75rem; letter-spacing: 1px; text-transform: uppercase;
+            color: var(--muted-text); margin-bottom: 0.75rem;
+        }
+
+        .article-card h3 { font-size: 1.3rem; line-height: 1.35; margin-bottom: 0.9rem; color: var(--navy); }
+
+        .article-excerpt {
+            font-size: 0.92rem; color: var(--muted-text); line-height: 1.7;
+            margin-bottom: 1.5rem; flex-grow: 1;
+        }
+
+        .article-link {
+            font-size: 0.8rem; font-weight: 700; letter-spacing: 1.5px;
+            text-transform: uppercase; color: var(--navy);
+            border-bottom: 1px solid var(--gold); padding-bottom: 4px;
+            align-self: flex-start; transition: var(--transition-fast);
+            text-align: left;
+        }
+        .article-link:hover { color: var(--gold); }
+
+        /* =============================================================
+           11. GUIDES ACCORDION
+           ============================================================= */
+        .guide-list { max-width: 900px; margin: 0 auto; }
+
+        .guide-item {
+            background-color: var(--white); border: 1px solid var(--border-color);
+            border-radius: 4px; margin-bottom: 1rem; overflow: hidden;
+            transition: var(--transition-fast);
+        }
+        .guide-item.open { box-shadow: var(--shadow-subtle); border-color: rgba(197, 160, 89, 0.4); }
+
+        .guide-toggle {
+            width: 100%; display: flex; align-items: center; gap: 1.5rem;
+            padding: 1.6rem 2rem; text-align: left; background: none;
+        }
+
+        .guide-number {
+            font-family: var(--font-heading); font-size: 1.4rem;
+            color: var(--gold); min-width: 40px; line-height: 1;
+        }
+
+        .guide-title {
+            flex-grow: 1; font-family: var(--font-heading);
+            font-size: 1.15rem; color: var(--navy); font-weight: 600; line-height: 1.4;
+        }
+
+        .guide-icon { position: relative; width: 16px; height: 16px; flex-shrink: 0; }
+        .guide-icon::before, .guide-icon::after {
+            content: ''; position: absolute; background-color: var(--gold);
+            transition: var(--transition-fast);
+        }
+        .guide-icon::before { top: 7px; left: 0; width: 16px; height: 2px; }
+        .guide-icon::after { top: 0; left: 7px; width: 2px; height: 16px; }
+        .guide-item.open .guide-icon::after { transform: rotate(90deg); opacity: 0; }
+
+        .guide-panel { display: none; padding: 0 2rem 2rem 2rem; }
+        .guide-item.open .guide-panel { display: block; }
+        .guide-panel p { font-size: 0.95rem; color: var(--muted-text); line-height: 1.8; margin-bottom: 1.25rem; }
+
+        .guide-steps { counter-reset: guide-step; }
+        .guide-steps li {
+            position: relative; padding-left: 2.5rem; margin-bottom: 1rem;
+            font-size: 0.95rem; color: var(--charcoal); line-height: 1.7;
+        }
+        .guide-steps li::before {
+            counter-increment: guide-step; content: counter(guide-step);
+            position: absolute; left: 0; top: 0; width: 26px; height: 26px;
+            background-color: var(--gold-transparent); color: var(--navy);
+            font-size: 0.75rem; font-weight: 700; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+        }
+
+        /* =============================================================
+           12. NEWSLETTER
+           ============================================================= */
+        .newsletter-section { background-color: var(--navy); padding: 6rem 0; }
+        .newsletter-inner { max-width: 760px; margin: 0 auto; text-align: center; }
+        .newsletter-inner h2 { color: var(--white); font-size: clamp(1.8rem, 3.5vw, 2.6rem); margin-bottom: 1.25rem; }
+        .newsletter-inner p { color: var(--light-gray); font-size: 1.05rem; margin-bottom: 2.5rem; }
+
+        .newsletter-form { display: flex; gap: 0.75rem; max-width: 560px; margin: 0 auto 1.25rem; }
+
+        .newsletter-input {
+            flex-grow: 1; padding: 1rem 1.25rem; font-size: 0.95rem;
+            color: var(--navy); background-color: var(--ivory);
+            border: 1px solid transparent; border-radius: 2px;
+            transition: var(--transition-fast);
+        }
+        .newsletter-input:focus { border-color: var(--gold); }
+
+        .newsletter-note { font-size: 0.8rem; color: #8A8A8A; letter-spacing: 0.5px; }
+
+        .form-success {
+            display: none; color: var(--gold); font-size: 0.95rem;
+            font-weight: 600; margin-top: 1.25rem;
+        }
+        .form-success.visible { display: block; }
+
+        /* =============================================================
+           13. CTA
+           ============================================================= */
+        .cta-section { background-color: var(--ivory); padding: 8rem 0; }
+        .cta-container { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+        .cta-text h2 { color: var(--navy); font-size: 3rem; margin-bottom: 1.5rem; }
+        .cta-text p { color: var(--muted-text); font-size: 1.1rem; margin-bottom: 2rem; }
+
+        /* =============================================================
+           14. FOOTER
+           ============================================================= */
+        .mega-footer { background-color: #050A18; color: var(--light-gray); padding-top: 5rem; }
+        .footer-grid {
+            display: grid; grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
+            gap: 4rem; padding-bottom: 4rem; border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        .footer-logo { height: 60px; width: auto; margin-bottom: 1.5rem; }
+        .footer-tagline { color: var(--gold); font-family: var(--font-heading); font-size: 1.1rem; margin-bottom: 1rem; line-height: 1.5; }
+        .footer-desc { font-size: 0.9rem; color: #999; line-height: 1.8; }
+        .footer-col h4 { color: var(--white); font-family: var(--font-body); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1.5rem; font-weight: 600; }
+        .footer-col ul { margin-bottom: 0; }
+        .footer-col ul li { margin-bottom: 0.8rem; }
+        .footer-col ul li a { font-size: 0.9rem; color: #999; }
+        .footer-col ul li a:hover { color: var(--gold); padding-left: 5px; }
+        .footer-email { display: inline-block; color: var(--gold); font-size: 1.1rem; font-weight: 500; margin-bottom: 1rem; }
+        .footer-email:hover { text-decoration: underline; }
+        .footer-response { font-size: 0.85rem; color: #888; margin-bottom: 2rem; }
+        .footer-contact-text { font-size: 0.9rem; color: #999; line-height: 1.8; margin-bottom: 1.25rem; }
+        .footer-bottom { padding: 2rem 0; display: flex; justify-content: space-between; align-items: center; font-size: 0.85rem; color: #888; }
+        .footer-bottom p { margin-bottom: 0; color: #888; font-size: 0.85rem; }
+
+        /* =============================================================
+           15. SCROLL REVEAL
+           ============================================================= */
+        .fade-in-up { opacity: 0; transform: translateY(40px); transition: opacity 0.8s ease, transform 0.8s ease; }
+        .fade-in-up.visible { opacity: 1; transform: translateY(0); }
+        .fade-in-left { opacity: 0; transform: translateX(-40px); transition: opacity 0.8s ease, transform 0.8s ease; }
+        .fade-in-left.visible { opacity: 1; transform: translateX(0); }
+        .fade-in-right { opacity: 0; transform: translateX(40px); transition: opacity 0.8s ease, transform 0.8s ease; }
+        .fade-in-right.visible { opacity: 1; transform: translateX(0); }
+        .delay-1 { transition-delay: 0.1s; }
+        .delay-2 { transition-delay: 0.2s; }
+        .delay-3 { transition-delay: 0.3s; }
+
+        /* =============================================================
+           16. ARTICLE MODAL
+           ============================================================= */
+        .article-modal {
+            position: fixed; inset: 0; z-index: 2000;
+            display: none; align-items: flex-start; justify-content: center;
+            padding: 4rem 1rem; overflow-y: auto;
+        }
+        .article-modal.open { display: flex; }
+
+        .article-modal-backdrop {
+            position: fixed; inset: 0;
+            background-color: rgba(11, 19, 43, 0.78);
+            backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px);
+        }
+
+        .article-modal-panel {
+            position: relative; z-index: 2;
+            background-color: var(--white); max-width: 760px; width: 100%;
+            border-radius: 4px; padding: 3rem;
+            box-shadow: 0 30px 80px rgba(0,0,0,0.35);
+            animation: modalIn 0.35s ease;
+        }
+
+        @keyframes modalIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .article-modal-close {
+            position: absolute; top: 1rem; right: 1rem;
+            width: 40px; height: 40px; border-radius: 50%;
+            background-color: var(--ivory); color: var(--navy);
+            font-size: 1.4rem; line-height: 1;
+            display: flex; align-items: center; justify-content: center;
+            transition: var(--transition-fast);
+        }
+        .article-modal-close:hover { background-color: var(--gold); }
+
+        .article-modal-content h2 {
+            font-size: 2rem; margin-bottom: 0.75rem;
+            color: var(--navy); padding-right: 3rem; line-height: 1.25;
+        }
+
+        .article-modal-meta {
+            font-size: 0.75rem; font-weight: 700; letter-spacing: 1.5px;
+            text-transform: uppercase; color: var(--gold);
+            margin-bottom: 2rem; display: block;
+        }
+
+        .article-modal-content h3 {
+            font-size: 1.2rem; margin-top: 2rem; margin-bottom: 0.75rem;
+            color: var(--navy); line-height: 1.35;
+        }
+
+        .article-modal-content p {
+            font-size: 1rem; color: var(--charcoal);
+            line-height: 1.85; margin-bottom: 1.25rem;
+        }
+
+        .article-modal-content ul { margin: 1rem 0 1.5rem; padding-left: 0; }
+
+        .article-modal-content ul li {
+            position: relative; padding-left: 1.5rem;
+            margin-bottom: 0.75rem; font-size: 0.98rem;
+            line-height: 1.8; color: var(--charcoal);
+        }
+        .article-modal-content ul li::before {
+            content: ''; position: absolute; left: 0; top: 0.7rem;
+            width: 6px; height: 6px; border-radius: 50%;
+            background-color: var(--gold);
+        }
+
+        .article-modal-content blockquote {
+            border-left: 3px solid var(--gold);
+            padding: 1rem 1.5rem; background-color: var(--ivory);
+            margin: 1.5rem 0; font-style: italic;
+            font-size: 1rem; color: var(--charcoal); line-height: 1.8;
+        }
+
+        body.modal-open { overflow: hidden; }
+
+        /* =============================================================
+           17. RESPONSIVE
+           ============================================================= */
+        @media (max-width: 1200px) {
+            .container { padding: 0 1.5rem; }
+            .mega-menu { width: 600px; left: -100px; }
+            .mega-menu-inner { grid-template-columns: 1fr 1fr; }
+            .cta-container { gap: 3rem; }
+            .footer-grid { grid-template-columns: 1fr 1fr; gap: 3rem; }
+            .pdf-grid { grid-template-columns: repeat(2, 1fr); }
+            .article-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 1024px) {
+            .section { padding: 6rem 0; }
+            .cta-container { grid-template-columns: 1fr; }
+            .hero-title { font-size: 3.5rem; }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-btn { display: flex; }
+            .nav-links {
+                position: fixed; top: 0; right: -100%; width: 85%; height: 100vh;
+                background-color: var(--navy); flex-direction: column;
+                justify-content: flex-start; padding: 8rem 2rem 2rem;
+                transition: var(--transition-smooth); box-shadow: -10px 0 30px rgba(0,0,0,0.5);
+                z-index: 999; overflow-y: auto; gap: 1.5rem;
+            }
+            .nav-links.active { right: 0; }
+            .nav-link { color: var(--white) !important; font-size: 1.1rem; margin: 0; display: block; width: 100%; }
+            .nav-link::after { display: none; }
+            .mega-menu { position: static; background-color: transparent; box-shadow: none; border-top: none; opacity: 1; visibility: visible; transform: none; width: 100%; padding: 0; display: none; }
+            .dropdown.active .mega-menu { display: block; }
+            .mega-menu-inner { grid-template-columns: 1fr; gap: 1.5rem; }
+            .mega-col h4 { color: var(--gold); border-bottom: 1px solid rgba(255,255,255,0.1); margin-bottom: 1rem; }
+            .mega-col ul li a { color: var(--light-gray); padding: 0.3rem 0; }
+            .highlight-col { display: none; }
+            .mobile-menu-btn.active .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); background-color: var(--white) !important; }
+            .mobile-menu-btn.active .bar:nth-child(2) { opacity: 0; }
+            .mobile-menu-btn.active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); background-color: var(--white) !important; }
+            .btn-primary.nav-btn { width: 100%; text-align: center; margin-top: 1rem; }
+            .hero-inner { min-height: 50vh; height: auto; }
+            .hero-title { font-size: 2.5rem; }
+            .hero-description { font-size: 1rem; }
+            .section-header h2 { font-size: 2rem; }
+            .section-intro { font-size: 1rem; }
+            .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+            .footer-bottom { flex-direction: column; text-align: center; gap: 1rem; }
+            .pdf-grid { grid-template-columns: 1fr; }
+            .article-grid { grid-template-columns: 1fr; }
+            .newsletter-form { flex-direction: column; }
+            .cta-text h2 { font-size: 2.2rem; }
+            .guide-toggle { padding: 1.25rem 1.25rem; gap: 1rem; }
+            .guide-panel { padding: 0 1.25rem 1.5rem 1.25rem; }
+            .article-modal { padding: 2rem 1rem; }
+            .article-modal-panel { padding: 2rem 1.5rem; }
+            .article-modal-content h2 { font-size: 1.6rem; padding-right: 2.5rem; }
+        }
+
+        @media (max-width: 480px) {
+            .container { padding: 0 1rem; }
+            .section { padding: 4rem 0; }
+            .hero-title { font-size: 2rem; }
+            .btn-primary, .btn-secondary { padding: 0.8rem 1.5rem; font-size: 0.85rem; }
+            .filter-btn { padding: 0.5rem 1rem; font-size: 0.72rem; }
+            .pdf-card { padding: 1.75rem 1.5rem; }
+            .article-modal-panel { padding: 1.75rem 1.25rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- PRELOADER -->
+    <div id="preloader">
+        <div class="loader-content">
+            <svg class="loader-svg" viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="40" stroke="#C5A059" stroke-width="2" fill="none" class="circle-anim"></circle>
+            </svg>
+            <h2 class="loader-text">ALLY WEALTH</h2>
+            <p class="loader-subtext">Loading resources...</p>
+        </div>
+    </div>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+
+            <a href="index.html" class="logo-link" aria-label="Ally Wealth Home">
+                <img src="images/favicon.png" alt="Ally Wealth Logo" class="logo-img">
+            </a>
+
+            <div class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle Menu" role="button" tabindex="0">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+
+                <li class="dropdown mega-dropdown">
+                    <a href="services.html" class="nav-link">Services <span class="arrow">&#9662;</span></a>
+                    <div class="mega-menu">
+                        <div class="mega-menu-inner">
+                            <div class="mega-col">
+                                <h4>Amazon Optimization</h4>
+                                <ul>
+                                    <li><a href="services.html#amazon">Amazon Book Marketing</a></li>
+                                    <li><a href="services.html#aplus">Amazon A+ Content</a></li>
+                                    <li><a href="services.html#listing">Book Listing Optimisation</a></li>
+                                    <li><a href="services.html#keywords">Keywords and Categories</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-col">
+                                <h4>Reader Engagement</h4>
+                                <ul>
+                                    <li><a href="services.html#goodreads">Goodreads Marketing</a></li>
+                                    <li><a href="services.html#arc">ARC and Reader Outreach</a></li>
+                                    <li><a href="services.html#social">Social Media Promotion</a></li>
+                                    <li><a href="services.html#audiobook">Audiobook Marketing</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-col">
+                                <h4>Author and Launch</h4>
+                                <ul>
+                                    <li><a href="services.html#branding">Author Branding</a></li>
+                                    <li><a href="services.html#descriptions">Book Descriptions</a></li>
+                                    <li><a href="services.html#launch">Book Launch Campaigns</a></li>
+                                    <li><a href="services.html#custom">Custom Book Strategy</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-col highlight-col">
+                                <h4>Need Guidance?</h4>
+                                <p>Not sure which service fits your book? Let's discuss your goals.</p>
+                                <a href="contact.html" class="btn-primary btn-small">Get a Proposal</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li><a href="work.html" class="nav-link">Our Work</a></li>
+                <li><a href="resources.html" class="nav-link active">Resources</a></li>
+                <li><a href="contact.html" class="btn-primary nav-btn">Request a Proposal</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <header class="hero-inner">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <p class="hero-subtitle fade-in-up">ALLY WEALTH RESOURCES</p>
+            <h1 class="hero-title fade-in-up delay-1">
+                The knowledge centre<br>for serious authors.
+            </h1>
+            <p class="hero-description fade-in-up delay-2">
+                Free PDFs, practical articles, and step-by-step guides. Everything here is built to help you understand how book visibility actually works, whether you work with us or not.
+            </p>
+        </div>
+    </header>
+
+    <!-- PDF LIBRARY -->
+    <section class="section bg-ivory" id="pdf-library">
+        <div class="container">
+
+            <div class="section-header fade-in-up">
+                <span class="section-label">FREE PDF LIBRARY</span>
+                <h2>Download. Read. Apply.</h2>
+                <p class="section-intro">
+                    Practical, no-fluff documents you can use immediately. Every download is a real PDF, generated in your browser. Filter by topic to find the resource that matches where you are in your author journey.
+                </p>
+            </div>
+
+            <div class="filter-bar fade-in-up" data-target="pdf-grid">
+                <button class="filter-btn active" data-filter="all">All Resources</button>
+                <button class="filter-btn" data-filter="amazon">Amazon</button>
+                <button class="filter-btn" data-filter="keywords">Keywords</button>
+                <button class="filter-btn" data-filter="launch">Launch</button>
+                <button class="filter-btn" data-filter="branding">Branding</button>
+                <button class="filter-btn" data-filter="discovery">Discovery</button>
+                <button class="filter-btn" data-filter="arc">ARC</button>
+            </div>
+
+            <div class="pdf-grid" id="pdf-grid">
+
+                <article class="pdf-card filterable-card fade-in-up" data-category="amazon">
+                    <svg class="pdf-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                        <polyline points="14 2 14 8 20 8"></polyline>
+                    </svg>
+                    <span class="pdf-tag">Amazon</span>
+                    <h3>The Amazon Listing Audit Checklist</h3>
+                    <p>A 22-point checklist covering title, subtitle, description, categories, and backend keywords. Use it to grade your own listing before you spend a single dollar on ads.</p>
+                    <button type="button" class="pdf-download" data-pdf="amazon-audit">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="7 10 12 15 17 10"></polyline>
+                            <line x1="12" y1="15" x2="12" y2="3"></line>
+                        </svg>
+                        Download PDF
+                    </button>
+                </article>
+
+                <article class="pdf-card filterable-card fade-in-up delay-1" data-category="keywords">
+                    <svg class="pdf-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                    <span class="pdf-tag">Keywords</span>
+                    <h3>Keyword Research Starter Workbook</h3>
+                    <p>A guided workbook that walks you through finding the exact search terms your readers type. Includes a scoring sheet so you can rank keywords by intent and competition.</p>
+                    <button type="button" class="pdf-download" data-pdf="keywords-workbook">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="7 10 12 15 17 10"></polyline>
+                            <line x1="12" y1="15" x2="12" y2="3"></line>
+                        </svg>
+                        Download PDF
+                    </button>
+                </article>
+
+                <article class="pdf-card filterable-card fade-in-up delay-2" data-category="launch">
+                    <svg class="pdf-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
+                    </svg>
+                    <span class="pdf-tag">Launch</span>
+                    <h3>The 90 Day Book Launch Timeline</h3>
+                    <p>A week-by-week launch calendar that starts three months out and ends thirty days after release. Each week has a single clear focus so you never feel overwhelmed.</p>
+                    <button type="button" class="pdf-download" data-pdf="launch-timeline">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="7 10 12 15 17 10"></polyline>
+                            <line x1="12" y1="15" x2="12" y2="3"></line>
+                        </svg>
+                        Download PDF
+                    </button>
+                </article>
+
+                <article class="pdf-card filterable-card fade-in-up" data-category="branding">
+                    <svg class="pdf-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                    <span class="pdf-tag">Branding</span>
+                    <h3>Author Bio Templates Pack</h3>
+                    <p>Five fill-in-the-blank bio templates for Amazon Author Central, your website, panels, podcasts, and social profiles. Written for fiction and non-fiction authors.</p>
+                    <button type="button" class="pdf-download" data-pdf="bio-templates">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="7 10 12 15 17 10"></polyline>
+                            <line x1="12" y1="15" x2="12" y2="3"></line>
+                        </svg>
+                        Download PDF
+                    </button>
+                </article>
+
+                <article class="pdf-card filterable-card fade-in-up delay-1" data-category="discovery">
+                    <svg class="pdf-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="2" y1="12" x2="22" y2="12"></line>
+                        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                    </svg>
+                    <span class="pdf-tag">Discovery</span>
+                    <h3>Reader Discovery Map</h3>
+                    <p>A genre-by-genre map of where readers actually spend time online. Covers book blogs, forums, newsletters, and community groups worth your attention.</p>
+                    <button type="button" class="pdf-download" data-pdf="discovery-map">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="7 10 12 15 17 10"></polyline>
+                            <line x1="12" y1="15" x2="12" y2="3"></line>
+                        </svg>
+                        Download PDF
+                    </button>
+                </article>
+
+                <article class="pdf-card filterable-card fade-in-up delay-2" data-category="arc">
+                    <svg class="pdf-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                        <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                    </svg>
+                    <span class="pdf-tag">ARC</span>
+                    <h3>ARC Outreach Email Templates</h3>
+                    <p>Five respectful, compliant outreach templates for inviting readers to review your book. Includes follow-up scripts, a thank-you template, and a simple tracking method.</p>
+                    <button type="button" class="pdf-download" data-pdf="arc-templates">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="7 10 12 15 17 10"></polyline>
+                            <line x1="12" y1="15" x2="12" y2="3"></line>
+                        </svg>
+                        Download PDF
+                    </button>
+                </article>
+
+                <article class="pdf-card filterable-card fade-in-up" data-category="amazon">
+                    <svg class="pdf-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <rect x="2" y="3" width="20" height="18" rx="2" ry="2"></rect>
+                        <line x1="2" y1="9" x2="22" y2="9"></line>
+                        <line x1="9" y1="21" x2="9" y2="9"></line>
+                    </svg>
+                    <span class="pdf-tag">Amazon</span>
+                    <h3>A+ Content Module Planner</h3>
+                    <p>A visual planning sheet for Amazon A+ Content. Sketches out five proven module layouts and shows you which reader questions each module should answer.</p>
+                    <button type="button" class="pdf-download" data-pdf="aplus-planner">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="7 10 12 15 17 10"></polyline>
+                            <line x1="12" y1="15" x2="12" y2="3"></line>
+                        </svg>
+                        Download PDF
+                    </button>
+                </article>
+
+                <article class="pdf-card filterable-card fade-in-up delay-1" data-category="launch">
+                    <svg class="pdf-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                    </svg>
+                    <span class="pdf-tag">Launch</span>
+                    <h3>Launch Week Social Caption Bank</h3>
+                    <p>Fifteen pre-written caption starters for launch week. Each one is designed to start a conversation rather than shout a link, and all of them are easy to adapt to your voice.</p>
+                    <button type="button" class="pdf-download" data-pdf="caption-bank">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="7 10 12 15 17 10"></polyline>
+                            <line x1="12" y1="15" x2="12" y2="3"></line>
+                        </svg>
+                        Download PDF
+                    </button>
+                </article>
+
+                <article class="pdf-card filterable-card fade-in-up delay-2" data-category="branding">
+                    <svg class="pdf-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                        <polyline points="2 17 12 22 22 17"></polyline>
+                        <polyline points="2 12 12 17 22 12"></polyline>
+                    </svg>
+                    <span class="pdf-tag">Branding</span>
+                    <h3>Author Visual Identity Worksheet</h3>
+                    <p>A simple worksheet that helps you define your colour palette, typography, and image style so every graphic you publish looks like it belongs to the same author.</p>
+                    <button type="button" class="pdf-download" data-pdf="visual-identity">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="7 10 12 15 17 10"></polyline>
+                            <line x1="12" y1="15" x2="12" y2="3"></line>
+                        </svg>
+                        Download PDF
+                    </button>
+                </article>
+
+                <article class="pdf-card filterable-card fade-in-up" data-category="keywords">
+                    <svg class="pdf-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M12 20h9"></path>
+                        <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
+                    </svg>
+                    <span class="pdf-tag">Keywords</span>
+                    <h3>Category Selection Guide</h3>
+                    <p>How to choose categories you can realistically rank in. Explains the difference between a vanity category and a profitable one, with worked examples.</p>
+                    <button type="button" class="pdf-download" data-pdf="category-guide">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="7 10 12 15 17 10"></polyline>
+                            <line x1="12" y1="15" x2="12" y2="3"></line>
+                        </svg>
+                        Download PDF
+                    </button>
+                </article>
+
+                <article class="pdf-card filterable-card fade-in-up delay-1" data-category="discovery">
+                    <svg class="pdf-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="9" cy="7" r="4"></circle>
+                    </svg>
+                    <span class="pdf-tag">Discovery</span>
+                    <h3>Goodreads Profile Setup Checklist</h3>
+                    <p>A step-by-step checklist for building a complete, trustworthy Goodreads author profile. Covers book data verification, series linking, and community etiquette.</p>
+                    <button type="button" class="pdf-download" data-pdf="goodreads-checklist">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="7 10 12 15 17 10"></polyline>
+                            <line x1="12" y1="15" x2="12" y2="3"></line>
+                        </svg>
+                        Download PDF
+                    </button>
+                </article>
+
+                <article class="pdf-card filterable-card fade-in-up delay-2" data-category="arc">
+                    <svg class="pdf-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M3 18v-6a9 9 0 0 1 18 0v6"></path>
+                        <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"></path>
+                    </svg>
+                    <span class="pdf-tag">ARC</span>
+                    <h3>Audiobook Promo Planning Sheet</h3>
+                    <p>Plan a multi-format promotion that treats your audiobook as a standalone product. Includes a podcast outreach tracker and a sample promo schedule.</p>
+                    <button type="button" class="pdf-download" data-pdf="audiobook-plan">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="7 10 12 15 17 10"></polyline>
+                            <line x1="12" y1="15" x2="12" y2="3"></line>
+                        </svg>
+                        Download PDF
+                    </button>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ARTICLES -->
+    <section class="section bg-white" id="articles">
+        <div class="container">
+
+            <div class="section-header fade-in-up">
+                <span class="section-label">MARKETING ARTICLES</span>
+                <h2>Straight answers to real questions.</h2>
+                <p class="section-intro">
+                    Short, focused articles on the problems authors actually face. Click any article to read it in full on this page. No redirects, no gated downloads.
+                </p>
+            </div>
+
+            <div class="filter-bar fade-in-up" data-target="article-grid">
+                <button class="filter-btn active" data-filter="all">All Articles</button>
+                <button class="filter-btn" data-filter="amazon">Amazon</button>
+                <button class="filter-btn" data-filter="marketing">Marketing</button>
+                <button class="filter-btn" data-filter="launch">Launch</button>
+                <button class="filter-btn" data-filter="branding">Branding</button>
+                <button class="filter-btn" data-filter="discovery">Discovery</button>
+            </div>
+
+            <div class="article-grid" id="article-grid">
+
+                <article class="article-card filterable-card fade-in-up" data-category="amazon">
+                    <div class="article-thumb"><span class="article-cat">Amazon</span></div>
+                    <div class="article-body">
+                        <p class="article-meta">8 minute read</p>
+                        <h3>Why your book page gets visitors but no sales</h3>
+                        <p class="article-excerpt">Traffic is not the problem. Conversion is. Here are the four elements of a book listing that quietly push readers away, and how to fix each one.</p>
+                        <button type="button" class="article-link" data-article="article-1">Read Article</button>
+                    </div>
+                </article>
+
+                <article class="article-card filterable-card fade-in-up delay-1" data-category="marketing">
+                    <div class="article-thumb"><span class="article-cat">Marketing</span></div>
+                    <div class="article-body">
+                        <p class="article-meta">6 minute read</p>
+                        <h3>The difference between marketing a book and marketing an author</h3>
+                        <p class="article-excerpt">Readers buy from people they trust. If every post you publish is about one book, you are building a campaign instead of a career.</p>
+                        <button type="button" class="article-link" data-article="article-2">Read Article</button>
+                    </div>
+                </article>
+
+                <article class="article-card filterable-card fade-in-up delay-2" data-category="launch">
+                    <div class="article-thumb"><span class="article-cat">Launch</span></div>
+                    <div class="article-body">
+                        <p class="article-meta">10 minute read</p>
+                        <h3>Launch day is not a day, it is a window</h3>
+                        <p class="article-excerpt">Most authors put all their energy into a single date. The authors who sell well treat launch as a ninety day window with three distinct phases.</p>
+                        <button type="button" class="article-link" data-article="article-3">Read Article</button>
+                    </div>
+                </article>
+
+                <article class="article-card filterable-card fade-in-up" data-category="discovery">
+                    <div class="article-thumb"><span class="article-cat">Discovery</span></div>
+                    <div class="article-body">
+                        <p class="article-meta">7 minute read</p>
+                        <h3>How to find the readers who are already looking for you</h3>
+                        <p class="article-excerpt">You do not need a bigger audience. You need to be present where your genre already has one. A practical method for mapping reader communities.</p>
+                        <button type="button" class="article-link" data-article="article-4">Read Article</button>
+                    </div>
+                </article>
+
+                <article class="article-card filterable-card fade-in-up delay-1" data-category="branding">
+                    <div class="article-thumb"><span class="article-cat">Branding</span></div>
+                    <div class="article-body">
+                        <p class="article-meta">5 minute read</p>
+                        <h3>Your author bio is a conversion tool</h3>
+                        <p class="article-excerpt">Most author bios read like a CV. A good one answers a single question for the reader: why should I trust you with my time?</p>
+                        <button type="button" class="article-link" data-article="article-5">Read Article</button>
+                    </div>
+                </article>
+
+                <article class="article-card filterable-card fade-in-up delay-2" data-category="amazon">
+                    <div class="article-thumb"><span class="article-cat">Amazon</span></div>
+                    <div class="article-body">
+                        <p class="article-meta">9 minute read</p>
+                        <h3>Categories, keywords, and the myth of the bestseller badge</h3>
+                        <p class="article-excerpt">Chasing a badge in a category nobody browses is a waste of effort. Here is how to pick categories that actually bring buyers to your page.</p>
+                        <button type="button" class="article-link" data-article="article-6">Read Article</button>
+                    </div>
+                </article>
+
+                <article class="article-card filterable-card fade-in-up" data-category="marketing">
+                    <div class="article-thumb"><span class="article-cat">Marketing</span></div>
+                    <div class="article-body">
+                        <p class="article-meta">6 minute read</p>
+                        <h3>What to do when your book has been out for a year</h3>
+                        <p class="article-excerpt">Backlist books can still sell. The strategy just changes. A realistic plan for reviving a book that is no longer new.</p>
+                        <button type="button" class="article-link" data-article="article-7">Read Article</button>
+                    </div>
+                </article>
+
+                <article class="article-card filterable-card fade-in-up delay-1" data-category="launch">
+                    <div class="article-thumb"><span class="article-cat">Launch</span></div>
+                    <div class="article-body">
+                        <p class="article-meta">8 minute read</p>
+                        <h3>Pre-launch without an email list</h3>
+                        <p class="article-excerpt">You do not need ten thousand subscribers to have a good launch. You need a small group of people who genuinely care. Here is how to build one fast.</p>
+                        <button type="button" class="article-link" data-article="article-8">Read Article</button>
+                    </div>
+                </article>
+
+                <article class="article-card filterable-card fade-in-up delay-2" data-category="branding">
+                    <div class="article-thumb"><span class="article-cat">Branding</span></div>
+                    <div class="article-body">
+                        <p class="article-meta">7 minute read</p>
+                        <h3>Consistency beats creativity in author branding</h3>
+                        <p class="article-excerpt">A recognisable brand is not the most original one. It is the one that shows up the same way, in the same place, on a reliable schedule.</p>
+                        <button type="button" class="article-link" data-article="article-9">Read Article</button>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- GUIDES -->
+    <section class="section bg-ivory" id="guides">
+        <div class="container">
+
+            <div class="section-header fade-in-up">
+                <span class="section-label">STEP-BY-STEP GUIDES</span>
+                <h2>Do it yourself, properly.</h2>
+                <p class="section-intro">
+                    Expand any guide below to see the exact sequence we follow when working with clients. These are the same processes we use, written out in plain language.
+                </p>
+            </div>
+
+            <div class="guide-list">
+
+                <div class="guide-item fade-in-up">
+                    <button class="guide-toggle" aria-expanded="false">
+                        <span class="guide-number">01</span>
+                        <span class="guide-title">How to audit your own Amazon listing</span>
+                        <span class="guide-icon"></span>
+                    </button>
+                    <div class="guide-panel">
+                        <p>Before you change anything, you need a clear picture of what is currently working and what is not. This audit takes about an hour and gives you a prioritised list of fixes.</p>
+                        <ol class="guide-steps">
+                            <li>Open your book page in an incognito window so your browsing history does not skew what you see.</li>
+                            <li>Read your description out loud. If it sounds like a synopsis, it needs rewriting.</li>
+                            <li>Check your title and subtitle against the top five competitors in your category.</li>
+                            <li>Note the categories you are listed in and whether they match where your readers browse.</li>
+                            <li>Look at your cover thumbnail at the size it appears on mobile. Can you read the title?</li>
+                            <li>Score each element from one to five and fix the lowest scoring items first.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="guide-item fade-in-up delay-1">
+                    <button class="guide-toggle" aria-expanded="false">
+                        <span class="guide-number">02</span>
+                        <span class="guide-title">How to research keywords without paid tools</span>
+                        <span class="guide-icon"></span>
+                    </button>
+                    <div class="guide-panel">
+                        <p>Paid tools are useful, but you can build a strong keyword list with nothing but a browser and some patience.</p>
+                        <ol class="guide-steps">
+                            <li>Type your genre into the Amazon search bar and write down every autocomplete suggestion.</li>
+                            <li>Do the same with your main theme, your setting, and your protagonist type.</li>
+                            <li>Visit the pages of ten books similar to yours and note the phrases used in their subtitles.</li>
+                            <li>Group the results into themes and remove anything that describes a different genre.</li>
+                            <li>Keep the phrases that sound like something a reader would actually type, not something an author would write.</li>
+                            <li>Revisit this list every quarter, since search behaviour shifts over time.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="guide-item fade-in-up delay-2">
+                    <button class="guide-toggle" aria-expanded="false">
+                        <span class="guide-number">03</span>
+                        <span class="guide-title">How to build a ninety day launch plan</span>
+                        <span class="guide-icon"></span>
+                    </button>
+                    <div class="guide-panel">
+                        <p>A launch plan is not a to-do list. It is a sequence, where each phase makes the next one easier.</p>
+                        <ol class="guide-steps">
+                            <li>Days ninety to sixty: finalise your cover, description, and categories. Nothing else matters until these are locked.</li>
+                            <li>Days sixty to thirty: recruit early readers and begin respectful ARC outreach.</li>
+                            <li>Days thirty to seven: publish teaser content, confirm your promotional partners, and prepare your launch week captions.</li>
+                            <li>Launch week: focus on starting conversations rather than posting links. Ask questions. Share the story behind the book.</li>
+                            <li>Days seven to thirty: collect and respond to reviews, run a small paid test, and track which channels actually drove sales.</li>
+                            <li>Day thirty: review the data, write down what worked, and keep the top two channels running.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="guide-item fade-in-up">
+                    <button class="guide-toggle" aria-expanded="false">
+                        <span class="guide-number">04</span>
+                        <span class="guide-title">How to write a book description that sells</span>
+                        <span class="guide-icon"></span>
+                    </button>
+                    <div class="guide-panel">
+                        <p>A description has one job: make the right reader feel that this book was written for them.</p>
+                        <ol class="guide-steps">
+                            <li>Start with a hook line that creates a question in the reader's mind.</li>
+                            <li>Establish the stakes in the second paragraph. What changes if the reader does not pick this up?</li>
+                            <li>Use short paragraphs and bold section headers so the page is scannable on mobile.</li>
+                            <li>Signal the genre clearly. Readers want to know what kind of experience they are buying.</li>
+                            <li>End with a direct invitation to read, not a summary of the ending.</li>
+                            <li>Read it out loud and cut anything that sounds like a book report.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="guide-item fade-in-up delay-1">
+                    <button class="guide-toggle" aria-expanded="false">
+                        <span class="guide-number">05</span>
+                        <span class="guide-title">How to run an ethical ARC campaign</span>
+                        <span class="guide-icon"></span>
+                    </button>
+                    <div class="guide-panel">
+                        <p>Early reviews matter, but not at the cost of your reputation or your compliance with retailer rules.</p>
+                        <ol class="guide-steps">
+                            <li>Identify readers who already review books in your genre, not random contacts.</li>
+                            <li>Send a short, personal invitation that makes clear the review is optional.</li>
+                            <li>Never offer payment or incentives in exchange for a review.</li>
+                            <li>Track who received a copy and follow up once, politely, after two weeks.</li>
+                            <li>Accept that some readers will not review, and that is fine.</li>
+                            <li>Keep a record of your outreach so you can improve the next campaign.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="guide-item fade-in-up delay-2">
+                    <button class="guide-toggle" aria-expanded="false">
+                        <span class="guide-number">06</span>
+                        <span class="guide-title">How to set up Amazon A+ Content</span>
+                        <span class="guide-icon"></span>
+                    </button>
+                    <div class="guide-panel">
+                        <p>A+ Content turns a plain product page into a brand experience. It is available to most authors through Author Central and KDP.</p>
+                        <ol class="guide-steps">
+                            <li>Decide on the three questions your modules will answer for the reader.</li>
+                            <li>Sketch the layout on paper before opening the builder.</li>
+                            <li>Prepare images at the recommended dimensions so nothing gets cropped awkwardly.</li>
+                            <li>Write short supporting copy for each module. Two sentences is usually enough.</li>
+                            <li>Preview the modules on mobile before publishing. Most readers will see them there.</li>
+                            <li>Review performance after thirty days and swap out the weakest module.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="guide-item fade-in-up">
+                    <button class="guide-toggle" aria-expanded="false">
+                        <span class="guide-number">07</span>
+                        <span class="guide-title">How to build an author brand from scratch</span>
+                        <span class="guide-icon"></span>
+                    </button>
+                    <div class="guide-panel">
+                        <p>Branding is not a logo. It is the consistent impression you leave across every touchpoint.</p>
+                        <ol class="guide-steps">
+                            <li>Write one sentence describing what a reader gets from your work.</li>
+                            <li>Choose two fonts and two colours and use them everywhere.</li>
+                            <li>Write three versions of your bio: one line, one paragraph, and one page.</li>
+                            <li>Complete your Amazon Author Central profile, including a current photo.</li>
+                            <li>Create a simple one page website with a mailing list signup.</li>
+                            <li>Audit every profile once a quarter so they stay consistent.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="guide-item fade-in-up delay-1">
+                    <button class="guide-toggle" aria-expanded="false">
+                        <span class="guide-number">08</span>
+                        <span class="guide-title">How to measure whether your marketing is working</span>
+                        <span class="guide-icon"></span>
+                    </button>
+                    <div class="guide-panel">
+                        <p>Most authors measure the wrong things. Sales are an outcome, not a signal you can act on day to day.</p>
+                        <ol class="guide-steps">
+                            <li>Pick three numbers to track weekly: page visits, conversion rate, and mailing list growth.</li>
+                            <li>Record them in the same place every week so you can see trends.</li>
+                            <li>Change one thing at a time and wait at least two weeks before judging it.</li>
+                            <li>Ignore vanity metrics that do not connect to a reader taking an action.</li>
+                            <li>Review the data monthly and cut the activity with the weakest return.</li>
+                            <li>Double down on the single channel that is already producing results.</li>
+                        </ol>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- NEWSLETTER -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-inner fade-in-up">
+                <h2>New resources, sent when they are ready.</h2>
+                <p>Join the list to receive new PDFs, articles, and guides as they are published. No daily emails, no filler.</p>
+                <form class="newsletter-form" id="newsletter-form">
+                    <input type="email" class="newsletter-input" id="newsletter-email" placeholder="Your email address" aria-label="Your email address" required>
+                    <button type="submit" class="btn-primary">Join the List</button>
+                </form>
+                <p class="newsletter-note">We respect your inbox. Unsubscribe at any time.</p>
+                <p class="form-success" id="form-success">Thank you. You are on the list.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section cta-section">
+        <div class="container cta-container">
+            <div class="cta-text fade-in-left">
+                <p class="section-label">READY TO GO DEEPER?</p>
+                <h2>Let us build the strategy for you.</h2>
+                <p>Reading is a good start. If you would rather hand the work to a specialist, tell us about your book and we will prepare a tailored proposal.</p>
+            </div>
+            <div class="fade-in-right" style="text-align: center;">
+                <a href="contact.html" class="btn-primary btn-large">Request a Proposal</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="mega-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col brand-col">
+                    <img src="images/favicon.png" alt="Ally Wealth Logo" class="footer-logo">
+                    <p class="footer-tagline">Get Seen. Grow Your Influence.<br>Build Your Legacy.</p>
+                    <p class="footer-desc">Premium author visibility and book marketing consulting for authors, publishers, and independent professionals.</p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html#amazon">Amazon Book Marketing</a></li>
+                        <li><a href="services.html#aplus">Amazon A+ Content</a></li>
+                        <li><a href="services.html#listing">Book Listing Optimisation</a></li>
+                        <li><a href="services.html#keywords">Keywords and Categories</a></li>
+                        <li><a href="services.html#goodreads">Goodreads Marketing</a></li>
+                        <li><a href="services.html#branding">Author Branding</a></li>
+                        <li><a href="services.html#descriptions">Book Descriptions</a></li>
+                        <li><a href="services.html#arc">ARC and Reader Outreach</a></li>
+                        <li><a href="services.html#launch">Book Launch Campaigns</a></li>
+                        <li><a href="services.html#audiobook">Audiobook Marketing</a></li>
+                        <li><a href="services.html#social">Social Media Promotion</a></li>
+                        <li><a href="services.html#custom">Custom Strategy</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Knowledge Centre</h4>
+                    <ul>
+                        <li><a href="resources.html">Resources Home</a></li>
+                        <li><a href="resources.html#pdf-library">Free PDF Library</a></li>
+                        <li><a href="resources.html#articles">Marketing Articles</a></li>
+                        <li><a href="resources.html#guides">Step-by-Step Guides</a></li>
+                        <li><a href="work.html">Case Studies</a></li>
+                    </ul>
+
+                    <h4 class="mt-2">Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Ally Wealth</a></li>
+                        <li><a href="work.html">Our Work</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col contact-col">
+                    <h4>Get in Touch</h4>
+                    <p class="footer-contact-text">Ready to discuss your book marketing strategy? We would love to hear from you.</p>
+                    <a href="mailto:info.allywealth@gmail.com" class="footer-email">info.allywealth@gmail.com</a>
+                    <p class="footer-response">We typically respond within 24-48 business hours.</p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Ally Wealth. All rights reserved.</p>
+                <p>Author Visibility Consultant and Book Marketing Specialist.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ARTICLE MODAL -->
+    <div class="article-modal" id="article-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="article-modal-title">
+        <div class="article-modal-backdrop" data-close></div>
+        <div class="article-modal-panel" role="document">
+            <button type="button" class="article-modal-close" aria-label="Close article" data-close>&times;</button>
+            <div class="article-modal-content" id="article-modal-content"></div>
+        </div>
+    </div>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+        /* =========================================================
+           1. PRELOADER
+           ========================================================= */
+        const preloader = document.getElementById('preloader');
+        if (preloader) {
+            window.addEventListener('load', () => {
+                setTimeout(() => {
+                    preloader.classList.add('hidden');
+                    setTimeout(() => { preloader.style.display = 'none'; }, 600);
+                }, 800);
+            });
+        }
+
+        /* =========================================================
+           2. MOBILE NAVIGATION
+           ========================================================= */
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const navLinks = document.getElementById('nav-links');
+        const dropdowns = document.querySelectorAll('.dropdown');
+
+        if (mobileMenuBtn && navLinks) {
+            mobileMenuBtn.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                mobileMenuBtn.classList.toggle('active');
+                document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
+            });
+
+            navLinks.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    if (window.innerWidth <= 768 && !link.parentElement.classList.contains('dropdown')) {
+                        navLinks.classList.remove('active');
+                        mobileMenuBtn.classList.remove('active');
+                        document.body.style.overflow = '';
+                    }
+                });
+            });
+
+            dropdowns.forEach(dropdown => {
+                const link = dropdown.querySelector('.nav-link');
+                if (!link) return;
+                link.addEventListener('click', (e) => {
+                    if (window.innerWidth <= 768) {
+                        e.preventDefault();
+                        dropdown.classList.toggle('active');
+                    }
+                });
+            });
+        }
+
+        /* =========================================================
+           3. STICKY NAVBAR
+           ========================================================= */
+        const navbar = document.getElementById('navbar');
+        if (navbar) {
+            const handleScroll = () => {
+                if (window.scrollY > 50) navbar.classList.add('scrolled');
+                else navbar.classList.remove('scrolled');
+            };
+            window.addEventListener('scroll', handleScroll);
+            handleScroll();
+        }
+
+        /* =========================================================
+           4. SCROLL REVEAL
+           ========================================================= */
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+        document.querySelectorAll('.fade-in-up, .fade-in-left, .fade-in-right').forEach(el => revealObserver.observe(el));
+
+        /* =========================================================
+           5. FILTER BARS
+           ========================================================= */
+        document.querySelectorAll('.filter-bar').forEach(bar => {
+            const targetId = bar.getAttribute('data-target');
+            const grid = document.getElementById(targetId);
+            if (!grid) return;
+            const cards = grid.querySelectorAll('.filterable-card');
+            const buttons = bar.querySelectorAll('.filter-btn');
+
+            buttons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    buttons.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    const filter = btn.getAttribute('data-filter');
+                    cards.forEach(card => {
+                        const category = card.getAttribute('data-category');
+                        const show = filter === 'all' || category === filter;
+                        card.classList.toggle('is-hidden', !show);
+                    });
+                });
+            });
+        });
+
+        /* =========================================================
+           6. GUIDE ACCORDION
+           ========================================================= */
+        const guideItems = document.querySelectorAll('.guide-item');
+        guideItems.forEach(item => {
+            const toggle = item.querySelector('.guide-toggle');
+            if (!toggle) return;
+            toggle.addEventListener('click', () => {
+                const isOpen = item.classList.contains('open');
+                guideItems.forEach(other => {
+                    other.classList.remove('open');
+                    const t = other.querySelector('.guide-toggle');
+                    if (t) t.setAttribute('aria-expanded', 'false');
+                });
+                if (!isOpen) {
+                    item.classList.add('open');
+                    toggle.setAttribute('aria-expanded', 'true');
+                }
+            });
+        });
+
+        /* =========================================================
+           7. NEWSLETTER (front-end only)
+           ========================================================= */
+        const newsletterForm = document.getElementById('newsletter-form');
+        const formSuccess = document.getElementById('form-success');
+
+        if (newsletterForm) {
+            newsletterForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const emailInput = document.getElementById('newsletter-email');
+                if (!emailInput || !emailInput.value.trim()) return;
+                newsletterForm.reset();
+                if (formSuccess) {
+                    formSuccess.classList.add('visible');
+                    setTimeout(() => formSuccess.classList.remove('visible'), 6000);
+                }
+            });
+        }
+
+        /* =========================================================
+           8. PDF GENERATOR
+           Builds a valid single or multi-page PDF in the browser.
+           ========================================================= */
+
+        // Helper builders for PDF content
+        const p = (text) => ({ type: 'paragraph', text });
+        const h = (text) => ({ type: 'heading', text });
+        const b = (text) => ({ type: 'bullet', text });
+
+        function escapePdfText(str) {
+            return String(str)
+                .replace(/[\u2018\u2019]/g, "'")
+                .replace(/[\u201C\u201D]/g, '"')
+                .replace(/[\u2013\u2014]/g, '-')
+                .replace(/\u2026/g, '...')
+                .replace(/\u00A0/g, ' ')
+                .replace(/[^\x20-\x7E]/g, '')
+                .replace(/\\/g, '\\\\')
+                .replace(/\(/g, '\\(')
+                .replace(/\)/g, '\\)');
+        }
+
+        function wrapLine(text, maxChars) {
+            const words = String(text).split(/\s+/);
+            const lines = [];
+            let line = '';
+            words.forEach(w => {
+                if ((line + ' ' + w).trim().length > maxChars && line) {
+                    lines.push(line);
+                    line = w;
+                } else {
+                    line = (line ? line + ' ' : '') + w;
+                }
+            });
+            if (line) lines.push(line);
+            return lines.length ? lines : [''];
+        }
+
+        function buildPdf(spec) {
+            const pageWidth = 595;
+            const pageHeight = 842;
+            const margin = 50;
+            const bottomMargin = 55;
+            const maxChars = 88;
+
+            const allLines = [];
+            const pushLine = (text, font, size, gapBefore) => {
+                allLines.push({ text, font, size, gapBefore });
+            };
+
+            if (spec.title) pushLine(spec.title, 'F1', 18, 0);
+            if (spec.subtitle) pushLine(spec.subtitle, 'F2', 10, 14);
+
+            (spec.blocks || []).forEach(block => {
+                if (block.type === 'heading') {
+                    pushLine(block.text, 'F1', 12.5, 22);
+                } else if (block.type === 'paragraph') {
+                    const wrapped = wrapLine(block.text, maxChars);
+                    wrapped.forEach((line, i) => {
+                        pushLine(line, 'F2', 10, i === 0 ? 12 : 14);
+                    });
+                } else if (block.type === 'bullet') {
+                    const wrapped = wrapLine(block.text, maxChars - 4);
+                    wrapped.forEach((line, i) => {
+                        pushLine((i === 0 ? '-   ' : '    ') + line, 'F2', 10, i === 0 ? 10 : 13);
+                    });
+                } else if (block.type === 'spacer') {
+                    pushLine('', 'F2', 10, 10);
+                }
+            });
+
+            // Paginate
+            const pages = [];
+            let currentPage = [];
+            let cursorY = pageHeight - margin;
+            let isFirstOnPage = true;
+
+            allLines.forEach(op => {
+                const gap = isFirstOnPage ? 0 : op.gapBefore;
+                const lineHeight = op.size * 1.4;
+                if (cursorY - gap - lineHeight < bottomMargin && !isFirstOnPage) {
+                    pages.push(currentPage);
+                    currentPage = [];
+                    cursorY = pageHeight - margin;
+                    isFirstOnPage = true;
+                }
+                if (!isFirstOnPage) cursorY -= gap;
+                currentPage.push({ text: op.text, font: op.font, size: op.size, y: cursorY });
+                cursorY -= lineHeight;
+                isFirstOnPage = false;
+            });
+            if (currentPage.length) pages.push(currentPage);
+
+            // Content streams
+            const contentStreams = pages.map(pageLines => {
+                let s = '';
+                pageLines.forEach(l => {
+                    if (!l.text) return;
+                    s += `BT\n/${l.font} ${l.size} Tf\n${margin} ${l.y.toFixed(2)} Td\n(${escapePdfText(l.text)}) Tj\nET\n`;
+                });
+                return s;
+            });
+
+            const n = pages.length;
+            const font1Obj = 3 + 2 * n;
+            const font2Obj = font1Obj + 1;
+            const totalObjs = font2Obj;
+
+            const objects = {};
+            objects[1] = `<< /Type /Catalog /Pages 2 0 R >>`;
+
+            const pageRefs = [];
+            for (let i = 0; i < n; i++) pageRefs.push(`${3 + 2 * i} 0 R`);
+            objects[2] = `<< /Type /Pages /Kids [${pageRefs.join(' ')}] /Count ${n} >>`;
+
+            for (let i = 0; i < n; i++) {
+                const pageObjNum = 3 + 2 * i;
+                const contentObjNum = 4 + 2 * i;
+                const stream = contentStreams[i];
+                objects[pageObjNum] = `<< /Type /Page /Parent 2 0 R /MediaBox [0 0 ${pageWidth} ${pageHeight}] /Resources << /Font << /F1 ${font1Obj} 0 R /F2 ${font2Obj} 0 R >> >> /Contents ${contentObjNum} 0 R >>`;
+                objects[contentObjNum] = `<< /Length ${stream.length} >>\nstream\n${stream}\nendstream`;
+            }
+
+            objects[font1Obj] = `<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>`;
+            objects[font2Obj] = `<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>`;
+
+            let pdf = '%PDF-1.4\n';
+            const offsets = {};
+            for (let i = 1; i <= totalObjs; i++) {
+                offsets[i] = pdf.length;
+                pdf += `${i} 0 obj\n${objects[i]}\nendobj\n`;
+            }
+
+            const xrefStart = pdf.length;
+            pdf += `xref\n0 ${totalObjs + 1}\n`;
+            pdf += `0000000000 65535 f \n`;
+            for (let i = 1; i <= totalObjs; i++) {
+                pdf += `${String(offsets[i]).padStart(10, '0')} 00000 n \n`;
+            }
+            pdf += `trailer\n<< /Size ${totalObjs + 1} /Root 1 0 R >>\nstartxref\n${xrefStart}\n%%EOF`;
+
+            return pdf;
+        }
+
+        /* =========================================================
+           9. PDF LIBRARY CONTENT
+           ========================================================= */
+        const PDFS = {
+
+            'amazon-audit': {
+                filename: 'ally-wealth-amazon-listing-audit.pdf',
+                title: 'The Amazon Listing Audit Checklist',
+                subtitle: 'A 22-point review from Ally Wealth',
+                blocks: [
+                    p('Open your book page in a private browsing window, on a phone, and read it as a reader would. Score each item from 1 to 5. Fix anything scoring 3 or below before spending money on promotion.'),
+                    h('Title and subtitle'),
+                    b('Is the title readable as a thumbnail on a mobile screen?'),
+                    b('Does the subtitle include a benefit or keyword phrase readers would actually search for?'),
+                    b('Is the subtitle free of hype language Amazon may flag, such as "bestseller" or "#1"?'),
+                    b('Does the title match the genre convention of the top ten books in your category?'),
+                    h('Cover'),
+                    b('Can you read the title at 100 pixels wide?'),
+                    b('Is the author name legible at thumbnail size?'),
+                    b('Does the cover look consistent with the top ten in your category?'),
+                    b('Is the cover resolution at least 2,500 pixels on the longest side?'),
+                    h('Description'),
+                    b('Does the first line create a question in the reader\'s mind?'),
+                    b('Are the first 250 characters a complete hook, since this is all that appears above the fold?'),
+                    b('Is the description free of plot summary in the first paragraph?'),
+                    b('Are bold section headers used so the page is scannable on mobile?'),
+                    b('Does the description end with an invitation to read, rather than a summary of the ending?'),
+                    h('Categories and keywords'),
+                    b('Are you in categories you can realistically rank in, not only the most competitive ones?'),
+                    b('Have you reviewed the categories of the top ten books in each category?'),
+                    b('Have you filled all seven backend keyword slots?'),
+                    b('Are your keywords phrases readers type, not phrases authors write?'),
+                    b('Have you avoided repeating words already in the title and subtitle?'),
+                    h('Reviews and social proof'),
+                    b('Do you have at least 15 reviews before running any paid promotion?'),
+                    b('Is the average rating 4.0 or higher?'),
+                    b('Are the top three reviews representative of your target reader?'),
+                    h('Author page and series'),
+                    b('Is your Author Central profile complete with bio, photo, and links?'),
+                    b('If part of a series, are the books properly linked?'),
+                    b('Does your author page share a consistent visual style with your covers?'),
+                    h('Scoring'),
+                    p('Score each section one to five. Anything at three or below is your first priority. Do not run paid promotion until every section scores at least four. Repeat this audit every ninety days.')
+                ]
+            },
+
+            'keywords-workbook': {
+                filename: 'ally-wealth-keyword-research-workbook.pdf',
+                title: 'Keyword Research Starter Workbook',
+                subtitle: 'Build a keyword list using only a browser',
+                blocks: [
+                    p('This workbook walks you through building a keyword list from scratch. It takes about ninety minutes and requires no paid tools.'),
+                    h('Step 1 - Autocomplete mining'),
+                    p('Open the Amazon search bar in a private window. Type your genre name, then a space. Note every suggestion that appears. Repeat for your theme, your setting, your protagonist type, and any sub-genre labels readers might use.'),
+                    b('Do not dismiss suggestions that seem obvious. Obvious phrases are often the ones readers actually type.'),
+                    b('Record each phrase exactly as Amazon suggests it, including word order.'),
+                    h('Step 2 - Competitor subtitle mining'),
+                    p('Find ten books similar to yours and currently ranking well. Note the exact phrases used in their subtitles. These are the phrases their publishers have tested and found effective.'),
+                    h('Step 3 - Group and clean'),
+                    p('Group your phrases into three to five themes. Remove any phrase that describes a different genre. Remove any phrase that sounds like an author wrote it rather than a reader searching for it.'),
+                    h('Step 4 - Score and select'),
+                    p('For each remaining phrase, score it from one to five on two axes: how closely it matches your book, and how likely a reader is to type it. Multiply the two scores. Your highest scoring phrases are your primary keywords.'),
+                    h('Worksheet'),
+                    b('Primary keyword 1: ____________________________'),
+                    b('Primary keyword 2: ____________________________'),
+                    b('Primary keyword 3: ____________________________'),
+                    b('Secondary keyword 1: __________________________'),
+                    b('Secondary keyword 2: __________________________'),
+                    b('Category 1 from keyword research: ______________'),
+                    b('Category 2 from keyword research: ______________'),
+                    h('Reminder'),
+                    p('Revisit this list every quarter. Search behaviour shifts, and a phrase that worked in January may be dead by July.')
+                ]
+            },
+
+            'launch-timeline': {
+                filename: 'ally-wealth-90-day-launch-timeline.pdf',
+                title: 'The 90 Day Book Launch Timeline',
+                subtitle: 'A week-by-week plan from Ally Wealth',
+                blocks: [
+                    p('A launch is not a day. It is a ninety day window, with three distinct phases. Each week below has one clear focus. Do not skip ahead.'),
+                    h('Phase 1 - Foundations: weeks -12 to -9'),
+                    b('Week -12: finalise cover files and description. Do not commission a cover at week -4.'),
+                    b('Week -11: set up categories and backend keywords. Run the audit checklist twice.'),
+                    b('Week -10: build or update your author profile. Write the one-line, one-paragraph, and one-page bios.'),
+                    b('Week -9: identify your first twenty potential early readers. Personal contacts and readers in your genre.'),
+                    h('Phase 2 - Early readers: weeks -8 to -5'),
+                    b('Week -8: send personal outreach to your first twenty contacts. Ask, do not pitch.'),
+                    b('Week -7: prepare your ARC file and distribution plan. Confirm the format.'),
+                    b('Week -6: recruit thirty to fifty ARC readers in total. Twenty committed readers are enough.'),
+                    b('Week -5: send ARCs. Confirm expected review windows. Set up a tracking sheet.'),
+                    h('Phase 3 - Pre-launch: weeks -4 to -1'),
+                    b('Week -4: publish three teaser posts. Share the story behind the book, not just the cover.'),
+                    b('Week -3: confirm promotional partners and podcast interviews for launch month.'),
+                    b('Week -2: write all launch week captions in advance. Do not improvise on the day.'),
+                    b('Week -1: send a reminder to ARC readers. Confirm the book is live on all platforms.'),
+                    h('Launch week'),
+                    b('Day 1: publish. Start conversations rather than posting links. Ask questions.'),
+                    b('Days 2 to 5: share one insight per day. Respond to every comment personally.'),
+                    b('Days 6 to 7: thank early reviewers publicly. Ask readers for reviews, never pay for them.'),
+                    h('Phase 4 - Post-launch: weeks +1 to +4'),
+                    b('Week +1: send review reminders to ARC readers. Run one small paid test.'),
+                    b('Week +2: analyse the paid test. Kill what did not work. Double down on what did.'),
+                    b('Week +3: refresh the description with lines that mirror what readers are saying in reviews.'),
+                    b('Week +4: full review. Which channels produced sales, not clicks? Keep only those.'),
+                    h('Day 30 review'),
+                    p('Write down three things that worked, three that did not, and one change you will make before the next book. That document is worth more than any single campaign.')
+                ]
+            },
+
+            'bio-templates': {
+                filename: 'ally-wealth-author-bio-templates.pdf',
+                title: 'Author Bio Templates Pack',
+                subtitle: 'Five templates for every context',
+                blocks: [
+                    p('Every author needs at least three bio lengths: one line, one paragraph, and one page. Write the long version first, then cut. Replace every bracket below with your own words.'),
+                    h('Template 1 - Amazon Author Central'),
+                    p('[Full Name] writes [genre] for readers who [what your readers care about]. [One concrete detail that establishes credibility, such as a previous book, a professional background, or a lived experience relevant to the work]. When not writing, [one human detail]. [What the reader can expect next].'),
+                    h('Template 2 - One line, for podcasts and social profiles'),
+                    p('[Name] is a [genre] author based in [place]. Author of [Book Title].'),
+                    h('Template 3 - Panel bio, medium length'),
+                    p('[Name] is the author of [Book Title] and [Book Title]. Their work explores [themes] and is written for [audience]. [One credibility line]. They live in [place] with [family or pets].'),
+                    h('Template 4 - Website About page'),
+                    p('Start with why you write what you write. One paragraph on the reader and the experience they get from your work. One paragraph on your background and the specific experience that qualifies you. One paragraph on you as a person. End with what is coming next and how to hear about it.'),
+                    h('Template 5 - Social bio, very short'),
+                    p('[Genre] author. [Book Title] out now. [Place].'),
+                    h('Guidance'),
+                    b('Write in third person for Amazon, first person for your website.'),
+                    b('Never open with your birth date or place. Open with what you write and who it is for.'),
+                    b('Cut any sentence that does not answer the reader\'s real question: why should I trust you with my time?'),
+                    b('Update the bio every time you publish a new book.')
+                ]
+            },
+
+            'discovery-map': {
+                filename: 'ally-wealth-reader-discovery-map.pdf',
+                title: 'Reader Discovery Map',
+                subtitle: 'Where readers actually spend time online',
+                blocks: [
+                    p('The goal is not to be everywhere. It is to be present in the three or four places your genre already gathers. Use this map to identify candidates, then choose three to participate in for a month before promoting anything.'),
+                    h('Romance'),
+                    b('Bookstagram and BookTok communities built around tropes, not authors.'),
+                    b('Newsletter aggregators such as BookBub and Freebooksy, for later stage promotion.'),
+                    b('Facebook reader groups organised by sub-genre, such as historical or paranormal.'),
+                    b('Indie romance blogs that run review tours and cover reveals.'),
+                    h('Thriller and mystery'),
+                    b('Reddit communities for crime fiction and psychological thrillers.'),
+                    b('Book review blogs that specialise in twist-driven plots.'),
+                    b('Facebook groups for Nordic noir, domestic suspense, and procedural readers.'),
+                    b('Podcasts on true crime and thriller writing.'),
+                    h('Literary fiction'),
+                    b('Goodreads groups organised by prize lists and literary publications.'),
+                    b('Subscription newsletter reviewers who cover independent literary fiction.'),
+                    b('Local bookshop event series and literary festivals.'),
+                    b('Podcasts interviewing literary novelists.'),
+                    h('Non-fiction and business'),
+                    b('LinkedIn groups organised by professional topic.'),
+                    b('Industry newsletters that review books alongside trends.'),
+                    b('Podcasts in your professional field.'),
+                    b('Substack writers who cover your subject area.'),
+                    h('Memoir'),
+                    b('Goodreads memoir groups.'),
+                    b('Podcasts on personal storytelling and resilience.'),
+                    b('Substack newsletters for essayists and life writers.'),
+                    b('Facebook groups for readers of specific lived experiences.'),
+                    h('Children\'s and young adult'),
+                    b('Teacher and librarian newsletters.'),
+                    b('Parenting and family blogs.'),
+                    b('Bookstagram communities focused on middle-grade and YA.'),
+                    b('School visit circuits and local library programmes.'),
+                    h('How to engage'),
+                    p('Pick three communities. Spend one month participating without promoting anything. Answer questions. Recommend other authors\' books. Be useful. When you eventually mention your own book, it will land very differently.')
+                ]
+            },
+
+            'arc-templates': {
+                filename: 'ally-wealth-arc-outreach-templates.pdf',
+                title: 'ARC Outreach Email Templates',
+                subtitle: 'Five compliant scripts from Ally Wealth',
+                blocks: [
+                    p('Early reviews matter. They matter less than your reputation. Every template below is voluntary, personal, and compliant with Amazon and Goodreads rules. Never offer payment or incentives for a review.'),
+                    h('Template 1 - Cold outreach to a reader'),
+                    p('Subject: A new [genre] novel, if you would like to read it\n\nHi [Name],\n\nI am the author of a new [genre] novel called [Title], which comes out on [date]. I saw your review of [Similar Book] and thought this might be up your street.\n\nIf you would like a free copy in exchange for an honest review, I would be glad to send one. There is no obligation either way, and a review is entirely optional.\n\nEither way, thank you for the reading you already do in this genre.\n\n[Your name]'),
+                    h('Template 2 - Follow-up, two weeks later'),
+                    p('Subject: Checking in on [Title]\n\nHi [Name],\n\nJust a quick check in on [Title]. If you have started reading it, I hope it is going well. If it is not for you, that is completely fine. No need to reply.\n\n[Your name]'),
+                    h('Template 3 - Thank you after a review'),
+                    p('Subject: Thank you\n\nHi [Name],\n\nThank you for taking the time to review [Title]. Whatever you thought of it, an honest review from a reader who reads in this genre is genuinely useful to me.\n\n[Your name]'),
+                    h('Template 4 - Outreach to a book blogger'),
+                    p('Subject: Review request - [Title], [genre], out [date]\n\nHi [Name],\n\nI read your recent review of [Similar Book] and appreciated the detail you went into. I am the author of [Title], a [genre] novel coming out on [date].\n\nI would be glad to send a copy if you would like to consider it for review. I have included the blurb below and a link to the first chapter.\n\nThank you for the work you do for readers in this genre.\n\n[Your name]'),
+                    h('Template 5 - Podcast pitch'),
+                    p('Subject: Podcast guest - [Title], [genre]\n\nHi [Name],\n\nI have listened to your recent episode with [Guest] and thought you might be interested in a conversation about [specific angle relevant to the podcast].\n\nI am the author of [Title], a [genre] novel about [one-line premise]. I can talk specifically about [one or two topics that suit the show].\n\nI have included a short bio and a link to the book below.\n\n[Your name]'),
+                    h('Compliance notes'),
+                    b('Never offer money, gift cards, or any other incentive for a review.'),
+                    b('Never require a review as a condition of receiving the copy.'),
+                    b('Never use a review-swap arrangement with another author.'),
+                    b('Keep a record of who received a copy and when, so you can follow up once, politely.')
+                ]
+            },
+
+            'aplus-planner': {
+                filename: 'ally-wealth-aplus-content-planner.pdf',
+                title: 'A+ Content Module Planner',
+                subtitle: 'Five module layouts that convert',
+                blocks: [
+                    p('A+ Content turns a plain product page into a brand experience. Before opening the builder, decide on the three questions your modules will answer for the reader. Then sketch the layout on paper.'),
+                    h('Module 1 - Hero banner'),
+                    p('Purpose: place the book in a scene, not on a plain background. Show the reader the experience they are buying.'),
+                    b('Recommended size: 970 by 600 pixels.'),
+                    b('One clear visual, no text except a short line.'),
+                    b('The line should say what the book is about in one sentence.'),
+                    h('Module 2 - What the reader will experience'),
+                    p('Purpose: answer the question, what do I get from this book?'),
+                    b('Three or four short blocks, each with a heading and one sentence.'),
+                    b('Each block should map to a reader desire, not to a plot point.'),
+                    b('Use icons sparingly. Clear headings do more work.'),
+                    h('Module 3 - About the author'),
+                    p('Purpose: build trust.'),
+                    b('Author photo, one paragraph bio, one line of credibility.'),
+                    b('Link to your Author Central profile and website.'),
+                    b('If part of a series, mention the next book here.'),
+                    h('Module 4 - Series or backlist cross-sell'),
+                    p('Purpose: turn one sale into two.'),
+                    b('Grid of three to six books with small covers and short titles.'),
+                    b('One sentence on how they connect.'),
+                    b('Do not list books that are not yet published unless the date is confirmed.'),
+                    h('Module 5 - Review pull quotes'),
+                    p('Purpose: let readers speak for you.'),
+                    b('Three short quotes from verified readers.'),
+                    b('Include the first name and, if possible, the review platform.'),
+                    b('Update the quotes every six months so they reflect current reception.'),
+                    h('Planning notes'),
+                    b('Preview every module on mobile before publishing.'),
+                    b('Review performance after thirty days and swap out the weakest module.'),
+                    b('Keep your A+ Content consistent with your cover typography and colours.')
+                ]
+            },
+
+            'caption-bank': {
+                filename: 'ally-wealth-launch-week-caption-bank.pdf',
+                title: 'Launch Week Social Caption Bank',
+                subtitle: 'Fifteen conversation starters',
+                blocks: [
+                    p('The captions below are designed to start conversations, not to shout links. Adapt each one to your own voice. Do not post all fifteen in one week. Pick five and let them breathe.'),
+                    h('Story openers'),
+                    b('1. The first line of this book came to me on a train, on the back of a receipt. I still have the receipt.'),
+                    b('2. I wrote this book over three years. It went through four titles. Here is the one I almost went with.'),
+                    b('3. The hardest scene to write was not the one you would expect. Here is the one that took the longest.'),
+                    h('Reader questions'),
+                    b('4. A question for readers of [genre]: what is the one thing a book in this genre has to get right for you?'),
+                    b('5. If you could ask an author one question about their process, what would it be? I am collecting answers.'),
+                    b('6. I am always looking for recommendations in [genre]. What have you read recently that stayed with you?'),
+                    h('Behind the scenes'),
+                    b('7. This is my desk at the moment. The mug has been there since Monday.'),
+                    b('8. My editor and I disagreed about one chapter for two months. Here is how we resolved it.'),
+                    b('9. The research for this book took me to some odd places. This is one of the more unusual ones.'),
+                    h('Launch week'),
+                    b('10. The book is out today. I am not going to ask you to buy it. I am going to ask you to tell me which part of the premise interests you most.'),
+                    b('11. Three readers have already finished the book. Here is what they said. I am grateful for all of it.'),
+                    b('12. The first review is in. It is not a five star review. It is a thoughtful one. That is better.'),
+                    h('Thank you notes'),
+                    b('13. Thank you to the fifteen people who read an early draft. You know who you are.'),
+                    b('14. Thank you to the readers who have already left a review. Every one of them helps.'),
+                    b('15. This is the last launch post I will make. From here on, I am back to reading, writing, and answering questions.'),
+                    h('Guidance'),
+                    b('Post at most twice per day during launch week.'),
+                    b('Reply to every comment personally.'),
+                    b('Do not post the same link more than once per day.'),
+                    b('After launch week, return to normal posting. Do not treat every day as a promotion.')
+                ]
+            },
+
+            'visual-identity': {
+                filename: 'ally-wealth-visual-identity-worksheet.pdf',
+                title: 'Author Visual Identity Worksheet',
+                subtitle: 'Define a look you can repeat',
+                blocks: [
+                    p('A recognisable author brand is not the most original one. It is the one that shows up the same way every time. This worksheet helps you define a system you can apply without thinking.'),
+                    h('Colour palette'),
+                    b('Primary colour (the one that appears on every graphic): ____________'),
+                    b('Accent colour (used sparingly for emphasis): ____________'),
+                    b('Neutral background colour: ____________'),
+                    b('Are these colours consistent with your latest cover? Yes / No'),
+                    h('Typography'),
+                    b('Heading typeface: ____________'),
+                    b('Body typeface: ____________'),
+                    b('Do both typefaces appear on your website and your Amazon page? Yes / No'),
+                    h('Image style'),
+                    b('Image style one: photographic, illustrated, or typographic? ____________'),
+                    b('Image style two: moody, bright, or neutral? ____________'),
+                    b('Composition rule for every graphic, for example, cover on the left, quote on the right: ____________'),
+                    h('Presence'),
+                    b('The one platform you will commit to for twelve months: ____________'),
+                    b('How often you will post there, realistically: ____________'),
+                    b('How often you will review and update every profile: ____________'),
+                    h('Consistency check'),
+                    p('Once a quarter, open every place a reader might find you: Amazon Author Central, Goodreads, your website, and your main social profile. Do they all use the same colours, typefaces, and photo? If not, that is the work for the next week.')
+                ]
+            },
+
+            'category-guide': {
+                filename: 'ally-wealth-category-selection-guide.pdf',
+                title: 'Category Selection Guide',
+                subtitle: 'Vanity categories versus profitable ones',
+                blocks: [
+                    p('The bestseller badge is not a signal of quality. It is a signal that a book sold more copies than others in a specific category during a specific window. Choose a category nobody browses and you can earn a badge on ten sales.'),
+                    h('The vanity category'),
+                    p('A vanity category is one with low competition but no real reader traffic. The book sits at the top of it and sells almost nothing. The badge looks impressive and means very little.'),
+                    h('The profitable category'),
+                    p('A profitable category is one where a meaningful number of readers browse and where your book would feel at home. Competition is higher, but so is the potential upside.'),
+                    h('How to spot an attainable category'),
+                    b('Look at the top ten books. Do any of them have fewer than 500 reviews? If yes, the category is attainable.'),
+                    b('Do the top ten look like your book? If not, the category is wrong even if it is attainable.'),
+                    b('Are the top ten new releases recent? If not, the category may be dormant.'),
+                    b('Do the covers in the top ten share a visual language you can meet? If not, you will look out of place.'),
+                    h('A worked example'),
+                    p('Suppose your book is a psychological thriller. The obvious categories are Thrillers and Suspense. Both are dominated by books with thousands of reviews. A better starting point might be a niche such as Psychological Thrillers with a specific setting or trope. Smaller, but with a genuine audience.'),
+                    h('Testing'),
+                    b('Pick two candidate categories.'),
+                    b('Place the book in both.'),
+                    b('Run a small paid test over two weeks.'),
+                    b('Keep whichever produced more sales, not more impressions.'),
+                    b('Reassess every ninety days. Categories change.')
+                ]
+            },
+
+            'goodreads-checklist': {
+                filename: 'ally-wealth-goodreads-setup-checklist.pdf',
+                title: 'Goodreads Profile Setup Checklist',
+                subtitle: 'Complete every item before promoting',
+                blocks: [
+                    p('Goodreads is a reader-driven platform. It rewards authors who participate respectfully and punishes those who treat it as a billboard. Complete this checklist before you promote anything.'),
+                    h('Profile'),
+                    b('Profile photo: current, professional, and consistent with your other profiles.'),
+                    b('Bio: the one-paragraph version from the Bio Templates Pack.'),
+                    b('Website: linked and correct.'),
+                    b('Amazon author page: linked.'),
+                    b('Location: current.'),
+                    h('Books'),
+                    b('Claim every edition of every book you have published.'),
+                    b('Confirm the cover image matches the current one on Amazon.'),
+                    b('Check the description matches your current Amazon description.'),
+                    b('If part of a series, link the books to the series.'),
+                    b('Ask your publisher or platform to merge duplicate editions where relevant.'),
+                    h('Participation'),
+                    b('Join three groups relevant to your genre. Do not join twenty.'),
+                    b('Read the group rules before posting anything.'),
+                    b('Spend a week only commenting, not posting.'),
+                    b('Answer reader questions on your books personally, politely, and briefly.'),
+                    b('Never respond to a negative review.'),
+                    h('Etiquette reminders'),
+                    b('Never buy reviews.'),
+                    b('Never ask a reader to remove a negative review.'),
+                    b('Never message readers who have not opted in to hear from you.'),
+                    b('Thank readers for honest reviews, including critical ones.'),
+                    h('Quarterly review'),
+                    p('Once a quarter, log back in, confirm your books are still linked correctly, and check whether any group you joined has become inactive. A complete, current profile is worth more than a busy one.')
+                ]
+            },
+
+            'audiobook-plan': {
+                filename: 'ally-wealth-audiobook-promo-plan.pdf',
+                title: 'Audiobook Promo Planning Sheet',
+                subtitle: 'Treat audio as a standalone product',
+                blocks: [
+                    p('Most authors market their audiobook as a footnote to the print edition. That is a mistake. Listeners are a distinct audience with distinct habits. This plan treats audio as its own product.'),
+                    h('Listener audience'),
+                    b('Where does your listener spend time? Commutes, gym, housework, and travel.'),
+                    b('What format do they prefer? Long-form narrative, episodic, or short?'),
+                    b('Which platforms do they use? Audible, Spotify, Apple Books, or library apps?'),
+                    b('Which podcasts do they listen to? List three below: ____________'),
+                    h('Podcast outreach tracker'),
+                    b('Podcast name: ____________'),
+                    b('Host name: ____________'),
+                    b('Subject area: ____________'),
+                    b('Date pitched: ____________'),
+                    b('Response: ____________'),
+                    b('Air date: ____________'),
+                    b('Promo asset sent: ____________'),
+                    h('Promotion calendar'),
+                    b('Week 1: send personalised pitches to five podcasts in your genre.'),
+                    b('Week 2: publish a short audio excerpt on social platforms.'),
+                    b('Week 3: follow up politely with podcasts who have not responded.'),
+                    b('Week 4: run a short paid test on a single audio platform.'),
+                    b('Week 6: review results. Double down on whichever channel produced listens.'),
+                    h('Multi-format cross-linking'),
+                    b('Add the audiobook link to the front and back of the ebook.'),
+                    b('Mention the audiobook in the Amazon description.'),
+                    b('Add the audiobook to your website homepage.'),
+                    b('Mention the narrator by name in every promotional post.'),
+                    h('Reminder'),
+                    p('Audio marketing is a slow build. The first month is mostly about discoverability. The second and third months are where the compounding happens.')
+                ]
+            }
+        };
+
+        // Wire up the PDF download buttons
+        document.querySelectorAll('.pdf-download').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                const id = btn.getAttribute('data-pdf');
+                const spec = PDFS[id];
+                if (!spec) return;
+
+                try {
+                    const pdfString = buildPdf(spec);
+                    const blob = new Blob([pdfString], { type: 'application/pdf' });
+                    const url = URL.createObjectURL(blob);
+                    const link = document.createElement('a');
+                    link.href = url;
+                    link.download = spec.filename;
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                    setTimeout(() => URL.revokeObjectURL(url), 1500);
+                } catch (err) {
+                    console.error('PDF generation failed:', err);
+                    alert('Sorry, the PDF could not be generated. Please try again.');
+                }
+            });
+        });
+
+        /* =========================================================
+           10. ARTICLE CONTENT
+           ========================================================= */
+        const ap = (text) => ({ type: 'p', text });
+        const ah = (text) => ({ type: 'h', text });
+        const al = (items) => ({ type: 'list', items });
+        const aq = (text) => ({ type: 'quote', text });
+
+        const ARTICLES = {
+            'article-1': {
+                title: 'Why your book page gets visitors but no sales',
+                category: 'Amazon',
+                readTime: '8 minute read',
+                body: [
+                    ap('Traffic is not the problem. If a meaningful number of people are arriving on your page and almost none are buying, the issue is almost always conversion. That is good news, because conversion is fixable.'),
+                    ap('The first thing to check is the first 250 characters of your description. On mobile, that is all most readers see before the read more cut. If those two or three lines read like a synopsis, you have lost the reader before they have any reason to care. A description should open with a question the reader wants answered, not with the plot.'),
+                    ah('The four quiet leaks'),
+                    al([
+                        'The cover is illegible at thumbnail size.',
+                        'The description opens with a summary rather than a hook.',
+                        'The categories are technically accurate but far too competitive.',
+                        'The reviews are thin, or the top three are from readers who do not match the target audience.'
+                    ]),
+                    ap('Each of these leaks individually reduces conversion by a small percentage. Together they can turn a book that deserves to sell into one that gets scrolled past.'),
+                    ap('The fix is not a redesign. It is a sequence. Correct the cover legibility first, because nothing else matters if the reader cannot read the title. Then rewrite the first two lines of the description. Then reassess the categories. Reviews and social proof come last, because they cannot compensate for the first three.'),
+                    aq('If you do only one thing this week, open your book page in a private window, on a phone, and look at it as a reader would. The problems are usually obvious once you stop looking at your own book as an author.')
+                ]
+            },
+
+            'article-2': {
+                title: 'The difference between marketing a book and marketing an author',
+                category: 'Marketing',
+                readTime: '6 minute read',
+                body: [
+                    ap('A book launch is a campaign. An author career is a series of campaigns that build on each other. The mistake many authors make is to pour everything into the first and nothing into the second.'),
+                    ap('Marketing a book is a set of tactical decisions: a cover, a description, a launch window, a set of ARC readers, a handful of promotion channels. The goal is to sell as many copies of one title as possible in a defined window.'),
+                    ap('Marketing an author is a different problem. It is about the impression a reader carries away from every touchpoint, and whether that impression makes them seek out the next book. It is slower, less measurable, and more valuable over time.'),
+                    ah('What author marketing actually involves'),
+                    al([
+                        'A consistent visual identity across covers, website, and social profiles.',
+                        'A bio that answers the reader\'s real question: why should I trust you?',
+                        'A clear genre signal, so the right readers can find you.',
+                        'A repeatable way for readers to hear from you between books.'
+                    ]),
+                    ap('Most authors skip author marketing because it does not show up in week-one sales. Then they wonder why their second book has to start from zero.'),
+                    ap('The fix is not to abandon book marketing. It is to run both. Launch the book properly, then take the assets you built during the launch, the description, the reader list, the relationships with reviewers, and use them to start building the author brand. By the third book, you are no longer starting from scratch.')
+                ]
+            },
+
+            'article-3': {
+                title: 'Launch day is not a day, it is a window',
+                category: 'Launch',
+                readTime: '10 minute read',
+                body: [
+                    ap('A common mistake is to treat launch day as a single event. You post everywhere, you ask everyone you know to buy, and then the momentum dies within forty-eight hours. The book was never given a chance to find its real audience.'),
+                    ap('A launch is a window, not a day. The window starts several weeks before publication and ends around thirty days after. Everything that happens in that window compounds.'),
+                    ah('The three phases'),
+                    al([
+                        'Pre-launch: build anticipation, recruit early readers, confirm promotional partners.',
+                        'Launch week: focus on starting conversations, not posting links. Ask questions. Share the story behind the book.',
+                        'Post-launch: collect reviews, respond to readers, run one small paid test, and track which channels actually drove sales.'
+                    ]),
+                    ap('The most important phase is the one most authors neglect: post-launch. The days and weeks after launch are when you have enough data to know what worked and enough reviews to make the page convert better than it did on day one.'),
+                    ap('A simple rule: if you have budget for only one week of promotion, do not spend it on launch week. Spend it on the fourth week after launch, once you know which channels actually produce readers, not just clicks.'),
+                    aq('Launch week is the beginning of the conversation, not the end of it.')
+                ]
+            },
+
+            'article-4': {
+                title: 'How to find the readers who are already looking for you',
+                category: 'Discovery',
+                readTime: '7 minute read',
+                body: [
+                    ap('The instinct for most authors is to build an audience. The more useful approach is to find the audience that already exists and meet it where it lives.'),
+                    ap('Every genre has a set of communities where readers gather to discuss the exact kind of book you have written. These communities are not hard to find, but they are easy to misunderstand. They are not promotional channels. They are conversations, and they will reject anyone who treats them as a billboard.'),
+                    ah('How to map a genre\'s communities'),
+                    al([
+                        'Start with the books most similar to yours. Where do their readers talk about them?',
+                        'Look at book blogs and newsletters that review in your genre. Read three posts before pitching one.',
+                        'Find the forums and groups where readers recommend books to each other. Read the room before posting.',
+                        'Note the podcasts that interview authors in your genre. Listen to two episodes before pitching.'
+                    ]),
+                    ap('Once you have a map, do not launch a campaign. Pick three communities and spend a month participating genuinely, without promoting anything. Answer questions. Recommend other authors\' books. Be useful.'),
+                    ap('When you eventually mention your own book, it will be to a community that has seen you contribute. The difference in response is not subtle. It is the difference between being ignored and being recommended.'),
+                    aq('The readers you want already exist. The work is not to create an audience, it is to find one.')
+                ]
+            },
+
+            'article-5': {
+                title: 'Your author bio is a conversion tool',
+                category: 'Branding',
+                readTime: '5 minute read',
+                body: [
+                    ap('Most author bios read like a CV. They list credentials, previous publications, and awards. These facts are not the point. The point is to answer the reader\'s real question: why should I trust you with my time?'),
+                    ap('A good bio is short, specific, and written in the author\'s voice. It gives the reader one concrete reason to care. It does not list everything you have ever done. It does not begin with your birth date.'),
+                    ah('The four-line test'),
+                    al([
+                        'Line one: what you write and who it is for.',
+                        'Line two: one concrete detail that makes you credible in that area.',
+                        'Line three: something human, such as where you live or what you do outside writing.',
+                        'Line four: what the reader can expect from you next.'
+                    ]),
+                    ap('If your bio passes the four-line test, it is doing its job. If it reads like a professional summary, it is not.'),
+                    ap('The same bio should exist in three lengths: a one-line version for podcasts and social profiles, a paragraph for Amazon Author Central, and a longer version for your website. Write the long one first, then cut.'),
+                    aq('A bio is not an autobiography. It is an argument for the reader\'s attention.')
+                ]
+            },
+
+            'article-6': {
+                title: 'Categories, keywords, and the myth of the bestseller badge',
+                category: 'Amazon',
+                readTime: '9 minute read',
+                body: [
+                    ap('The bestseller badge is not a signal of quality. It is a signal that a book, at a particular moment, sold more copies in a particular category than the other books in that category. Choose a category nobody browses and you can earn a badge on the strength of ten sales.'),
+                    ap('Authors chase badges because they look like proof. But a badge in a category that no reader browses does almost nothing for sales. The real goal is to be visible to readers who are already looking for a book like yours.'),
+                    ah('A better way to choose categories'),
+                    al([
+                        'Look at the top ten books in a candidate category. Are they books your ideal reader would recognise as similar to yours?',
+                        'Check whether the top ten have strong review counts. If every top book has 1,000+ reviews, the category is probably too competitive for a debut.',
+                        'Look for categories with fewer than 500 reviews on the top books, where your book would still feel at home.',
+                        'Run a small paid test. If conversion is strong, stay. If not, try a different category.'
+                    ]),
+                    ap('Keywords work the same way. The best keywords are not the most searched ones. They are the phrases a reader types when they are close to buying, and where your book would genuinely appear in the first page of results.'),
+                    ap('Both categories and keywords are testable. Treat them as hypotheses, not decisions. The data will tell you what works.'),
+                    aq('A badge in an empty room is not a win. Visibility to real readers is.')
+                ]
+            },
+
+            'article-7': {
+                title: 'What to do when your book has been out for a year',
+                category: 'Marketing',
+                readTime: '6 minute read',
+                body: [
+                    ap('The book is no longer new. The launch window closed long ago. Sales have fallen to a trickle, and the temptation is to move on to the next project. But a backlist title is not a dead asset. It is a book with a small, identifiable set of things that can be improved.'),
+                    ap('The starting point is a diagnosis. Why did sales fall? There are usually three or four reasons: the initial promotion stopped, the description aged poorly, the categories became more competitive, or the reviews stopped growing.'),
+                    ah('A realistic backlist plan'),
+                    al([
+                        'Rewrite the description. The reader who finds your book today is different from the reader who found it in launch week.',
+                        'Reassess the categories. What was achievable a year ago may not be now, and vice versa.',
+                        'Run a small ad test with a tight budget. Let the data tell you whether the book still has a market.',
+                        'Refresh the cover if the genre has visually moved on. This is often the highest impact single change.',
+                        'Ask existing readers for reviews. The easiest reviews to get are from people who already love the book.'
+                    ]),
+                    ap('The aim is not to recreate launch week. It is to make the book more discoverable and more convincing than it was when it first came out. Most backlist revivals are less dramatic than authors expect and more effective than they fear.'),
+                    ap('A book that has been out for a year is not a failure. It is a book with more data, more reviews, and more clarity than it had on day one. That is an advantage, not a disadvantage.')
+                ]
+            },
+
+            'article-8': {
+                title: 'Pre-launch without an email list',
+                category: 'Launch',
+                readTime: '8 minute read',
+                body: [
+                    ap('The advice to build an email list is sound. It is also useless to an author who is launching in three months and does not have one. Here is what to do instead.'),
+                    ap('The goal of pre-launch is not to reach a large audience. It is to reach a small group of people who will genuinely care. A launch supported by fifty invested readers will outperform one supported by five hundred indifferent ones.'),
+                    ah('What to build in twelve weeks'),
+                    al([
+                        'Week 1-2: identify the twenty people you already know who read in your genre. Not your whole contact list. The twenty who fit.',
+                        'Week 3-4: reach out personally to each one. Tell them you have written a book in their genre and would value their honest reaction. Do not pitch. Ask.',
+                        'Week 5-8: recruit ARC readers. Aim for thirty to fifty. Twenty committed readers are enough.',
+                        'Week 9-10: build a simple one-page website with a mailing list signup. It can be built in an afternoon.',
+                        'Week 11-12: prepare your launch week content. Write the posts in advance so you are not improvising on the day.'
+                    ]),
+                    ap('What you will not have: a large list, a proven channel, or any certainty. What you will have: real readers, real early feedback, and a small but committed group who will tell others.'),
+                    ap('An email list is worth building. But it is built over years, not weeks. If you are launching soon, the right move is not to try to build one fast. It is to build relationships with the readers you can reach directly.'),
+                    aq('Fifty readers who care will always beat five hundred who do not.')
+                ]
+            },
+
+            'article-9': {
+                title: 'Consistency beats creativity in author branding',
+                category: 'Branding',
+                readTime: '7 minute read',
+                body: [
+                    ap('A recognisable brand is not the most original one. It is the one that shows up the same way, in the same place, on a reliable schedule.'),
+                    ap('Authors often treat branding as an exercise in creativity. They try new fonts, new colour palettes, new visual styles, and new social platforms. Every change resets the audience\'s recognition. The result is a body of work that looks like it belongs to five different authors.'),
+                    ah('The simplest possible brand system'),
+                    al([
+                        'Choose two typefaces. One serif for headings, one sans-serif for body. Use them everywhere.',
+                        'Choose two colours. One primary, one accent. Use them consistently.',
+                        'Choose one composition rule for every graphic you publish. For example: cover on the left, pull quote on the right.',
+                        'Choose one place you will be present, and commit to it for twelve months.'
+                    ]),
+                    ap('This is not glamorous. It is also what every author with a strong brand actually does.'),
+                    ap('Consistency compounds. After a year, a reader who has seen your posts five times will recognise the sixth before they read a word. That recognition is worth more than any single clever piece of design.'),
+                    ap('The good news is that consistency is easier than creativity. You do not have to be original every day. You only have to be recognisable.'),
+                    aq('A recognisable brand is not the most original one. It is the most consistent one.')
+                ]
+            }
+        };
+
+        /* =========================================================
+           11. ARTICLE MODAL
+           ========================================================= */
+        const articleModal = document.getElementById('article-modal');
+        const articleContent = document.getElementById('article-modal-content');
+        let lastFocusedElement = null;
+
+        function renderArticle(article) {
+            let html = '';
+            html += '<span class="article-modal-meta">' + article.category + ' &middot; ' + article.readTime + '</span>';
+            html += '<h2 id="article-modal-title">' + article.title + '</h2>';
+            article.body.forEach(block => {
+                if (block.type === 'p') {
+                    html += '<p>' + block.text + '</p>';
+                } else if (block.type === 'h') {
+                    html += '<h3>' + block.text + '</h3>';
+                } else if (block.type === 'list') {
+                    html += '<ul>';
+                    block.items.forEach(item => { html += '<li>' + item + '</li>'; });
+                    html += '</ul>';
+                } else if (block.type === 'quote') {
+                    html += '<blockquote>' + block.text + '</blockquote>';
+                }
+            });
+            return html;
+        }
+
+        function openArticle(id) {
+            const article = ARTICLES[id];
+            if (!article || !articleModal || !articleContent) return;
+            articleContent.innerHTML = renderArticle(article);
+            lastFocusedElement = document.activeElement;
+            articleModal.classList.add('open');
+            articleModal.setAttribute('aria-hidden', 'false');
+            document.body.classList.add('modal-open');
+            articleModal.scrollTop = 0;
+            const closeBtn = articleModal.querySelector('.article-modal-close');
+            if (closeBtn) closeBtn.focus();
+        }
+
+        function closeArticle() {
+            if (!articleModal) return;
+            articleModal.classList.remove('open');
+            articleModal.setAttribute('aria-hidden', 'true');
+            document.body.classList.remove('modal-open');
+            if (lastFocusedElement && lastFocusedElement.focus) lastFocusedElement.focus();
+        }
+
+        document.querySelectorAll('.article-link').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                const id = btn.getAttribute('data-article');
+                if (id) openArticle(id);
+            });
+        });
+
+        if (articleModal) {
+            articleModal.querySelectorAll('[data-close]').forEach(el => {
+                el.addEventListener('click', closeArticle);
+            });
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && articleModal && articleModal.classList.contains('open')) {
+                closeArticle();
+            }
+        });
+
+    });
+    </script>
+</body>
+</html>

@@ -1,0 +1,1833 @@
+<!DOCTYPE html>
+<!-- =====================================================================
+     ALLY WEALTH - PREMIUM AUTHOR VISIBILITY CONSULTANT
+     MASTER TERMS OF SERVICE PAGE - ALL-IN-ONE FILE
+     =====================================================================
+     This file contains all HTML, CSS, and JavaScript required for the
+     terms of service page. No external CSS or JS files are needed for
+     this page to render perfectly.
+
+     Contents:
+     1. Terms hero with last updated badge
+     2. Sticky table of contents with scroll spy
+     3. Nineteen terms sections (anchored)
+     4. Contact block and back to top
+     5. Standard CTA and footer
+
+     Author: Ally Wealth Development Team
+     Date: 2026
+     ===================================================================== -->
+
+<html lang="en">
+<head>
+    <!-- =================================================================
+         META TAGS AND SEO OPTIMIZATION
+         ================================================================= -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Primary Meta Tags -->
+    <title>Terms of Service | Ally Wealth Book Marketing</title>
+    <meta name="title" content="Terms of Service | Ally Wealth Book Marketing">
+    <meta name="description" content="Read the Ally Wealth terms of service. The agreement that governs use of this website and the book marketing services we provide to authors and publishers.">
+    <meta name="keywords" content="Ally Wealth terms of service, book marketing terms, author consultancy agreement, terms and conditions">
+    <meta name="author" content="Ally Wealth">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.allywealth.com/terms.html">
+    <meta property="og:title" content="Terms of Service | Ally Wealth Book Marketing">
+    <meta property="og:description" content="The agreement that governs use of this website and the services we provide.">
+    <meta property="og:image" content="images/banner.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.allywealth.com/terms.html">
+    <meta property="twitter:title" content="Terms of Service | Ally Wealth Book Marketing">
+    <meta property="twitter:description" content="The agreement that governs use of this website and the services we provide.">
+    <meta property="twitter:image" content="images/banner.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="apple-touch-icon" href="images/favicon.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+
+    <!-- =================================================================
+         EMBEDDED CSS STYLESHEET
+         ================================================================= -->
+    <style>
+        /* =============================================================
+           1. CSS VARIABLES AND ROOT DEFINITIONS
+           ============================================================= */
+        :root {
+            --navy: #0B132B;
+            --gold: #C5A059;
+            --ivory: #F4EFE7;
+            --charcoal: #28221D;
+            --white: #FFFFFF;
+            --light-gray: #E8DFD2;
+            --dark-gray: #1A1A1A;
+            --muted-text: #6B6B6B;
+            --border-color: rgba(0, 0, 0, 0.08);
+            --gold-transparent: rgba(197, 160, 89, 0.2);
+            --font-heading: 'Playfair Display', serif;
+            --font-body: 'Inter', sans-serif;
+            --transition-smooth: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            --transition-fast: all 0.2s ease-in-out;
+            --shadow-subtle: 0 10px 30px rgba(0, 0, 0, 0.05);
+            --shadow-hover: 0 20px 40px rgba(0, 0, 0, 0.1);
+            --container-width: 1280px;
+            --container-padding: 2rem;
+            --section-padding: 8rem 0;
+        }
+
+        /* =============================================================
+           2. GLOBAL RESET AND BASE STYLES
+           ============================================================= */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--ivory);
+            color: var(--charcoal);
+            line-height: 1.7;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-heading);
+            font-weight: 600;
+            color: var(--navy);
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        h1 { font-size: clamp(2.5rem, 5vw, 4.5rem); }
+        h2 { font-size: clamp(2rem, 4vw, 3rem); }
+        h3 { font-size: clamp(1.3rem, 2.5vw, 1.8rem); }
+        h4 { font-size: clamp(1.1rem, 2vw, 1.4rem); }
+
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+            color: var(--charcoal);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition-fast);
+        }
+
+        ul, ol {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+        }
+
+        button, input, select, textarea {
+            font-family: inherit;
+            font-size: inherit;
+            outline: none;
+            border: none;
+            background: none;
+        }
+
+        button { cursor: pointer; }
+
+        /* =============================================================
+           3. UTILITY AND LAYOUT CLASSES
+           ============================================================= */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--container-padding);
+            width: 100%;
+        }
+
+        .section {
+            padding: var(--section-padding);
+            position: relative;
+        }
+
+        .section-label {
+            color: var(--gold);
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+
+        .mt-2 { margin-top: 2rem; }
+        .mt-3 { margin-top: 3rem; }
+
+        .bg-white { background-color: var(--white); }
+        .bg-ivory { background-color: var(--ivory); }
+
+        /* =============================================================
+           4. BUTTONS
+           ============================================================= */
+        .btn-primary,
+        .btn-secondary {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            border-radius: 2px;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+            text-align: center;
+            border: 1px solid transparent;
+        }
+
+        .btn-primary {
+            background-color: var(--gold);
+            color: var(--navy);
+            border-color: var(--gold);
+        }
+
+        .btn-primary:hover {
+            background-color: transparent;
+            color: var(--gold);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--navy);
+            border-color: var(--navy);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--navy);
+            color: var(--ivory);
+        }
+
+        .btn-large {
+            padding: 1.2rem 3rem;
+            font-size: 1rem;
+        }
+
+        .btn-small {
+            padding: 0.6rem 1.5rem;
+            font-size: 0.8rem;
+        }
+
+        /* =============================================================
+           5. PRELOADER
+           ============================================================= */
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: var(--navy);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.6s ease;
+        }
+
+        #preloader.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .loader-content { text-align: center; }
+
+        .loader-svg {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 1rem;
+        }
+
+        .circle-anim {
+            stroke-dasharray: 250;
+            stroke-dashoffset: 250;
+            animation: drawCircle 1.5s ease forwards infinite;
+            transform-origin: center;
+        }
+
+        @keyframes drawCircle {
+            0% { stroke-dashoffset: 250; transform: rotate(0deg); }
+            50% { stroke-dashoffset: 0; transform: rotate(180deg); }
+            100% { stroke-dashoffset: -250; transform: rotate(360deg); }
+        }
+
+        .loader-text {
+            color: var(--gold);
+            font-family: var(--font-heading);
+            letter-spacing: 4px;
+            font-size: 1.2rem;
+            animation: pulseText 1.5s ease infinite;
+        }
+
+        .loader-subtext {
+            color: var(--light-gray);
+            font-size: 0.8rem;
+            margin-top: 0.5rem;
+            letter-spacing: 1px;
+        }
+
+        @keyframes pulseText {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 1; }
+        }
+
+        /* =============================================================
+           6. NAVIGATION
+           ============================================================= */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 1.5rem 0;
+            background-color: transparent;
+            z-index: 1000;
+            transition: var(--transition-smooth);
+        }
+
+        .navbar.scrolled {
+            background-color: rgba(244, 239, 231, 0.95);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .nav-container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--container-padding);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-link {
+            display: flex;
+            align-items: center;
+            z-index: 1001;
+        }
+
+        .logo-img {
+            height: 65px;
+            width: auto;
+            transition: var(--transition-fast);
+        }
+
+        .navbar.scrolled .logo-img { height: 50px; }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 2.5rem;
+            margin-bottom: 0;
+        }
+
+        .nav-link {
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--ivory);
+            position: relative;
+            padding-bottom: 5px;
+            transition: var(--transition-fast);
+        }
+
+        .navbar.scrolled .nav-link { color: var(--navy); }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--gold);
+            transition: var(--transition-fast);
+        }
+
+        .nav-link:hover::after,
+        .nav-link.active::after { width: 100%; }
+
+        .nav-link:hover,
+        .nav-link.active { color: var(--gold) !important; }
+
+        .btn-primary.nav-btn {
+            background-color: var(--gold);
+            color: var(--navy);
+            padding: 0.8rem 1.5rem;
+            border: 1px solid var(--gold);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.85rem !important;
+            border-radius: 2px;
+        }
+
+        .btn-primary.nav-btn:hover {
+            background-color: transparent;
+            color: var(--gold);
+        }
+
+        .navbar:not(.scrolled) .btn-primary.nav-btn {
+            background-color: transparent;
+            color: var(--ivory);
+            border-color: var(--ivory);
+        }
+
+        .navbar:not(.scrolled) .btn-primary.nav-btn:hover {
+            background-color: var(--ivory);
+            color: var(--navy);
+        }
+
+        .dropdown { position: relative; }
+        .arrow { font-size: 0.7rem; margin-left: 3px; display: inline-block; transition: transform 0.3s ease; }
+        .dropdown:hover .arrow { transform: rotate(180deg); }
+
+        .mega-menu {
+            position: absolute;
+            top: 100%;
+            left: -150px;
+            background-color: var(--white);
+            width: 800px;
+            box-shadow: var(--shadow-hover);
+            border-top: 3px solid var(--gold);
+            padding: 2.5rem;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: var(--transition-smooth);
+            z-index: 100;
+        }
+
+        .dropdown:hover .mega-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .mega-menu-inner {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1.2fr;
+            gap: 2rem;
+        }
+
+        .mega-col h4 {
+            font-family: var(--font-body);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1.5rem;
+            color: var(--navy);
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.5rem;
+        }
+
+        .mega-col ul li { margin-bottom: 0.8rem; }
+        .mega-col ul li a {
+            font-size: 0.85rem;
+            color: var(--muted-text);
+            text-transform: none;
+            letter-spacing: 0;
+            display: block;
+            transition: var(--transition-fast);
+        }
+
+        .mega-col ul li a:hover {
+            color: var(--gold);
+            padding-left: 5px;
+        }
+
+        .highlight-col {
+            background-color: var(--ivory);
+            padding: 1.5rem;
+            border-radius: 4px;
+        }
+
+        .highlight-col p {
+            font-size: 0.9rem;
+            color: var(--muted-text);
+            margin-bottom: 1.5rem;
+            line-height: 1.5;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            cursor: pointer;
+            flex-direction: column;
+            gap: 6px;
+            z-index: 1001;
+            padding: 5px;
+        }
+
+        .bar {
+            width: 28px;
+            height: 2px;
+            background-color: var(--ivory);
+            transition: var(--transition-fast);
+            display: block;
+        }
+
+        .navbar.scrolled .bar { background-color: var(--navy); }
+
+        /* =============================================================
+           7. INNER PAGE HERO
+           ============================================================= */
+        .hero-inner {
+            position: relative;
+            height: 55vh;
+            min-height: 480px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background-color: var(--navy);
+            overflow: hidden;
+            padding-top: 80px;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(11,19,43,0.85) 0%, rgba(11,19,43,0.6) 50%, rgba(11,19,43,0.95) 100%);
+            z-index: 2;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 3;
+            max-width: 900px;
+        }
+
+        .hero-subtitle {
+            color: var(--gold);
+            font-size: 0.9rem;
+            font-weight: 700;
+            letter-spacing: 4px;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+        }
+
+        .hero-title {
+            color: var(--white);
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            line-height: 1.1;
+            margin-bottom: 1.75rem;
+            text-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        .hero-description {
+            color: var(--light-gray);
+            font-size: 1.15rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            line-height: 1.8;
+        }
+
+        .last-updated {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            font-size: 0.78rem;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--gold);
+            border: 1px solid rgba(197, 160, 89, 0.5);
+            padding: 0.5rem 1.1rem;
+            border-radius: 2px;
+        }
+
+        .last-updated-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background-color: var(--gold);
+            display: inline-block;
+        }
+
+        /* =============================================================
+           8. TERMS LAYOUT WITH STICKY SIDEBAR
+           ============================================================= */
+        .terms-layout {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .terms-sidebar {
+            position: sticky;
+            top: 120px;
+        }
+
+        .terms-toc {
+            background-color: var(--white);
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
+            padding: 1.75rem;
+            box-shadow: var(--shadow-subtle);
+        }
+
+        .terms-toc-title {
+            font-family: var(--font-body);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 1.25rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .terms-toc ol {
+            counter-reset: toc-counter;
+            margin-bottom: 0;
+        }
+
+        .terms-toc ol li {
+            counter-increment: toc-counter;
+            margin-bottom: 0.25rem;
+        }
+
+        .terms-toc ol li a {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            padding: 0.5rem 0.6rem;
+            border-radius: 2px;
+            font-size: 0.85rem;
+            color: var(--muted-text);
+            line-height: 1.4;
+            transition: var(--transition-fast);
+            position: relative;
+        }
+
+        .terms-toc ol li a::before {
+            content: counter(toc-counter, decimal-leading-zero);
+            font-family: var(--font-heading);
+            font-size: 0.75rem;
+            color: var(--gold);
+            min-width: 22px;
+            padding-top: 1px;
+            flex-shrink: 0;
+        }
+
+        .terms-toc ol li a:hover {
+            background-color: var(--ivory);
+            color: var(--navy);
+        }
+
+        .terms-toc ol li a.active {
+            background-color: var(--ivory);
+            color: var(--navy);
+            font-weight: 600;
+        }
+
+        .terms-toc ol li a.active::before {
+            color: var(--navy);
+            font-weight: 700;
+        }
+
+        .terms-sidebar-note {
+            margin-top: 1.5rem;
+            padding: 1.25rem;
+            background-color: var(--navy);
+            border-radius: 4px;
+            color: var(--light-gray);
+        }
+
+        .terms-sidebar-note p {
+            font-size: 0.8rem;
+            line-height: 1.7;
+            color: var(--light-gray);
+            margin-bottom: 0.75rem;
+        }
+
+        .terms-sidebar-note a {
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            color: var(--gold);
+            border-bottom: 1px solid var(--gold);
+            padding-bottom: 2px;
+        }
+
+        .terms-sidebar-note a:hover {
+            color: var(--ivory);
+            border-bottom-color: var(--ivory);
+        }
+
+        /* =============================================================
+           9. TERMS CONTENT
+           ============================================================= */
+        .terms-content {
+            min-width: 0;
+        }
+
+        .terms-intro {
+            background-color: var(--white);
+            border-left: 3px solid var(--gold);
+            padding: 1.75rem 2rem;
+            border-radius: 2px;
+            margin-bottom: 3rem;
+            box-shadow: var(--shadow-subtle);
+        }
+
+        .terms-intro p {
+            font-size: 1rem;
+            color: var(--muted-text);
+            line-height: 1.85;
+            margin-bottom: 0;
+        }
+
+        .terms-intro p strong {
+            color: var(--navy);
+        }
+
+        .terms-section {
+            padding-bottom: 3rem;
+            margin-bottom: 3rem;
+            border-bottom: 1px solid var(--border-color);
+            scroll-margin-top: 120px;
+        }
+
+        .terms-section:last-of-type {
+            border-bottom: none;
+            margin-bottom: 2rem;
+        }
+
+        .terms-section-header {
+            display: flex;
+            align-items: baseline;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .terms-number {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            color: var(--gold);
+            line-height: 1;
+            flex-shrink: 0;
+        }
+
+        .terms-section h2 {
+            font-size: clamp(1.4rem, 2.5vw, 1.9rem);
+            margin-bottom: 0;
+            color: var(--navy);
+            line-height: 1.3;
+        }
+
+        .terms-section h3 {
+            font-size: 1.1rem;
+            margin-top: 2rem;
+            margin-bottom: 0.75rem;
+            color: var(--navy);
+        }
+
+        .terms-section p {
+            font-size: 0.98rem;
+            color: var(--charcoal);
+            line-height: 1.85;
+            margin-bottom: 1.25rem;
+        }
+
+        .terms-section p strong {
+            color: var(--navy);
+            font-weight: 600;
+        }
+
+        .terms-section ul {
+            margin: 1rem 0 1.5rem;
+            padding-left: 0;
+        }
+
+        .terms-section ul li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.75rem;
+            font-size: 0.98rem;
+            color: var(--charcoal);
+            line-height: 1.8;
+        }
+
+        .terms-section ul li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.7rem;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background-color: var(--gold);
+        }
+
+        .terms-section ul li strong {
+            color: var(--navy);
+            font-weight: 600;
+        }
+
+        .terms-callout {
+            background-color: var(--ivory);
+            border-left: 3px solid var(--gold);
+            padding: 1.25rem 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 2px;
+        }
+
+        .terms-callout p {
+            font-size: 0.92rem;
+            color: var(--muted-text);
+            line-height: 1.8;
+            margin-bottom: 0;
+        }
+
+        .terms-callout p strong {
+            color: var(--navy);
+        }
+
+        .terms-contact-block {
+            background-color: var(--navy);
+            border-radius: 4px;
+            padding: 2.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .terms-contact-block p {
+            color: var(--light-gray);
+            font-size: 0.95rem;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .terms-contact-block p:last-child {
+            margin-bottom: 0;
+        }
+
+        .terms-contact-block a {
+            color: var(--gold);
+            border-bottom: 1px solid rgba(197, 160, 89, 0.4);
+            padding-bottom: 1px;
+        }
+
+        .terms-contact-block a:hover {
+            border-bottom-color: var(--gold);
+        }
+
+        .terms-contact-block strong {
+            color: var(--white);
+            display: block;
+            font-size: 0.75rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 0.4rem;
+        }
+
+        .back-to-top-wrap {
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .back-to-top {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--navy);
+            border-bottom: 1px solid var(--gold);
+            padding-bottom: 4px;
+            transition: var(--transition-fast);
+        }
+
+        .back-to-top:hover {
+            color: var(--gold);
+        }
+
+        /* =============================================================
+           10. CTA SECTION
+           ============================================================= */
+        .cta-section {
+            background-color: var(--ivory);
+            padding: 7rem 0;
+        }
+
+        .cta-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .cta-text h2 {
+            color: var(--navy);
+            font-size: 2.6rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-text p {
+            color: var(--muted-text);
+            font-size: 1.05rem;
+            margin-bottom: 0;
+        }
+
+        /* =============================================================
+           11. FOOTER
+           ============================================================= */
+        .mega-footer {
+            background-color: #050A18;
+            color: var(--light-gray);
+            padding-top: 5rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
+            gap: 4rem;
+            padding-bottom: 4rem;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .footer-logo { height: 60px; width: auto; margin-bottom: 1.5rem; }
+        .footer-tagline { color: var(--gold); font-family: var(--font-heading); font-size: 1.1rem; margin-bottom: 1rem; line-height: 1.5; }
+        .footer-desc { font-size: 0.9rem; color: #999; line-height: 1.8; }
+
+        .footer-col h4 { color: var(--white); font-family: var(--font-body); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1.5rem; font-weight: 600; }
+        .footer-col ul { margin-bottom: 0; }
+        .footer-col ul li { margin-bottom: 0.8rem; }
+        .footer-col ul li a { font-size: 0.9rem; color: #999; }
+        .footer-col ul li a:hover { color: var(--gold); padding-left: 5px; }
+
+        .footer-email { display: inline-block; color: var(--gold); font-size: 1.1rem; font-weight: 500; margin-bottom: 1rem; }
+        .footer-email:hover { text-decoration: underline; }
+        .footer-response { font-size: 0.85rem; color: #888; margin-bottom: 2rem; }
+        .footer-contact-text { font-size: 0.9rem; color: #999; line-height: 1.8; margin-bottom: 1.25rem; }
+
+        .footer-bottom { padding: 2rem 0; display: flex; justify-content: space-between; align-items: center; font-size: 0.85rem; color: #888; }
+        .footer-bottom p { margin-bottom: 0; color: #888; font-size: 0.85rem; }
+
+        /* =============================================================
+           12. ANIMATIONS (SCROLL REVEAL)
+           ============================================================= */
+        .fade-in-up { opacity: 0; transform: translateY(40px); transition: opacity 0.8s ease, transform 0.8s ease; }
+        .fade-in-up.visible { opacity: 1; transform: translateY(0); }
+        .fade-in-left { opacity: 0; transform: translateX(-40px); transition: opacity 0.8s ease, transform 0.8s ease; }
+        .fade-in-left.visible { opacity: 1; transform: translateX(0); }
+        .fade-in-right { opacity: 0; transform: translateX(40px); transition: opacity 0.8s ease, transform 0.8s ease; }
+        .fade-in-right.visible { opacity: 1; transform: translateX(0); }
+        .delay-1 { transition-delay: 0.1s; }
+        .delay-2 { transition-delay: 0.2s; }
+        .delay-3 { transition-delay: 0.3s; }
+
+        /* =============================================================
+           13. RESPONSIVE DESIGN
+           ============================================================= */
+        @media (max-width: 1200px) {
+            .container { padding: 0 1.5rem; }
+            .mega-menu { width: 600px; left: -100px; }
+            .mega-menu-inner { grid-template-columns: 1fr 1fr; }
+            .cta-container { gap: 3rem; }
+            .footer-grid { grid-template-columns: 1fr 1fr; gap: 3rem; }
+            .terms-layout { grid-template-columns: 260px 1fr; gap: 3rem; }
+        }
+
+        @media (max-width: 1024px) {
+            .section { padding: 6rem 0; }
+            .cta-container { grid-template-columns: 1fr; }
+            .hero-title { font-size: 3rem; }
+            .terms-layout { grid-template-columns: 1fr; gap: 2.5rem; }
+            .terms-sidebar { position: static; }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-btn { display: flex; }
+            .nav-links {
+                position: fixed; top: 0; right: -100%; width: 85%; height: 100vh;
+                background-color: var(--navy); flex-direction: column;
+                justify-content: flex-start; padding: 8rem 2rem 2rem;
+                transition: var(--transition-smooth); box-shadow: -10px 0 30px rgba(0,0,0,0.5);
+                z-index: 999; overflow-y: auto; gap: 1.5rem;
+            }
+            .nav-links.active { right: 0; }
+            .nav-link { color: var(--white) !important; font-size: 1.1rem; margin: 0; display: block; width: 100%; }
+            .nav-link::after { display: none; }
+            .mega-menu { position: static; background-color: transparent; box-shadow: none; border-top: none; opacity: 1; visibility: visible; transform: none; width: 100%; padding: 0; display: none; }
+            .dropdown.active .mega-menu { display: block; }
+            .mega-menu-inner { grid-template-columns: 1fr; gap: 1.5rem; }
+            .mega-col h4 { color: var(--gold); border-bottom: 1px solid rgba(255,255,255,0.1); margin-bottom: 1rem; }
+            .mega-col ul li a { color: var(--light-gray); padding: 0.3rem 0; }
+            .highlight-col { display: none; }
+            .mobile-menu-btn.active .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); background-color: var(--white) !important; }
+            .mobile-menu-btn.active .bar:nth-child(2) { opacity: 0; }
+            .mobile-menu-btn.active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); background-color: var(--white) !important; }
+            .btn-primary.nav-btn { width: 100%; text-align: center; margin-top: 1rem; }
+            .hero-inner { min-height: 46vh; height: auto; }
+            .hero-title { font-size: 2.4rem; }
+            .hero-description { font-size: 1rem; }
+            .section-header h2 { font-size: 2rem; }
+            .section-intro { font-size: 1rem; }
+            .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+            .footer-bottom { flex-direction: column; text-align: center; gap: 1rem; }
+            .terms-toc { padding: 1.5rem; }
+            .terms-intro { padding: 1.5rem; }
+            .terms-contact-block { padding: 2rem; }
+            .cta-text h2 { font-size: 2.1rem; }
+        }
+
+        @media (max-width: 480px) {
+            .container { padding: 0 1rem; }
+            .section { padding: 4rem 0; }
+            .hero-title { font-size: 1.95rem; }
+            .btn-primary, .btn-secondary { padding: 0.8rem 1.5rem; font-size: 0.85rem; }
+            .terms-section-header { gap: 0.75rem; }
+            .terms-number { font-size: 1.2rem; }
+            .terms-section h2 { font-size: 1.3rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- =================================================================
+         PRELOADER
+         ================================================================= -->
+    <div id="preloader">
+        <div class="loader-content">
+            <svg class="loader-svg" viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="40" stroke="#C5A059" stroke-width="2" fill="none" class="circle-anim"></circle>
+            </svg>
+            <h2 class="loader-text">ALLY WEALTH</h2>
+            <p class="loader-subtext">Loading terms of service...</p>
+        </div>
+    </div>
+
+    <!-- =================================================================
+         GLOBAL NAVIGATION
+         ================================================================= -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+
+            <a href="index.html" class="logo-link" aria-label="Ally Wealth Home">
+                <img src="images/favicon.png" alt="Ally Wealth Logo" class="logo-img">
+            </a>
+
+            <div class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle Menu" role="button" tabindex="0">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+
+                <li class="dropdown mega-dropdown">
+                    <a href="services.html" class="nav-link">Services <span class="arrow">&#9662;</span></a>
+                    <div class="mega-menu">
+                        <div class="mega-menu-inner">
+                            <div class="mega-col">
+                                <h4>Amazon Optimization</h4>
+                                <ul>
+                                    <li><a href="services.html#amazon">Amazon Book Marketing</a></li>
+                                    <li><a href="services.html#aplus">Amazon A+ Content</a></li>
+                                    <li><a href="services.html#listing">Book Listing Optimisation</a></li>
+                                    <li><a href="services.html#keywords">Keywords and Categories</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-col">
+                                <h4>Reader Engagement</h4>
+                                <ul>
+                                    <li><a href="services.html#goodreads">Goodreads Marketing</a></li>
+                                    <li><a href="services.html#arc">ARC and Reader Outreach</a></li>
+                                    <li><a href="services.html#social">Social Media Promotion</a></li>
+                                    <li><a href="services.html#audiobook">Audiobook Marketing</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-col">
+                                <h4>Author and Launch</h4>
+                                <ul>
+                                    <li><a href="services.html#branding">Author Branding</a></li>
+                                    <li><a href="services.html#descriptions">Book Descriptions</a></li>
+                                    <li><a href="services.html#launch">Book Launch Campaigns</a></li>
+                                    <li><a href="services.html#custom">Custom Book Strategy</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-col highlight-col">
+                                <h4>Need Guidance?</h4>
+                                <p>Not sure which service fits your book? Let's discuss your goals.</p>
+                                <a href="contact.html" class="btn-primary btn-small">Get a Proposal</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li><a href="work.html" class="nav-link">Our Work</a></li>
+                <li><a href="resources.html" class="nav-link">Resources</a></li>
+                <li><a href="contact.html" class="btn-primary nav-btn">Request a Proposal</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- =================================================================
+         INNER PAGE HERO
+         ================================================================= -->
+    <header class="hero-inner">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <p class="hero-subtitle fade-in-up">LEGAL</p>
+            <h1 class="hero-title fade-in-up delay-1">
+                Terms of Service
+            </h1>
+            <p class="hero-description fade-in-up delay-2">
+                These terms set out the agreement between you and Ally Wealth. They apply to this website and to any book marketing services we provide. Please read them before you engage with us.
+            </p>
+            <span class="last-updated fade-in-up delay-3">
+                <span class="last-updated-dot"></span>
+                Last updated 10 November 2026
+            </span>
+        </div>
+    </header>
+
+    <!-- =================================================================
+         TERMS SECTION
+         ================================================================= -->
+    <section class="section bg-ivory" id="terms">
+        <div class="container">
+
+            <div class="terms-layout">
+
+                <!-- =====================================================
+                     STICKY TABLE OF CONTENTS
+                     ===================================================== -->
+                <aside class="terms-sidebar">
+                    <nav class="terms-toc" aria-label="Terms of service contents">
+                        <p class="terms-toc-title">Contents</p>
+                        <ol>
+                            <li><a href="#acceptance">Acceptance of Terms</a></li>
+                            <li><a href="#definitions">Definitions</a></li>
+                            <li><a href="#services">Services Provided</a></li>
+                            <li><a href="#proposal">Proposal and Engagement</a></li>
+                            <li><a href="#fees">Fees and Payment Terms</a></li>
+                            <li><a href="#client-obligations">Client Obligations</a></li>
+                            <li><a href="#our-obligations">Our Obligations</a></li>
+                            <li><a href="#timelines">Timelines and Deliverables</a></li>
+                            <li><a href="#revisions">Revisions and Scope Changes</a></li>
+                            <li><a href="#confidentiality">Confidentiality</a></li>
+                            <li><a href="#intellectual-property">Intellectual Property</a></li>
+                            <li><a href="#platforms">Third-Party Platforms</a></li>
+                            <li><a href="#no-guarantee">No Guarantee of Results</a></li>
+                            <li><a href="#liability">Limitation of Liability</a></li>
+                            <li><a href="#termination">Termination</a></li>
+                            <li><a href="#force-majeure">Force Majeure</a></li>
+                            <li><a href="#law">Governing Law and Disputes</a></li>
+                            <li><a href="#changes">Changes to These Terms</a></li>
+                            <li><a href="#contact">How to Contact Us</a></li>
+                        </ol>
+                    </nav>
+
+                    <div class="terms-sidebar-note">
+                        <p>Have a question about a specific clause before you engage? Ask us directly.</p>
+                        <a href="mailto:info.allywealth@gmail.com">Get in Touch</a>
+                    </div>
+                </aside>
+
+                <!-- =====================================================
+                     TERMS CONTENT
+                     ===================================================== -->
+                <div class="terms-content">
+
+                    <div class="terms-intro fade-in-up">
+                        <p>
+                            <strong>In short:</strong> we work on clearly defined scopes with clearly defined fees, we treat your materials as confidential, we do not guarantee specific commercial outcomes, and we resolve disputes through good faith conversation before anything else. The full legal details are set out below.
+                        </p>
+                    </div>
+
+                    <!-- ===============================================
+                         01. ACCEPTANCE OF TERMS
+                         =============================================== -->
+                    <article class="terms-section fade-in-up" id="acceptance">
+                        <div class="terms-section-header">
+                            <span class="terms-number">01</span>
+                            <h2>Acceptance of Terms</h2>
+                        </div>
+                        <p>
+                            These terms of service ("Terms") govern your access to and use of the Ally Wealth website, as well as any services we provide to you. By accessing the website, submitting the contact form, or engaging us for any service, you agree to be bound by these Terms.
+                        </p>
+                        <p>
+                            If you do not agree to these Terms, please do not use the website or engage our services. If you are engaging us on behalf of a company or organisation, you confirm that you have the authority to bind that organisation to these Terms.
+                        </p>
+                        <p>
+                            These Terms should be read together with our <a href="privacy.html" style="color: var(--gold); border-bottom: 1px solid var(--gold); padding-bottom: 1px;">Privacy Policy</a>, which explains how we handle your personal information.
+                        </p>
+                    </article>
+
+                    <!-- ===============================================
+                         02. DEFINITIONS
+                         =============================================== -->
+                    <article class="terms-section fade-in-up" id="definitions">
+                        <div class="terms-section-header">
+                            <span class="terms-number">02</span>
+                            <h2>Definitions</h2>
+                        </div>
+                        <p>
+                            Throughout these Terms, the following definitions apply unless the context requires otherwise.
+                        </p>
+                        <ul>
+                            <li><strong>"Ally Wealth", "we", "us", "our":</strong> refers to the book marketing consultancy operating under the Ally Wealth name.</li>
+                            <li><strong>"Client", "you", "your":</strong> refers to the individual or organisation accessing the website or engaging our services.</li>
+                            <li><strong>"Services":</strong> any book marketing, consultancy, design, strategy, or related work we agree to provide.</li>
+                            <li><strong>"Proposal":</strong> a written document outlining the scope, fees, and deliverables for a specific engagement.</li>
+                            <li><strong>"Materials":</strong> any content, manuscripts, cover art, images, or information you provide to us in connection with the Services.</li>
+                            <li><strong>"Deliverables":</strong> the specific outputs, reports, designs, or strategies we produce for you under an engagement.</li>
+                            <li><strong>"Engagement":</strong> a specific piece of work agreed between you and us, whether one-off or ongoing.</li>
+                        </ul>
+                    </article>
+
+                    <!-- ===============================================
+                         03. SERVICES PROVIDED
+                         =============================================== -->
+                    <article class="terms-section fade-in-up" id="services">
+                        <div class="terms-section-header">
+                            <span class="terms-number">03</span>
+                            <h2>Services Provided</h2>
+                        </div>
+                        <p>
+                            Ally Wealth provides book marketing and author visibility consultancy. The specific services we offer are described on the Services page of this website, and include areas such as Amazon optimisation, keyword and category research, listing copywriting, A+ Content design, ARC outreach, launch strategy, author branding, and reader discovery.
+                        </p>
+                        <p>
+                            The Services we provide to you will be defined in a written Proposal. Any work not explicitly described in the Proposal is outside the scope of that engagement and may require a separate agreement.
+                        </p>
+                        <p>
+                            We reserve the right to decline any engagement at our discretion, particularly where we believe we are not the best fit for the Client's goals, stage, or genre.
+                        </p>
+                    </article>
+
+                    <!-- ===============================================
+                         04. PROPOSAL AND ENGAGEMENT
+                         =============================================== -->
+                    <article class="terms-section fade-in-up" id="proposal">
+                        <div class="terms-section-header">
+                            <span class="terms-number">04</span>
+                            <h2>Proposal and Engagement</h2>
+                        </div>
+                        <p>
+                            Every engagement begins with a written Proposal that sets out the scope of work, the deliverables, the timeline, and the fees. The Proposal is valid for thirty days from the date of issue unless otherwise stated.
+                        </p>
+                        <p>
+                            To accept a Proposal, the Client confirms their acceptance in writing (by email or by signed acceptance) and pays any deposit required by the Proposal. The engagement begins on the later of the two dates.
+                        </p>
+                        <p>
+                            No work will commence, and no commitment will be made by us, until the Proposal has been accepted in writing and any required deposit has been received.
+                        </p>
+                        <div class="terms-callout">
+                            <p>
+                                <strong>Verbal instructions:</strong> while we are happy to discuss a project verbally, any changes to the scope of an engagement must be confirmed in writing by email so that both parties have a clear record of what has been agreed.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- ===============================================
+                         05. FEES AND PAYMENT TERMS
+                         =============================================== -->
+                    <article class="terms-section fade-in-up" id="fees">
+                        <div class="terms-section-header">
+                            <span class="terms-number">05</span>
+                            <h2>Fees and Payment Terms</h2>
+                        </div>
+                        <p>
+                            Fees for each engagement are set out in the Proposal. Unless otherwise stated, the following payment terms apply.
+                        </p>
+                        <ul>
+                            <li><strong>Deposit:</strong> a deposit is typically required before work begins. The amount will be stated in the Proposal.</li>
+                            <li><strong>Milestone payments:</strong> for larger engagements, payment may be split across agreed milestones.</li>
+                            <li><strong>Invoicing:</strong> invoices are issued by email and are payable within the timeframe stated on the invoice, usually 14 days.</li>
+                            <li><strong>Currency:</strong> fees are quoted in the currency stated on the Proposal, and payment must be made in that currency unless otherwise agreed.</li>
+                            <li><strong>Late payment:</strong> overdue invoices may attract a late payment fee, at the rate stated in the Proposal or, where none is stated, at the maximum rate permitted by applicable law.</li>
+                            <li><strong>Expenses:</strong> any third-party expenses, such as paid advertising spend or software subscriptions, will be agreed in advance and invoiced separately.</li>
+                        </ul>
+                        <p>
+                            Fees are exclusive of any applicable taxes, which will be added where required by law. All payments are non-refundable except as explicitly provided in these Terms or required by applicable consumer protection law.
+                        </p>
+                    </article>
+
+                    <!-- ===============================================
+                         06. CLIENT OBLIGATIONS
+                         =============================================== -->
+                    <article class="terms-section fade-in-up" id="client-obligations">
+                        <div class="terms-section-header">
+                            <span class="terms-number">06</span>
+                            <h2>Client Obligations</h2>
+                        </div>
+                        <p>
+                            For an engagement to run smoothly, we need the Client to provide certain things on time. The Client agrees to:
+                        </p>
+                        <ul>
+                            <li><strong>Provide accurate information:</strong> share complete, truthful information about the book, its current market position, and any marketing activity that has already taken place.</li>
+                            <li><strong>Provide required materials:</strong> supply manuscripts, cover files, images, and any other materials needed for the work, in the formats we request.</li>
+                            <li><strong>Grant necessary permissions:</strong> authorise us to access the accounts and platforms we need to perform the Services, where relevant.</li>
+                            <li><strong>Respond in a timely way:</strong> reply to questions and requests for approvals within a reasonable timeframe, usually five business days.</li>
+                            <li><strong>Obtain required rights:</strong> ensure that any materials provided to us do not infringe the rights of third parties and that the Client has the right to use them.</li>
+                            <li><strong>Comply with platform rules:</strong> follow the terms of service of any third-party platform we work with on the Client's behalf, including Amazon, Goodreads, and Audible.</li>
+                        </ul>
+                        <p>
+                            Where the Client does not provide the information, materials, or approvals needed to proceed, we may need to pause the engagement. Timelines may need to be adjusted and additional fees may apply to compensate for the resulting disruption.
+                        </p>
+                    </article>
+
+                    <!-- ===============================================
+                         07. OUR OBLIGATIONS
+                         =============================================== -->
+                    <article class="terms-section fade-in-up" id="our-obligations">
+                        <div class="terms-section-header">
+                            <span class="terms-number">07</span>
+                            <h2>Our Obligations</h2>
+                        </div>
+                        <p>
+                            We take our commitments seriously. In return for the Client's obligations, we agree to:
+                        </p>
+                        <ul>
+                            <li><strong>Deliver the agreed work:</strong> carry out the Services described in the Proposal with reasonable skill and care, to a professional standard.</li>
+                            <li><strong>Communicate clearly:</strong> keep the Client informed about progress, timelines, and any issues that arise during the engagement.</li>
+                            <li><strong>Meet agreed deadlines:</strong> work to the timelines set out in the Proposal, and notify the Client promptly if any timeline is at risk.</li>
+                            <li><strong>Act ethically:</strong> follow all applicable rules and regulations, including the terms of service of third-party platforms we work with.</li>
+                            <li><strong>Respect confidentiality:</strong> treat the Client's information and materials as confidential in accordance with section 10 of these Terms.</li>
+                            <li><strong>Provide honest advice:</strong> give the Client an honest assessment of what is realistic for their book, even when that assessment is not what the Client was hoping to hear.</li>
+                        </ul>
+                    </article>
+
+                    <!-- ===============================================
+                         08. TIMELINES AND DELIVERABLES
+                         =============================================== -->
+                    <article class="terms-section fade-in-up" id="timelines">
+                        <div class="terms-section-header">
+                            <span class="terms-number">08</span>
+                            <h2>Timelines and Deliverables</h2>
+                        </div>
+                        <p>
+                            Any timelines in a Proposal are estimates made in good faith based on the information available at the time of the Proposal. Timelines may be affected by the Client's responsiveness, third-party delays, platform changes, or other factors beyond our control.
+                        </p>
+                        <p>
+                            Deliverables will be provided in the format specified in the Proposal. Where the deliverable is a document, report, or strategy, it will be sent by email or shared via a file-sharing platform agreed between the parties.
+                        </p>
+                        <p>
+                            The Client must review each deliverable within the timeframe stated in the Proposal (or, where no timeframe is stated, within ten business days). Where the Client does not provide feedback within that window, the deliverable will be considered accepted.
+                        </p>
+                    </article>
+
+                    <!-- ===============================================
+                         09. REVISIONS AND SCOPE CHANGES
+                         =============================================== -->
+                    <article class="terms-section fade-in-up" id="revisions">
+                        <div class="terms-section-header">
+                            <span class="terms-number">09</span>
+                            <h2>Revisions and Scope Changes</h2>
+                        </div>
+                        <p>
+                            Where the Proposal includes revisions, the number of revision rounds will be specified. Additional revision rounds beyond those included in the Proposal may be charged at our standard hourly or project rate.
+                        </p>
+                        <p>
+                            Any change to the scope of the engagement must be agreed in writing. If the Client requests additional work that was not included in the original Proposal, we will provide a supplemental proposal setting out the additional fees and timeline before the additional work begins.
+                        </p>
+                        <div class="terms-callout">
+                            <p>
+                                <strong>A note on "quick changes":</strong> small additional requests that seem trivial at first can have a real impact on a project timeline. We treat every scope change with the same written confirmation process so that nothing gets lost or becomes a source of disagreement later.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- ===============================================
+                         10. CONFIDENTIALITY
+                         =============================================== -->
+                    <article class="terms-section fade-in-up" id="confidentiality">
+                        <div class="terms-section-header">
+                            <span class="terms-number">10</span>
+                            <h2>Confidentiality</h2>
+                        </div>
+                        <p>
+                            Both parties acknowledge that during the course of an engagement, one party may share confidential information with the other. Each party agrees to treat such information as confidential and to use it only for the purpose of performing the engagement.
+                        </p>
+                        <p>
+                            Confidential information includes, but is not limited to, manuscripts, unpublished content, business plans, sales data, financial information, and any other information that is reasonably understood to be confidential.
+                        </p>
+                        <p>
+                            The obligations of confidentiality do not apply to information that:
+                        </p>
+                        <ul>
+                            <li>is already publicly available at the time of disclosure;</li>
+                            <li>becomes publicly available later, through no fault of the receiving party;</li>
+                            <li>is independently developed by the receiving party without reference to the confidential information;</li>
+                            <li>is required to be disclosed by law or court order, provided the receiving party gives prompt notice where permitted.</li>
+                        </ul>
+                        <p>
+                            The obligations of confidentiality survive the end of the engagement for a period of three years, or such longer period as the nature of the information requires.
+                        </p>
+                    </article>
+
+                    <!-- ===============================================
+                         11. INTELLECTUAL PROPERTY
+                         =============================================== -->
+                    <article class="terms-section fade-in-up" id="intellectual-property">
+                        <div class="terms-section-header">
+                            <span class="terms-number">11</span>
+                            <h2>Intellectual Property</h2>
+                        </div>
+                        <p>
+                            The Client retains full ownership of all materials provided to us, including manuscripts, cover art, and any original content created by the Client.
+                        </p>
+                        <p>
+                            Upon full payment of all fees for an engagement, we assign to the Client all rights in the specific deliverables produced for that engagement, including any copy, design, or strategy documents created specifically for the Client.
+                        </p>
+                        <p>
+                            The following are excluded from that assignment and remain the property of Ally Wealth:
+                        </p>
+                        <ul>
+                            <li><strong>Underlying methodology:</strong> our general frameworks, templates, processes, and internal tools remain our property, even where they have informed a deliverable.</li>
+                            <li><strong>Portfolio rights:</strong> we reserve the right to describe the engagement in general terms on our website or in marketing materials, without disclosing the Client's identity unless permission is given.</li>
+                            <li><strong>Third-party assets:</strong> any stock images, fonts, or licensed content used in a deliverable are subject to their original licenses and are not transferred to the Client.</li>
+                        </ul>
+                        <p>
+                            We do not claim any rights in the Client's book, characters, or story, and we will never use the Client's materials for any purpose other than performing the engagement without the Client's written permission.
+                        </p>
+                    </article>
+
+                    <!-- ===============================================
+                         12. THIRD-PARTY PLATFORMS
+                         =============================================== -->
+                    <article class="terms-section fade-in-up" id="platforms">
+                        <div class="terms-section-header">
+                            <span class="terms-number">12</span>
+                            <h2>Third-Party Platforms</h2>
+                        </div>
+                        <p>
+                            Our Services frequently involve working with third-party platforms such as Amazon, Goodreads, Audible, and social media networks. These platforms are independent of Ally Wealth, and their rules, algorithms, and features can change without notice.
+                        </p>
+                        <p>
+                            While we make every effort to work within the current rules of each platform and to stay informed of changes, we do not control and cannot guarantee the behaviour of any third-party platform. The Client is responsible for ensuring their own use of these platforms complies with the relevant terms of service.
+                        </p>
+                        <p>
+                            We will never knowingly recommend or carry out any activity that violates a platform's terms of service, including the purchase of reviews, the use of incentivised reviews, or any other practice that could put the Client's account at risk.
+                        </p>
+                    </article>
+
+                    <!-- ===============================================
+                         13. NO GUARANTEE OF RESULTS
+                         =============================================== -->
+                    <article class="terms-section fade-in-up" id="no-guarantee">
+                        <div class="terms-section-header">
+                            <span class="terms-number">13</span>
+                            <h2>No Guarantee of Results</h2>
+                        </div>
+                        <p>
+                            Book marketing outcomes depend on many factors, including the quality and genre fit of the book, the competitiveness of its category, existing audience, market timing, and the decisions of third-party platforms. These factors are outside our control.
+                        </p>
+                        <p>
+                            We do not guarantee any specific commercial outcome, including but not limited to:
+                        </p>
+                        <ul>
+                            <li>a particular sales volume or revenue figure;</li>
+                            <li>a bestseller ranking or category badge;</li>
+                            <li>a specific number of reviews or ratings;</li>
+                            <li>a specific increase in Amazon Best Sellers Rank;</li>
+                            <li>inclusion in any particular promotional opportunity or editorial feature.</li>
+                        </ul>
+                        <p>
+                            What we do commit to is professional, honest work carried out with skill and care, using approaches that reflect current best practice and the specific circumstances of the Client's book. If a specific result is promised by another provider, we would encourage you to ask them how they can guarantee something they do not control.
+                        </p>
+                    </article>
+
+                    <!-- ===============================================
+                         14. LIMITATION OF LIABILITY
+                         =============================================== -->
+                    <article class="terms-section fade-in-up" id="liability">
+                        <div class="terms-section-header">
+                            <span class="terms-number">14</span>
+                            <h2>Limitation of Liability</h2>
+                        </div>
+                        <p>
+                            To the fullest extent permitted by applicable law, Ally Wealth will not be liable to the Client for any indirect, incidental, special, consequential, or punitive damages arising out of or in connection with the Services or these Terms. This includes, without limitation, loss of profits, loss of revenue, loss of anticipated savings, loss of business, or loss of data.
+                        </p>
+                        <p>
+                            Our total aggregate liability to the Client for any claim arising out of or in connection with an engagement, whether in contract, tort, or otherwise, will not exceed the total fees paid by the Client for that engagement.
+                        </p>
+                        <p>
+                            Nothing in these Terms limits or excludes any liability that cannot legally be limited or excluded, including liability for death or personal injury caused by negligence, or for fraud or fraudulent misrepresentation.
+                        </p>
+                    </article>
+
+                    <!-- ===============================================
+                         15. TERMINATION
+                         =============================================== -->
+                    <article class="terms-section fade-in-up" id="termination">
+                        <div class="terms-section-header">
+                            <span class="terms-number">15</span>
+                            <h2>Termination</h2>
+                        </div>
+                        <p>
+                            Either party may terminate an engagement by giving written notice to the other. The notice period, unless otherwise stated in the Proposal, is 14 days.
+                        </p>
+                        <p>
+                            Where an engagement is terminated:
+                        </p>
+                        <ul>
+                            <li>The Client will be responsible for paying for all work carried out up to the effective date of termination, plus any agreed third-party expenses already committed on the Client's behalf.</li>
+                            <li>Any deposit paid is non-refundable, except where termination is due to our material breach of these Terms or where required by law.</li>
+                            <li>We will hand over any completed deliverables and any materials belonging to the Client within fourteen days of receiving any outstanding payment.</li>
+                        </ul>
+                        <p>
+                            We may terminate an engagement immediately, without notice, where the Client has asked us to do something illegal or in breach of a platform's terms of service, or has behaved abusively towards a member of our team.
+                        </p>
+                    </article>
+
+                    <!-- ===============================================
+                         16. FORCE MAJEURE
+                         =============================================== -->
+                    <article class="terms-section fade-in-up" id="force-majeure">
+                        <div class="terms-section-header">
+                            <span class="terms-number">16</span>
+                            <h2>Force Majeure</h2>
+                        </div>
+                        <p>
+                            Neither party will be liable for any failure or delay in performing their obligations under these Terms where that failure or delay is caused by circumstances beyond their reasonable control. This includes, without limitation, acts of God, natural disasters, war, terrorism, civil unrest, strikes, government action, internet outages, platform outages, or serious illness.
+                        </p>
+                        <p>
+                            Where a force majeure event occurs, the affected party will notify the other as soon as reasonably possible. Timelines will be adjusted by mutual agreement. If the event continues for more than sixty days, either party may terminate the engagement by written notice without penalty, subject to payment for work already completed.
+                        </p>
+                    </article>
+
+                    <!-- ===============================================
+                         17. GOVERNING LAW AND DISPUTES
+                         =============================================== -->
+                    <article class="terms-section fade-in-up" id="law">
+                        <div class="terms-section-header">
+                            <span class="terms-number">17</span>
+                            <h2>Governing Law and Disputes</h2>
+                        </div>
+                        <p>
+                            These Terms and any dispute arising out of or in connection with them are governed by the laws of the jurisdiction in which Ally Wealth is registered, without regard to its conflict of law principles.
+                        </p>
+                        <p>
+                            In the event of a dispute, both parties agree to the following sequence:
+                        </p>
+                        <ul>
+                            <li><strong>Good faith discussion:</strong> the parties will first attempt to resolve the dispute through direct, good faith conversation.</li>
+                            <li><strong>Written notice:</strong> if a conversation does not resolve the issue, either party may serve written notice of the dispute, and the other party will have fourteen days to respond.</li>
+                            <li><strong>Mediation:</strong> if the dispute remains unresolved, the parties will attempt to resolve it through mediation before pursuing any other remedy.</li>
+                            <li><strong>Legal proceedings:</strong> if mediation does not resolve the dispute, either party may bring proceedings in the courts of the governing jurisdiction.</li>
+                        </ul>
+                        <p>
+                            Nothing in this section prevents either party from seeking urgent injunctive relief where necessary.
+                        </p>
+                    </article>
+
+                    <!-- ===============================================
+                         18. CHANGES TO THESE TERMS
+                         =============================================== -->
+                    <article class="terms-section fade-in-up" id="changes">
+                        <div class="terms-section-header">
+                            <span class="terms-number">18</span>
+                            <h2>Changes to These Terms</h2>
+                        </div>
+                        <p>
+                            We may update these Terms from time to time to reflect changes in our practices, our services, or the law. When we do, we will update the "last updated" date at the top of this page.
+                        </p>
+                        <p>
+                            For engagements that are already in progress, the version of these Terms in force at the time the Proposal was accepted will continue to apply unless both parties agree in writing to adopt the updated version.
+                        </p>
+                        <p>
+                            Continuing to use the website after a change takes effect means you accept the revised Terms. We recommend checking this page occasionally so that you are aware of the current version.
+                        </p>
+                    </article>
+
+                    <!-- ===============================================
+                         19. HOW TO CONTACT US
+                         =============================================== -->
+                    <article class="terms-section fade-in-up" id="contact">
+                        <div class="terms-section-header">
+                            <span class="terms-number">19</span>
+                            <h2>How to Contact Us</h2>
+                        </div>
+                        <p>
+                            If you have a question about these Terms, or want to discuss any clause before you engage our services, please get in touch. We are happy to answer questions directly rather than leaving them to be interpreted.
+                        </p>
+
+                        <div class="terms-contact-block">
+                            <p>
+                                <strong>Email</strong>
+                                <a href="mailto:info.allywealth@gmail.com">info.allywealth@gmail.com</a>
+                            </p>
+                            <p>
+                                <strong>Response time</strong>
+                                We aim to respond to questions about these Terms within 5 business days, and usually sooner.
+                            </p>
+                            <p>
+                                <strong>What to include</strong>
+                                Tell us which section you have a question about and, if relevant, a brief description of the engagement you are considering.
+                            </p>
+                        </div>
+                    </article>
+
+                    <div class="back-to-top-wrap">
+                        <a href="#terms" class="back-to-top">Back to top &uarr;</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =================================================================
+         CTA SECTION
+         ================================================================= -->
+    <section class="section cta-section">
+        <div class="container cta-container">
+            <div class="cta-text fade-in-left">
+                <p class="section-label">READY TO MOVE FORWARD?</p>
+                <h2>Let's talk about your book.</h2>
+                <p>If these Terms work for you and you would like to explore a project, the next step is a simple enquiry. Tell us where your book is now and what you would like it to achieve.</p>
+            </div>
+            <div class="fade-in-right" style="text-align: center;">
+                <a href="contact.html" class="btn-primary btn-large">Request a Proposal</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- =================================================================
+         MASSIVE FOOTER
+         ================================================================= -->
+    <footer class="mega-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col brand-col">
+                    <img src="images/favicon.png" alt="Ally Wealth Logo" class="footer-logo">
+                    <p class="footer-tagline">Get Seen. Grow Your Influence.<br>Build Your Legacy.</p>
+                    <p class="footer-desc">Premium author visibility and book marketing consulting for authors, publishers, and independent professionals.</p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html#amazon">Amazon Book Marketing</a></li>
+                        <li><a href="services.html#aplus">Amazon A+ Content</a></li>
+                        <li><a href="services.html#listing">Book Listing Optimisation</a></li>
+                        <li><a href="services.html#keywords">Keywords and Categories</a></li>
+                        <li><a href="services.html#goodreads">Goodreads Marketing</a></li>
+                        <li><a href="services.html#branding">Author Branding</a></li>
+                        <li><a href="services.html#descriptions">Book Descriptions</a></li>
+                        <li><a href="services.html#arc">ARC and Reader Outreach</a></li>
+                        <li><a href="services.html#launch">Book Launch Campaigns</a></li>
+                        <li><a href="services.html#audiobook">Audiobook Marketing</a></li>
+                        <li><a href="services.html#social">Social Media Promotion</a></li>
+                        <li><a href="services.html#custom">Custom Strategy</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Knowledge Centre</h4>
+                    <ul>
+                        <li><a href="resources.html">Resources Home</a></li>
+                        <li><a href="resources.html#pdf-library">Free PDF Library</a></li>
+                        <li><a href="resources.html#articles">Marketing Articles</a></li>
+                        <li><a href="resources.html#guides">Step-by-Step Guides</a></li>
+                        <li><a href="work.html">Case Studies</a></li>
+                    </ul>
+
+                    <h4 class="mt-2">Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Ally Wealth</a></li>
+                        <li><a href="work.html">Our Work</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col contact-col">
+                    <h4>Get in Touch</h4>
+                    <p class="footer-contact-text">Ready to discuss your book marketing strategy? We would love to hear from you.</p>
+                    <a href="mailto:info.allywealth@gmail.com" class="footer-email">info.allywealth@gmail.com</a>
+                    <p class="footer-response">We typically respond within 24-48 business hours.</p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Ally Wealth. All rights reserved.</p>
+                <p>Author Visibility Consultant and Book Marketing Specialist.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- =================================================================
+         EMBEDDED JAVASCRIPT
+         ================================================================= -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            /* =========================================================
+               1. PRELOADER
+               ========================================================= */
+            const preloader = document.getElementById('preloader');
+            if (preloader) {
+                window.addEventListener('load', () => {
+                    setTimeout(() => {
+                        preloader.classList.add('hidden');
+                        setTimeout(() => { preloader.style.display = 'none'; }, 600);
+                    }, 800);
+                });
+            }
+
+            /* =========================================================
+               2. MOBILE NAVIGATION AND DROPDOWNS
+               ========================================================= */
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const navLinks = document.getElementById('nav-links');
+            const dropdowns = document.querySelectorAll('.dropdown');
+
+            if (mobileMenuBtn && navLinks) {
+                mobileMenuBtn.addEventListener('click', () => {
+                    navLinks.classList.toggle('active');
+                    mobileMenuBtn.classList.toggle('active');
+                    document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
+                });
+
+                navLinks.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        if (window.innerWidth <= 768 && !link.parentElement.classList.contains('dropdown')) {
+                            navLinks.classList.remove('active');
+                            mobileMenuBtn.classList.remove('active');
+                            document.body.style.overflow = '';
+                        }
+                    });
+                });
+
+                dropdowns.forEach(dropdown => {
+                    const link = dropdown.querySelector('.nav-link');
+                    if (!link) return;
+                    link.addEventListener('click', (e) => {
+                        if (window.innerWidth <= 768) {
+                            e.preventDefault();
+                            dropdown.classList.toggle('active');
+                        }
+                    });
+                });
+            }
+
+            /* =========================================================
+               3. STICKY NAVBAR
+               ========================================================= */
+            const navbar = document.getElementById('navbar');
+            if (navbar) {
+                const handleScroll = () => {
+                    if (window.scrollY > 50) {
+                        navbar.classList.add('scrolled');
+                    } else {
+                        navbar.classList.remove('scrolled');
+                    }
+                };
+                window.addEventListener('scroll', handleScroll);
+                handleScroll();
+            }
+
+            /* =========================================================
+               4. SCROLL REVEAL ANIMATIONS
+               ========================================================= */
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const revealObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        revealObserver.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.fade-in-up, .fade-in-left, .fade-in-right').forEach(el => revealObserver.observe(el));
+
+            /* =========================================================
+               5. SCROLL SPY FOR THE TABLE OF CONTENTS
+               ========================================================= */
+            const tocLinks = document.querySelectorAll('.terms-toc ol li a');
+            const sections = document.querySelectorAll('.terms-section');
+
+            if (tocLinks.length && sections.length) {
+                const linkMap = {};
+                tocLinks.forEach(link => {
+                    const href = link.getAttribute('href');
+                    if (href && href.startsWith('#')) {
+                        linkMap[href.slice(1)] = link;
+                    }
+                });
+
+                const setActive = (id) => {
+                    tocLinks.forEach(link => link.classList.remove('active'));
+                    if (linkMap[id]) {
+                        linkMap[id].classList.add('active');
+                    }
+                };
+
+                const spyOptions = {
+                    rootMargin: '-110px 0px -65% 0px',
+                    threshold: 0
+                };
+
+                const spyObserver = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            setActive(entry.target.id);
+                        }
+                    });
+                }, spyOptions);
+
+                sections.forEach(section => spyObserver.observe(section));
+
+                /* Fallback: mark the first link active on load */
+                setActive('acceptance');
+            }
+
+        });
+    </script>
+</body>
+</html>

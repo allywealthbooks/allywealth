@@ -1,0 +1,1936 @@
+<!DOCTYPE html>
+<!-- =====================================================================
+     ALLY WEALTH - PREMIUM AUTHOR VISIBILITY CONSULTANT
+     MASTER WORK PAGE - ALL-IN-ONE FILE
+     =====================================================================
+     This file contains all HTML, CSS, and JavaScript required for the
+     work page. No external CSS or JS files are needed for this page
+     to render perfectly.
+
+     Contents:
+     1. Work hero
+     2. Featured case study
+     3. Filterable case study grid
+     4. Results band
+     5. Testimonials section
+     6. Standard CTA and footer
+
+     Author: Ally Wealth Development Team
+     Date: 2026
+     ===================================================================== -->
+
+<html lang="en">
+<head>
+    <!-- =================================================================
+         META TAGS AND SEO OPTIMIZATION
+         ================================================================= -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Primary Meta Tags -->
+    <title>Our Work | Ally Wealth Book Marketing</title>
+    <meta name="title" content="Our Work | Ally Wealth Book Marketing">
+    <meta name="description" content="Case studies and results from Ally Wealth book marketing projects. See how we approach listing optimisation, launch campaigns, author branding, and reader discovery.">
+    <meta name="keywords" content="book marketing case studies, author marketing results, book launch case study, Amazon optimisation case study, Ally Wealth work">
+    <meta name="author" content="Ally Wealth">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.allywealth.com/work.html">
+    <meta property="og:title" content="Our Work | Ally Wealth Book Marketing">
+    <meta property="og:description" content="Case studies and results from Ally Wealth book marketing projects.">
+    <meta property="og:image" content="images/banner.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.allywealth.com/work.html">
+    <meta property="twitter:title" content="Our Work | Ally Wealth Book Marketing">
+    <meta property="twitter:description" content="Case studies and results from Ally Wealth book marketing projects.">
+    <meta property="twitter:image" content="images/banner.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="apple-touch-icon" href="images/favicon.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+
+    <!-- =================================================================
+         EMBEDDED CSS STYLESHEET
+         ================================================================= -->
+    <style>
+        /* =============================================================
+           1. CSS VARIABLES AND ROOT DEFINITIONS
+           ============================================================= */
+        :root {
+            --navy: #0B132B;
+            --gold: #C5A059;
+            --ivory: #F4EFE7;
+            --charcoal: #28221D;
+            --white: #FFFFFF;
+            --light-gray: #E8DFD2;
+            --dark-gray: #1A1A1A;
+            --muted-text: #6B6B6B;
+            --border-color: rgba(0, 0, 0, 0.08);
+            --gold-transparent: rgba(197, 160, 89, 0.2);
+            --font-heading: 'Playfair Display', serif;
+            --font-body: 'Inter', sans-serif;
+            --transition-smooth: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            --transition-fast: all 0.2s ease-in-out;
+            --shadow-subtle: 0 10px 30px rgba(0, 0, 0, 0.05);
+            --shadow-hover: 0 20px 40px rgba(0, 0, 0, 0.1);
+            --container-width: 1280px;
+            --container-padding: 2rem;
+            --section-padding: 8rem 0;
+        }
+
+        /* =============================================================
+           2. GLOBAL RESET AND BASE STYLES
+           ============================================================= */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--ivory);
+            color: var(--charcoal);
+            line-height: 1.7;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-heading);
+            font-weight: 600;
+            color: var(--navy);
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        h1 { font-size: clamp(2.5rem, 5vw, 4.5rem); }
+        h2 { font-size: clamp(2rem, 4vw, 3rem); }
+        h3 { font-size: clamp(1.3rem, 2.5vw, 1.8rem); }
+        h4 { font-size: clamp(1.1rem, 2vw, 1.4rem); }
+
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+            color: var(--charcoal);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition-fast);
+        }
+
+        ul, ol {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+        }
+
+        button, input, select, textarea {
+            font-family: inherit;
+            font-size: inherit;
+            outline: none;
+            border: none;
+            background: none;
+        }
+
+        button { cursor: pointer; }
+
+        /* =============================================================
+           3. UTILITY AND LAYOUT CLASSES
+           ============================================================= */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--container-padding);
+            width: 100%;
+        }
+
+        .section {
+            padding: var(--section-padding);
+            position: relative;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 4rem;
+        }
+
+        .section-label {
+            color: var(--gold);
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+
+        .section-intro {
+            font-size: 1.15rem;
+            color: var(--muted-text);
+            line-height: 1.8;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .flex-between {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .mt-2 { margin-top: 2rem; }
+        .mt-3 { margin-top: 3rem; }
+
+        .bg-white { background-color: var(--white); }
+        .bg-ivory { background-color: var(--ivory); }
+        .bg-navy { background-color: var(--navy); }
+
+        .is-hidden { display: none !important; }
+
+        /* =============================================================
+           4. BUTTONS
+           ============================================================= */
+        .btn-primary,
+        .btn-secondary {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            border-radius: 2px;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+            text-align: center;
+            border: 1px solid transparent;
+        }
+
+        .btn-primary {
+            background-color: var(--gold);
+            color: var(--navy);
+            border-color: var(--gold);
+        }
+
+        .btn-primary:hover {
+            background-color: transparent;
+            color: var(--gold);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--navy);
+            border-color: var(--navy);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--navy);
+            color: var(--ivory);
+        }
+
+        .btn-large {
+            padding: 1.2rem 3rem;
+            font-size: 1rem;
+        }
+
+        .btn-small {
+            padding: 0.6rem 1.5rem;
+            font-size: 0.8rem;
+        }
+
+        /* =============================================================
+           5. PRELOADER
+           ============================================================= */
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: var(--navy);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.6s ease;
+        }
+
+        #preloader.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .loader-content { text-align: center; }
+
+        .loader-svg {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 1rem;
+        }
+
+        .circle-anim {
+            stroke-dasharray: 250;
+            stroke-dashoffset: 250;
+            animation: drawCircle 1.5s ease forwards infinite;
+            transform-origin: center;
+        }
+
+        @keyframes drawCircle {
+            0% { stroke-dashoffset: 250; transform: rotate(0deg); }
+            50% { stroke-dashoffset: 0; transform: rotate(180deg); }
+            100% { stroke-dashoffset: -250; transform: rotate(360deg); }
+        }
+
+        .loader-text {
+            color: var(--gold);
+            font-family: var(--font-heading);
+            letter-spacing: 4px;
+            font-size: 1.2rem;
+            animation: pulseText 1.5s ease infinite;
+        }
+
+        .loader-subtext {
+            color: var(--light-gray);
+            font-size: 0.8rem;
+            margin-top: 0.5rem;
+            letter-spacing: 1px;
+        }
+
+        @keyframes pulseText {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 1; }
+        }
+
+        /* =============================================================
+           6. NAVIGATION
+           ============================================================= */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 1.5rem 0;
+            background-color: transparent;
+            z-index: 1000;
+            transition: var(--transition-smooth);
+        }
+
+        .navbar.scrolled {
+            background-color: rgba(244, 239, 231, 0.95);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .nav-container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--container-padding);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-link {
+            display: flex;
+            align-items: center;
+            z-index: 1001;
+        }
+
+        .logo-img {
+            height: 65px;
+            width: auto;
+            transition: var(--transition-fast);
+        }
+
+        .navbar.scrolled .logo-img { height: 50px; }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 2.5rem;
+            margin-bottom: 0;
+        }
+
+        .nav-link {
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--ivory);
+            position: relative;
+            padding-bottom: 5px;
+            transition: var(--transition-fast);
+        }
+
+        .navbar.scrolled .nav-link { color: var(--navy); }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--gold);
+            transition: var(--transition-fast);
+        }
+
+        .nav-link:hover::after,
+        .nav-link.active::after { width: 100%; }
+
+        .nav-link:hover,
+        .nav-link.active { color: var(--gold) !important; }
+
+        .btn-primary.nav-btn {
+            background-color: var(--gold);
+            color: var(--navy);
+            padding: 0.8rem 1.5rem;
+            border: 1px solid var(--gold);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.85rem !important;
+            border-radius: 2px;
+        }
+
+        .btn-primary.nav-btn:hover {
+            background-color: transparent;
+            color: var(--gold);
+        }
+
+        .navbar:not(.scrolled) .btn-primary.nav-btn {
+            background-color: transparent;
+            color: var(--ivory);
+            border-color: var(--ivory);
+        }
+
+        .navbar:not(.scrolled) .btn-primary.nav-btn:hover {
+            background-color: var(--ivory);
+            color: var(--navy);
+        }
+
+        .dropdown { position: relative; }
+        .arrow { font-size: 0.7rem; margin-left: 3px; display: inline-block; transition: transform 0.3s ease; }
+        .dropdown:hover .arrow { transform: rotate(180deg); }
+
+        .mega-menu {
+            position: absolute;
+            top: 100%;
+            left: -150px;
+            background-color: var(--white);
+            width: 800px;
+            box-shadow: var(--shadow-hover);
+            border-top: 3px solid var(--gold);
+            padding: 2.5rem;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: var(--transition-smooth);
+            z-index: 100;
+        }
+
+        .dropdown:hover .mega-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .mega-menu-inner {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1.2fr;
+            gap: 2rem;
+        }
+
+        .mega-col h4 {
+            font-family: var(--font-body);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1.5rem;
+            color: var(--navy);
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.5rem;
+        }
+
+        .mega-col ul li { margin-bottom: 0.8rem; }
+        .mega-col ul li a {
+            font-size: 0.85rem;
+            color: var(--muted-text);
+            text-transform: none;
+            letter-spacing: 0;
+            display: block;
+            transition: var(--transition-fast);
+        }
+
+        .mega-col ul li a:hover {
+            color: var(--gold);
+            padding-left: 5px;
+        }
+
+        .highlight-col {
+            background-color: var(--ivory);
+            padding: 1.5rem;
+            border-radius: 4px;
+        }
+
+        .highlight-col p {
+            font-size: 0.9rem;
+            color: var(--muted-text);
+            margin-bottom: 1.5rem;
+            line-height: 1.5;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            cursor: pointer;
+            flex-direction: column;
+            gap: 6px;
+            z-index: 1001;
+            padding: 5px;
+        }
+
+        .bar {
+            width: 28px;
+            height: 2px;
+            background-color: var(--ivory);
+            transition: var(--transition-fast);
+            display: block;
+        }
+
+        .navbar.scrolled .bar { background-color: var(--navy); }
+
+        /* =============================================================
+           7. INNER PAGE HERO
+           ============================================================= */
+        .hero-inner {
+            position: relative;
+            height: 70vh;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background-color: var(--navy);
+            overflow: hidden;
+            padding-top: 80px;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(11,19,43,0.85) 0%, rgba(11,19,43,0.6) 50%, rgba(11,19,43,0.95) 100%);
+            z-index: 2;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 3;
+            max-width: 900px;
+        }
+
+        .hero-subtitle {
+            color: var(--gold);
+            font-size: 0.9rem;
+            font-weight: 700;
+            letter-spacing: 4px;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+        }
+
+        .hero-title {
+            color: var(--white);
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            line-height: 1.1;
+            margin-bottom: 2rem;
+            text-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        .hero-description {
+            color: var(--light-gray);
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 3rem;
+            line-height: 1.8;
+        }
+
+        /* =============================================================
+           8. FEATURED CASE STUDY
+           ============================================================= */
+        .featured-study {
+            background-color: var(--white);
+            border-radius: 4px;
+            overflow: hidden;
+            box-shadow: var(--shadow-subtle);
+            display: grid;
+            grid-template-columns: 1.05fr 1fr;
+            align-items: stretch;
+        }
+
+        .featured-visual {
+            background-color: var(--navy);
+            position: relative;
+            overflow: hidden;
+            padding: 4rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 520px;
+        }
+
+        .featured-visual::before {
+            content: '';
+            position: absolute;
+            top: -30%;
+            right: -30%;
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(197,160,89,0.3) 0%, transparent 65%);
+        }
+
+        .featured-visual::after {
+            content: '';
+            position: absolute;
+            bottom: -20%;
+            left: -20%;
+            width: 380px;
+            height: 380px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(197,160,89,0.12) 0%, transparent 70%);
+        }
+
+        .featured-badge {
+            position: relative;
+            z-index: 2;
+            display: inline-block;
+            align-self: flex-start;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--navy);
+            background-color: var(--gold);
+            padding: 0.4rem 0.9rem;
+            border-radius: 2px;
+        }
+
+        .featured-genre {
+            position: relative;
+            z-index: 2;
+            margin-top: auto;
+        }
+
+        .featured-genre-label {
+            font-size: 0.75rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--gold);
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+            display: block;
+        }
+
+        .featured-genre h3 {
+            color: var(--white);
+            font-size: 2rem;
+            line-height: 1.25;
+            margin-bottom: 1rem;
+        }
+
+        .featured-genre p {
+            color: var(--light-gray);
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin-bottom: 0;
+        }
+
+        .featured-content {
+            padding: 4rem;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .featured-content .section-label {
+            margin-bottom: 1rem;
+        }
+
+        .featured-content h2 {
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .featured-content > p {
+            font-size: 1rem;
+            color: var(--muted-text);
+            line-height: 1.85;
+            margin-bottom: 1.25rem;
+        }
+
+        .featured-results {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin: 1.5rem 0 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .featured-result {
+            text-align: left;
+        }
+
+        .featured-result-value {
+            display: block;
+            font-family: var(--font-heading);
+            font-size: 1.9rem;
+            color: var(--navy);
+            line-height: 1.1;
+            margin-bottom: 0.4rem;
+        }
+
+        .featured-result-value span {
+            color: var(--gold);
+        }
+
+        .featured-result-label {
+            font-size: 0.72rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: var(--muted-text);
+            line-height: 1.4;
+        }
+
+        .featured-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .tag {
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: var(--navy);
+            background-color: var(--ivory);
+            border: 1px solid var(--border-color);
+            padding: 0.35rem 0.8rem;
+            border-radius: 2px;
+        }
+
+        .featured-content .btn-secondary {
+            align-self: flex-start;
+            margin-top: auto;
+        }
+
+        /* =============================================================
+           9. FILTER BAR
+           ============================================================= */
+        .filter-bar {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.75rem;
+            margin-bottom: 3.5rem;
+        }
+
+        .filter-btn {
+            padding: 0.65rem 1.4rem;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: var(--navy);
+            background-color: transparent;
+            border: 1px solid var(--border-color);
+            border-radius: 2px;
+            transition: var(--transition-fast);
+        }
+
+        .filter-btn:hover {
+            border-color: var(--gold);
+            color: var(--gold);
+        }
+
+        .filter-btn.active {
+            background-color: var(--navy);
+            color: var(--ivory);
+            border-color: var(--navy);
+        }
+
+        /* =============================================================
+           10. CASE STUDY GRID
+           ============================================================= */
+        .case-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2.5rem;
+        }
+
+        .case-card {
+            background-color: var(--white);
+            border-radius: 4px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            box-shadow: var(--shadow-subtle);
+            transition: var(--transition-smooth);
+            border-top: 3px solid transparent;
+        }
+
+        .case-card:hover {
+            box-shadow: var(--shadow-hover);
+            transform: translateY(-6px);
+            border-top-color: var(--gold);
+        }
+
+        .case-card-visual {
+            height: 180px;
+            position: relative;
+            overflow: hidden;
+            background-color: var(--navy);
+            display: flex;
+            align-items: flex-end;
+            padding: 1.5rem;
+        }
+
+        .case-card-visual::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(11,19,43,0.95) 0%, rgba(22,34,74,0.9) 100%);
+        }
+
+        .case-card-visual::after {
+            content: '';
+            position: absolute;
+            top: 30%;
+            right: 10%;
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(197,160,89,0.25) 0%, transparent 70%);
+        }
+
+        .case-card-cat {
+            position: relative;
+            z-index: 2;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--navy);
+            background-color: var(--gold);
+            padding: 0.35rem 0.8rem;
+            border-radius: 2px;
+        }
+
+        .case-card-body {
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .case-card h3 {
+            font-size: 1.35rem;
+            line-height: 1.35;
+            margin-bottom: 0.9rem;
+            color: var(--navy);
+        }
+
+        .case-summary {
+            font-size: 0.93rem;
+            color: var(--muted-text);
+            line-height: 1.75;
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+
+        .case-metrics {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--border-color);
+            margin-bottom: 1.5rem;
+        }
+
+        .case-metric-value {
+            display: block;
+            font-family: var(--font-heading);
+            font-size: 1.35rem;
+            color: var(--navy);
+            line-height: 1.2;
+            margin-bottom: 0.2rem;
+        }
+
+        .case-metric-value span {
+            color: var(--gold);
+        }
+
+        .case-metric-label {
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+            color: var(--muted-text);
+            line-height: 1.4;
+        }
+
+        .case-link {
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--navy);
+            border-bottom: 1px solid var(--gold);
+            padding-bottom: 4px;
+            align-self: flex-start;
+            transition: var(--transition-fast);
+        }
+
+        .case-link:hover { color: var(--gold); }
+
+        /* =============================================================
+           11. RESULTS BAND
+           ============================================================= */
+        .results-band {
+            background-color: var(--navy);
+            padding: 6rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .results-band::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -10%;
+            width: 700px;
+            height: 700px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(197,160,89,0.1) 0%, transparent 70%);
+        }
+
+        .results-inner {
+            position: relative;
+            z-index: 2;
+        }
+
+        .results-heading {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 4rem;
+        }
+
+        .results-heading .section-label {
+            color: var(--gold);
+        }
+
+        .results-heading h2 {
+            color: var(--white);
+            font-size: clamp(1.9rem, 3.5vw, 2.6rem);
+            margin-bottom: 1rem;
+        }
+
+        .results-heading p {
+            color: var(--light-gray);
+            font-size: 1.05rem;
+            margin-bottom: 0;
+        }
+
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2.5rem;
+        }
+
+        .result-block {
+            text-align: center;
+            padding: 2rem 1.5rem;
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 4px;
+            transition: var(--transition-smooth);
+        }
+
+        .result-block:hover {
+            border-color: rgba(197,160,89,0.5);
+            background-color: rgba(197,160,89,0.05);
+        }
+
+        .result-value {
+            display: block;
+            font-family: var(--font-heading);
+            font-size: clamp(2.4rem, 4vw, 3.2rem);
+            color: var(--gold);
+            line-height: 1;
+            margin-bottom: 0.9rem;
+        }
+
+        .result-label {
+            font-size: 0.78rem;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--light-gray);
+            line-height: 1.6;
+        }
+
+        .results-note {
+            text-align: center;
+            margin-top: 3.5rem;
+            max-width: 760px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .results-note p {
+            color: #8A8A8A;
+            font-size: 0.85rem;
+            line-height: 1.8;
+            margin-bottom: 0;
+        }
+
+        /* =============================================================
+           12. TESTIMONIALS
+           ============================================================= */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .testimonial-card {
+            background-color: var(--white);
+            padding: 2.5rem;
+            border-radius: 4px;
+            box-shadow: var(--shadow-subtle);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            transition: var(--transition-smooth);
+        }
+
+        .testimonial-card:hover {
+            box-shadow: var(--shadow-hover);
+        }
+
+        .testimonial-mark {
+            font-family: var(--font-heading);
+            font-size: 3.5rem;
+            color: var(--gold);
+            line-height: 0.6;
+            margin-bottom: 1rem;
+            opacity: 0.4;
+        }
+
+        .testimonial-quote {
+            font-size: 0.98rem;
+            color: var(--charcoal);
+            line-height: 1.8;
+            margin-bottom: 2rem;
+            flex-grow: 1;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .testimonial-avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background-color: var(--navy);
+            color: var(--gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-heading);
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        .testimonial-name {
+            font-family: var(--font-heading);
+            font-size: 1rem;
+            color: var(--navy);
+            margin-bottom: 0.1rem;
+            line-height: 1.3;
+        }
+
+        .testimonial-role {
+            font-size: 0.72rem;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            color: var(--gold);
+            font-weight: 600;
+        }
+
+        .testimonial-disclaimer {
+            text-align: center;
+            margin-top: 3rem;
+            max-width: 720px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .testimonial-disclaimer p {
+            font-size: 0.82rem;
+            color: var(--muted-text);
+            line-height: 1.7;
+            margin-bottom: 0;
+            font-style: italic;
+        }
+
+        /* =============================================================
+           13. CTA SECTION
+           ============================================================= */
+        .cta-section {
+            background-color: var(--ivory);
+            padding: 8rem 0;
+        }
+
+        .cta-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .cta-text h2 {
+            color: var(--navy);
+            font-size: 2.9rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-text p {
+            color: var(--muted-text);
+            font-size: 1.08rem;
+            margin-bottom: 0;
+        }
+
+        /* =============================================================
+           14. FOOTER
+           ============================================================= */
+        .mega-footer {
+            background-color: #050A18;
+            color: var(--light-gray);
+            padding-top: 5rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
+            gap: 4rem;
+            padding-bottom: 4rem;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .footer-logo { height: 60px; width: auto; margin-bottom: 1.5rem; }
+        .footer-tagline { color: var(--gold); font-family: var(--font-heading); font-size: 1.1rem; margin-bottom: 1rem; line-height: 1.5; }
+        .footer-desc { font-size: 0.9rem; color: #999; line-height: 1.8; }
+
+        .footer-col h4 { color: var(--white); font-family: var(--font-body); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1.5rem; font-weight: 600; }
+        .footer-col ul { margin-bottom: 0; }
+        .footer-col ul li { margin-bottom: 0.8rem; }
+        .footer-col ul li a { font-size: 0.9rem; color: #999; }
+        .footer-col ul li a:hover { color: var(--gold); padding-left: 5px; }
+
+        .footer-email { display: inline-block; color: var(--gold); font-size: 1.1rem; font-weight: 500; margin-bottom: 1rem; }
+        .footer-email:hover { text-decoration: underline; }
+        .footer-response { font-size: 0.85rem; color: #888; margin-bottom: 2rem; }
+        .footer-contact-text { font-size: 0.9rem; color: #999; line-height: 1.8; margin-bottom: 1.25rem; }
+
+        .footer-bottom { padding: 2rem 0; display: flex; justify-content: space-between; align-items: center; font-size: 0.85rem; color: #888; }
+        .footer-bottom p { margin-bottom: 0; color: #888; font-size: 0.85rem; }
+
+        /* =============================================================
+           15. ANIMATIONS (SCROLL REVEAL)
+           ============================================================= */
+        .fade-in-up { opacity: 0; transform: translateY(40px); transition: opacity 0.8s ease, transform 0.8s ease; }
+        .fade-in-up.visible { opacity: 1; transform: translateY(0); }
+        .fade-in-left { opacity: 0; transform: translateX(-40px); transition: opacity 0.8s ease, transform 0.8s ease; }
+        .fade-in-left.visible { opacity: 1; transform: translateX(0); }
+        .fade-in-right { opacity: 0; transform: translateX(40px); transition: opacity 0.8s ease, transform 0.8s ease; }
+        .fade-in-right.visible { opacity: 1; transform: translateX(0); }
+        .delay-1 { transition-delay: 0.1s; }
+        .delay-2 { transition-delay: 0.2s; }
+        .delay-3 { transition-delay: 0.3s; }
+        .delay-4 { transition-delay: 0.4s; }
+
+        /* =============================================================
+           16. RESPONSIVE DESIGN
+           ============================================================= */
+        @media (max-width: 1200px) {
+            .container { padding: 0 1.5rem; }
+            .mega-menu { width: 600px; left: -100px; }
+            .mega-menu-inner { grid-template-columns: 1fr 1fr; }
+            .cta-container { gap: 3rem; }
+            .footer-grid { grid-template-columns: 1fr 1fr; gap: 3rem; }
+            .featured-study { grid-template-columns: 1fr; }
+            .featured-visual { min-height: 380px; padding: 3rem; }
+            .featured-content { padding: 3rem; }
+            .testimonials-grid { grid-template-columns: 1fr 1fr; }
+        }
+
+        @media (max-width: 1024px) {
+            .section { padding: 6rem 0; }
+            .cta-container { grid-template-columns: 1fr; }
+            .hero-title { font-size: 3.5rem; }
+            .case-grid { grid-template-columns: 1fr; }
+            .results-grid { grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+            .result-block { padding: 1.75rem 1rem; }
+            .testimonials-grid { grid-template-columns: 1fr; }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-btn { display: flex; }
+            .nav-links {
+                position: fixed; top: 0; right: -100%; width: 85%; height: 100vh;
+                background-color: var(--navy); flex-direction: column;
+                justify-content: flex-start; padding: 8rem 2rem 2rem;
+                transition: var(--transition-smooth); box-shadow: -10px 0 30px rgba(0,0,0,0.5);
+                z-index: 999; overflow-y: auto; gap: 1.5rem;
+            }
+            .nav-links.active { right: 0; }
+            .nav-link { color: var(--white) !important; font-size: 1.1rem; margin: 0; display: block; width: 100%; }
+            .nav-link::after { display: none; }
+            .mega-menu { position: static; background-color: transparent; box-shadow: none; border-top: none; opacity: 1; visibility: visible; transform: none; width: 100%; padding: 0; display: none; }
+            .dropdown.active .mega-menu { display: block; }
+            .mega-menu-inner { grid-template-columns: 1fr; gap: 1.5rem; }
+            .mega-col h4 { color: var(--gold); border-bottom: 1px solid rgba(255,255,255,0.1); margin-bottom: 1rem; }
+            .mega-col ul li a { color: var(--light-gray); padding: 0.3rem 0; }
+            .highlight-col { display: none; }
+            .mobile-menu-btn.active .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); background-color: var(--white) !important; }
+            .mobile-menu-btn.active .bar:nth-child(2) { opacity: 0; }
+            .mobile-menu-btn.active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); background-color: var(--white) !important; }
+            .btn-primary.nav-btn { width: 100%; text-align: center; margin-top: 1rem; }
+            .hero-inner { min-height: 50vh; height: auto; }
+            .hero-title { font-size: 2.5rem; }
+            .hero-description { font-size: 1rem; }
+            .section-header h2 { font-size: 2rem; }
+            .section-intro { font-size: 1rem; }
+            .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+            .footer-bottom { flex-direction: column; text-align: center; gap: 1rem; }
+            .featured-visual { padding: 2.5rem; min-height: 320px; }
+            .featured-genre h3 { font-size: 1.6rem; }
+            .featured-content { padding: 2.5rem; }
+            .featured-content h2 { font-size: 1.8rem; }
+            .featured-results { grid-template-columns: 1fr; gap: 1.25rem; }
+            .results-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+            .case-card-body { padding: 1.75rem; }
+            .testimonial-card { padding: 2rem; }
+            .cta-text h2 { font-size: 2.2rem; }
+        }
+
+        @media (max-width: 480px) {
+            .container { padding: 0 1rem; }
+            .section { padding: 4rem 0; }
+            .hero-title { font-size: 2rem; }
+            .btn-primary, .btn-secondary { padding: 0.8rem 1.5rem; font-size: 0.85rem; }
+            .filter-btn { padding: 0.5rem 1rem; font-size: 0.72rem; }
+            .featured-content { padding: 2rem; }
+            .featured-visual { padding: 2rem; }
+            .case-card-body { padding: 1.5rem; }
+            .case-metrics { grid-template-columns: 1fr; gap: 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- =================================================================
+         PRELOADER
+         ================================================================= -->
+    <div id="preloader">
+        <div class="loader-content">
+            <svg class="loader-svg" viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="40" stroke="#C5A059" stroke-width="2" fill="none" class="circle-anim"></circle>
+            </svg>
+            <h2 class="loader-text">ALLY WEALTH</h2>
+            <p class="loader-subtext">Loading our work...</p>
+        </div>
+    </div>
+
+    <!-- =================================================================
+         GLOBAL NAVIGATION
+         ================================================================= -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+
+            <a href="index.html" class="logo-link" aria-label="Ally Wealth Home">
+                <img src="images/favicon.png" alt="Ally Wealth Logo" class="logo-img">
+            </a>
+
+            <div class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle Menu" role="button" tabindex="0">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+
+                <li class="dropdown mega-dropdown">
+                    <a href="services.html" class="nav-link">Services <span class="arrow">&#9662;</span></a>
+                    <div class="mega-menu">
+                        <div class="mega-menu-inner">
+                            <div class="mega-col">
+                                <h4>Amazon Optimization</h4>
+                                <ul>
+                                    <li><a href="services.html#amazon">Amazon Book Marketing</a></li>
+                                    <li><a href="services.html#aplus">Amazon A+ Content</a></li>
+                                    <li><a href="services.html#listing">Book Listing Optimisation</a></li>
+                                    <li><a href="services.html#keywords">Keywords and Categories</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-col">
+                                <h4>Reader Engagement</h4>
+                                <ul>
+                                    <li><a href="services.html#goodreads">Goodreads Marketing</a></li>
+                                    <li><a href="services.html#arc">ARC and Reader Outreach</a></li>
+                                    <li><a href="services.html#social">Social Media Promotion</a></li>
+                                    <li><a href="services.html#audiobook">Audiobook Marketing</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-col">
+                                <h4>Author and Launch</h4>
+                                <ul>
+                                    <li><a href="services.html#branding">Author Branding</a></li>
+                                    <li><a href="services.html#descriptions">Book Descriptions</a></li>
+                                    <li><a href="services.html#launch">Book Launch Campaigns</a></li>
+                                    <li><a href="services.html#custom">Custom Book Strategy</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-col highlight-col">
+                                <h4>Need Guidance?</h4>
+                                <p>Not sure which service fits your book? Let's discuss your goals.</p>
+                                <a href="contact.html" class="btn-primary btn-small">Get a Proposal</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li><a href="work.html" class="nav-link active">Our Work</a></li>
+                <li><a href="resources.html" class="nav-link">Resources</a></li>
+                <li><a href="contact.html" class="btn-primary nav-btn">Request a Proposal</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- =================================================================
+         INNER PAGE HERO
+         ================================================================= -->
+    <header class="hero-inner">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <p class="hero-subtitle fade-in-up">OUR WORK</p>
+            <h1 class="hero-title fade-in-up delay-1">
+                Case studies,<br>not claims.
+            </h1>
+            <p class="hero-description fade-in-up delay-2">
+                We do not publish vague testimonials. Below you will find a selection of the strategy work we have delivered, the problems behind it, and the measured results that followed.
+            </p>
+        </div>
+    </header>
+
+    <!-- =================================================================
+         FEATURED CASE STUDY
+         ================================================================= -->
+    <section class="section bg-ivory">
+        <div class="container">
+
+            <div class="section-header fade-in-up">
+                <span class="section-label">FEATURED PROJECT</span>
+                <h2>A debut thriller rescued from obscurity.</h2>
+                <p class="section-intro">
+                    A full breakdown of a three month engagement that took a stalled debut from page four of the search results to a stable presence in its category.
+                </p>
+            </div>
+
+            <article class="featured-study fade-in-up">
+
+                <div class="featured-visual">
+                    <span class="featured-badge">Featured Case Study</span>
+
+                    <div class="featured-genre">
+                        <span class="featured-genre-label">Genre</span>
+                        <h3>Literary Thriller</h3>
+                        <p>A dual timeline novel with a strong sense of place, published independently with a cover that did not communicate genre clearly on mobile.</p>
+                    </div>
+                </div>
+
+                <div class="featured-content">
+                    <span class="section-label">THE BRIEF</span>
+                    <h2>Stalled at launch, invisible after week two.</h2>
+
+                    <p>
+                        The author had done everything a debut novelist is told to do. The book was professionally edited, the cover had been commissioned, and the launch week had been announced to a modest mailing list. It sold reasonably for ten days and then went quiet.
+                    </p>
+
+                    <p>
+                        Our brief was to work out why a book with strong editorial reviews was not converting page visits into sales, and to rebuild the listing so that future promotional efforts would actually produce results.
+                    </p>
+
+                    <p>
+                        The first audit showed three separate problems. The cover read well at full size but was illegible as a thumbnail. The description opened with a plot summary instead of a hook. And the book was placed in two categories that were technically accurate but far too competitive for a debut to rank in.
+                    </p>
+
+                    <div class="featured-results">
+                        <div class="featured-result">
+                            <span class="featured-result-value">3.8<span>x</span></span>
+                            <span class="featured-result-label">Increase in listing conversion</span>
+                        </div>
+                        <div class="featured-result">
+                            <span class="featured-result-value">2<span> new</span></span>
+                            <span class="featured-result-label">Attainable category placements</span>
+                        </div>
+                        <div class="featured-result">
+                            <span class="featured-result-value">41<span>%</span></span>
+                            <span class="featured-result-label">Lift in organic impressions</span>
+                        </div>
+                    </div>
+
+                    <div class="featured-tags">
+                        <span class="tag">Amazon Optimisation</span>
+                        <span class="tag">Description Rewrite</span>
+                        <span class="tag">Category Strategy</span>
+                        <span class="tag">Keyword Research</span>
+                    </div>
+
+                    <a href="contact.html" class="btn-secondary">Discuss a Similar Project</a>
+                </div>
+
+            </article>
+        </div>
+    </section>
+
+    <!-- =================================================================
+         CASE STUDY GRID
+         ================================================================= -->
+    <section class="section bg-white">
+        <div class="container">
+
+            <div class="section-header fade-in-up">
+                <span class="section-label">SELECTED PROJECTS</span>
+                <h2>More from the portfolio.</h2>
+                <p class="section-intro">
+                    Each case study below represents a different problem, a different genre, and a different set of constraints. Filter by service category to see the work most relevant to your book.
+                </p>
+            </div>
+
+            <!-- Filter bar -->
+            <div class="filter-bar fade-in-up" data-target="case-grid">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="amazon">Amazon</button>
+                <button class="filter-btn" data-filter="launch">Launch</button>
+                <button class="filter-btn" data-filter="branding">Branding</button>
+                <button class="filter-btn" data-filter="discovery">Discovery</button>
+                <button class="filter-btn" data-filter="arc">ARC</button>
+                <button class="filter-btn" data-filter="audiobook">Audiobook</button>
+            </div>
+
+            <!-- Case grid -->
+            <div class="case-grid" id="case-grid">
+
+                <!-- Case 1 -->
+                <article class="case-card filterable-card fade-in-up" data-category="amazon">
+                    <div class="case-card-visual">
+                        <span class="case-card-cat">Amazon</span>
+                    </div>
+                    <div class="case-card-body">
+                        <h3>Backlist revival for a five book business series</h3>
+                        <p class="case-summary">
+                            A non-fiction author with five books in a single business topic had seen sales decline steadily for eighteen months. A full category and keyword audit revealed that three of the five were in categories that had become far too competitive. We repositioned two of the strongest titles into smaller but highly relevant categories and rewrote their descriptions to reflect how the market had shifted.
+                        </p>
+                        <div class="case-metrics">
+                            <div class="case-metric">
+                                <span class="case-metric-value">4.1<span>x</span></span>
+                                <span class="case-metric-label">Sales on top title</span>
+                            </div>
+                            <div class="case-metric">
+                                <span class="case-metric-value">2</span>
+                                <span class="case-metric-label">Categories repositioned</span>
+                            </div>
+                        </div>
+                        <a href="contact.html" class="case-link">Discuss a Similar Project</a>
+                    </div>
+                </article>
+
+                <!-- Case 2 -->
+                <article class="case-card filterable-card fade-in-up delay-1" data-category="launch">
+                    <div class="case-card-visual">
+                        <span class="case-card-cat">Launch</span>
+                    </div>
+                    <div class="case-card-body">
+                        <h3>Ninety day launch campaign for a memoir</h3>
+                        <p class="case-summary">
+                            A memoir with a strong personal story but no existing audience needed a launch strategy that did not rely on a large mailing list. We built a phased campaign around a small group of committed early readers, a series of short public reading events, and a coordinated outreach to podcasters in the memoir and personal development space. Launch week was quiet. The four weeks after it were not.
+                        </p>
+                        <div class="case-metrics">
+                            <div class="case-metric">
+                                <span class="case-metric-value">90<span> days</span></span>
+                                <span class="case-metric-label">Campaign length</span>
+                            </div>
+                            <div class="case-metric">
+                                <span class="case-metric-value">18</span>
+                                <span class="case-metric-label">Podcasts secured</span>
+                            </div>
+                        </div>
+                        <a href="contact.html" class="case-link">Discuss a Similar Project</a>
+                    </div>
+                </article>
+
+                <!-- Case 3 -->
+                <article class="case-card filterable-card fade-in-up delay-2" data-category="branding">
+                    <div class="case-card-visual">
+                        <span class="case-card-cat">Branding</span>
+                    </div>
+                    <div class="case-card-body">
+                        <h3>Visual identity rebuild for a science fiction author</h3>
+                        <p class="case-summary">
+                            A science fiction author with a strong voice and an inconsistent visual presence needed a brand that could travel across seven books. We built a restrained visual system: two typefaces, a fixed colour palette, and a consistent composition rule for every graphic. Every asset the author published for the following year looked like it belonged to the same body of work.
+                        </p>
+                        <div class="case-metrics">
+                            <div class="case-metric">
+                                <span class="case-metric-value">7</span>
+                                <span class="case-metric-label">Titles unified</span>
+                            </div>
+                            <div class="case-metric">
+                                <span class="case-metric-value">2</span>
+                                <span class="case-metric-label">Core typefaces adopted</span>
+                            </div>
+                        </div>
+                        <a href="contact.html" class="case-link">Discuss a Similar Project</a>
+                    </div>
+                </article>
+
+                <!-- Case 4 -->
+                <article class="case-card filterable-card fade-in-up" data-category="discovery">
+                    <div class="case-card-visual">
+                        <span class="case-card-cat">Discovery</span>
+                    </div>
+                    <div class="case-card-body">
+                        <h3>Reader community mapping for a romance debut</h3>
+                        <p class="case-summary">
+                            A debut romance author had a book that reviewers loved and a marketing budget that could not compete with the big publishers. We mapped the reader communities where the book had the strongest natural fit, prioritised three of them, and built a slow, respectful engagement strategy that avoided paid promotion entirely.
+                        </p>
+                        <div class="case-metrics">
+                            <div class="case-metric">
+                                <span class="case-metric-value">3</span>
+                                <span class="case-metric-label">Communities prioritised</span>
+                            </div>
+                            <div class="case-metric">
+                                <span class="case-metric-value">0</span>
+                                <span class="case-metric-label">Paid ad spend used</span>
+                            </div>
+                        </div>
+                        <a href="contact.html" class="case-link">Discuss a Similar Project</a>
+                    </div>
+                </article>
+
+                <!-- Case 5 -->
+                <article class="case-card filterable-card fade-in-up delay-1" data-category="arc">
+                    <div class="case-card-visual">
+                        <span class="case-card-cat">ARC</span>
+                    </div>
+                    <div class="case-card-body">
+                        <h3>Compliant ARC campaign for a literary debut</h3>
+                        <p class="case-summary">
+                            A literary fiction author wanted early reviews without risking their account or their reputation. We built an ARC programme around a curated list of readers who had reviewed similar titles in the previous twelve months. Every invitation was personal, every reviewer opted in voluntarily, and the resulting reviews were honest, varied, and durable.
+                        </p>
+                        <div class="case-metrics">
+                            <div class="case-metric">
+                                <span class="case-metric-value">42</span>
+                                <span class="case-metric-label">ARC readers recruited</span>
+                            </div>
+                            <div class="case-metric">
+                                <span class="case-metric-value">29</span>
+                                <span class="case-metric-label">Verified reviews posted</span>
+                            </div>
+                        </div>
+                        <a href="contact.html" class="case-link">Discuss a Similar Project</a>
+                    </div>
+                </article>
+
+                <!-- Case 6 -->
+                <article class="case-card filterable-card fade-in-up delay-2" data-category="audiobook">
+                    <div class="case-card-visual">
+                        <span class="case-card-cat">Audiobook</span>
+                    </div>
+                    <div class="case-card-body">
+                        <h3>Audiobook promotion for a self-help author</h3>
+                        <p class="case-summary">
+                            An author with a successful print and ebook presence had an audiobook that was essentially invisible. We built a promotion strategy that treated the audio edition as a standalone product, with its own listener audience, its own outreach list of audio focused podcasts, and its own set of promotional assets. The audio edition went on to outsell the ebook edition in its second quarter.
+                        </p>
+                        <div class="case-metrics">
+                            <div class="case-metric">
+                                <span class="case-metric-value">12</span>
+                                <span class="case-metric-label">Audio podcasts secured</span>
+                            </div>
+                            <div class="case-metric">
+                                <span class="case-metric-value">2.4<span>x</span></span>
+                                <span class="case-metric-label">Audio edition growth</span>
+                            </div>
+                        </div>
+                        <a href="contact.html" class="case-link">Discuss a Similar Project</a>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- =================================================================
+         RESULTS BAND
+         ================================================================= -->
+    <section class="results-band">
+        <div class="container results-inner">
+
+            <div class="results-heading fade-in-up">
+                <span class="section-label">THE BIGGER PICTURE</span>
+                <h2>What the numbers look like across our work.</h2>
+                <p>Individual case studies are useful. These are the patterns we see across the projects we take on.</p>
+            </div>
+
+            <div class="results-grid">
+
+                <div class="result-block fade-in-up">
+                    <span class="result-value">3.2x</span>
+                    <span class="result-label">Average listing conversion lift after a full audit and rewrite</span>
+                </div>
+
+                <div class="result-block fade-in-up delay-1">
+                    <span class="result-value">68%</span>
+                    <span class="result-label">Of authors we work with see a measurable change within 60 days</span>
+                </div>
+
+                <div class="result-block fade-in-up delay-2">
+                    <span class="result-value">14</span>
+                    <span class="result-label">Distinct service areas covered by the consultancy</span>
+                </div>
+
+            </div>
+
+            <div class="results-note fade-in-up">
+                <p>
+                    Results vary by genre, category competitiveness, existing audience, and the length of the engagement. We do not aggregate these into a single headline number because doing so would misrepresent how marketing actually works. If you want to know what a realistic result looks like for your book, ask us directly and we will tell you honestly.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- =================================================================
+         TESTIMONIALS
+         ================================================================= -->
+    <section class="section bg-ivory">
+        <div class="container">
+
+            <div class="section-header fade-in-up">
+                <span class="section-label">FROM THE AUTHORS</span>
+                <h2>What it is like to work with us.</h2>
+                <p class="section-intro">
+                    We do not ask clients for testimonials. The quotes below are taken from unsolicited messages we received after the work was completed.
+                </p>
+            </div>
+
+            <div class="testimonials-grid">
+
+                <article class="testimonial-card fade-in-up">
+                    <p class="testimonial-mark">&ldquo;</p>
+                    <p class="testimonial-quote">
+                        What struck me first was the honesty. I had been told by two other services that a bestseller badge was achievable within a month. Ally Wealth told me within the first call that this was not going to happen for a debut in my category, and then showed me exactly what was achievable instead. Six months on, my book is consistently selling, and I understand why.
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar" aria-hidden="true">M</div>
+                        <div>
+                            <p class="testimonial-name">M. Harrow</p>
+                            <p class="testimonial-role">Literary Thriller Author</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="testimonial-card fade-in-up delay-1">
+                    <p class="testimonial-mark">&ldquo;</p>
+                    <p class="testimonial-quote">
+                        The process was quiet and methodical. There were no big announcements, no flashy campaigns, just a sequence of small decisions that added up. I appreciated that they kept the client list small. Every email I sent was answered by the same person, and every question was answered with a straight reply.
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar" aria-hidden="true">R</div>
+                        <div>
+                            <p class="testimonial-name">R. Okafor</p>
+                            <p class="testimonial-role">Business Non-Fiction Author</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="testimonial-card fade-in-up delay-2">
+                    <p class="testimonial-mark">&ldquo;</p>
+                    <p class="testimonial-quote">
+                        I came in expecting a marketing campaign and got a marketing education. By the time the engagement ended I understood how keyword research worked, why category placement matters, and what my description was actually doing for me. That knowledge is now mine, and it will keep working across every book I publish.
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar" aria-hidden="true">S</div>
+                        <div>
+                            <p class="testimonial-name">S. Lindqvist</p>
+                            <p class="testimonial-role">Memoirist</p>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+
+            <div class="testimonial-disclaimer">
+                <p>
+                    Names and identifying details have been changed at the request of some clients. Full references are available on request during the proposal stage.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- =================================================================
+         CTA SECTION
+         ================================================================= -->
+    <section class="section cta-section">
+        <div class="container cta-container">
+            <div class="cta-text fade-in-left">
+                <p class="section-label">YOUR BOOK, NEXT</p>
+                <h2>Let us look at your book.</h2>
+                <p>Tell us where your book is now and what a good outcome looks like for you. We will review your details personally and come back with a straight assessment and, if it makes sense, a proposal.</p>
+            </div>
+            <div class="fade-in-right" style="text-align: center;">
+                <a href="contact.html" class="btn-primary btn-large">Request a Proposal</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- =================================================================
+         MASSIVE FOOTER
+         ================================================================= -->
+    <footer class="mega-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col brand-col">
+                    <img src="images/favicon.png" alt="Ally Wealth Logo" class="footer-logo">
+                    <p class="footer-tagline">Get Seen. Grow Your Influence.<br>Build Your Legacy.</p>
+                    <p class="footer-desc">Premium author visibility and book marketing consulting for authors, publishers, and independent professionals.</p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html#amazon">Amazon Book Marketing</a></li>
+                        <li><a href="services.html#aplus">Amazon A+ Content</a></li>
+                        <li><a href="services.html#listing">Book Listing Optimisation</a></li>
+                        <li><a href="services.html#keywords">Keywords and Categories</a></li>
+                        <li><a href="services.html#goodreads">Goodreads Marketing</a></li>
+                        <li><a href="services.html#branding">Author Branding</a></li>
+                        <li><a href="services.html#descriptions">Book Descriptions</a></li>
+                        <li><a href="services.html#arc">ARC and Reader Outreach</a></li>
+                        <li><a href="services.html#launch">Book Launch Campaigns</a></li>
+                        <li><a href="services.html#audiobook">Audiobook Marketing</a></li>
+                        <li><a href="services.html#social">Social Media Promotion</a></li>
+                        <li><a href="services.html#custom">Custom Strategy</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Knowledge Centre</h4>
+                    <ul>
+                        <li><a href="resources.html">Resources Home</a></li>
+                        <li><a href="resources.html#pdf-library">Free PDF Library</a></li>
+                        <li><a href="resources.html#articles">Marketing Articles</a></li>
+                        <li><a href="resources.html#guides">Step-by-Step Guides</a></li>
+                        <li><a href="work.html">Case Studies</a></li>
+                    </ul>
+
+                    <h4 class="mt-2">Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Ally Wealth</a></li>
+                        <li><a href="work.html">Our Work</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col contact-col">
+                    <h4>Get in Touch</h4>
+                    <p class="footer-contact-text">Ready to discuss your book marketing strategy? We would love to hear from you.</p>
+                    <a href="mailto:info.allywealth@gmail.com" class="footer-email">info.allywealth@gmail.com</a>
+                    <p class="footer-response">We typically respond within 24-48 business hours.</p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Ally Wealth. All rights reserved.</p>
+                <p>Author Visibility Consultant and Book Marketing Specialist.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- =================================================================
+         EMBEDDED JAVASCRIPT
+         ================================================================= -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            /* =========================================================
+               1. PRELOADER
+               ========================================================= */
+            const preloader = document.getElementById('preloader');
+            if (preloader) {
+                window.addEventListener('load', () => {
+                    setTimeout(() => {
+                        preloader.classList.add('hidden');
+                        setTimeout(() => { preloader.style.display = 'none'; }, 600);
+                    }, 800);
+                });
+            }
+
+            /* =========================================================
+               2. MOBILE NAVIGATION AND DROPDOWNS
+               ========================================================= */
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const navLinks = document.getElementById('nav-links');
+            const dropdowns = document.querySelectorAll('.dropdown');
+
+            if (mobileMenuBtn && navLinks) {
+                mobileMenuBtn.addEventListener('click', () => {
+                    navLinks.classList.toggle('active');
+                    mobileMenuBtn.classList.toggle('active');
+                    document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
+                });
+
+                navLinks.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        if (window.innerWidth <= 768 && !link.parentElement.classList.contains('dropdown')) {
+                            navLinks.classList.remove('active');
+                            mobileMenuBtn.classList.remove('active');
+                            document.body.style.overflow = '';
+                        }
+                    });
+                });
+
+                dropdowns.forEach(dropdown => {
+                    const link = dropdown.querySelector('.nav-link');
+                    if (!link) return;
+                    link.addEventListener('click', (e) => {
+                        if (window.innerWidth <= 768) {
+                            e.preventDefault();
+                            dropdown.classList.toggle('active');
+                        }
+                    });
+                });
+            }
+
+            /* =========================================================
+               3. STICKY NAVBAR
+               ========================================================= */
+            const navbar = document.getElementById('navbar');
+            if (navbar) {
+                const handleScroll = () => {
+                    if (window.scrollY > 50) {
+                        navbar.classList.add('scrolled');
+                    } else {
+                        navbar.classList.remove('scrolled');
+                    }
+                };
+                window.addEventListener('scroll', handleScroll);
+                handleScroll();
+            }
+
+            /* =========================================================
+               4. SCROLL REVEAL ANIMATIONS
+               ========================================================= */
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.fade-in-up, .fade-in-left, .fade-in-right').forEach(el => observer.observe(el));
+
+            /* =========================================================
+               5. CASE STUDY FILTER BAR
+               ========================================================= */
+            document.querySelectorAll('.filter-bar').forEach(bar => {
+                const targetId = bar.getAttribute('data-target');
+                const grid = document.getElementById(targetId);
+                if (!grid) return;
+
+                const cards = grid.querySelectorAll('.filterable-card');
+                const buttons = bar.querySelectorAll('.filter-btn');
+
+                buttons.forEach(btn => {
+                    btn.addEventListener('click', () => {
+                        buttons.forEach(b => b.classList.remove('active'));
+                        btn.classList.add('active');
+
+                        const filter = btn.getAttribute('data-filter');
+
+                        cards.forEach(card => {
+                            const category = card.getAttribute('data-category');
+                            const show = filter === 'all' || category === filter;
+                            card.classList.toggle('is-hidden', !show);
+                        });
+                    });
+                });
+            });
+
+        });
+    </script>
+</body>
+</html>
