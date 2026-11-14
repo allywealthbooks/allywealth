@@ -3,10 +3,10 @@
      ALLY WEALTH - PREMIUM AUTHOR VISIBILITY CONSULTANT
      MASTER HOMEPAGE - ALL-IN-ONE FILE
      =====================================================================
-     This file contains all HTML, CSS, and JavaScript required for the 
-     homepage. No external CSS or JS files are needed for this page to 
-     render perfectly. 
-     
+     This file contains all HTML, CSS, and JavaScript required for the
+     homepage. No external CSS or JS files are needed for this page to
+     render perfectly.
+
      Author: Ally Wealth Development Team
      Date: 2026
      ===================================================================== -->
@@ -19,7 +19,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
+
     <!-- Primary Meta Tags -->
     <title>Ally Wealth | Premium Author Visibility and Book Marketing Consultant</title>
     <meta name="title" content="Ally Wealth | Premium Author Visibility and Book Marketing Consultant">
@@ -27,20 +27,20 @@
     <meta name="keywords" content="book marketing, author visibility, amazon marketing, A+ content, book launch, ARC outreach, goodreads marketing, book descriptions, Ally Wealth, book marketing consultant, author branding">
     <meta name="author" content="Ally Wealth">
     <meta name="robots" content="index, follow">
-    
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://allywealthvisibility.com/">
     <meta property="og:title" content="Ally Wealth | Premium Author Visibility and Book Marketing">
     <meta property="og:description" content="Get Seen. Grow Your Influence. Build Your Legacy. Strategic book marketing for authors and publishers.">
-    <meta property="og:image" content="images/banner.jpg">
+    <meta property="og:image" content="https://allywealthvisibility.com/images/banner.jpg">
 
     <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://www.allywealth.com/">
-    <meta property="twitter:title" content="Ally Wealth | Premium Author Visibility and Book Marketing">
-    <meta property="twitter:description" content="Get Seen. Grow Your Influence. Build Your Legacy. Strategic book marketing for authors and publishers.">
-    <meta property="twitter:image" content="images/banner.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://allywealthvisibility.com/">
+    <meta name="twitter:title" content="Ally Wealth | Premium Author Visibility and Book Marketing">
+    <meta name="twitter:description" content="Get Seen. Grow Your Influence. Build Your Legacy. Strategic book marketing for authors and publishers.">
+    <meta name="twitter:image" content="https://allywealthvisibility.com/images/banner.jpg">
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="images/favicon.png">
@@ -60,34 +60,35 @@
            ============================================================= */
         :root {
             /* Primary Color Palette */
-            --navy: #0B132B; 
-            --gold: #C5A059; 
+            --navy: #0B132B;
+            --gold: #C5A059;
             --ivory: #F4EFE7;
             --charcoal: #28221D;
             --white: #FFFFFF;
-            
+
             /* Secondary Color Palette */
             --light-gray: #E8DFD2;
             --dark-gray: #1A1A1A;
             --muted-text: #6B6B6B;
             --border-color: rgba(0, 0, 0, 0.08);
             --gold-transparent: rgba(197, 160, 89, 0.2);
-            
+
             /* Typography */
             --font-heading: 'Playfair Display', serif;
             --font-body: 'Inter', sans-serif;
-            
+
             /* Transitions and Animations */
             --transition-smooth: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
             --transition-fast: all 0.2s ease-in-out;
             --transition-slow: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-            
+            --ease-expo: cubic-bezier(0.16, 1, 0.3, 1);
+
             /* Shadows */
             --shadow-subtle: 0 10px 30px rgba(0, 0, 0, 0.05);
             --shadow-hover: 0 20px 40px rgba(0, 0, 0, 0.1);
             --shadow-inset: inset 0 0 20px rgba(0,0,0,0.05);
             --shadow-gold: 0 10px 30px rgba(197, 160, 89, 0.15);
-            
+
             /* Layout Spacing */
             --container-width: 1280px;
             --container-padding: 2rem;
@@ -250,6 +251,8 @@
             transition: var(--transition-smooth);
             text-align: center;
             border: 1px solid transparent;
+            position: relative;
+            overflow: hidden;
         }
 
         .btn-primary {
@@ -1079,7 +1082,7 @@
         }
 
         .premium-form .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
-        .premium-form .form-group { margin-bottom: 1.5rem; }
+        .premium-form .form-group { margin-bottom: 1.5rem; position: relative; }
 
         .premium-form label {
             display: block;
@@ -1089,6 +1092,7 @@
             margin-bottom: 0.5rem;
             text-transform: uppercase;
             letter-spacing: 0.5px;
+            transition: color 0.3s ease;
         }
 
         .premium-form input,
@@ -1154,11 +1158,11 @@
         /* =============================================================
            18. ANIMATIONS (SCROLL REVEAL)
            ============================================================= */
-        .fade-in-up { opacity: 0; transform: translateY(40px); transition: opacity 0.8s ease, transform 0.8s ease; }
+        .fade-in-up { opacity: 0; transform: translateY(40px); transition: opacity 0.9s var(--ease-expo), transform 0.9s var(--ease-expo); }
         .fade-in-up.visible { opacity: 1; transform: translateY(0); }
-        .fade-in-left { opacity: 0; transform: translateX(-40px); transition: opacity 0.8s ease, transform 0.8s ease; }
+        .fade-in-left { opacity: 0; transform: translateX(-40px); transition: opacity 0.9s var(--ease-expo), transform 0.9s var(--ease-expo); }
         .fade-in-left.visible { opacity: 1; transform: translateX(0); }
-        .fade-in-right { opacity: 0; transform: translateX(40px); transition: opacity 0.8s ease, transform 0.8s ease; }
+        .fade-in-right { opacity: 0; transform: translateX(40px); transition: opacity 0.9s var(--ease-expo), transform 0.9s var(--ease-expo); }
         .fade-in-right.visible { opacity: 1; transform: translateX(0); }
         .delay-1 { transition-delay: 0.1s; }
         .delay-2 { transition-delay: 0.2s; }
@@ -1236,101 +1240,465 @@
             .footer-newsletter-form input, .footer-newsletter-form button { width: 100%; }
         }
 
-    
-/* =========================================
-   FIX: HERO AND NAVIGATION OVERLAP
-   ========================================= */
+    /* =========================================
+       FIX: HERO AND NAVIGATION OVERLAP
+       ========================================= */
 
-body {
-    margin: 0;
-    padding: 0;
-}
+    body {
+        margin: 0;
+        padding: 0;
+    }
 
-.navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    min-height: 90px;
-}
-
-.nav-container {
-    min-height: 65px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo-link {
-    min-width: 160px;
-    flex-shrink: 0;
-}
-
-.logo-img {
-    display: block;
-    max-height: 65px;
-    width: auto;
-    object-fit: contain;
-}
-
-/* Push hero content below navigation */
-.hero {
-    position: relative;
-    min-height: 800px;
-    height: 100vh;
-    padding-top: 90px;
-    box-sizing: border-box;
-}
-
-.hero-content {
-    position: relative;
-    z-index: 3;
-    width: 100%;
-    margin-top: 60px;
-}
-
-.hero-subtitle {
-    display: block;
-    margin-bottom: 25px;
-    line-height: 1.6;
-}
-
-.hero-title {
-    margin-top: 0;
-    line-height: 1.15;
-}
-
-/* Mobile adjustment */
-@media (max-width: 768px) {
     .navbar {
-        min-height: 75px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        min-height: 90px;
     }
 
-    .hero {
-        min-height: 750px;
-        height: auto;
-        padding-top: 100px;
-        padding-bottom: 60px;
-    }
-
-    .hero-content {
-        margin-top: 30px;
-    }
-
-    .hero-subtitle {
-        font-size: 0.75rem;
-        letter-spacing: 2px;
+    .nav-container {
+        min-height: 65px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 
     .logo-link {
-        min-width: auto;
+        min-width: 160px;
+        flex-shrink: 0;
     }
-}
 
+    .logo-img {
+        display: block;
+        max-height: 65px;
+        width: auto;
+        object-fit: contain;
+    }
+
+    /* Push hero content below navigation */
+    .hero {
+        position: relative;
+        min-height: 800px;
+        height: 100vh;
+        padding-top: 90px;
+        box-sizing: border-box;
+    }
+
+    .hero-content {
+        position: relative;
+        z-index: 3;
+        width: 100%;
+        margin-top: 60px;
+    }
+
+    .hero-subtitle {
+        display: block;
+        margin-bottom: 25px;
+        line-height: 1.6;
+    }
+
+    .hero-title {
+        margin-top: 0;
+        line-height: 1.15;
+    }
+
+    /* Mobile adjustment */
+    @media (max-width: 768px) {
+        .navbar {
+            min-height: 75px;
+        }
+
+        .hero {
+            min-height: 750px;
+            height: auto;
+            padding-top: 100px;
+            padding-bottom: 60px;
+        }
+
+        .hero-content {
+            margin-top: 30px;
+        }
+
+        .hero-subtitle {
+            font-size: 0.75rem;
+            letter-spacing: 2px;
+        }
+
+        .logo-link {
+            min-width: auto;
+        }
+    }
+
+    /* =============================================================
+       20. PREMIUM ANIMATION LAYER
+       All new motion, transitions, and micro-interactions live here.
+       Nothing above this line is changed. All animations respect
+       prefers-reduced-motion.
+       ============================================================= */
+
+    /* -------- Custom text selection (gold) -------- */
+    ::selection { background: var(--gold); color: var(--navy); }
+    ::-moz-selection { background: var(--gold); color: var(--navy); }
+
+    /* -------- Scroll progress bar (top of viewport) -------- */
+    .scroll-progress {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 2px;
+        width: 0%;
+        background: linear-gradient(90deg, var(--gold), #e8c98a);
+        z-index: 10001;
+        pointer-events: none;
+        transition: width 0.08s linear;
+        box-shadow: 0 0 12px rgba(197, 160, 89, 0.55);
+    }
+
+    /* -------- Back to top button with progress ring -------- */
+    .back-to-top {
+        position: fixed;
+        bottom: 2rem;
+        right: 2rem;
+        width: 52px;
+        height: 52px;
+        border-radius: 50%;
+        background-color: var(--navy);
+        color: var(--gold);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        z-index: 999;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(20px);
+        transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+        border: 1px solid rgba(197, 160, 89, 0.35);
+    }
+    .back-to-top.visible { opacity: 1; visibility: visible; transform: translateY(0); }
+    .back-to-top:hover { background-color: var(--gold); color: var(--navy); transform: translateY(-3px); }
+    .back-to-top svg { width: 18px; height: 18px; transition: transform 0.3s ease; }
+    .back-to-top:hover svg { transform: translateY(-2px); }
+    .back-to-top::before {
+        content: '';
+        position: absolute;
+        inset: -3px;
+        border-radius: 50%;
+        border: 2px solid transparent;
+        border-top-color: var(--gold);
+        transform: rotate(-45deg);
+        opacity: 0.5;
+    }
+
+    /* -------- Hero banner image section -------- */
+    .hero-banner {
+        display: block;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+        position: relative;
+        background-color: var(--navy);
+    }
+    .hero-banner .banner-img {
+        width: 100%;
+        height: auto;
+        display: block;
+        transform: scale(1);
+        transition: transform 1.6s var(--ease-expo);
+        will-change: transform;
+    }
+    .hero-banner.revealed .banner-img { animation: bannerReveal 1.6s var(--ease-expo) forwards; }
+    @keyframes bannerReveal {
+        from { transform: scale(1.06); opacity: 0.85; }
+        to   { transform: scale(1); opacity: 1; }
+    }
+
+    /* -------- Hero title word reveal -------- */
+    .hero-title .word {
+        display: inline-block;
+        opacity: 0;
+        transform: translateY(0.8em) rotateX(-30deg);
+        transform-origin: bottom center;
+        animation: wordRise 0.9s var(--ease-expo) forwards;
+        will-change: transform, opacity;
+    }
+    @keyframes wordRise {
+        to { opacity: 1; transform: translateY(0) rotateX(0deg); }
+    }
+
+    /* -------- Hero subtitle: gold line draws under -------- */
+    .hero-subtitle { position: relative; padding-bottom: 0; }
+    .hero-subtitle::after {
+        content: '';
+        position: absolute;
+        bottom: -12px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 1px;
+        background: linear-gradient(90deg, transparent, var(--gold), transparent);
+        animation: drawUnderline 1.4s var(--ease-expo) 0.6s forwards;
+    }
+    @keyframes drawUnderline {
+        to { width: 60%; }
+    }
+
+    /* -------- Hero overlay ambient shimmer -------- */
+    .hero-overlay::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -50%;
+        width: 50%;
+        height: 100%;
+        background: linear-gradient(120deg, transparent 30%, rgba(197,160,89,0.06) 50%, transparent 70%);
+        animation: ambientShimmer 9s ease-in-out infinite;
+        pointer-events: none;
+    }
+    @keyframes ambientShimmer {
+        0%   { left: -50%; }
+        50%  { left: 100%; }
+        100% { left: 100%; }
+    }
+
+    /* -------- Button shimmer sweep -------- */
+    .btn-primary::before,
+    .btn-secondary::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(120deg, transparent, rgba(255,255,255,0.35), transparent);
+        transition: left 0.65s var(--ease-expo);
+        pointer-events: none;
+    }
+    .btn-primary:hover::before,
+    .btn-secondary:hover::before { left: 100%; }
+
+    /* -------- Ripple on buttons -------- */
+    .btn-primary .ripple {
+        position: absolute;
+        border-radius: 50%;
+        background: rgba(255,255,255,0.5);
+        transform: scale(0);
+        animation: rippleExpand 0.65s ease-out forwards;
+        pointer-events: none;
+    }
+    @keyframes rippleExpand {
+        to { transform: scale(4); opacity: 0; }
+    }
+
+    /* -------- Philosophy card icons gently float -------- */
+    .philosophy-card .card-icon {
+        animation: gentleFloat 4s ease-in-out infinite;
+    }
+    .philosophy-card:nth-child(2) .card-icon { animation-delay: 0.8s; }
+    .philosophy-card:nth-child(3) .card-icon { animation-delay: 1.6s; }
+    @keyframes gentleFloat {
+        0%, 100% { transform: translateY(0); }
+        50%      { transform: translateY(-6px); }
+    }
+
+    /* -------- Service card gold sweep on hover -------- */
+    .service-mega-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 60%;
+        height: 100%;
+        background: linear-gradient(120deg, transparent, rgba(197,160,89,0.10), transparent);
+        transition: left 0.7s var(--ease-expo);
+        pointer-events: none;
+    }
+    .service-mega-card:hover::before { left: 120%; }
+
+    /* -------- Service deliverables slide in on hover -------- */
+    .service-deliverables li {
+        opacity: 0.85;
+        transform: translateX(0);
+        transition: opacity 0.3s ease, transform 0.3s var(--ease-expo), color 0.3s ease;
+    }
+    .service-mega-card:hover .service-deliverables li {
+        opacity: 1;
+        transform: translateX(3px);
+        color: var(--navy);
+    }
+
+    /* -------- Process step number pulse on hover -------- */
+    .process-step:hover .step-number {
+        box-shadow: 0 0 0 6px rgba(197,160,89,0.15), 0 0 0 12px rgba(197,160,89,0.05);
+    }
+
+    /* -------- Work card placeholder shimmer -------- */
+    .work-img-placeholder::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -50%;
+        width: 50%;
+        height: 100%;
+        background: linear-gradient(120deg, transparent, rgba(197,160,89,0.12), transparent);
+        animation: workShimmer 4.5s ease-in-out infinite;
+        z-index: 1;
+        pointer-events: none;
+    }
+    @keyframes workShimmer {
+        0%   { left: -50%; }
+        60%  { left: 120%; }
+        100% { left: 120%; }
+    }
+
+    /* -------- Testimonial quote mark gentle float -------- */
+    .quote-icon {
+        animation: quoteBob 5s ease-in-out infinite;
+    }
+    .testimonial-card:nth-child(even) .quote-icon { animation-delay: 1.2s; }
+    @keyframes quoteBob {
+        0%, 100% { transform: translateY(0) rotate(0deg); }
+        50%      { transform: translateY(-4px) rotate(-3deg); }
+    }
+
+    /* -------- Glossary left border draws on reveal -------- */
+    .glossary-item {
+        position: relative;
+        overflow: hidden;
+    }
+    .glossary-item::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 3px;
+        height: 0;
+        background: linear-gradient(to bottom, var(--gold), #e8c98a);
+        transition: height 0.6s var(--ease-expo);
+    }
+    .glossary-item.visible::before { height: 100%; }
+
+    /* -------- FAQ smooth open: opacity + transform -------- */
+    .faq-answer {
+        transition: max-height 0.45s var(--ease-expo), opacity 0.35s ease;
+        opacity: 0;
+    }
+    .faq-item.active .faq-answer { opacity: 1; }
+    .faq-question:hover .faq-icon { color: #e8c98a; }
+
+    /* -------- Form: focus label colour + animated input -------- */
+    .premium-form .form-group:focus-within label {
+        color: var(--gold);
+    }
+    .premium-form input,
+    .premium-form select,
+    .premium-form textarea {
+        transition: border-color 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+    }
+    .premium-form input:focus,
+    .premium-form select:focus,
+    .premium-form textarea:focus {
+        transform: translateY(-1px);
+    }
+
+    /* -------- Form: error shake -------- */
+    .premium-form.shake { animation: formShake 0.4s ease; }
+    @keyframes formShake {
+        0%, 100% { transform: translateX(0); }
+        20%      { transform: translateX(-6px); }
+        40%      { transform: translateX(6px); }
+        60%      { transform: translateX(-4px); }
+        80%      { transform: translateX(4px); }
+    }
+
+    /* -------- Form success: animated checkmark -------- */
+    .form-success-mark {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 22px;
+        height: 22px;
+        margin-right: 8px;
+        vertical-align: middle;
+        color: #2e7d32;
+    }
+    .form-success-mark svg { width: 100%; height: 100%; }
+    .form-success-mark path {
+        stroke-dasharray: 30;
+        stroke-dashoffset: 30;
+        animation: drawCheck 0.6s var(--ease-expo) forwards;
+    }
+    @keyframes drawCheck {
+        to { stroke-dashoffset: 0; }
+    }
+
+    /* -------- Newsletter input focus glow -------- */
+    .footer-newsletter-form input:focus {
+        box-shadow: 0 0 0 3px rgba(197,160,89,0.25);
+    }
+
+    /* -------- Footer link arrow slide -------- */
+    .footer-col ul li a {
+        position: relative;
+        display: inline-block;
+        transition: color 0.25s ease, padding-left 0.3s var(--ease-expo);
+    }
+
+    /* -------- Section label underline draw on reveal -------- */
+    .section-label {
+        position: relative;
+        display: inline-block;
+    }
+
+    /* -------- Stats number gold pulse on complete -------- */
+    .stat-number.complete {
+        animation: statPulse 0.7s var(--ease-expo);
+    }
+    @keyframes statPulse {
+        0%   { text-shadow: 0 0 0 rgba(197,160,89,0); }
+        50%  { text-shadow: 0 0 24px rgba(197,160,89,0.8); }
+        100% { text-shadow: 0 0 0 rgba(197,160,89,0); }
+    }
+
+    /* -------- Scroll reveal: also animate inner section-label line -------- */
+    .section-header.visible .section-label::after {
+        content: '';
+        display: block;
+        width: 40px;
+        height: 1px;
+        background: var(--gold);
+        margin: 0.6rem auto 0;
+        animation: labelLine 0.9s var(--ease-expo) 0.2s both;
+    }
+    @keyframes labelLine {
+        from { width: 0; opacity: 0; }
+        to   { width: 40px; opacity: 0.7; }
+    }
+
+    /* -------- Respect reduced motion -------- */
+    @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after {
+            animation-duration: 0.01ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: 0.01ms !important;
+            scroll-behavior: auto !important;
+        }
+        .hero-title .word { opacity: 1; transform: none; }
+        .hero-subtitle::after { width: 60%; }
+        .fade-in-up, .fade-in-left, .fade-in-right { opacity: 1 !important; transform: none !important; }
+        .scroll-progress { display: none; }
+        .work-img-placeholder::before,
+        .hero-overlay::before { display: none; }
+    }
     </style>
 </head>
 <body>
+
+    <!-- NEW: scroll progress bar -->
+    <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
 
     <!-- =================================================================
          PRELOADER
@@ -1345,17 +1713,26 @@ body {
         </div>
     </div>
 
+    <!-- Failsafe for visitors with JS disabled -->
+    <noscript>
+        <style>
+            #preloader { display: none !important; }
+            .fade-in-up, .fade-in-left, .fade-in-right { opacity: 1 !important; transform: none !important; }
+            .hero-title .word { opacity: 1 !important; transform: none !important; }
+        </style>
+    </noscript>
+
     <!-- =================================================================
          GLOBAL NAVIGATION
          ================================================================= -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
-            
+
             <!-- Logo -->
             <a href="index.html" class="logo-link" aria-label="Ally Wealth Home">
                 <img src="images/favicon.png" alt="Ally Wealth Logo" class="logo-img">
             </a>
-            
+
             <!-- Mobile Menu Button -->
             <div class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle Menu" role="button" tabindex="0">
                 <span class="bar"></span>
@@ -1367,7 +1744,7 @@ body {
             <ul class="nav-links" id="nav-links">
                 <li><a href="index.html" class="nav-link active">Home</a></li>
                 <li><a href="about.html" class="nav-link">About</a></li>
-                
+
                 <!-- Mega Menu Dropdown -->
                 <li class="dropdown mega-dropdown">
                     <a href="services.html" class="nav-link">Services <span class="arrow">&#9662;</span></a>
@@ -1408,7 +1785,7 @@ body {
                         </div>
                     </div>
                 </li>
-                
+
                 <li><a href="work.html" class="nav-link">Our Work</a></li>
                 <li><a href="resources.html" class="nav-link">Resources</a></li>
                 <li><a href="contact.html" class="btn-primary nav-btn">Request a Proposal</a></li>
@@ -1422,19 +1799,19 @@ body {
     <header class="hero" id="home">
         <div class="hero-overlay"></div>
         <div class="hero-bg-parallax" id="hero-parallax"></div>
-        
+
         <div class="container hero-content">
             <p class="hero-subtitle fade-in-up">ALLY WEALTH - AUTHOR VISIBILITY CONSULTANT</p>
-            
-            <h1 class="hero-title fade-in-up delay-1">
+
+            <h1 class="hero-title fade-in-up delay-1" id="hero-title">
                 Your book deserves<br>
                 to be discovered.
             </h1>
-            
+
             <p class="hero-description fade-in-up delay-2">
                 We help authors position their books, strengthen discoverability, and connect with the readers already searching for stories like theirs. With over a decade of industry experience, we turn your manuscript into a visible, marketable asset.
             </p>
-            
+
             <div class="hero-actions fade-in-up delay-3">
                 <a href="services.html" class="btn-primary btn-large">Explore Our Services</a>
                 <a href="contact.html" class="btn-secondary btn-large">Get a Strategy</a>
@@ -1447,7 +1824,7 @@ body {
         </div>
     </header>
 
-    <section class="hero-banner">
+    <section class="hero-banner" id="hero-banner">
     <img src="images/Banner.png"
          alt="Ally Wealth Author Visibility Consultant"
          class="banner-img">
@@ -1499,7 +1876,7 @@ body {
                     <h3>Data-Informed Strategies</h3>
                     <p>We do not guess. Our strategies are built on rigorous keyword research, category analysis, and an understanding of algorithmic trends across Amazon, Goodreads, and social media.</p>
                 </div>
-                
+
                 <div class="philosophy-card fade-in-up delay-1">
                     <div class="card-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="#C5A059" stroke-width="1.5"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>
@@ -1507,7 +1884,7 @@ body {
                     <h3>Tailored to Your Genre</h3>
                     <p>A romance novel requires a vastly different marketing strategy than a technical non-fiction book. We respect the nuances of every genre, tailoring our copy and outreach to meet reader expectations.</p>
                 </div>
-                
+
                 <div class="philosophy-card fade-in-up delay-2">
                     <div class="card-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="#C5A059" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
@@ -1531,7 +1908,7 @@ body {
             </div>
 
             <div class="services-mega-grid">
-                
+
                 <!-- Service 1 -->
                 <div class="service-mega-card fade-in-up">
                     <div class="service-mega-icon">
@@ -1729,7 +2106,7 @@ body {
                 </div>
 
             </div>
-            
+
             <div class="center-btn fade-in-up mt-3">
                 <a href="services.html" class="btn-primary btn-large">View Detailed Service Pages</a>
             </div>
@@ -1810,7 +2187,7 @@ body {
                         <a href="work.html" class="service-link">View Concept &rarr;</a>
                     </div>
                 </div>
-                
+
                 <div class="work-card fade-in-up delay-1">
                     <div class="work-img-placeholder">
                         <span>A+ Content Mockup</span>
@@ -2047,13 +2424,13 @@ body {
                 <p class="section-label">08 - LET'S WORK TOGETHER</p>
                 <h2>Let's give your book the visibility it deserves.</h2>
                 <p>Tell us about your book and the marketing support you're looking for. We will review your details and prepare a tailored proposal. We typically respond within 24-48 business hours.</p>
-                
+
                 <div class="cta-contact-info">
                     <p><strong>Email:</strong> <a href="mailto:info@allywealthvisibility.com">info@allywealthvisibility.com</a></p>
                     <p><strong>Location:</strong> Remote Consultations Available Worldwide</p>
                 </div>
             </div>
-            
+
             <div class="cta-form-wrapper fade-in-right">
                 <form id="contact-form" action="https://formspree.io/f/moedaybz" method="POST" class="premium-form">
                     <div class="form-row">
@@ -2126,7 +2503,7 @@ body {
                     <p class="footer-tagline">Get Seen. Grow Your Influence.<br>Build Your Legacy.</p>
                     <p class="footer-desc">Premium author visibility and book marketing consulting for authors, publishers, and independent professionals. We turn manuscripts into visible, marketable assets.</p>
                 </div>
-                
+
                 <!-- Column 2: Services -->
                 <div class="footer-col">
                     <h4>Services</h4>
@@ -2145,7 +2522,7 @@ body {
                         <li><a href="services.html#custom">Custom Strategy</a></li>
                     </ul>
                 </div>
-                
+
                 <!-- Column 3: Company and Resources -->
                 <div class="footer-col">
                     <h4>Knowledge Centre</h4>
@@ -2156,7 +2533,7 @@ body {
                         <li><a href="resources.html#articles">Step-by-Step Guides</a></li>
                         <li><a href="work.html">Case Studies</a></li>
                     </ul>
-                    
+
                     <h4 class="mt-2">Company</h4>
                     <ul>
                         <li><a href="about.html">About Ally Wealth</a></li>
@@ -2166,14 +2543,14 @@ body {
                         <li><a href="terms.html">Terms of Service</a></li>
                     </ul>
                 </div>
-                
+
                 <!-- Column 4: Contact and Newsletter -->
                 <div class="footer-col contact-col">
                     <h4>Get in Touch</h4>
                     <p class="footer-contact-text">Ready to discuss your book marketing strategy? We'd love to hear from you.</p>
                     <a href="mailto:info@allywealthvisibility.com" class="footer-email">info@allywealthvisibility.com</a>
                     <p class="footer-response">We typically respond within 24-48 business hours.</p>
-                    
+
                     <h4 class="mt-2">Newsletter</h4>
                     <p class="footer-contact-text">Join our mailing list for book marketing tips and industry insights.</p>
                     <form class="footer-newsletter-form" action="#" method="POST">
@@ -2182,7 +2559,7 @@ body {
                     </form>
                 </div>
             </div>
-            
+
             <div class="footer-bottom">
                 <p>&copy; 2026 Ally Wealth. All rights reserved.</p>
                 <p>Author Visibility Consultant and Book Marketing Specialist.</p>
@@ -2190,38 +2567,105 @@ body {
         </div>
     </footer>
 
+    <!-- NEW: back to top button -->
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="6 15 12 9 18 15"></polyline>
+        </svg>
+    </button>
+
     <!-- =================================================================
          EMBEDDED JAVASCRIPT
          ================================================================= -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            
+
+            const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+            // 0. SCROLL PROGRESS BAR
+            const scrollProgress = document.getElementById('scroll-progress');
+            if (scrollProgress) {
+                const updateProgress = () => {
+                    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+                    const pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+                    scrollProgress.style.width = pct + '%';
+                };
+                window.addEventListener('scroll', updateProgress, { passive: true });
+                window.addEventListener('resize', updateProgress);
+                updateProgress();
+            }
+
             // 1. PRELOADER
             const preloader = document.getElementById('preloader');
             if (preloader) {
-                window.addEventListener('load', () => {
-                    setTimeout(() => {
-                        preloader.classList.add('hidden');
-                        setTimeout(() => { preloader.style.display = 'none'; }, 600);
-                    }, 800);
+                const hidePreloader = () => {
+                    if (preloader.classList.contains('hidden')) return;
+                    preloader.classList.add('hidden');
+                    setTimeout(() => { preloader.style.display = 'none'; }, 600);
+                };
+                window.addEventListener('load', () => setTimeout(hidePreloader, 700));
+                setTimeout(hidePreloader, 3500); // failsafe
+            }
+
+            // 2. HERO TITLE WORD-BY-WORD REVEAL
+            const heroTitle = document.getElementById('hero-title');
+            if (heroTitle && !prefersReducedMotion) {
+                // Walk text nodes and wrap each word in a span, preserving <br>
+                const wrapWords = (node) => {
+                    for (let i = node.childNodes.length - 1; i >= 0; i--) {
+                        const child = node.childNodes[i];
+                        if (child.nodeType === 3) { // text node
+                            const words = child.nodeValue.split(/(\s+)/);
+                            const frag = document.createDocumentFragment();
+                            words.forEach(w => {
+                                if (/^\s+$/.test(w)) {
+                                    frag.appendChild(document.createTextNode(w));
+                                } else if (w.length) {
+                                    const span = document.createElement('span');
+                                    span.className = 'word';
+                                    span.textContent = w;
+                                    frag.appendChild(span);
+                                }
+                            });
+                            child.parentNode.replaceChild(frag, child);
+                        } else if (child.nodeType === 1 && child.tagName !== 'BR') {
+                            wrapWords(child);
+                        }
+                    }
+                };
+                wrapWords(heroTitle);
+
+                // Stagger the animation delay
+                const words = heroTitle.querySelectorAll('.word');
+                words.forEach((word, i) => {
+                    word.style.animationDelay = (0.15 + i * 0.08) + 's';
                 });
             }
 
-            // 2. MOBILE NAVIGATION & DROPDOWNS
+            // 3. MOBILE NAVIGATION & DROPDOWNS
             const mobileMenuBtn = document.getElementById('mobile-menu-btn');
             const navLinks = document.getElementById('nav-links');
             const dropdowns = document.querySelectorAll('.dropdown');
 
             if (mobileMenuBtn && navLinks) {
-                mobileMenuBtn.addEventListener('click', () => {
-                    navLinks.classList.toggle('active');
-                    mobileMenuBtn.classList.toggle('active');
-                    document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
+                const toggleMenu = () => {
+                    const isOpen = navLinks.classList.toggle('active');
+                    mobileMenuBtn.classList.toggle('active', isOpen);
+                    document.body.style.overflow = isOpen ? 'hidden' : '';
+                };
+
+                mobileMenuBtn.addEventListener('click', toggleMenu);
+                mobileMenuBtn.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        toggleMenu();
+                    }
                 });
 
                 navLinks.querySelectorAll('a').forEach(link => {
                     link.addEventListener('click', () => {
-                        if (window.innerWidth <= 768 && !link.parentElement.classList.contains('dropdown')) {
+                        if (window.innerWidth <= 768 && !link.closest('.dropdown')) {
                             navLinks.classList.remove('active');
                             mobileMenuBtn.classList.remove('active');
                             document.body.style.overflow = '';
@@ -2231,6 +2675,7 @@ body {
 
                 dropdowns.forEach(dropdown => {
                     const link = dropdown.querySelector('.nav-link');
+                    if (!link) return;
                     link.addEventListener('click', (e) => {
                         if (window.innerWidth <= 768) {
                             e.preventDefault();
@@ -2240,74 +2685,101 @@ body {
                 });
             }
 
-            // 3. STICKY NAVBAR
+            // 4. STICKY NAVBAR
             const navbar = document.getElementById('navbar');
             if (navbar) {
                 const handleScroll = () => {
-                    if (window.scrollY > 50) { navbar.classList.add('scrolled'); } 
-                    else { navbar.classList.remove('scrolled'); }
+                    navbar.classList.toggle('scrolled', window.scrollY > 50);
                 };
-                window.addEventListener('scroll', handleScroll);
+                window.addEventListener('scroll', handleScroll, { passive: true });
                 handleScroll();
             }
 
-            // 4. SCROLL REVEAL ANIMATIONS
-            const observerOptions = { threshold: 0.1, rootMargin: "0px 0px -50px 0px" };
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                        observer.unobserve(entry.target); 
-                    }
-                });
-            }, observerOptions);
+            // 5. SCROLL REVEAL ANIMATIONS
+            const revealTargets = document.querySelectorAll('.fade-in-up, .fade-in-left, .fade-in-right');
+            if ('IntersectionObserver' in window) {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('visible');
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 
-            document.querySelectorAll('.fade-in-up, .fade-in-left, .fade-in-right').forEach(el => observer.observe(el));
-
-            // 5. HERO PARALLAX EFFECT
-            const heroParallax = document.getElementById('hero-parallax');
-            if (heroParallax) {
-                window.addEventListener('scroll', () => {
-                    const scrolled = window.pageYOffset;
-                    if (scrolled < window.innerHeight) {
-                        heroParallax.style.transform = `translateY(${scrolled * 0.4}px)`;
-                    }
-                });
+                revealTargets.forEach(el => observer.observe(el));
+            } else {
+                // Fallback: never leave content stuck at opacity 0
+                revealTargets.forEach(el => el.classList.add('visible'));
             }
 
-            // 6. ANIMATED NUMBER COUNTERS
+            // 6. HERO PARALLAX + BANNER REVEAL (rAF-throttled)
+            const heroParallax = document.getElementById('hero-parallax');
+            const heroBanner = document.getElementById('hero-banner');
+            if (!prefersReducedMotion) {
+                let ticking = false;
+                const onScrollParallax = () => {
+                    if (ticking) return;
+                    ticking = true;
+                    requestAnimationFrame(() => {
+                        const scrolled = window.pageYOffset;
+                        if (heroParallax && scrolled < window.innerHeight) {
+                            heroParallax.style.transform = `translateY(${scrolled * 0.35}px)`;
+                        }
+                        ticking = false;
+                    });
+                };
+                window.addEventListener('scroll', onScrollParallax, { passive: true });
+            }
+            if (heroBanner && 'IntersectionObserver' in window) {
+                const bannerObs = new IntersectionObserver((entries) => {
+                    entries.forEach(e => {
+                        if (e.isIntersecting) {
+                            heroBanner.classList.add('revealed');
+                            bannerObs.unobserve(heroBanner);
+                        }
+                    });
+                }, { threshold: 0.25 });
+                bannerObs.observe(heroBanner);
+            } else if (heroBanner) {
+                heroBanner.classList.add('revealed');
+            }
+
+            // 7. ANIMATED NUMBER COUNTERS (with gold pulse on completion)
             const statNumbers = document.querySelectorAll('.stat-number[data-target]');
-            if (statNumbers.length > 0) {
+            if (statNumbers.length > 0 && 'IntersectionObserver' in window) {
                 const countObserver = new IntersectionObserver((entries) => {
                     entries.forEach(entry => {
                         if (entry.isIntersecting) {
-                            const target = +entry.target.getAttribute('data-target');
+                            const el = entry.target;
+                            const target = +el.getAttribute('data-target');
                             let count = 0;
-                            const duration = 2000;
+                            const duration = 1800;
                             const increment = target / (duration / 16);
                             const updateCount = () => {
                                 count += increment;
                                 if (count < target) {
-                                    entry.target.innerText = Math.ceil(count) + '+';
+                                    el.innerText = Math.ceil(count) + '+';
                                     requestAnimationFrame(updateCount);
                                 } else {
-                                    entry.target.innerText = target + '+';
+                                    el.innerText = target + '+';
+                                    el.classList.add('complete');
                                 }
                             };
                             updateCount();
-                            countObserver.unobserve(entry.target);
+                            countObserver.unobserve(el);
                         }
                     });
                 }, { threshold: 0.5 });
                 statNumbers.forEach(num => countObserver.observe(num));
             }
 
-            // 7. FAQ ACCORDION
+            // 8. FAQ ACCORDION (with opacity transition)
             document.querySelectorAll('.faq-question').forEach(question => {
                 question.addEventListener('click', () => {
                     const answer = question.nextElementSibling;
                     const parent = question.parentElement;
-                    
+
                     document.querySelectorAll('.faq-item').forEach(item => {
                         if (item !== parent && item.classList.contains('active')) {
                             item.classList.remove('active');
@@ -2320,7 +2792,24 @@ body {
                 });
             });
 
-            // 8. FORMSPREE AJAX SUBMISSION
+            // 9. BUTTON RIPPLE + SUBMIT-BUTTON FEEDBACK
+            const buttons = document.querySelectorAll('.btn-primary, .btn-secondary');
+            buttons.forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    if (prefersReducedMotion) return;
+                    const rect = btn.getBoundingClientRect();
+                    const size = Math.max(rect.width, rect.height);
+                    const ripple = document.createElement('span');
+                    ripple.className = 'ripple';
+                    ripple.style.width = ripple.style.height = size + 'px';
+                    ripple.style.left = (e.clientX - rect.left - size / 2) + 'px';
+                    ripple.style.top = (e.clientY - rect.top - size / 2) + 'px';
+                    btn.appendChild(ripple);
+                    setTimeout(() => ripple.remove(), 700);
+                });
+            });
+
+            // 10. FORMSPREE AJAX SUBMISSION (with error shake + animated check)
             const forms = document.querySelectorAll('form[action^="https://formspree.io"]');
             forms.forEach(form => {
                 form.addEventListener('submit', async (e) => {
@@ -2340,7 +2829,7 @@ body {
                     }
 
                     const data = new FormData(form);
-                    
+
                     try {
                         const response = await fetch(form.action, {
                             method: form.method,
@@ -2350,7 +2839,12 @@ body {
 
                         if (response.ok) {
                             if (formStatus) {
-                                formStatus.innerHTML = "Thank you! Your enquiry has been sent successfully. We will be in touch soon.";
+                                formStatus.innerHTML =
+                                    '<span class="form-success-mark" aria-hidden="true">' +
+                                    '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">' +
+                                    '<path d="M4 12l5 5L20 6"></path>' +
+                                    '</svg></span>' +
+                                    'Thank you! Your enquiry has been sent successfully. We will be in touch soon.';
                                 formStatus.className = "form-status success";
                             }
                             form.reset();
@@ -2360,11 +2854,23 @@ body {
                                 formStatus.innerHTML = responseData.errors ? responseData.errors.map(error => error.message).join(", ") : "Oops! There was a problem submitting your form.";
                                 formStatus.className = "form-status error";
                             }
+                            if (!prefersReducedMotion) {
+                                form.classList.remove('shake');
+                                void form.offsetWidth;
+                                form.classList.add('shake');
+                                setTimeout(() => form.classList.remove('shake'), 500);
+                            }
                         }
                     } catch (error) {
                         if (formStatus) {
                             formStatus.innerHTML = "Oops! There was a problem submitting your form. Please check your connection and try again.";
                             formStatus.className = "form-status error";
+                        }
+                        if (!prefersReducedMotion) {
+                            form.classList.remove('shake');
+                            void form.offsetWidth;
+                            form.classList.add('shake');
+                            setTimeout(() => form.classList.remove('shake'), 500);
                         }
                     } finally {
                         if (submitBtn) {
@@ -2375,6 +2881,37 @@ body {
                     }
                 });
             });
+
+            // 11. BACK TO TOP
+            const backToTop = document.getElementById('back-to-top');
+            if (backToTop) {
+                const toggleBackTop = () => {
+                    backToTop.classList.toggle('visible', window.scrollY > 600);
+                };
+                window.addEventListener('scroll', toggleBackTop, { passive: true });
+                toggleBackTop();
+
+                backToTop.addEventListener('click', () => {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: prefersReducedMotion ? 'auto' : 'smooth'
+                    });
+                });
+            }
+
+            // 12. NEWSLETTER FORM (quiet no-op so it doesn't navigate away)
+            const newsletterForm = document.querySelector('.footer-newsletter-form');
+            if (newsletterForm) {
+                newsletterForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    const input = newsletterForm.querySelector('input[type="email"]');
+                    const btn = newsletterForm.querySelector('button');
+                    const original = btn.textContent;
+                    btn.textContent = 'Subscribed';
+                    if (input) input.value = '';
+                    setTimeout(() => { btn.textContent = original; }, 2200);
+                });
+            }
         });
     </script>
 </body>
