@@ -40,14 +40,14 @@
     <meta property="og:url" content="https://allywealthvisibility.com/contact.html">
     <meta property="og:title" content="Contact | Ally Wealth Book Marketing">
     <meta property="og:description" content="Request a tailored book marketing proposal. Tell us about your book and your goals.">
-    <meta property="og:image" content="images/banner.jpg">
+    <meta property="og:image" content="https://allywealthvisibility.com/images/banner.jpg">
 
     <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://allywealthvisibility.com//contact.html">
-    <meta property="twitter:title" content="Contact | Ally Wealth Book Marketing">
-    <meta property="twitter:description" content="Request a tailored book marketing proposal. Tell us about your book and your goals.">
-    <meta property="twitter:image" content="images/banner.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://allywealthvisibility.com/contact.html">
+    <meta name="twitter:title" content="Contact | Ally Wealth Book Marketing">
+    <meta name="twitter:description" content="Request a tailored book marketing proposal. Tell us about your book and your goals.">
+    <meta name="twitter:image" content="https://allywealthvisibility.com/images/banner.jpg">
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="images/favicon.png">
@@ -701,31 +701,31 @@
         }
 
         .form-success.visible {
-    display: block;
-}
+            display: block;
+        }
 
-/* NEW — submission failure banner */
-.form-failure {
-    display: none;
-    background-color: #FDF3F2;
-    border-left: 3px solid #C0392B;
-    padding: 1.25rem 1.5rem;
-    margin-bottom: 2rem;
-    font-size: 0.95rem;
-    color: #7B241C;
-    line-height: 1.7;
-}
+        /* NEW — submission failure banner */
+        .form-failure {
+            display: none;
+            background-color: #FDF3F2;
+            border-left: 3px solid #C0392B;
+            padding: 1.25rem 1.5rem;
+            margin-bottom: 2rem;
+            font-size: 0.95rem;
+            color: #7B241C;
+            line-height: 1.7;
+        }
 
-.form-failure.visible {
-    display: block;
-}
+        .form-failure.visible {
+            display: block;
+        }
 
-/* NEW — button loading state */
-.btn-primary:disabled {
-    opacity: 0.65;
-    cursor: wait;
-    pointer-events: none;
-}
+        /* NEW — button loading state */
+        .btn-primary:disabled {
+            opacity: 0.65;
+            cursor: wait;
+            pointer-events: none;
+        }
 
         /* =============================================================
            9. CONTACT INFO PANEL
@@ -1042,6 +1042,15 @@
             <p class="loader-subtext">Loading contact...</p>
         </div>
     </div>
+
+    <!-- FIX: if JavaScript is disabled or fails, the preloader must never
+         trap the page and scroll-reveal content must never stay invisible. -->
+    <noscript>
+        <style>
+            #preloader { display: none !important; }
+            .fade-in-up, .fade-in-left, .fade-in-right { opacity: 1 !important; transform: none !important; }
+        </style>
+    </noscript>
 
     <!-- =================================================================
          GLOBAL NAVIGATION
@@ -1440,12 +1449,20 @@
                ========================================================= */
             const preloader = document.getElementById('preloader');
             if (preloader) {
-                window.addEventListener('load', () => {
-                    setTimeout(() => {
-                        preloader.classList.add('hidden');
-                        setTimeout(() => { preloader.style.display = 'none'; }, 600);
-                    }, 800);
-                });
+                const hidePreloader = () => {
+                    if (preloader.classList.contains('hidden')) return;
+                    preloader.classList.add('hidden');
+                    setTimeout(() => { preloader.style.display = 'none'; }, 600);
+                };
+
+                if (document.readyState === 'complete') {
+                    setTimeout(hidePreloader, 400);
+                } else {
+                    window.addEventListener('load', () => setTimeout(hidePreloader, 600));
+                }
+
+                // Failsafe: the page must never be trapped behind the overlay
+                setTimeout(hidePreloader, 4000);
             }
 
             /* =========================================================
@@ -1456,15 +1473,25 @@
             const dropdowns = document.querySelectorAll('.dropdown');
 
             if (mobileMenuBtn && navLinks) {
-                mobileMenuBtn.addEventListener('click', () => {
-                    navLinks.classList.toggle('active');
-                    mobileMenuBtn.classList.toggle('active');
-                    document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
+                const toggleMenu = () => {
+                    const isOpen = navLinks.classList.toggle('active');
+                    mobileMenuBtn.classList.toggle('active', isOpen);
+                    document.body.style.overflow = isOpen ? 'hidden' : '';
+                };
+
+                mobileMenuBtn.addEventListener('click', toggleMenu);
+
+                // FIX: keyboard accessibility for role="button" element
+                mobileMenuBtn.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        toggleMenu();
+                    }
                 });
 
                 navLinks.querySelectorAll('a').forEach(link => {
                     link.addEventListener('click', () => {
-                        if (window.innerWidth <= 768 && !link.parentElement.classList.contains('dropdown')) {
+                        if (window.innerWidth <= 768 && !link.closest('.dropdown')) {
                             navLinks.classList.remove('active');
                             mobileMenuBtn.classList.remove('active');
                             document.body.style.overflow = '';
@@ -1490,34 +1517,32 @@
             const navbar = document.getElementById('navbar');
             if (navbar) {
                 const handleScroll = () => {
-                    if (window.scrollY > 50) {
-                        navbar.classList.add('scrolled');
-                    } else {
-                        navbar.classList.remove('scrolled');
-                    }
+                    navbar.classList.toggle('scrolled', window.scrollY > 50);
                 };
-                window.addEventListener('scroll', handleScroll);
+                window.addEventListener('scroll', handleScroll, { passive: true });
                 handleScroll();
             }
 
             /* =========================================================
                4. SCROLL REVEAL ANIMATIONS
                ========================================================= */
-            const observerOptions = {
-                threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
-            };
+            const revealTargets = document.querySelectorAll('.fade-in-up, .fade-in-left, .fade-in-right');
 
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, observerOptions);
+            if ('IntersectionObserver' in window) {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('visible');
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 
-            document.querySelectorAll('.fade-in-up, .fade-in-left, .fade-in-right').forEach(el => observer.observe(el));
+                revealTargets.forEach(el => observer.observe(el));
+            } else {
+                // FIX: fallback so content is never stuck at opacity: 0
+                revealTargets.forEach(el => el.classList.add('visible'));
+            }
 
             /* =========================================================
                5. FAQ ACCORDION
@@ -1534,9 +1559,7 @@
                     faqItems.forEach(other => {
                         other.classList.remove('open');
                         const otherToggle = other.querySelector('.faq-toggle');
-                        if (otherToggle) {
-                            otherToggle.setAttribute('aria-expanded', 'false');
-                        }
+                        if (otherToggle) otherToggle.setAttribute('aria-expanded', 'false');
                     });
 
                     if (!isOpen) {
@@ -1547,20 +1570,21 @@
             });
 
             /* =========================================================
-               6. CONTACT FORM VALIDATION
+               6. CONTACT FORM VALIDATION AND SUBMISSION
                ========================================================= */
             const contactForm = document.getElementById('contact-form');
             const formSuccess = document.getElementById('form-success');
+            const formFailure = document.getElementById('form-failure');
 
             if (contactForm) {
 
                 const fields = [
-                    { id: 'name', group: 'group-name', validate: (v) => v.trim().length > 1 },
-                    { id: 'email', group: 'group-email', validate: (v) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim()) },
-                    { id: 'book', group: 'group-book', validate: (v) => v.trim().length > 1 },
-                    { id: 'genre', group: 'group-genre', validate: (v) => v !== '' },
-                    { id: 'service', group: 'group-service', validate: (v) => v !== '' },
-                    { id: 'message', group: 'group-message', validate: (v) => v.trim().length > 10 }
+                    { id: 'name',    group: 'group-name',    validate: v => v.trim().length > 1 },
+                    { id: 'email',   group: 'group-email',   validate: v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim()) },
+                    { id: 'book',    group: 'group-book',    validate: v => v.trim().length > 1 },
+                    { id: 'genre',   group: 'group-genre',   validate: v => v !== '' },
+                    { id: 'service', group: 'group-service', validate: v => v !== '' },
+                    { id: 'message', group: 'group-message', validate: v => v.trim().length > 10 }
                 ];
 
                 const validateField = (field) => {
@@ -1578,95 +1602,98 @@
                     if (!input) return;
 
                     input.addEventListener('blur', () => validateField(field));
-
+                    // FIX: <select> fires change, not input, in several browsers
+                    input.addEventListener('change', () => validateField(field));
                     input.addEventListener('input', () => {
                         const group = document.getElementById(field.group);
-                        if (group && group.classList.contains('has-error')) {
-                            validateField(field);
-                        }
+                        if (group && group.classList.contains('has-error')) validateField(field);
                     });
                 });
 
-const formFailure = document.getElementById('form-failure');
+                contactForm.addEventListener('submit', async (e) => {
+                    e.preventDefault();
 
-contactForm.addEventListener('submit', async (e) => {
-    e.preventDefault();
+                    // Reset any previous banners
+                    if (formSuccess) formSuccess.classList.remove('visible');
+                    if (formFailure) formFailure.classList.remove('visible');
 
-    // Reset any previous banners
-    if (formSuccess) formSuccess.classList.remove('visible');
-    if (formFailure) formFailure.classList.remove('visible');
+                    // Validate all fields
+                    let allValid = true;
+                    fields.forEach(field => {
+                        if (!validateField(field)) allValid = false;
+                    });
 
-    // Validate all fields
-    let allValid = true;
-    fields.forEach(field => {
-        if (!validateField(field)) {
-            allValid = false;
-        }
-    });
+                    if (!allValid) {
+                        const firstError = contactForm.querySelector('.has-error .form-control');
+                        if (firstError) firstError.focus();
+                        return;
+                    }
 
-    if (!allValid) {
-        const firstError = contactForm.querySelector('.has-error .form-control');
-        if (firstError) firstError.focus();
-        return;
-    }
+                    // Disable button to prevent double submits
+                    const submitBtn = contactForm.querySelector('button[type="submit"]');
+                    const originalBtnText = submitBtn ? submitBtn.textContent : '';
+                    if (submitBtn) {
+                        submitBtn.disabled = true;
+                        submitBtn.textContent = 'Sending...';
+                    }
 
-    // Disable button to prevent double submits
-    const submitBtn = contactForm.querySelector('button[type="submit"]');
-    const originalBtnText = submitBtn.textContent;
-    submitBtn.disabled = true;
-    submitBtn.textContent = 'Sending...';
+                    try {
+                        const response = await fetch(contactForm.action, {
+                            method: 'POST',
+                            body: new FormData(contactForm),
+                            headers: { 'Accept': 'application/json' }
+                        });
 
-    try {
-        const response = await fetch(contactForm.action, {
-            method: 'POST',
-            body: new FormData(contactForm),
-            headers: { 'Accept': 'application/json' }
-        });
+                        if (response.ok) {
+                            // Success: clear form and show confirmation
+                            contactForm.reset();
+                            fields.forEach(field => {
+                                const group = document.getElementById(field.group);
+                                if (group) group.classList.remove('has-error');
+                            });
 
-        if (response.ok) {
-            // Success: clear form and show confirmation
-            contactForm.reset();
-            fields.forEach(field => {
-                const group = document.getElementById(field.group);
-                if (group) group.classList.remove('has-error');
-            });
+                            if (formSuccess) {
+                                formSuccess.classList.add('visible');
+                                formSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                                setTimeout(() => {
+                                    formSuccess.classList.remove('visible');
+                                }, 10000);
+                            }
+                        } else {
+                            // Formspree returned an error
+                            let msg = 'Submission failed. Please try again.';
+                            try {
+                                const data = await response.json();
+                                if (data && data.errors && data.errors.length) {
+                                    msg = data.errors.map(err => err.message).join(' ');
+                                }
+                            } catch (_) { /* ignore JSON parse errors */ }
 
-            if (formSuccess) {
-                formSuccess.classList.add('visible');
-                formSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                setTimeout(() => {
-                    formSuccess.classList.remove('visible');
-                }, 10000);
-            }
-        } else {
-            // Formspree returned an error
-            let msg = 'Submission failed. Please try again.';
-            try {
-                const data = await response.json();
-                if (data && data.errors && data.errors.length) {
-                    msg = data.errors.map(err => err.message).join(' ');
-                }
-            } catch (_) { /* ignore JSON parse errors */ }
+                            if (formFailure) {
+                                formFailure.innerHTML = 'Sorry, your enquiry could not be sent: ' + msg +
+                                    ' Please try again, or email us directly at ' +
+                                    '<a href="mailto:info@allywealthvisibility.com" style="color:#7B241C;text-decoration:underline;">info@allywealthvisibility.com</a>.';
+                                formFailure.classList.add('visible');
+                                formFailure.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                            }
+                        }
+                    } catch (err) {
+                        // Network error
+                        if (formFailure) {
+                            formFailure.classList.add('visible');
+                            formFailure.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                        }
+                    } finally {
+                        if (submitBtn) {
+                            submitBtn.disabled = false;
+                            submitBtn.textContent = originalBtnText;
+                        }
+                    }
+                });
 
-            if (formFailure) {
-                formFailure.innerHTML = 'Sorry, your enquiry could not be sent: ' + msg +
-                    ' Please try again, or email us directly at ' +
-                    '<a href="mailto:info@allywealthvisibility.com" style="color:#7B241C;text-decoration:underline;">info@allywealthvisibility.com</a>.';
-                formFailure.classList.add('visible');
-                formFailure.scrollIntoView({ behavior: 'smooth', block: 'center' });
-            }
-        }
-    } catch (err) {
-        // Network error
-        if (formFailure) {
-            formFailure.classList.add('visible');
-            formFailure.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        }
-    } finally {
-        submitBtn.disabled = false;
-        submitBtn.textContent = originalBtnText;
-    }
-});
+            } // END if (contactForm)
+
+        }); // END DOMContentLoaded
     </script>
 </body>
 </html>
